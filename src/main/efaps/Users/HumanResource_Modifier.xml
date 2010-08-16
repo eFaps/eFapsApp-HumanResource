@@ -27,7 +27,7 @@
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>51bc004d-4aa8-4bc7-a2f2-1d99dd82b190</uuid>
-    <file-application>eFaps-ERP-HumanResource</file-application>
+    <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>

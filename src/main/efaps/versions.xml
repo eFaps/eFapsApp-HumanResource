@@ -24,7 +24,7 @@
 -->
 <install xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <application>eFaps-ERP-HumanResource</application>
+    <application>eFapsApp-HumanResource</application>
     <dependencies>
         <dependency order="0">
             <groupId>org.efaps</groupId>
@@ -51,7 +51,7 @@
             import java.net.URL
             import java.io.File;
 
-            EFAPS_LOGGER.info("Checking for import of JaasKeys for eFaps-ERP-HumanResource");
+            EFAPS_LOGGER.info("Checking for import of JaasKeys for eFapsApp-HumanResource");
 
             SearchQuery query = new SearchQuery();
             query.setQueryTypes("Admin_User_JAASKey");
@@ -63,7 +63,7 @@
                 RunLevel.init("shell");
                 RunLevel.execute();
 
-                EFAPS_LOGGER.info("    Importing JaasKeys for eFaps-ERP-HumanResource");
+                EFAPS_LOGGER.info("    Importing JaasKeys for eFapsApp-HumanResource");
                 URL url = new URL(EFAPS_ROOTURL, "Data/IMPORT_UserJAASKey.xml");
                 DataImport imp = DataImport.readFile(url);
                 imp.updateInDB();

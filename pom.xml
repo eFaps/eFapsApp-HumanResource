@@ -33,8 +33,8 @@
     * Module Definition
     ************************************************************************* -->
     <packaging>jar</packaging>
-    <groupId>org.efaps.module</groupId>
-    <artifactId>efaps-erp-humanresource</artifactId>
+    <groupId>org.efaps.apps</groupId>
+    <artifactId>humanresource</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <name>eFaps ERP Human Resource Module</name>
     <description>
@@ -75,7 +75,7 @@
         <name>The eFaps Team</name>
         <url>http://www.efaps.org</url>
     </organization>
-    
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -330,8 +330,8 @@
     <dependencies>
            <!-- eFaps ERP Common Module -->
         <dependency>
-            <groupId>org.efaps.module</groupId>
-            <artifactId>efaps-erp-commons</artifactId>
+            <groupId>org.efaps.apps</groupId>
+            <artifactId>commons</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
