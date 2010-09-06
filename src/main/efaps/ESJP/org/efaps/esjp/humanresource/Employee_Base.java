@@ -28,11 +28,13 @@ import java.util.Map;
 import java.util.TreeMap;
 
 import org.efaps.admin.event.Parameter;
-import org.efaps.admin.event.Return;
 import org.efaps.admin.event.Parameter.ParameterValues;
+import org.efaps.admin.event.Return;
 import org.efaps.admin.event.Return.ReturnValues;
 import org.efaps.admin.program.esjp.EFapsRevision;
 import org.efaps.admin.program.esjp.EFapsUUID;
+import org.efaps.ci.CIAdminUser;
+import org.efaps.db.AttributeQuery;
 import org.efaps.db.MultiPrintQuery;
 import org.efaps.db.QueryBuilder;
 import org.efaps.esjp.ci.CIHumanResource;
@@ -110,6 +112,50 @@ public abstract class Employee_Base
                 } else {
                     map.put("eFapsAutoCompleteVALUE", dataemployee);
                 }
+                tmpMap.put(choice, map);
+            }
+            list.addAll(tmpMap.values());
+        }
+        final Return retVal = new Return();
+        retVal.put(ReturnValues.VALUES, list);
+        return retVal;
+    }
+
+    /**
+     * method for auto-complete user person (if any a case non-existing in DB.)
+     *
+     * @param _parameter Parameter as passed from the eFaps API.
+     * @return ret witch values
+     * @throws EFapsException on error.
+     */
+    public Return autoComplete4Person(final Parameter _parameter)
+        throws EFapsException
+    {
+        final String input = (String) _parameter.get(ParameterValues.OTHERS);
+        final List<Map<String, String>> list = new ArrayList<Map<String, String>>();
+        if (input.length() > 0) {
+            final Map<String, Map<String, String>> tmpMap = new TreeMap<String, Map<String, String>>();
+            final QueryBuilder queryBldr = new QueryBuilder(CIAdminUser.Person);
+            queryBldr.addWhereAttrMatchValue(CIAdminUser.Person.Name, input + "*").setIgnoreCase(true);
+            final AttributeQuery attrQuery = new QueryBuilder(CIHumanResource.Employee)
+                                                            .getAttributeQuery(CIHumanResource.Employee.UserPerson);
+            queryBldr.addWhereAttrNotInQuery(CIAdminUser.Person.ID, attrQuery);
+            final MultiPrintQuery multi = queryBldr.getPrint();
+
+            multi.addAttribute(CIAdminUser.Person.ID, CIAdminUser.Person.Name,
+                               CIAdminUser.Person.FirstName, CIAdminUser.Person.LastName);
+            multi.execute();
+            while (multi.next()) {
+                final long id = multi.<Long>getAttribute(CIAdminUser.Person.ID);
+                final String name = multi.<String>getAttribute(CIAdminUser.Person.Name);
+                final String firstname = multi.<String>getAttribute(CIAdminUser.Person.FirstName);
+                final String lastname = multi.<String>getAttribute(CIAdminUser.Person.LastName);
+                final String fullName = lastname + ", " + firstname;
+                final String choice = name + " - " + fullName;
+                final Map<String, String> map = new HashMap<String, String>();
+                map.put("eFapsAutoCompleteKEY", String.valueOf(id));
+                map.put("eFapsAutoCompleteCHOICE", choice);
+                map.put("eFapsAutoCompleteVALUE", name);
                 tmpMap.put(choice, map);
             }
             list.addAll(tmpMap.values());
