@@ -26,85 +26,67 @@
 <datamodel-type  xmlns="http://www.efaps.org/xsd"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>ce6969da-0941-4775-bbcf-821706264ea3</uuid>
+    <uuid>8eafaac5-50ab-47f8-bd94-fcbe718da3e7</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev$</file-revision>
-
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_EmployeeAbstract</name>
+        <name>HumanResource_HumanResource2HumanResourceAbstract</name>
         <purpose abstract="true" />
         <attribute>
             <name>Type</name>
             <type>Type</type>
-            <sqltable>HumanResource_EmployeeSQLTable</sqltable>
+            <sqltable>HumanResource_HumanResource2HumanResourceAbstractSQLTable</sqltable>
             <sqlcolumn>TYPEID</sqlcolumn>
         </attribute>
         <attribute>
             <name>OID</name>
             <type>OID</type>
-            <sqltable>HumanResource_EmployeeSQLTable</sqltable>
-            <sqlcolumn>TYPEID, ID</sqlcolumn>
+            <sqltable>HumanResource_HumanResource2HumanResourceAbstractSQLTable</sqltable>
+            <sqlcolumn>TYPEID,ID</sqlcolumn>
         </attribute>
         <attribute>
             <name>ID</name>
             <type>Long</type>
-            <sqltable>HumanResource_EmployeeSQLTable</sqltable>
+            <sqltable>HumanResource_HumanResource2HumanResourceAbstractSQLTable</sqltable>
             <sqlcolumn>ID</sqlcolumn>
         </attribute>
         <attribute>
-            <name>Company</name>
-            <type>CompanyLink</type>
-            <sqltable>HumanResource_EmployeeSQLTable</sqltable>
-            <sqlcolumn>COMPANYID</sqlcolumn>
-        </attribute>
-        <attribute>
-            <name>Number</name>
-            <type>String</type>
-            <sqltable>HumanResource_EmployeeSQLTable</sqltable>
-            <sqlcolumn>NUMBER</sqlcolumn>
-        </attribute>
-        <attribute>
-            <name>FirstName</name>
-            <type>String</type>
-            <sqltable>HumanResource_EmployeeSQLTable</sqltable>
-            <sqlcolumn>FIRSTNAME</sqlcolumn>
-        </attribute>
-        <attribute>
-            <name>LastName</name>
-            <type>String</type>
-            <sqltable>HumanResource_EmployeeSQLTable</sqltable>
-            <sqlcolumn>LASTNAME</sqlcolumn>
-        </attribute>
-        <attribute>
-            <name>UserPerson</name>
+            <name>FromAbstractLink</name>
             <type>Link</type>
-            <typelink>Admin_User_Person</typelink>
-            <sqltable>HumanResource_EmployeeSQLTable</sqltable>
-            <sqlcolumn>USERID</sqlcolumn>
+            <typelink>HumanResource_EmployeeAbstract</typelink>
+            <sqltable>HumanResource_HumanResource2HumanResourceAbstractSQLTable</sqltable>
+            <sqlcolumn>FROMID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>ToAbstractLink</name>
+            <type>Link</type>
+            <typelink>HumanResource_EmployeeAbstract</typelink>
+            <sqltable>HumanResource_HumanResource2HumanResourceAbstractSQLTable</sqltable>
+            <sqlcolumn>TOID</sqlcolumn>
         </attribute>
         <attribute>
             <name>Creator</name>
             <type>CreatorLink</type>
-            <sqltable>HumanResource_EmployeeSQLTable</sqltable>
+            <sqltable>HumanResource_HumanResource2HumanResourceAbstractSQLTable</sqltable>
             <sqlcolumn>CREATOR</sqlcolumn>
         </attribute>
         <attribute>
             <name>Created</name>
             <type>Created</type>
-            <sqltable>HumanResource_EmployeeSQLTable</sqltable>
+            <sqltable>HumanResource_HumanResource2HumanResourceAbstractSQLTable</sqltable>
             <sqlcolumn>CREATED</sqlcolumn>
         </attribute>
         <attribute>
             <name>Modifier</name>
             <type>ModifierLink</type>
-            <sqltable>HumanResource_EmployeeSQLTable</sqltable>
+            <sqltable>HumanResource_HumanResource2HumanResourceAbstractSQLTable</sqltable>
             <sqlcolumn>MODIFIER</sqlcolumn>
         </attribute>
         <attribute>
             <name>Modified</name>
             <type>Modified</type>
-            <sqltable>HumanResource_EmployeeSQLTable</sqltable>
+            <sqltable>HumanResource_HumanResource2HumanResourceAbstractSQLTable</sqltable>
             <sqlcolumn>MODIFIED</sqlcolumn>
         </attribute>
     </definition>
