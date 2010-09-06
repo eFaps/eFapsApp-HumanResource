@@ -52,12 +52,33 @@
             <property name="Columns">60</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
         </field>
         <field name="lastName">
             <property name="Attribute">LastName</property>
             <property name="Columns">60</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>
+        <field name="userPerson">
+            <property name="ModeEdit">NONE</property>
+            <property name="ModeView">NONE</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="Attribute">UserPerson</property>
+            <trigger program="org.efaps.esjp.humanresource.Employee"
+                     name="HumanResource_EmployeeForm.userPerson.UI_FIELD_AUTOCOMPLETE"
+                     method="autoComplete4Person"
+                     event="UI_FIELD_AUTOCOMPLETE" />
+        </field>
+        <field name="userPerson4View">
+            <property name="SelectAlternateOID">linkto[UserPerson].oid</property>
+            <property name="Select">linkto[UserPerson].attribute[Name]</property>
+            <property name="Label">HumanResource_Employee/UserPerson.Label</property>
+            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
+            <property name="ModeEdit">READONLY</property>
+            <property name="ModeView">READONLY</property>
+            <property name="ModeCreate">NONE</property>
         </field>
         <field name="createGroup" character="Group">
             <property name="GroupCount">2</property>

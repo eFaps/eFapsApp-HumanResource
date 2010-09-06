@@ -39,6 +39,10 @@
         </target>
         <!-- type tree for -->
         <type>HumanResource_Employee</type>
+        <!-- child -->
+        <childs>
+            <child>HumanResource_EmployeeTree_Superior2Inferior</child>
+        </childs>
         <!-- properties -->
         <property name="Target">content</property>
         <property name="TargetMode">view</property>

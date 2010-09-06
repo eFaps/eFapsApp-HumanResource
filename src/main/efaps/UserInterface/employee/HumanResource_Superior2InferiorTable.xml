@@ -26,41 +26,26 @@
 <ui-table xmlns="http://www.efaps.org/xsd"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>6125f981-baa6-4a22-a4e3-5de320964b91</uuid>
+    <uuid>319ade1b-f6e1-427f-95ba-69301e10017d</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_EmployeeTable</name>
+        <name>HumanResource_Superior2InferiorTable</name>
         <!-- fields -->
         <field name="type">
             <property name="Attribute">Type</property>
-            <property name="Label">HumanResource_EmployeeAbstract/Type.Label</property>
-            <property name="ShowTypeIcon">true</property>
-            <property name="ModeSearch">READONLY</property>
+            <property name="Label">HumanResource_Superior2InferiorTable/Type.Label</property>
         </field>
         <field name="number">
+            <property name="Select">linkto[ToLink].attribute[Number]</property>
+            <property name="Label">HumanResource_Superior2InferiorTable/Number.Label</property>
+        </field>
+        <field name="fullName">
+            <property name="SelectAlternateOID">linkto[ToLink].oid</property>
+            <property name="Phrase">$&lt;linkto[ToLink].attribute[LastName]&gt;, $&lt;linkto[ToLink].attribute[FirstName]&gt; </property>
+            <property name="Label">HumanResource_Superior2InferiorTable/FullName.Label</property>
             <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
-            <property name="Attribute">Number</property>
-            <property name="Label">HumanResource_EmployeeAbstract/Number.Label</property>
-            <property name="ModeSearch">READONLY</property>
-        </field>
-        <field name="firstName">
-            <property name="Attribute">FirstName</property>
-            <property name="Label">HumanResource_EmployeeAbstract/FirstName.Label</property>
-            <property name="ModeSearch">READONLY</property>
-        </field>
-        <field name="lastName">
-            <property name="Attribute">LastName</property>
-            <property name="Label">HumanResource_EmployeeAbstract/LastName.Label</property>
-            <property name="ModeSearch">READONLY</property>
-        </field>
-        <field name="buttonOpenInNewWindow">
-            <icon>eFapsActionNewWindow</icon>
-            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
-            <property name="Target">popup</property>
-            <property name="SortAble">false</property>
-            <property name="Width">15px</property>
         </field>
     </definition>
 </ui-table>
