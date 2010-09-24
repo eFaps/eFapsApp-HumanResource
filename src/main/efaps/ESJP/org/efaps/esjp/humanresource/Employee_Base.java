@@ -137,8 +137,11 @@ public abstract class Employee_Base
             final Map<String, Map<String, String>> tmpMap = new TreeMap<String, Map<String, String>>();
             final QueryBuilder queryBldr = new QueryBuilder(CIAdminUser.Person);
             queryBldr.addWhereAttrMatchValue(CIAdminUser.Person.Name, input + "*").setIgnoreCase(true);
-            final AttributeQuery attrQuery = new QueryBuilder(CIHumanResource.Employee)
-                                                            .getAttributeQuery(CIHumanResource.Employee.UserPerson);
+
+            final QueryBuilder attrQueryBldr = new QueryBuilder(CIHumanResource.Employee);
+            attrQueryBldr.addWhereAttrNotIsNull(CIHumanResource.Employee.UserPerson);
+
+            final AttributeQuery attrQuery = attrQueryBldr.getAttributeQuery(CIHumanResource.Employee.UserPerson);
             queryBldr.addWhereAttrNotInQuery(CIAdminUser.Person.ID, attrQuery);
             final MultiPrintQuery multi = queryBldr.getPrint();
 
