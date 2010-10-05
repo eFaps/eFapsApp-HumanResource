@@ -23,8 +23,8 @@
 
 -->
 
-<datamodel-type  xmlns="http://www.efaps.org/xsd" 
-                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+<datamodel-type  xmlns="http://www.efaps.org/xsd"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>0439a9bf-a293-4986-854e-2de1c4748373</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
@@ -130,6 +130,6 @@
             </attribute>
         </attributeset>
         <classifies type="HumanResource_Employee" relType="HumanResource_Employee2Class"
-                    relLinkAttribute="Employee" relTypeAttribute="ClassTypeId" />
+                    relLinkAttribute="Employee" relTypeAttribute="ClassTypeId" multipleSelect="true"/>
     </definition>
 </datamodel-type>
