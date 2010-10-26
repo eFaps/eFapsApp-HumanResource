@@ -34,6 +34,10 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_EmployeeTree_Superior2Inferior_Menu_Action_AddExisting</name>
+        <access>
+            <role>HumanResource_Admin</role>
+            <role>HumanResource_Modifier</role>
+        </access>
         <!-- target definition -->
         <target>
             <search>HumanResource_EmployeeTree_Superior2Inferior_Menu_Action_AddExisting_Search</search>

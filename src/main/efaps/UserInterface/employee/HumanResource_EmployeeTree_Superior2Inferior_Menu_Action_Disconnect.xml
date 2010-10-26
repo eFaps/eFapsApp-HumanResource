@@ -34,6 +34,10 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_EmployeeTree_Superior2Inferior_Menu_Action_Disconnect</name>
+        <access>
+            <role>HumanResource_Admin</role>
+            <role>HumanResource_Modifier</role>
+        </access>
         <!-- target definitions -->
         <target>
             <execute program="org.efaps.esjp.common.uitable.CommonDelete" />
