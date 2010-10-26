@@ -35,6 +35,7 @@
         <!-- childs -->
         <childs>
             <child>HumanResource_EmployeeTree_Menu_Action_Edit</child>
+            <child>HumanResource_EmployeeTree_Menu_Action_SetPerson</child>
         </childs>
     </definition>
 

@@ -52,19 +52,6 @@ import org.efaps.util.EFapsException;
 public abstract class Employee_Base
 {
     /**
-     * Create a new Employee.
-     *
-     * @param _parameter    Parameter as passed from the eFAPS API
-     * @return new Return
-     * @throws EFapsException on error
-     */
-    public Return create(final Parameter _parameter)
-        throws EFapsException
-    {
-        return new Return();
-    }
-
-    /**
      * Method is executed on an auto-complete event to present a drop-down with
      * employees.
      *
