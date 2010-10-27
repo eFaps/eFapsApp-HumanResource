@@ -60,6 +60,7 @@
             <parent>HumanResource_AttributeAbstract</parent>
             <sqltable>HumanResource_AttributeAbstractSQLTable</sqltable>
             <sqlcolumn>RELID</sqlcolumn>
+            <uuid>23b71d46-f0de-4465-932f-1bf2d9decaa6</uuid>
             <attribute>
                 <name>Description4Phone</name>
                 <type>LinkWithRanges</type>
@@ -85,6 +86,7 @@
             <parent>HumanResource_AttributeAbstract</parent>
             <sqltable>HumanResource_AttributeAbstractSQLTable</sqltable>
             <sqlcolumn>RELID</sqlcolumn>
+            <uuid>f43168ad-2588-465f-887e-c790a5b46bf2</uuid>
             <attribute>
                 <name>Description4Fax</name>
                 <type>LinkWithRanges</type>
@@ -110,6 +112,7 @@
             <parent>HumanResource_AttributeAbstract</parent>
             <sqltable>HumanResource_AttributeAbstractSQLTable</sqltable>
             <sqlcolumn>RELID</sqlcolumn>
+            <uuid>a3468b2c-23eb-4352-87c0-80a44d165db3</uuid>
             <attribute>
                 <name>Description4Email</name>
                 <type>LinkWithRanges</type>
