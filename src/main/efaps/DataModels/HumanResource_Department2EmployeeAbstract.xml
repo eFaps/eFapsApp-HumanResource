@@ -52,7 +52,7 @@
             <sqlcolumn>ID</sqlcolumn>
         </attribute>
         <attribute>
-            <name>DepartmentAbstracttLink</name>
+            <name>DepartmentAbstractLink</name>
             <type>Link</type>
             <typelink>HumanResource_DepartmentAbstract</typelink>
             <sqltable>HumanResource_Department2EmployeeSQLTable</sqltable>

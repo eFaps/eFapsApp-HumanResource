@@ -2,7 +2,7 @@
 
 <!--
 
- Copyright 2003 - 2011 The eFaps Team
+ Copyright 2003 - 2010 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -26,31 +26,31 @@
 <ui-table xmlns="http://www.efaps.org/xsd"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>af71fe2a-3cfe-4275-ab23-2200d010163a</uuid>
+    <uuid>46769563-3028-42ee-905f-a3da8c28b143</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev: 5498 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_DepartmentTable</name>
+        <name>HumanResource_Department2EmployeeTable</name>
         <!-- fields -->
         <field name="type">
             <property name="Attribute">Type</property>
-            <property name="Label">HumanResource_DepartmentAbstract/Type.Label</property>
+            <property name="Label">HumanResource_Department2EmployeeAbstract/Type.Label</property>
             <property name="ShowTypeIcon">true</property>
-            <property name="ModeSearch">READONLY</property>
         </field>
-        <field name="name">
-            <property name="HRef">TREE</property>
-            <property name="Attribute">Name</property>
-            <property name="Label">HumanResource_DepartmentAbstract/Name.Label</property>
-            <property name="ModeSearch">READONLY</property>
-        </field>
-        <field name="buttonOpenInNewWindow">
-            <icon>eFapsActionNewWindow</icon>
+        <field name="number">
             <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
-            <property name="Target">popup</property>
-            <property name="SortAble">false</property>
-            <property name="Width">15px</property>
+            <property name="SelectAlternateOID">linkto[EmployeeAbstractLink].oid</property>
+            <property name="Select">linkto[EmployeeAbstractLink].attribute[Number]</property>
+            <property name="Label">HumanResource_EmployeeAbstract/Number.Label</property>
+        </field>
+        <field name="firstName">
+            <property name="Select">linkto[EmployeeAbstractLink].attribute[FirstName]</property>
+            <property name="Label">HumanResource_EmployeeAbstract/FirstName.Label</property>
+        </field>
+        <field name="lastName">
+            <property name="Select">linkto[EmployeeAbstractLink].attribute[LastName]</property>
+            <property name="Label">HumanResource_EmployeeAbstract/LastName.Label</property>
         </field>
     </definition>
 </ui-table>

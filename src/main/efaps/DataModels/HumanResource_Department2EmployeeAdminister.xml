@@ -34,5 +34,19 @@
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_Department2EmployeeAdminister</name>
         <parent>HumanResource_Department2EmployeeAbstract</parent>
+        <attribute>
+            <name>DepartmentLink</name>
+            <type>Link</type>
+            <typelink>HumanResource_Department</typelink>
+            <sqltable>HumanResource_Department2EmployeeSQLTable</sqltable>
+            <sqlcolumn>DEPTID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>EmployeeLink</name>
+            <type>Link</type>
+            <typelink>HumanResource_Employee</typelink>
+            <sqltable>HumanResource_Department2EmployeeSQLTable</sqltable>
+            <sqlcolumn>EMPLOYEEID</sqlcolumn>
+        </attribute>
     </definition>
 </datamodel-type>

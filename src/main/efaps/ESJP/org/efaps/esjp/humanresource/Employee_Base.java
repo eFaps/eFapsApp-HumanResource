@@ -195,7 +195,7 @@ public abstract class Employee_Base
             final Instance depInst = Instance.get(_parameter.getParameterValue("department"));
             if (depInst != null && depInst.isValid()) {
                 final Insert insert = new Insert(CIHumanResource.Department2EmployeeAdminister);
-                insert.add(CIHumanResource.Department2EmployeeAbstract.DepartmentAbstracttLink, depInst.getId());
+                insert.add(CIHumanResource.Department2EmployeeAbstract.DepartmentAbstractLink, depInst.getId());
                 insert.add(CIHumanResource.Department2EmployeeAbstract.EmployeeAbstractLink, _instance.getId());
                 insert.execute();
             }
