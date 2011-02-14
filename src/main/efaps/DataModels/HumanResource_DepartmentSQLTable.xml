@@ -32,7 +32,7 @@
 
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_DeptSQLTable</name>
+        <name>HumanResource_DepartmentSQLTable</name>
         <typeid-column>TYPEID</typeid-column>
         <database>
             <table-name>T_HRDEPT</table-name>

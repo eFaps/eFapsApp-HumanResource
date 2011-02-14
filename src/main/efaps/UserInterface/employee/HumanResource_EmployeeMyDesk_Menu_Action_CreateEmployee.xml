@@ -39,7 +39,7 @@
         <!-- target definitions -->
         <target>
             <form>HumanResource_EmployeeForm</form>
-            <execute program="org.efaps.esjp.common.uiform.Create" />
+            <execute program="org.efaps.esjp.humanresource.Employee" method="create" />
         </target>
 
         <!-- properties -->

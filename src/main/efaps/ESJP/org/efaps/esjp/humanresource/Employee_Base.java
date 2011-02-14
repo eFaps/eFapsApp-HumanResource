@@ -35,9 +35,12 @@ import org.efaps.admin.program.esjp.EFapsRevision;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.ci.CIAdminUser;
 import org.efaps.db.AttributeQuery;
+import org.efaps.db.Insert;
+import org.efaps.db.Instance;
 import org.efaps.db.MultiPrintQuery;
 import org.efaps.db.QueryBuilder;
 import org.efaps.esjp.ci.CIHumanResource;
+import org.efaps.esjp.common.uiform.Create;
 import org.efaps.util.EFapsException;
 
 
@@ -51,6 +54,30 @@ import org.efaps.util.EFapsException;
 @EFapsRevision("$Rev$")
 public abstract class Employee_Base
 {
+    /**
+     * Method is executed on create event.
+     *
+     * @param _parameter Parameter as passed from the eFaps API.
+     * @return empty Return
+     * @throws EFapsException on error.
+     */
+    public Return create(final Parameter _parameter)
+        throws EFapsException
+    {
+        final EmployeeCreate create = getCreate(_parameter);
+        return create.execute(_parameter);
+    }
+
+    /**
+     * @param _parameter Parameter as passed by the eFaps API
+     * @return new EmployeeCreate
+     */
+    protected EmployeeCreate getCreate(final Parameter _parameter)
+    {
+        return new EmployeeCreate();
+    }
+
+
     /**
      * Method is executed on an auto-complete event to present a drop-down with
      * employees.
@@ -153,5 +180,25 @@ public abstract class Employee_Base
         final Return retVal = new Return();
         retVal.put(ReturnValues.VALUES, list);
         return retVal;
+    }
+
+
+    public class EmployeeCreate
+        extends Create
+    {
+        @Override
+        public void connect(final Parameter _parameter,
+                            final Instance _instance)
+            throws EFapsException
+        {
+            super.connect(_parameter, _instance);
+            final Instance depInst = Instance.get(_parameter.getParameterValue("department"));
+            if (depInst != null && depInst.isValid()) {
+                final Insert insert = new Insert(CIHumanResource.Department2EmployeeAdminister);
+                insert.add(CIHumanResource.Department2EmployeeAbstract.DepartmentAbstracttLink, depInst.getId());
+                insert.add(CIHumanResource.Department2EmployeeAbstract.EmployeeAbstractLink, _instance.getId());
+                insert.execute();
+            }
+        }
     }
 }
