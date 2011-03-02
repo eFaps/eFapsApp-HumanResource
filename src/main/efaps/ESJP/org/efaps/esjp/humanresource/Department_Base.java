@@ -33,7 +33,7 @@ import org.efaps.admin.program.esjp.EFapsUUID;
  */
 @EFapsUUID("05ac1fa2-bafd-433c-8e87-5e5b34bb1a68")
 @EFapsRevision("$Rev$")
-public class Department_Base
+public abstract class Department_Base
 {
 
 }
