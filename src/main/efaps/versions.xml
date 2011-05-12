@@ -72,6 +72,10 @@
             UIUpdate update = new UIUpdate();
             <!-- connect the HumanResource_MyDesk Menu to the main menu from efaps -->
             update.add2Menu("95a2cfe0-92f0-432b-bbfb-6dee6e91a181", "87001cc3-c45c-44de-b8f1-776df507f268", 1);
+
+            <!-- connect the HR_Projects_WorkOrderTree_Employee Menu to the Projects_WorkOrderTree -->
+            update.add2Menu("aca3bb47-9bdc-4106-9233-cc84e4984e1c", "450debe4-df03-4137-abd1-bfc3c8e4b2f1", 1);
+
         </script>
     </version>
 </install>
