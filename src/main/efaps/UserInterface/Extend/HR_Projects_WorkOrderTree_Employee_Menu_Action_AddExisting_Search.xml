@@ -36,11 +36,11 @@
         <name>HR_Projects_WorkOrderTree_Employee_Menu_Action_AddExisting_Search</name>
         <!-- defaults -->
         <default>
-            <command>Projects_WorkOrderSearch</command>
+            <command>HumanResource_EmployeeSearch</command>
         </default>
         <!-- childs -->
         <childs>
-            <child>Projects_WorkOrderSearch</child>
+            <child>HumanResource_EmployeeSearch</child>
         </childs>
     </definition>
 

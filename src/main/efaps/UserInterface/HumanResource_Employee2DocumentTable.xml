@@ -35,25 +35,30 @@
         <!-- fields -->
         <field name="type">
             <property name="Attribute">Type</property>
-            <property name="Label">HumanResource_Employee2DocumentAbstract/Type.Label</property>
+            <property name="Label">HumanResource_EmployeeAbstract/Type.Label</property>
             <property name="ShowTypeIcon">true</property>
-            <property name="FilterType">PickList</property>
+            <property name="ModeSearch">READONLY</property>
         </field>
-        <field name="name">
-            <property name="SelectAlternateOID">linkto[ToAbstractLink].oid</property>
+        <field name="number">
+            <property name="SelectAlternateOID">linkto[FromAbstractLink].oid</property>
+            <property name="Select">linkto[FromAbstractLink].attribute[Number]</property>
             <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
-            <property name="Phrase">$&lt;linkto[ToAbstractLink].type.label&gt; - $&lt;linkto[ToAbstractLink].attribute[Name]&gt;</property>
-            <property name="Label">ERP_DocumentAbstract/Name.Label</property>
+            <property name="Attribute">Number</property>
+            <property name="Label">HumanResource_EmployeeAbstract/Number.Label</property>
+            <property name="ModeSearch">READONLY</property>
+        </field>
+        <field name="firstName">
+            <property name="Attribute">FirstName</property>
+            <property name="SelectAlternateOID">linkto[FromAbstractLink].oid</property>
+            <property name="Select">linkto[FromAbstractLink].attribute[FirstName]</property>
+            <property name="Label">HumanResource_EmployeeAbstract/FirstName.Label</property>
             <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
         </field>
-        <field name="date">
-            <property name="Select">linkto[ToAbstractLink].attribute[Date]</property>
-            <property name="Label">ERP_DocumentAbstract/Date.Label</property>
-        </field>
-        <field name="status">
-            <property name="SelectAlternateOID">linkto[ToAbstractLink].oid</property>
-            <property name="Select">linkto[ToAbstractLink].attribute[StatusAbstract]</property>
-            <property name="Label">ERP_DocumentAbstract/StatusAbstract.Label</property>
+        <field name="lastName">
+            <property name="Attribute">LastName</property>
+            <property name="SelectAlternateOID">linkto[FromAbstractLink].oid</property>
+            <property name="Select">linkto[FromAbstractLink].attribute[LastName]</property>
+            <property name="Label">HumanResource_EmployeeAbstract/LastName.Label</property>
         </field>
         <field name="buttonOpenInNewWindow">
             <icon>eFapsActionNewWindow</icon>
