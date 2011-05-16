@@ -31,7 +31,7 @@
     <file-revision>$Rev: 6404 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_Employee2DocumentTable</name>
+        <name>HumanResource_Document2EmployeeTable</name>
         <!-- fields -->
         <field name="type">
             <property name="Attribute">Type</property>
