@@ -1,0 +1,42 @@
+<wiki:comment>
+@eFapsPackage  org.efaps.wiki.humanresource
+@eFapsUUID      b77ad659-cfe6-4ca3-89e5-0b5f4e0f3643
+@eFapsRevision $Rev: 6527 $
+</wiki:comment>
+
+
+
+
+#summary Recursos humanos
+<wiki:toc max_depth="3"/>
+
+----
+
+El menú de recursos humanos es para poder tener la información completa de todos los empleados que forman parte de la empresa, le facilita además en tener una búsqueda mas dinámica y rápida de los datos de cada personal.
+
+Veremos los siguientes puntos:
+
+  # Crear empleado
+  # Borrar
+  # Exportar
+
+==1. Crear empleado==
+Para poder crear un empleado debe dirigirse a acción y seleccionar crear empleado, inmediatamente le aparecerá la ventana crear empleado en donde usted deberá hacer click en la lupa para poder acceder a la otra ventana en donde elegirá dentro de la clasificación de empleados a un tipo de empleado según la relación que tenga con la empresa, para seleccionar usted deberá hacer un check en el casillero, una vez realizada esta acción retorna a la otra ventana por medio del botón update, la ventana crear empleado mostrará mas campos en los cuales usted deberá ingresar la información correspondiente.
+
+Importancia
+
+Agregar departamento:
+ir al menú Recursos Humanos, dirigirnos a departamentos e ingresar a [http://localhost:8080/intimotors/servlet/help/org.efaps.wiki.sales.Administration.wiki departamentos]. Departamento es el menú el cual nos ayudará a la creación de departamentos.
+
+Agregar datos a clasificación:
+los datos de teléfono, fax y e-mail se agregan con el signo + y el signo – es para eliminar los datos agregados.
+
+Agregar valores:
+Para agregar los valores que se presentan en el distrito, tipo de documento, telefono, fax y e-mail, debe dirigirse a [http://localhost:8080/mn/servlet/help/org.efaps.wiki.contacts.DefinitionAtt.wiki definiciones].
+
+==2. Borrar selecto==
+Seleccionamos uno o varios empleados haciendo check en las casillas, dirigirse a la opción acción y elija borrar selecto.
+
+==3. Exportar==
+Le sirve para poder imprimir una o varias hojas con todos los datos que se encuentran en el menú, en dos tipos de formatos PDF o XLS.
+

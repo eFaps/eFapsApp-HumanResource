@@ -1,0 +1,34 @@
+<wiki:comment>
+@eFapsPackage  org.efaps.wiki.humanresource
+@eFapsUUID      06012a80-2423-422e-ab37-e2b3ea431b56
+@eFapsRevision $Rev: 6527 $
+</wiki:comment>
+
+
+
+
+#summary Definiciones
+<wiki:toc max_depth="3"/>
+
+----
+
+En este Manual de Usuario usted encontrará toda la información necesaria referente a la inicialización y uso del menú definiciones, de manera que usted esté informado de todas las funcionalidades de este menú para que pueda trabajar en toda su potencialidad.
+
+Este documento explica:
+
+  # Crear
+  # Borrar seleccionado(s)
+
+==1. Crear==
+
+  * 1.1 Crear definición de Distrito
+  * 1.2 Crear definición para tipo de documento
+  * 1.3 Crear definición de teléfono
+  * 1.4 Crear definición de email
+  * 1.5 Crear definición de fax
+
+Para realizar la creación de cualquiera de estas opciones usted podrá dirigirse a acción y seleccionar cualquiera de las definiciones que desea crear. En cada caso le aparecerá una nueva ventana en donde ingresará la información correspondiente, en el campo llamado valor.
+
+==2. Borrar seleccionado(s)==
+Debe de escoger una o mas definiciones haciendo un check en las casillas, dirigirse a acción y seleccionar borrar.
+
