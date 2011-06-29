@@ -74,7 +74,7 @@
             update.add2Menu("95a2cfe0-92f0-432b-bbfb-6dee6e91a181", "87001cc3-c45c-44de-b8f1-776df507f268", 1);
 
             <!-- Humanresource_humanresource, Admin_Help_MainMenu -->
-            update.add2Menu("c1d7896b-8a1c-4257-88e1-92c286de61b8", "450debe4-df03-4137-abd1-bfc3c8e4b2f1", 1);
+            update.add2Menu("c1d7896b-8a1c-4257-88e1-92c286de61b8", "dead549e-5cc6-49f9-9a79-8e33aa139f6d", 1);
 
 
         </script>
