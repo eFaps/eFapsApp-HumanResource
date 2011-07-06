@@ -1,6 +1,6 @@
 <wiki:comment>
 @eFapsPackage  org.efaps.wiki.humanresource
-@eFapsUUID      493316b9-62b5-481d-9b00-ebf43b321c24
+@eFapsUUID     493316b9-62b5-481d-9b00-ebf43b321c24
 @eFapsRevision $Rev: 6527 $
 </wiki:comment>
 

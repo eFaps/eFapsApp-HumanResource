@@ -27,10 +27,10 @@
     <file-revision>$Rev: 6527 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Definicion_humanresource</name>
+        <name>Definition_humanresource</name>
         <!-- targets -->
         <target>
-            <wiki>org.efaps.wiki.humanresource.Definicion.wiki</wiki>
+            <wiki>org.efaps.wiki.humanresource.Definition.wiki</wiki>
         </target>
     </definition>
 </help-menu>

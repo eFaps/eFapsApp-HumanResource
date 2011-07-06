@@ -38,7 +38,7 @@
         </target>
         <childs>
             <child>Department_humanresource</child>
-            <child>Definicion_humanresource</child>
+            <child>Definition_humanresource</child>
         </childs>
     </definition>
 </help-menu>
