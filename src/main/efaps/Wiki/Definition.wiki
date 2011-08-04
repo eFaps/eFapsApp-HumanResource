@@ -27,8 +27,8 @@ Este documento explica:
   * 1.4 Crear definición de email
   * 1.5 Crear definición de fax
 
-Para realizar la creación de cualquiera de estas opciones usted podrá dirigirse a acción y seleccionar cualquiera de las definiciones que desea crear. En cada caso le aparecerá una nueva ventana en donde ingresará la información correspondiente, en el campo llamado valor.
+Para realizar la creación de cualquiera de estas definiciones, tendrá que dirigirse a la opción acción y seleccionar un tipo de definición. En el proceso de creación le aparecerá una nueva ventana en donde ingresará la información correspondiente, en el campo valor.
 
 ==2. Borrar seleccionado(s)==
-Debe de escoger una o mas definiciones haciendo un check en las casillas, dirigirse a acción y seleccionar borrar.
+Seleccionar una o mas definiciones haciendo un check en sus casillas, dirigirse a la opción acción y escoger borrar.
 

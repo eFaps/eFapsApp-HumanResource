@@ -1,0 +1,115 @@
+<wiki:comment>
+@eFapsPackage  org.efaps.wiki.humanresource
+@eFapsUUID     d766da3e-6248-4400-be04-ad2a1bc15852
+@eFapsRevision $Rev: 6527 $
+</wiki:comment>
+
+
+
+
+#summary Acceso a Recursos Humanos
+<wiki:toc max_depth="3"/>
+
+----
+
+En este Manual de Usuario usted encontrará toda la información necesaria al momento de ingresar a un empleado, a una definición y a un departamento, de tal manera que usted esté informado de todas las funcionalidades y pueda trabajar en toda su potencialidad.
+
+Este documento explica:
+
+  # Acceso a empleados
+  # Acceso a Definiciones
+  # Acceso a departamentos
+
+==1. Acceso a empleados==
+
+|| *Tipo* || *Número* || *Nombres* || *Apellidos* ||
+|| Empleado ||  *00522468* || Alicia || Pinedo  ||
+
+Se ingresa a un empleado por la palabra mas resaltada, a continuación veremos los siguientes puntos:
+
+  * 1.1 Editar
+  * 1.2 Editar usuario
+  * 1.3 Exportar
+  * 1.4 Superior – Inferior
+
+===1.1 Editar===
+Para editar un empleado debe dirigirse a la opción acción y seleccionar editar, inmediatamente le aparecerá la ventana *editar empleado: Detalles* en
+donde podrá editar la mayoría de los datos ingresados anteriormente, una vez finalizado el proceso deberá actualizar.
+
+===1.2 Editar usuario===
+Para editar usuario de un empleado debe dirigirse a la opción acción y seleccionar editar usuario, inmediatamente le aparecerá la ventana *editar usuario* en
+donde podrá reemplazar el usuario actual por otro.
+
+Para llamar al usuario debe colocar el nombre de usuario o solo {{{*}}}(le aparecerá la lista completa de usuarios).
+
+===1.3 Exportar===
+Sirve para poder imprimir una o varias hojas con todos los datos que se encuentran en el menú, en dos tipos de formato PDF o XLS.
+
+===1.4 Superior-Inferior===
+Verá los siguientes puntos:
+
+  * 1.4.1 Agregar existente
+  * 1.4.2 Desconectar
+
+====1.4.1 Agregar existente====
+Para agregar un empleado deberá dirigirse a la opción acción y seleccionar agregar existente, inmediatamente le aparecerá la ventana *Búsqueda de empleados* en donde ingresará el nombre ó apellido del empleado(colocar {{{*}}} al final de la información), pero también puede colocar solo {{{*}}} en ambos campos(le aparecerá la lista completa de empleados).
+
+Para seleccionar al empleado de la lista deberá hacer un check en su casilla correspondiente e interconectar.
+
+====1.4.2 Desconectar====
+
+Seleccionar uno o varios empleados haciendo un check en sus casillas, dirigirse a la opción acción y elegir
+desconectar.
+
+
+==2. Acceso a Definiciones==
+
+|| *Tipo* || *Valor* ||
+|| Definición de distrito ||  *San Borja* ||
+
+Ingresar por la palabra mas resaltada, a continuación le mostraremos los siguientes puntos:
+
+  * 2.1 Editar
+  * 2.2 Exportar
+
+===2.1 Editar===
+Para editar una definición debe dirigirse a la opción acción y seleccionar editar, inmediatamente le aparecerá una ventana nueva en
+donde podrá editar el valor de la defición.
+
+===2.2 Exportar===
+Sirve para poder imprimir una o varias hojas con todos los datos que se encuentran en el menú, en dos tipos de formato PDF o XLS.
+
+
+==3. Acceso a departamentos==
+
+|| *Tipo* || *Name* ||
+|| Departamento ||  *Administración* ||
+
+Ingresar por la palabra mas resaltada, a continuación le mostraremos los siguientes puntos:
+
+  * 3.1 Editar
+  * 3.2 Exportar
+  * 3.3 Empleados
+
+===3.1 Editar===
+Para editar un departamento debe dirigirse a la opción acción y seleccionar editar, inmediatamente le aparecerá la ventana *editar* en
+donde podrá editar el campo name del departamento.
+
+===3.2 Exportar===
+Sirve para poder imprimir una o varias hojas con todos los datos que se encuentran en el menú, en dos tipos de formato PDF o XLS.
+
+===3.3 Empleados===
+Mostraremos los siguientes puntos:
+
+  * 3.3.1 Agregar existente(Administrativo)
+  * 3.3.2 Desconectar
+
+====3.3.1 Agregar existente(Administrativo)====
+Para agregar un empleado deberá dirigirse a la opción acción y seleccionar agregar existente(Administrativo), inmediatamente le aparecerá la ventana *Búsqueda de empleados* en donde ingresará el nombre ó apellido del empleado(colocar {{{*}}} al final de la información), pero también puede colocar solo {{{*}}} en ambos campos(le aparecerá la lista completa de empleados).
+
+Para seleccionar al empleado de la lista deberá hacer un check en su casilla correspondiente e interconectar.
+
+====3.3.2 Desconectar====
+
+Seleccionar uno o varios empleados haciendo un check en sus casillas, dirigirse a la opción acción y elegir
+desconectar.

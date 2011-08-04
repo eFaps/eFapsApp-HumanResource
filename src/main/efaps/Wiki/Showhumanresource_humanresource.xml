@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
   Copyright 2003 - 2010 The eFaps Team
 
@@ -21,25 +19,18 @@
   Last Changed:    $Date: 2011-05-12 16:36:19 -0500 (jue, 12 may 2011) $
   Last Changed By: $Author: melissa.rojas@moxter.net $
 
--->
-
-<help-menu xmlns="http://www.efaps.org/xsd"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>c1d7896b-8a1c-4257-88e1-92c286de61b8</uuid>
+--><help-menu xmlns="http://www.efaps.org/xsd"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>20d7da82-0332-4820-8302-cd6ec4c471b4</uuid>
     <file-application>eFapsApp-humanresource</file-application>
     <file-revision>$Rev: 6527 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Humanresource_humanresource</name>
+        <name>Showhumanresource_humanresource</name>
         <!-- targets -->
         <target>
-            <wiki>org.efaps.wiki.humanresource.Humanresource.wiki</wiki>
+            <wiki>org.efaps.wiki.humanresource.Showhumanresource.wiki</wiki>
         </target>
-        <childs>
-            <child>Department_humanresource</child>
-            <child>Definition_humanresource</child>
-            <child>Showhumanresource_humanresource</child>
-        </childs>
     </definition>
 </help-menu>
