@@ -74,7 +74,7 @@ Ingresar por la palabra mas resaltada, a continuación le mostraremos los siguie
 
 ===2.1 Editar===
 Para editar una definición debe dirigirse a la opción acción y seleccionar editar, inmediatamente le aparecerá una ventana nueva en
-donde podrá editar el valor de la defición.
+donde podrá editar el valor de la definición.
 
 ===2.2 Exportar===
 Sirve para poder imprimir una o varias hojas con todos los datos que se encuentran en el menú, en dos tipos de formato PDF o XLS.
