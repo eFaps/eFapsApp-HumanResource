@@ -37,7 +37,7 @@
         <attribute>
             <name>ToLink</name>
             <type>Link</type>
-            <typelink>Projects_WorkOrder</typelink>
+            <typelink>ERP_DocumentAbstract</typelink>
             <sqltable>HumanResource_Employee2DocumentSQLTable</sqltable>
             <sqlcolumn>TOID</sqlcolumn>
         </attribute>
