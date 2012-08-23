@@ -28,17 +28,19 @@
         <name>HumanResource_Employee2DocumentTable</name>
         <!-- fields -->
         <field name="type">
+            <property name="FilterType">PICKER</property>
             <property name="Attribute">Type</property>
             <property name="Label">HumanResource_Employee2DocumentTable.type.Label</property>
         </field>
         <field name="name">
             <property name="SelectAlternateOID">linkto[ToAbstractLink].oid</property>
-            <property name="Select">linkto[ToAbstractLink].attribute[Name]</property>
+            <property name="Phrase">$&lt;linkto[ToAbstractLink].type.label&gt; - $&lt;linkto[ToAbstractLink].attribute[Name]&gt;</property>
             <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
             <property name="Label">HumanResource_Employee2DocumentTableName.name.Label</property>
         </field>
         <field name="statusAbstract">
-            <property name="Select">linkto[ToAbstractLink].attribute[Name]</property>
+            <property name="FilterType">PICKER</property>
+            <property name="Select">linkto[ToAbstractLink].attribute[Status]</property>
             <property name="Label">HumanResource_Employee2DocumentTableName.statusAbstract.Label</property>
         </field>
     </definition>
