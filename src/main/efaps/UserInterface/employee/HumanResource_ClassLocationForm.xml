@@ -62,5 +62,38 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
         </field>
+        <field name="additionalData" character="Heading">
+            <property name="Level">2</property>
+            <property name="Label">HumanResource_ClassLocationForm.additionalData.Heading</property>
+            <property name="ModeCreate">READONLY</property>
+            <property name="ModeEdit">READONLY</property>
+        </field>
+        <field name="startDate">
+            <property name="Attribute">StartDate</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>
+        <field name="laborSystem">
+            <property name="Columns">15</property>
+            <property name="Attribute">LaborSystem</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>
+        <field name="afp">
+            <property name="Columns">15</property>
+            <property name="Attribute">Afp</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>
+        <field name="cuspp">
+            <property name="Columns">15</property>
+            <property name="Attribute">Cuspp</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>
     </definition>
 </ui-form>
