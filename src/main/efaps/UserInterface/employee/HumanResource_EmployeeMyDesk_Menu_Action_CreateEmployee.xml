@@ -39,7 +39,10 @@
         <!-- target definitions -->
         <target>
             <form>HumanResource_EmployeeForm</form>
-            <execute program="org.efaps.esjp.humanresource.Employee" method="create" />
+            <execute program="org.efaps.esjp.humanresource.Employee" method="create" >
+            	<property name="StatusGroup">HumanResource_EmployeeStatus</property>
+            	<property name="Status">Worker</property>
+            </execute>
         </target>
 
         <!-- properties -->
