@@ -34,5 +34,15 @@
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_Employee</name>
         <parent>HumanResource_EmployeeAbstract</parent>
+        <attribute>
+            <name>Status</name>
+            <type>Status</type>
+            <typelink>HumanResource_EmployeeStatus</typelink>
+            <sqltable>HumanResource_EmployeeSQLTable</sqltable>
+            <sqlcolumn>STATUS</sqlcolumn>
+            <trigger program="org.efaps.esjp.admin.datamodel.StatusValue"
+                name="HumanResource_Employee.Status.RANGE_VALUE" event="RANGE_VALUE">
+            </trigger>
+        </attribute>
     </definition>
 </datamodel-type>
