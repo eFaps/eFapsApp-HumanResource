@@ -37,12 +37,12 @@
             <role>HumanResource_Admin</role>
         </access>
         <target>
-            <form>HumanResource_AttributeDefinitionAbstractForm</form>
+            <form>ERP_AttributeDefinitionForm</form>
             <execute program="org.efaps.esjp.common.uiform.Create" />
         </target>
         <!-- properties -->
         <property name="Target">modal</property>
-        <property name="TargetCreateType">HumanResource_AttributeDefinitionDocumentType</property>
+        <property name="TargetCreateType">HumanResource_AttributeDefinitionNumberType</property>
         <property name="TargetMode">create</property>
     </definition>
 </ui-command>

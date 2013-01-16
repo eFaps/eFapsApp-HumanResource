@@ -65,6 +65,19 @@
             <sqlcolumn>NUMBER</sqlcolumn>
         </attribute>
         <attribute>
+            <name>NumberTypeLink</name>
+            <type>LinkWithRanges</type>
+            <typelink>HumanResource_AttributeDefinitionNumberType</typelink>
+            <sqltable>HumanResource_EmployeeSQLTable</sqltable>
+            <sqlcolumn>NUMTYPEID</sqlcolumn>
+            <trigger name="HumanResource_EmployeeAbstract.NumberTypeLink.RANGE_VALUE"
+                     event="RANGE_VALUE"
+                     program="org.efaps.esjp.admin.datamodel.RangesValue">
+                <property name="Value">$&lt;attribute[Value]&gt; - $&lt;attribute[Description]&gt;</property>
+                <property name="Type">HumanResource_AttributeDefinitionNumberType</property>
+            </trigger>
+            </attribute>
+        <attribute>
             <name>FirstName</name>
             <type>String</type>
             <sqltable>HumanResource_EmployeeSQLTable</sqltable>
