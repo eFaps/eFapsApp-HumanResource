@@ -31,7 +31,7 @@
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateDocumentType</name>
+        <name>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateNumberType</name>
         <!-- target definitions -->
         <access>
             <role>HumanResource_Admin</role>

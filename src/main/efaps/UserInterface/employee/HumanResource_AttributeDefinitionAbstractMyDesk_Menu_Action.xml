@@ -34,7 +34,7 @@
         <name>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action</name>
         <childs>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateDistrict</child>
-            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateDocumentType</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateNumberType</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreatePhone</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateEmail</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateFax</child>
