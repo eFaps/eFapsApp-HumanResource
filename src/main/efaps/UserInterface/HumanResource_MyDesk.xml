@@ -35,7 +35,6 @@
         <childs>
             <child>HumanResource_EmployeeMyDesk</child>
             <child>HumanResource_DepartmentMyDesk</child>
-            <child>HumanResource_AttributeDefinitionAbstractMyDesk</child>
         </childs>
     </definition>
 </ui-menu>

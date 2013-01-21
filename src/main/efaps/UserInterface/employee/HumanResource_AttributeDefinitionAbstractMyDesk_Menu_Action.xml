@@ -38,7 +38,6 @@
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreatePhone</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateEmail</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateFax</child>
-            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_Delete</child>
         </childs>
     </definition>
 </ui-menu>
