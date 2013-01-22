@@ -28,7 +28,7 @@
         <name>HumanResource_Employee2DocumentTable</name>
         <!-- fields -->
         <field name="type">
-            <property name="FilterType">PICKER</property>
+            <property name="FilterType">PICKLIST</property>
             <property name="Attribute">Type</property>
             <property name="Label">HumanResource_Employee2DocumentTable.type.Label</property>
         </field>
@@ -39,7 +39,7 @@
             <property name="Label">HumanResource_Employee2DocumentTableName.name.Label</property>
         </field>
         <field name="statusAbstract">
-            <property name="FilterType">PICKER</property>
+            <property name="FilterType">PICKLIST</property>
             <property name="Select">linkto[ToAbstractLink].attribute[Status]</property>
             <property name="Label">HumanResource_Employee2DocumentTableName.statusAbstract.Label</property>
         </field>
