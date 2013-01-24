@@ -56,6 +56,7 @@
             <property name="ModeSearch">READONLY</property>
         </field>
         <field name="status">
+            <property name="FilterType">PICKLIST</property>
             <property name="Attribute">Status</property>
             <property name="Label">HumanResource_EmployeeAbstract/Status.Label</property>
             <property name="ModeSearch">READONLY</property>
