@@ -41,6 +41,8 @@ import org.efaps.db.MultiPrintQuery;
 import org.efaps.db.QueryBuilder;
 import org.efaps.esjp.ci.CIHumanResource;
 import org.efaps.esjp.common.uiform.Create;
+import org.efaps.esjp.common.uitable.MultiPrint;
+import org.efaps.ui.wicket.util.EFapsKey;
 import org.efaps.util.EFapsException;
 
 
@@ -96,14 +98,23 @@ public abstract class Employee_Base
         if (input.length() > 0) {
             final boolean nameSearch = Character.isDigit(input.charAt(0));
             final Map<String, Map<String, String>> tmpMap = new TreeMap<String, Map<String, String>>();
-            final QueryBuilder queryBld = new QueryBuilder(CIHumanResource.EmployeeAbstract);
-            if (nameSearch) {
-                queryBld.addWhereAttrMatchValue(CIHumanResource.EmployeeAbstract.Number, input + "*");
-            } else {
-                queryBld.addWhereAttrMatchValue(CIHumanResource.EmployeeAbstract.LastName, input + "*")
-                        .setIgnoreCase(true);
-            }
-            final MultiPrintQuery print = queryBld.getPrint();
+
+            final MultiPrint multi = new MultiPrint() {
+                @Override
+                protected void add2QueryBldr(final Parameter _parameter,
+                                             final QueryBuilder _queryBldr)
+                    throws EFapsException
+                {
+                    if (nameSearch) {
+                        _queryBldr.addWhereAttrMatchValue(CIHumanResource.EmployeeAbstract.Number, input + "*");
+                    } else {
+                        _queryBldr.addWhereAttrMatchValue(CIHumanResource.EmployeeAbstract.LastName, input + "*")
+                                .setIgnoreCase(true);
+                    }
+                }
+            };
+
+            final MultiPrintQuery print = new MultiPrintQuery( multi.getInstances(_parameter));
             print.addAttribute(CIHumanResource.EmployeeAbstract.OID,
                                CIHumanResource.EmployeeAbstract.Number,
                                CIHumanResource.EmployeeAbstract.FirstName,
@@ -117,14 +128,14 @@ public abstract class Employee_Base
                 final String oid = print.<String>getAttribute(CIHumanResource.EmployeeAbstract.OID);
                 final String choice = nameSearch ? number + "- " +  dataemployee : dataemployee + " - " + number;
                 final Map<String, String> map = new HashMap<String, String>();
-                map.put("eFapsAutoCompleteKEY", oid);
-                map.put("eFapsAutoCompleteCHOICE", choice);
+                map.put(EFapsKey.AUTOCOMPLETE_KEY.getKey(), oid);
+                map.put(EFapsKey.AUTOCOMPLETE_CHOICE.getKey(), choice);
                 if (key == null || key.isEmpty()) {
                     map.put("FirstName", firstname);
                     map.put("LastName", lastname);
-                    map.put("eFapsAutoCompleteVALUE", number);
+                    map.put(EFapsKey.AUTOCOMPLETE_VALUE.getKey(), number);
                 } else {
-                    map.put("eFapsAutoCompleteVALUE", dataemployee);
+                    map.put(EFapsKey.AUTOCOMPLETE_VALUE.getKey(), dataemployee);
                 }
                 tmpMap.put(choice, map);
             }
