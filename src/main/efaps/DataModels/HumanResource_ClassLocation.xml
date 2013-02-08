@@ -73,29 +73,5 @@
             <sqltable>HumanResource_ClassLocationSQLTable</sqltable>
             <sqlcolumn>ZIP</sqlcolumn>
         </attribute>
-        <attribute>
-            <name>StartDate</name>
-            <type>Date</type>
-            <sqltable>HumanResource_ClassLocationSQLTable</sqltable>
-            <sqlcolumn>STDATE</sqlcolumn>
-        </attribute>
-        <attribute>
-            <name>LaborSystem</name>
-            <type>String</type>
-            <sqltable>HumanResource_ClassLocationSQLTable</sqltable>
-            <sqlcolumn>LABSYS</sqlcolumn>
-        </attribute>
-        <attribute>
-            <name>Afp</name>
-            <type>String</type>
-            <sqltable>HumanResource_ClassLocationSQLTable</sqltable>
-            <sqlcolumn>AFP</sqlcolumn>
-        </attribute>
-        <attribute>
-            <name>Cuspp</name>
-            <type>String</type>
-            <sqltable>HumanResource_ClassLocationSQLTable</sqltable>
-            <sqlcolumn>CUSSPP</sqlcolumn>
-        </attribute>
     </definition>
 </datamodel-type>

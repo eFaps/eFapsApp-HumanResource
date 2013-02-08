@@ -132,6 +132,18 @@
                 <sqlcolumn>VALUE</sqlcolumn>
             </attribute>
         </attributeset>
+        <attribute>
+            <name>BirthDate</name>
+            <type>Date</type>
+            <sqltable>HumanResource_ClassSQLTable</sqltable>
+            <sqlcolumn>BIRTHDATE</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>EntryDate</name>
+            <type>Date</type>
+            <sqltable>HumanResource_ClassSQLTable</sqltable>
+            <sqlcolumn>ENTRYDATE</sqlcolumn>
+        </attribute>
         <classifies type="HumanResource_Employee" relType="HumanResource_Employee2Class"
                     relLinkAttribute="Employee" relTypeAttribute="ClassTypeId" multipleSelect="true"/>
     </definition>

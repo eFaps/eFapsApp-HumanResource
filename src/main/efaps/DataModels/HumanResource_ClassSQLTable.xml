@@ -23,8 +23,8 @@
 
 -->
 
-<datamodel-sqltable  xmlns="http://www.efaps.org/xsd" 
-                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+<datamodel-sqltable  xmlns="http://www.efaps.org/xsd"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                      xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>a1985173-7dd7-4f38-b871-31369717019c</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
@@ -35,7 +35,9 @@
         <database>
             <table-name>T_HRCLASS</table-name>
             <!-- columns -->
-            <column name="HUMANRESOURCEID" type="INTEGER" not-null="true" />
+            <column name="HUMANRESOURCEID" type="INTEGER"      not-null="true" />
+            <column name="ENTRYDATE"       type="DATETIME"     not-null="true"/>
+            <column name="BIRTHDATE"       type="DATETIME"     not-null="true"/>
             <foreign name="T_HRCLASS_FK_HUMANRESOURCEID" key="HUMANRESOURCEID" reference="T_HREMPLOYEE(ID)" />
         </database>
     </definition>
