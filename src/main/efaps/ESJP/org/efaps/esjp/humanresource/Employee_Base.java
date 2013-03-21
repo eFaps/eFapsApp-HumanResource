@@ -41,7 +41,6 @@ import org.efaps.db.MultiPrintQuery;
 import org.efaps.db.QueryBuilder;
 import org.efaps.esjp.ci.CIHumanResource;
 import org.efaps.esjp.common.uiform.Create;
-import org.efaps.esjp.common.uitable.MultiPrint;
 import org.efaps.ui.wicket.util.EFapsKey;
 import org.efaps.util.EFapsException;
 
@@ -96,25 +95,18 @@ public abstract class Employee_Base
         final Map<?, ?> properties = (Map<?, ?>) _parameter.get(ParameterValues.PROPERTIES);
         final String key = (String) properties.get("keyValue");
         if (input.length() > 0) {
+            final QueryBuilder queryBldr = new QueryBuilder(CIHumanResource.EmployeeAbstract);
             final boolean nameSearch = Character.isDigit(input.charAt(0));
             final Map<String, Map<String, String>> tmpMap = new TreeMap<String, Map<String, String>>();
 
-            final MultiPrint multi = new MultiPrint() {
-                @Override
-                protected void add2QueryBldr(final Parameter _parameter,
-                                             final QueryBuilder _queryBldr)
-                    throws EFapsException
-                {
-                    if (nameSearch) {
-                        _queryBldr.addWhereAttrMatchValue(CIHumanResource.EmployeeAbstract.Number, input + "*");
-                    } else {
-                        _queryBldr.addWhereAttrMatchValue(CIHumanResource.EmployeeAbstract.LastName, input + "*")
+            if (nameSearch) {
+                queryBldr.addWhereAttrMatchValue(CIHumanResource.EmployeeAbstract.Number, input + "*");
+            } else {
+                queryBldr.addWhereAttrMatchValue(CIHumanResource.EmployeeAbstract.LastName, input + "*")
                                 .setIgnoreCase(true);
-                    }
-                }
-            };
+            }
 
-            final MultiPrintQuery print = new MultiPrintQuery( multi.getInstances(_parameter));
+            final MultiPrintQuery print = queryBldr.getPrint();
             print.addAttribute(CIHumanResource.EmployeeAbstract.OID,
                                CIHumanResource.EmployeeAbstract.Number,
                                CIHumanResource.EmployeeAbstract.FirstName,
