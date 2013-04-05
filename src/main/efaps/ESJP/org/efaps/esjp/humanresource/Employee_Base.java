@@ -1,5 +1,5 @@
 /*
-  * Copyright 2003 - 2010 The eFaps Team
+ * Copyright 2003 - 2013 The eFaps Team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,6 +27,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+import org.efaps.admin.datamodel.Classification;
+import org.efaps.admin.datamodel.Type;
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Parameter.ParameterValues;
 import org.efaps.admin.event.Return;
@@ -94,8 +96,22 @@ public abstract class Employee_Base
         final List<Map<String, String>> list = new ArrayList<Map<String, String>>();
         final Map<?, ?> properties = (Map<?, ?>) _parameter.get(ParameterValues.PROPERTIES);
         final String key = (String) properties.get("keyValue");
+        final String classesStr = (String) properties.get("Classifications");
+        String[] classes = new String[0];
+        if (classesStr != null) {
+            classes = classesStr.split(";");
+        }
+
         if (input.length() > 0) {
             final QueryBuilder queryBldr = new QueryBuilder(CIHumanResource.EmployeeAbstract);
+            if (classes.length > 0) {
+                final Classification[] classTypes = new Classification[classes.length];
+                for (int i = 0; i < classes.length; i++) {
+                    classTypes[i] = (Classification) Type.get(classes[i]);
+                }
+                queryBldr.addWhereClassification(classTypes);
+            }
+
             final boolean nameSearch = Character.isDigit(input.charAt(0));
             final Map<String, Map<String, String>> tmpMap = new TreeMap<String, Map<String, String>>();
 
