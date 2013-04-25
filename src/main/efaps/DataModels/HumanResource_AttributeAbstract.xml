@@ -23,8 +23,8 @@
 
 -->
 
-<datamodel-type  xmlns="http://www.efaps.org/xsd" 
-                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+<datamodel-type  xmlns="http://www.efaps.org/xsd"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>b6c50d5c-da6d-4187-9e53-64b82eb24993</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
@@ -32,6 +32,7 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_AttributeAbstract</name>
+        <purpose abstract="true"/>
         <attribute>
             <name>Type</name>
             <type>Type</type>

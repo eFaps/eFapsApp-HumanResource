@@ -33,5 +33,6 @@
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_AttributeDefinitionAbstract</name>
         <parent>ERP_AttributeDefinitionAbstract</parent>
+        <purpose abstract="true"/>
     </definition>
 </datamodel-type>
