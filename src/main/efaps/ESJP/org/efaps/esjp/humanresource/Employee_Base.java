@@ -141,7 +141,7 @@ public abstract class Employee_Base
                 if (key == null || key.isEmpty()) {
                     map.put("FirstName", firstname);
                     map.put("LastName", lastname);
-                    map.put(EFapsKey.AUTOCOMPLETE_VALUE.getKey(), number);
+                    map.put(EFapsKey.AUTOCOMPLETE_VALUE.getKey(), dataemployee);
                 } else {
                     map.put(EFapsKey.AUTOCOMPLETE_VALUE.getKey(), dataemployee);
                 }
