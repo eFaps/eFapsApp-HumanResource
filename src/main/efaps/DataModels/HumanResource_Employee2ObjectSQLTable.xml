@@ -38,9 +38,9 @@
             <column name="MODIFIER" not-null="true" type="INTEGER"/>
             <column name="MODIFIED" not-null="true" type="DATETIME"/>
             <!-- foreign keys -->
-            <foreign key="FROMID" name="T_HREMPLOYEE2DOC_FK_FROMID" reference="T_HREMPLOYEE(ID)"/>
-            <foreign key="CREATOR" name="T_HREMPLOYEE2DOC_FK_CRTR" reference="T_USERPERSON(ID)"/>
-            <foreign key="MODIFIER" name="T_HREMPLOYEE2DOC_FK_MDFR" reference="T_USERPERSON(ID)"/>
+            <foreign key="FROMID" name="T_HREMPLOYEE2OBJ_FK_FROMID" reference="T_HREMPLOYEE(ID)"/>
+            <foreign key="CREATOR" name="T_HREMPLOYEE2OBJ_FK_CRTR" reference="T_USERPERSON(ID)"/>
+            <foreign key="MODIFIER" name="T_HREMPLOYEE2OBJ_FK_MDFR" reference="T_USERPERSON(ID)"/>
         </database>
     </definition>
 </datamodel-sqltable>
