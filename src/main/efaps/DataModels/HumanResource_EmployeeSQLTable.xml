@@ -43,6 +43,7 @@
             <column name="NUMTYPEID"    type="INTEGER"/>
             <column name="FIRSTNAME"    type="STRING_SHORT" not-null="true" length="255" />
             <column name="LASTNAME"     type="STRING_SHORT" not-null="true" length="255" />
+            <column name="SECLASTNAME"  type="STRING_SHORT"                 length="255" />
             <column name="USERID"       type="INTEGER"      />
             <column name="STATUS"       type="INTEGER"      />
             <column name="CREATOR"      type="INTEGER"      not-null="true" />

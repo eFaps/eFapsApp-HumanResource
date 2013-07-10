@@ -90,6 +90,12 @@
             <sqlcolumn>LASTNAME</sqlcolumn>
         </attribute>
         <attribute>
+            <name>SecondLastName</name>
+            <type>String</type>
+            <sqltable>HumanResource_EmployeeSQLTable</sqltable>
+            <sqlcolumn>SECLASTNAME</sqlcolumn>
+        </attribute>
+        <attribute>
             <name>UserPerson</name>
             <type>Link</type>
             <typelink>Admin_User_Person</typelink>

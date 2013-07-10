@@ -49,7 +49,7 @@
             <property name="Label">HumanResource_EmployeeAbstract/FirstName.Label</property>
         </field>
         <field name="lastName">
-            <property name="Select">linkto[EmployeeAbstractLink].attribute[LastName]</property>
+            <property name="Phrase">$&lt;linkto[EmployeeAbstractLink].attribute[LastName]&gt; $&lt;linkto[EmployeeAbstractLink].attribute[SecondLastName]&gt;</property>
             <property name="Label">HumanResource_EmployeeAbstract/LastName.Label</property>
         </field>
     </definition>

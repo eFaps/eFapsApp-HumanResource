@@ -57,7 +57,7 @@
         <field name="lastName">
             <property name="Attribute">LastName</property>
             <property name="SelectAlternateOID">linkto[FromAbstractLink].oid</property>
-            <property name="Select">linkto[FromAbstractLink].attribute[LastName]</property>
+            <property name="Phrase">$&lt;linkto[FromAbstractLink].attribute[LastName]&gt; $&lt;linkto[FromAbstractLink].attribute[SecondLastName]&gt;</property>
             <property name="Label">HumanResource_EmployeeAbstract/LastName.Label</property>
         </field>
         <field name="buttonOpenInNewWindow">

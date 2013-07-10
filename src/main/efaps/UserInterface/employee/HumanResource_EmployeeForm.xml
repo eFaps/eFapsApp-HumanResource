@@ -62,6 +62,13 @@
             <property name="ModeSearch">EDITABLE</property>
             <property name="Required">true</property>
         </field>
+        <field name="secondLastName">
+            <property name="Attribute">SecondLastName</property>
+            <property name="Columns">60</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>
         <field name="status">
             <property name="Attribute">Status</property>
             <property name="ModeEdit">EDITABLE</property>

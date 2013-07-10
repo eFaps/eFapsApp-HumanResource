@@ -126,13 +126,15 @@ public abstract class Employee_Base
             print.addAttribute(CIHumanResource.EmployeeAbstract.OID,
                                CIHumanResource.EmployeeAbstract.Number,
                                CIHumanResource.EmployeeAbstract.FirstName,
-                               CIHumanResource.EmployeeAbstract.LastName);
+                               CIHumanResource.EmployeeAbstract.LastName,
+                               CIHumanResource.EmployeeAbstract.SecondLastName);
             print.execute();
             while (print.next()) {
                 final String number = print.<String>getAttribute(CIHumanResource.EmployeeAbstract.Number);
                 final String firstname = print.<String>getAttribute(CIHumanResource.EmployeeAbstract.FirstName);
                 final String lastname = print.<String>getAttribute(CIHumanResource.EmployeeAbstract.LastName);
-                final String dataemployee = lastname + ", " + firstname;
+                final String secondLastname = print.<String>getAttribute(CIHumanResource.EmployeeAbstract.SecondLastName);
+                final String dataemployee = lastname + " " + secondLastname + ", " + firstname;
                 final String oid = print.<String>getAttribute(CIHumanResource.EmployeeAbstract.OID);
                 final String choice = nameSearch ? number + "- " +  dataemployee : dataemployee + " - " + number;
                 final Map<String, String> map = new HashMap<String, String>();
@@ -141,6 +143,7 @@ public abstract class Employee_Base
                 if (key == null || key.isEmpty()) {
                     map.put("FirstName", firstname);
                     map.put("LastName", lastname);
+                    map.put("SecondLastName", secondLastname);
                     map.put(EFapsKey.AUTOCOMPLETE_VALUE.getKey(), dataemployee);
                 } else {
                     map.put(EFapsKey.AUTOCOMPLETE_VALUE.getKey(), dataemployee);

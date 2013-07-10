@@ -43,7 +43,7 @@
         </field>
         <field name="fullName">
             <property name="SelectAlternateOID">linkto[ToLink].oid</property>
-            <property name="Phrase">$&lt;linkto[ToLink].attribute[LastName]&gt;, $&lt;linkto[ToLink].attribute[FirstName]&gt; </property>
+            <property name="Phrase">$&lt;linkto[ToLink].attribute[LastName]&gt; $&lt;linkto[ToLink].attribute[SecondLastName]&gt;, $&lt;linkto[ToLink].attribute[FirstName]&gt; </property>
             <property name="Label">HumanResource_Superior2InferiorTable/FullName.Label</property>
             <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
         </field>

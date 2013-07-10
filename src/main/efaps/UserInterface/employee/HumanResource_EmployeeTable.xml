@@ -55,6 +55,11 @@
             <property name="Label">HumanResource_EmployeeAbstract/LastName.Label</property>
             <property name="ModeSearch">READONLY</property>
         </field>
+        <field name="secondLastName">
+            <property name="Attribute">SecondLastName</property>
+            <property name="Label">HumanResource_EmployeeAbstract/SecondLastName.Label</property>
+            <property name="ModeSearch">READONLY</property>
+        </field>
         <field name="status">
             <property name="FilterType">PICKLIST</property>
             <property name="Attribute">Status</property>
