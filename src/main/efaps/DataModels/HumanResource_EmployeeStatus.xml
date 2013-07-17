@@ -20,22 +20,23 @@
  Last Changed By: $Author: jan@moxter.net $
 
 -->
-<datamodel-statusgroup xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-  	<uuid>e8b9df4c-a52e-4bad-be76-7a5228422e51</uuid>
-	<file-application>eFapsApp-HumanResource</file-application>
-	<file-revision>$Rev: 5898 $</file-revision>
-
-	<definition>
-		<version-expression>(version==latest)</version-expression>
-		<name>HumanResource_EmployeeStatus</name>
-		<parent>Admin_DataModel_StatusAbstract</parent>
-
-		<status key="Worker">
-			<description>Invoice was printed, but needs to be payed for.</description>
-		</status>
-
-		<status key="Notworked">
-			<description>Invoice was payed.</description>
-		</status>
-	</definition>
+<datamodel-statusgroup xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>e8b9df4c-a52e-4bad-be76-7a5228422e51</uuid>
+    <file-application>eFapsApp-HumanResource</file-application>
+    <file-revision>$Rev: 5898 $</file-revision>
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <name>HumanResource_EmployeeStatus</name>
+        <parent>Admin_DataModel_StatusAbstract</parent>
+        <status key="Worker">
+            <description>Active Employee.</description>
+        </status>
+        <status key="Notworked">
+            <description>Not active employee.</description>
+        </status>
+        <status key="Subsidiary">
+            <description></description>
+        </status>
+    </definition>
 </datamodel-statusgroup>
