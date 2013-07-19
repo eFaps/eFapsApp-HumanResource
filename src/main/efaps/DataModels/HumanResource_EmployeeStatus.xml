@@ -36,7 +36,7 @@
             <description>Not active employee.</description>
         </status>
         <status key="Subsidiary">
-            <description></description>
+            <description>Subsidiary employee.</description>
         </status>
     </definition>
 </datamodel-statusgroup>
