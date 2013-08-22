@@ -32,9 +32,9 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_ClassLocation</name>
-        <parent>HumanResource_Class</parent>
         <purpose classification="true">
             <LinkColumn>EmployeeLink</LinkColumn>
+            <parent>HumanResource_Class</parent>
         </purpose>
         <attribute>
             <name>OID</name>
