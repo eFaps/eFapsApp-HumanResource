@@ -133,10 +133,12 @@ public abstract class Employee_Base
                 final String number = print.<String>getAttribute(CIHumanResource.EmployeeAbstract.Number);
                 final String firstname = print.<String>getAttribute(CIHumanResource.EmployeeAbstract.FirstName);
                 final String lastname = print.<String>getAttribute(CIHumanResource.EmployeeAbstract.LastName);
-                final String secondLastname = print.<String>getAttribute(CIHumanResource.EmployeeAbstract.SecondLastName);
-                final String dataemployee = lastname + " " + secondLastname + ", " + firstname;
+                final String secondLastname = print
+                                .<String>getAttribute(CIHumanResource.EmployeeAbstract.SecondLastName);
+                final String dataemployee = lastname + (secondLastname.isEmpty() ? ", " : " " + secondLastname + ", ")
+                                + firstname;
                 final String oid = print.<String>getAttribute(CIHumanResource.EmployeeAbstract.OID);
-                final String choice = nameSearch ? number + "- " +  dataemployee : dataemployee + " - " + number;
+                final String choice = nameSearch ? number + "- " + dataemployee : dataemployee + " - " + number;
                 final Map<String, String> map = new HashMap<String, String>();
                 map.put(EFapsKey.AUTOCOMPLETE_KEY.getKey(), oid);
                 map.put(EFapsKey.AUTOCOMPLETE_CHOICE.getKey(), choice);
