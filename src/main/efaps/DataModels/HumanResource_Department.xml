@@ -34,5 +34,7 @@
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_Department</name>
         <parent>HumanResource_DepartmentAbstract</parent>
+        <trigger program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType"
+            name="HumanResource_Department.ACCESSCHECK" event="ACCESSCHECK" />
     </definition>
 </datamodel-type>

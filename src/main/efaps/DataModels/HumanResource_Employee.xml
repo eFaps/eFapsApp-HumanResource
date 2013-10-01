@@ -44,5 +44,7 @@
                 name="HumanResource_Employee.Status.RANGE_VALUE" event="RANGE_VALUE">
             </trigger>
         </attribute>
+        <trigger program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType"
+            name="HumanResource_Employee.ACCESSCHECK" event="ACCESSCHECK" />
     </definition>
 </datamodel-type>

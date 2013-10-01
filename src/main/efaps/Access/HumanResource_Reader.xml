@@ -36,7 +36,15 @@
         <access-type>show</access-type>
         <access-type>read</access-type>
         <access-type>checkout</access-type>
-
+        
+        <type>HumanResource_Department</type>
+        <type>HumanResource_Employee</type>
+        
+        <status group="HumanResource_EmployeeStatus">
+            <key>Worker</key>
+            <key>Subsidiary</key>
+        </status>
+        
         <role>HumanResource_Reader</role>
     </definition>
 </access-set>

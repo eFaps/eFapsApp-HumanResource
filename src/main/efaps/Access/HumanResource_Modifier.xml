@@ -39,7 +39,16 @@
         <access-type>checkout</access-type>
         <access-type>checkin</access-type>
         <access-type>create</access-type>
-
+        
+        <type>HumanResource_Department</type>
+        <type>HumanResource_Employee</type>
+        
+        <status group="HumanResource_EmployeeStatus">
+            <key>Worker</key>
+            <key>Notworked</key>
+            <key>Subsidiary</key>
+        </status>
+        
         <role>HumanResource_Modifier</role>
     </definition>
 </access-set>

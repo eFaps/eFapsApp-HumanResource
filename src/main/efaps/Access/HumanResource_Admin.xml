@@ -42,7 +42,16 @@
         <access-type>statusBoost</access-type>
         <access-type>statusModify</access-type>
         <access-type>delete</access-type>
-
+        
+        <type>HumanResource_Department</type>
+        <type>HumanResource_Employee</type>
+        
+        <status group="HumanResource_EmployeeStatus">
+            <key>Worker</key>
+            <key>Notworked</key>
+            <key>Subsidiary</key>
+        </status>
+        
         <role>HumanResource_Admin</role>
     </definition>
 </access-set>
