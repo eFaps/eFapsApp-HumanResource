@@ -33,5 +33,8 @@
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_AttributeDefinitionNumberType</name>
         <parent>HumanResource_AttributeDefinitionAbstract</parent>
+        <trigger event="ACCESSCHECK"
+            name="HumanResource_AttributeDefinitionNumberType.ACCESSCHECK"
+            program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType" />
     </definition>
 </datamodel-type>
