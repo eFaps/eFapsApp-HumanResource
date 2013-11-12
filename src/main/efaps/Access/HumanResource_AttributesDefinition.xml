@@ -34,7 +34,6 @@
         <type>HumanResource_AttributeDefinitionDistrict</type>
         <type>HumanResource_AttributeDefinitionEmail</type>
         <type>HumanResource_AttributeDefinitionFax</type>
-        <type>HumanResource_AttributeDefinitionNumberType</type>
         <type>HumanResource_AttributeDefinitionPhone</type>
 
         <role>Contacts_Modifier</role>
