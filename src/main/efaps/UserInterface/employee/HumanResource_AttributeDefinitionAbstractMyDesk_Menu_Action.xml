@@ -37,6 +37,9 @@
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreatePhone</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateEmail</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateFax</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateNationality</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateSexoType</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateCivilStatus</child>
         </childs>
     </definition>
 </ui-menu>
