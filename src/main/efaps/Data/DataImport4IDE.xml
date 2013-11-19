@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
 
   Copyright 2003 - 2013 The eFaps Team
 
@@ -14,27 +16,14 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 
-  Author:          The eFaps Team
-  Revision:        $Rev$
-  Last Changed:    $Date$
-  Last Changed By: $Author$
+  Author:         The eFaps Team
+  Revision:       $Rev$
+  Last Changed:   $Date$
+  Last Changed By:$Author$
+
 
 -->
-<common-systemconfiguration xmlns="http://www.efaps.org/xsd"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
 
-    <uuid>4620a7d6-0c39-48ac-9c52-e90dd077f52e</uuid>
-    <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev$</file-revision>
-    <definition>
-        <version-expression>(version==latest)</version-expression>
-        <name>HumanResource-Configuration</name>
-        <attribute>
-            <key>org.efaps.humanresource.DataImport4IDE</key>
-            <value>
-            <![CDATA[
-<?xml version="1.0" encoding="UTF-8"?>
 <data-import xmlns="http://www.efaps.org/xsd"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
@@ -61,9 +50,4 @@
             </attribute>
         </type>
     </definition>
-</data-import>            
-            ]]>
-            </value>
-        </attribute>
-    </definition>
-</common-systemconfiguration>
+</data-import>

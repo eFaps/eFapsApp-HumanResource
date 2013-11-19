@@ -18,24 +18,25 @@
  * Last Changed By: $Author$
  */
 
-package org.efaps.esjp.humanresource.util;
+
+package org.efaps.esjp.humanresource.tregistro;
 
 import org.efaps.admin.program.esjp.EFapsRevision;
 import org.efaps.admin.program.esjp.EFapsUUID;
 
+
 /**
- * TODO comment!
+ * This class must be replaced for customization, therefore it is left empty.
+ * Functional description can be found in the related "<code>_base</code>"
+ * class.
  *
  * @author The eFaps Team
  * @version $Id$
  */
-
-@EFapsUUID("c9501012-a352-4445-86d6-c36424c78fea")
+@EFapsUUID("1b9a281a-570a-4018-9ed8-e8f773115d85")
 @EFapsRevision("$Rev$")
-public interface HumanResourceSettings
+public class ImportIDE
+    extends ImportIDE_Base
 {
-    /**
-     * String value used as xml.
-     */
-    String DI_IDE = "org.efaps.humanresource.DataImport4IDE";
+
 }
