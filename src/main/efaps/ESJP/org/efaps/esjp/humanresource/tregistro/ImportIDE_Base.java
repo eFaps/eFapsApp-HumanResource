@@ -68,8 +68,20 @@ public abstract class ImportIDE_Base
         throws EFapsException
     {
         Source source = null;
+        final StringBuilder bldr = new StringBuilder();
+
         final String xml = HumanResource.getSysConfig().getAttributeValue(HumanResourceSettings.DI_IDE);
-        source = new StreamSource(new StringReader(xml));
+        bldr.append(xml == null ? "" : xml);
+        for (int i = 1; i < 100; i++) {
+            final String keyTmp = HumanResourceSettings.DI_IDE + String.format("%02d", i);
+            final String valueTmp = HumanResource.getSysConfig().getAttributeValue(keyTmp);
+            if (valueTmp != null) {
+                bldr.append(valueTmp);
+            } else {
+                break;
+            }
+        }
+        source = new StreamSource(new StringReader(bldr.toString()));
         return source;
     }
 }

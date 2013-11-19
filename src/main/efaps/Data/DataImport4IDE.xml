@@ -34,8 +34,7 @@
         </identifier>
         <type name="HumanResource_Employee">
             <attribute name="Number" column="DOCNUMBER" validate="false"/>
-            <attribute name="NumberTypeLink" class="org.efaps.esjp.data.columns.QueryBldrColumn" 
-                validateClass="org.efaps.esjp.data.columns.QueryBldrColumn">
+            <attribute name="NumberTypeLink" class="org.efaps.esjp.data.columns.QueryBldrColumn" validateClass="org.efaps.esjp.data.columns.QueryBldrColumn">
                 <property name="Type">Contacts_AttributeDefinitionDOIType</property>
                 <property name="Select">id</property>
                 <property name="QueryAttribute">Description</property>
@@ -48,6 +47,12 @@
                 <property name="StatusGrp">HumanResource_EmployeeStatus</property>
                 <property name="Status">Worker</property>
             </attribute>
+            <classification name="HumanResource_Class" >
+                <attribute name="BirthDate" class="org.efaps.esjp.data.columns.DateColumn" validateClass="org.efaps.esjp.data.columns.DateColumn" overwrite="true">
+                    <property name="Column">BIRTHDATE</property>
+                    <property name="Pattern">dd/MM/yyyy</property>
+                </attribute>
+            </classification>
         </type>
     </definition>
 </data-import>
