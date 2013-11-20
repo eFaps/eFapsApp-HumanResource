@@ -33,6 +33,7 @@
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_Modifier</name>
         <status>true</status>
+        <global>true</global>
     </definition>
 </user-role>
 
