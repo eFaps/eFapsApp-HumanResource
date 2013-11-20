@@ -20,6 +20,6 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_AttributeDefinitionLaborRegime</name>
-        <parent>ERP_AttributeDefinitionAbstract</parent>
+        <parent>ERP_AttributeDefinitionMappingAbstract</parent>
     </definition>
 </datamodel-type>

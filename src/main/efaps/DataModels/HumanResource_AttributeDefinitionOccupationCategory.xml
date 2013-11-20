@@ -23,6 +23,6 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_AttributeDefinitionOccupationCategory</name>
-        <parent>ERP_AttributeDefinitionAbstract</parent>
+        <parent>ERP_AttributeDefinitionMappingAbstract</parent>
     </definition>
 </datamodel-type>

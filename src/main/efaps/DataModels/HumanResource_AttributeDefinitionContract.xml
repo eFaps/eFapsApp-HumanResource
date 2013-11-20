@@ -24,6 +24,6 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_AttributeDefinitionContract</name>
-        <parent>ERP_AttributeDefinitionAbstract</parent>
+        <parent>ERP_AttributeDefinitionMappingAbstract</parent>
     </definition>
 </datamodel-type>
