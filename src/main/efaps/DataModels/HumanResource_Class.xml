@@ -33,7 +33,7 @@
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_Class</name>
         <purpose classification="true" abstract="true">
-            <LinkColumn>HumanResourceId</LinkColumn>
+            <LinkColumn>HumanResourceLink</LinkColumn>
         </purpose>
         <attribute>
             <name>OID</name>
@@ -48,7 +48,7 @@
             <sqlcolumn>ID</sqlcolumn>
         </attribute>
         <attribute>
-            <name>HumanResourceId</name>
+            <name>HumanResourceLink</name>
             <type>Link</type>
             <typelink>HumanResource_Employee</typelink>
             <sqltable>HumanResource_ClassSQLTable</sqltable>
@@ -132,12 +132,6 @@
                 <sqlcolumn>VALUE</sqlcolumn>
             </attribute>
         </attributeset>
-        <attribute>
-            <name>EntryDate</name>
-            <type>Date</type>
-            <sqltable>HumanResource_ClassSQLTable</sqltable>
-            <sqlcolumn>ENTRYDATE</sqlcolumn>
-        </attribute>
         <classifies type="HumanResource_Employee" relType="HumanResource_Employee2Class"
                     relLinkAttribute="Employee" relTypeAttribute="ClassTypeId" multipleSelect="true"/>
     </definition>
