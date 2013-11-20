@@ -15,7 +15,7 @@
 --><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
 
     <uuid>ced51d16-5655-4f77-bd92-a74356a63a9a</uuid>
-    <file-application>eFapsApp-Contacts</file-application>
+    <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev$</file-revision>
 
     <definition>

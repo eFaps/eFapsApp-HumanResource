@@ -22,7 +22,7 @@
 --><ui-table xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
 
     <uuid>46f57de6-b665-4e91-a6b4-91302f30ded8</uuid>
-    <file-application>eFapsApp-Contacts</file-application>
+    <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev: 9189 $</file-revision>
 
     <definition>
