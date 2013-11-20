@@ -104,6 +104,86 @@
                 <property name="Type">HumanResource_AttributeDefinitionEducation</property>
             </trigger>
         </attribute>
-        
+        <attribute>
+            <name>ContractLink</name>
+            <type>LinkWithRanges</type>
+            <typelink>HumanResource_AttributeDefinitionContract</typelink>
+            <sqltable>HumanResource_ClassTR_LaborSQLTable</sqltable>
+            <sqlcolumn>CONTRACTID</sqlcolumn>
+            <trigger event="RANGE_VALUE"
+                name="HumanResource_ClassTR_Labor.ContractLink.RANGE_VALUE"
+                program="org.efaps.esjp.admin.datamodel.RangesValue">
+                <property name="Value">$&lt;attribute[Value]&gt; - $&lt;attribute[Description]&gt;</property>
+                <property name="Type">HumanResource_AttributeDefinitionContract</property>
+            </trigger>
+        </attribute>
+        <attribute>
+            <name>PaymentLink</name>
+            <type>LinkWithRanges</type>
+            <typelink>HumanResource_AttributeDefinitionPayment</typelink>
+            <sqltable>HumanResource_ClassTR_LaborSQLTable</sqltable>
+            <sqlcolumn>PAYMENTID</sqlcolumn>
+            <trigger event="RANGE_VALUE"
+                name="HumanResource_ClassTR_Labor.PaymentLink.RANGE_VALUE"
+                program="org.efaps.esjp.admin.datamodel.RangesValue">
+                <property name="Value">$&lt;attribute[Value]&gt; - $&lt;attribute[Description]&gt;</property>
+                <property name="Type">HumanResource_AttributeDefinitionPayment</property>
+            </trigger>
+        </attribute>
+        <attribute>
+            <name>PeriodicityLink</name>
+            <type>LinkWithRanges</type>
+            <typelink>HumanResource_AttributeDefinitionPeriodicity</typelink>
+            <sqltable>HumanResource_ClassTR_LaborSQLTable</sqltable>
+            <sqlcolumn>PERIODICID</sqlcolumn>
+            <trigger event="RANGE_VALUE"
+                name="HumanResource_ClassTR_Labor.PeriodicityLink.RANGE_VALUE"
+                program="org.efaps.esjp.admin.datamodel.RangesValue">
+                <property name="Value">$&lt;attribute[Value]&gt; - $&lt;attribute[Description]&gt;</property>
+                <property name="Type">HumanResource_AttributeDefinitionPeriodicity</property>
+            </trigger>
+        </attribute>
+        <attribute>
+            <name>Disability</name>
+            <type>Boolean</type>
+            <sqltable>HumanResource_ClassTR_LaborSQLTable</sqltable>
+            <sqlcolumn>DISAB</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>Unionized</name>
+            <type>Boolean</type>
+            <sqltable>HumanResource_ClassTR_LaborSQLTable</sqltable>
+            <sqlcolumn>UNIO</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>Cumulative</name>
+            <type>Boolean</type>
+            <sqltable>HumanResource_ClassTR_LaborSQLTable</sqltable>
+            <sqlcolumn>CUMUL</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>Maximum</name>
+            <type>Boolean</type>
+            <sqltable>HumanResource_ClassTR_LaborSQLTable</sqltable>
+            <sqlcolumn>MAXIM</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>Nightly</name>
+            <type>Boolean</type>
+            <sqltable>HumanResource_ClassTR_LaborSQLTable</sqltable>
+            <sqlcolumn>NIGHT</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>SpecialSituacion</name>
+            <type>Integer</type>
+            <sqltable>HumanResource_ClassTR_LaborSQLTable</sqltable>
+            <sqlcolumn>SPECSIT</sqlcolumn>
+        </attribute>
+         <attribute>
+            <name>Remuneration</name>
+            <type>Integer</type>
+            <sqltable>HumanResource_ClassTR_LaborSQLTable</sqltable>
+            <sqlcolumn>RENUM</sqlcolumn>
+        </attribute>
     </definition>
 </datamodel-type>

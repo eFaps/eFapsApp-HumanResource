@@ -29,10 +29,20 @@
         <database>
             <table-name>T_HRCLASSTRLABOR</table-name>
             <column name="EMPLOYEEID" not-null="true" type="INTEGER"/>
-            <column name="REGIMEID" type="INTEGER"/>
-            <column name="OCCATID" type="INTEGER"/>
-            <column name="OCCID" type="INTEGER"/>
-            <column name="EDUID" type="INTEGER"/>
+            <column name="REGIMEID"     type="INTEGER"/>
+            <column name="OCCATID"      type="INTEGER"/>
+            <column name="OCCID"        type="INTEGER"/>
+            <column name="EDUID"        type="INTEGER"/>
+            <column name="CONTRACTID"   type="INTEGER"/>
+            <column name="PAYMENTID"    type="INTEGER"/>
+            <column name="PERIODICID"   type="INTEGER"/>
+            <column name="DISAB"        type="BOOLEAN"/>
+            <column name="UNIO"         type="BOOLEAN"/>
+            <column name="CUMUL"        type="BOOLEAN"/>
+            <column name="MAXIM"        type="BOOLEAN"/>
+            <column name="NIGHT"        type="BOOLEAN"/>
+            <column name="SPECSIT"      type="INTEGER"/>
+            <column name="RENUM"   type="INTEGER"/>
             <foreign key="EMPLOYEEID" name="T_HRCLASSTRLABOR_EMPLOYEEID" reference="T_HREMPLOYEE(ID)"/>
         </database>
     </definition>

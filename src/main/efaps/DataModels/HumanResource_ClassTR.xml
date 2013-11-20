@@ -62,5 +62,17 @@
                     <property name="Type">HumanResource_AttributeDefinitionEmployeeType</property>
                 </trigger>
         </attribute>
+        <attribute>
+            <name>SituationLink</name>
+            <type>LinkWithRanges</type>
+            <typelink>HumanResource_AttributeDefinitionSituation</typelink>
+            <sqltable>HumanResource_ClassTRSQLTable</sqltable>
+            <sqlcolumn>SITUATIONID</sqlcolumn>
+            <trigger program="org.efaps.esjp.admin.datamodel.RangesValue" 
+                name="HumanResource_ClassTR.SituationLink.RANGE_VALUE" event="RANGE_VALUE">
+                    <property name="Value">$&lt;attribute[Value]&gt; - $&lt;attribute[Description]&gt;</property>
+                    <property name="Type">HumanResource_AttributeDefinitionSituation</property>
+                </trigger>
+        </attribute>
     </definition>
 </datamodel-type>
