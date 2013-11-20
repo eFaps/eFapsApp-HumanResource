@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+
+  Copyright 2003 - 2009 The eFaps Team
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Author:          The eFaps Team
+  Revision:        $Rev$
+  Last Changed:    $Date$
+  Last Changed By: $Author$
+
+--><ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>0f6d31fb-3ad5-45f3-81bd-cc1e7784107b</uuid>
+    <file-application>eFapsApp-HumanResource</file-application>
+    <file-revision>$Rev$</file-revision>
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <name>HumanResource_ClassTR_LaborForm</name>
+        <type>HumanResource_ClassTR_Labor</type>
+        <field character="Heading" name="locationAdressHeading">
+            <property name="Level">2</property>
+            <property name="Label">HumanResource_ClassLocationForm.locationAdressHeading.Heading</property>
+            <property name="ModeCreate">READONLY</property>
+            <property name="ModeEdit">READONLY</property>
+        </field>
+         <field name="regimeLink">
+            <property name="Attribute">RegimeLink</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+        </field>
+        <field name="occupationCatLink">
+            <property name="Columns">40</property>
+            <property name="Attribute">OccupationCatLink</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>                        
+        </field>       
+        <field name="occupationLink">
+            <property name="Columns">40</property>
+            <property name="Attribute">OccupationLink</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>            
+        </field>
+        <field name="educationLink">
+            <property name="Columns">40</property>
+            <property name="Attribute">EducationLink</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>
+        <field name="contractLink">
+            <property name="Columns">40</property>
+            <property name="Attribute">ContractLink</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>
+        <field name="paymentLink">
+            <property name="Columns">40</property>
+            <property name="Attribute">PaymentLink</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>
+        <field name="periodicityLink">
+            <property name="Columns">40</property>
+            <property name="Attribute">PeriodicityLink</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>
+        <field name="disability">
+            <property name="Columns">40</property>
+            <property name="Attribute">Disability</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>
+        <field name="unionized">
+            <property name="Columns">40</property>
+            <property name="Attribute">Unionized</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field> 
+        <field name="cumulative">
+            <property name="Columns">40</property>
+            <property name="Attribute">Cumulative</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>
+        <field name="maximum">
+            <property name="Columns">40</property>
+            <property name="Attribute">Maximum</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>
+        <field name="nightly">
+            <property name="Columns">40</property>
+            <property name="Attribute">Nightly</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>
+        <field name="specialSituacion">
+            <property name="Columns">40</property>
+            <property name="Attribute">SpecialSituacion</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>  
+        <field name="remuneration">
+            <property name="Columns">40</property>
+            <property name="Attribute">Remuneration</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>     
+    </definition>
+</ui-form>
