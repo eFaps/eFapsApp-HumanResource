@@ -34,6 +34,7 @@ import org.efaps.esjp.data.AbstractImport;
 import org.efaps.esjp.data.jaxb.DataImport;
 import org.efaps.esjp.data.jaxb.Definition;
 
+import au.com.bytecode.opencsv.CSVParser;
 import au.com.bytecode.opencsv.CSVReader;
 
 /**
@@ -65,7 +66,7 @@ public abstract class AbstractImportUpdate_Base
             final File file = new File(url.getFile());
             final InputStreamReader inReader = new InputStreamReader(new FileInputStream(file),
                             AbstractImportUpdate_Base.CHARSET);
-            final CSVReader reader = new CSVReader(inReader, "|".charAt(0), CSVReader.DEFAULT_QUOTE_CHARACTER,
+            final CSVReader reader = new CSVReader(inReader, "|".charAt(0), CSVParser.DEFAULT_QUOTE_CHARACTER,
                             _definition.getSkipLine());
             ret.addAll(reader.readAll());
             reader.close();
