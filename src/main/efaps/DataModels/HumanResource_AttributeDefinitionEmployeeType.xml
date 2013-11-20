@@ -19,7 +19,7 @@
 
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_AttributeEmployeeType</name>
+        <name>HumanResource_AttributeDefinitionEmployeeType</name>
         <parent>ERP_AttributeDefinitionMappingAbstract</parent>
     </definition>
 </datamodel-type>
