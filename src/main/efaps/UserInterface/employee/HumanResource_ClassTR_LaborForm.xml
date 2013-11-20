@@ -26,13 +26,7 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_ClassTR_LaborForm</name>
-        <type>HumanResource_ClassTR_Labor</type>
-        <field character="Heading" name="locationAdressHeading">
-            <property name="Level">2</property>
-            <property name="Label">HumanResource_ClassLocationForm.locationAdressHeading.Heading</property>
-            <property name="ModeCreate">READONLY</property>
-            <property name="ModeEdit">READONLY</property>
-        </field>
+        <type>HumanResource_ClassTR_Labor</type>        
          <field name="regimeLink">
             <property name="Attribute">RegimeLink</property>
             <property name="ModeCreate">EDITABLE</property>
