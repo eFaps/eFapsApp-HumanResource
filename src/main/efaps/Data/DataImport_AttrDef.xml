@@ -27,32 +27,110 @@
 <data-import xmlns="http://www.efaps.org/xsd"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <definition name="ImportIDE"  file="" skipLine="12" execute="true" update="true">
-        <identifier class="org.efaps.esjp.data.identifier.QueryIdentifier">
-             <property name="QueryAttribute">Number</property>
-             <property name="QueryColumn">DOCNUMBER</property>
-        </identifier>
-        <type name="HumanResource_Employee">
-            <attribute name="Number" column="DOCNUMBER" validate="false"/>
-            <attribute name="NumberTypeLink" class="org.efaps.esjp.data.columns.QueryBldrColumn" validateClass="org.efaps.esjp.data.columns.QueryBldrColumn">
-                <property name="Type">Contacts_AttributeDefinitionDOIType</property>
-                <property name="Select">id</property>
-                <property name="QueryAttribute">Description</property>
-                <property name="QueryColumn">DOCTYPE</property>
-            </attribute>
-            <attribute name="LastName" column="LASTNAME1" validate="false" overwrite="true"/>
-            <attribute name="SecondLastName" column="LASTNAME2" validate="false" overwrite="true"/>
-            <attribute name="FirstName" column="FIRSTNAME" validate="false" overwrite="true"/>
-            <attribute name="Status" class="org.efaps.esjp.data.columns.StatusColumn" validateClass="org.efaps.esjp.data.columns.StatusColumn">
-                <property name="StatusGrp">HumanResource_EmployeeStatus</property>
-                <property name="Status">Worker</property>
-            </attribute>
-            <classification name="HumanResource_Class" >
-                <attribute name="BirthDate" class="org.efaps.esjp.data.columns.DateColumn" validateClass="org.efaps.esjp.data.columns.DateColumn" overwrite="true">
-                    <property name="Column">BIRTHDATE</property>
-                    <property name="Pattern">dd/MM/yyyy</property>
-                </attribute>
-            </classification>
+    
+    <definition name="Import_AttrDef_Contract"  file="AttrDef_Contract.csv">
+        <type name="HumanResource_AttributeDefinitionContract">
+            <attribute name="Value" column="VALUE" validate="false"/>
+            <attribute name="Description" column="DESCRIPTION" validate="false"/>
+            <attribute name="MappingKey" column="KEY" validate="false"/>
+        </type>
+    </definition>
+    <definition name="Import_AttrDef_DOIType"  file="AttrDef_DOIType.csv">
+        <type name="HumanResource_AttributeDefinitionDOIType">
+            <attribute name="Value" column="VALUE" validate="false"/>
+            <attribute name="Description" column="DESCRIPTION" validate="false"/>
+            <attribute name="MappingKey" column="KEY" validate="false"/>
+        </type>
+    </definition>
+    <definition name="Import_AttrDef_Education"  file="AttrDef_Education.csv">
+        <type name="HumanResource_AttributeDefinitionEducation">
+            <attribute name="Value" column="VALUE" validate="false"/>
+            <attribute name="Description" column="DESCRIPTION" validate="false"/>
+            <attribute name="MappingKey" column="KEY" validate="false"/>
+        </type>
+    </definition>
+    <definition name="Import_AttrDef_EmitterCountry"  file="AttrDef_EmitterCountry.csv">
+        <type name="HumanResource_AttributeDefinitionEmitterCountry">
+            <attribute name="Value" column="VALUE" validate="false"/>
+            <attribute name="Description" column="DESCRIPTION" validate="false"/>
+            <attribute name="MappingKey" column="KEY" validate="false"/>
+        </type>
+    </definition>
+    <definition name="Import_AttrDef_EmployeeType"  file="AttrDef_EmployeeType.csv">
+        <type name="HumanResource_AttributeDefinitionEmployeeType">
+            <attribute name="Value" column="VALUE" validate="false"/>
+            <attribute name="Description" column="DESCRIPTION" validate="false"/>
+            <attribute name="MappingKey" column="KEY" validate="false"/>
+        </type>
+    </definition>
+    <definition name="Import_AttrDef_HealthRegime"  file="AttrDef_HealthRegime.csv">
+        <type name="HumanResource_AttributeDefinitionHealthRegime">
+            <attribute name="Value" column="VALUE" validate="false"/>
+            <attribute name="Description" column="DESCRIPTION" validate="false"/>
+            <attribute name="MappingKey" column="KEY" validate="false"/>
+        </type>
+    </definition>
+    <definition name="Import_AttrDef_LaborRegime"  file="AttrDef_LaborRegime.csv">
+        <type name="HumanResource_AttributeDefinitionLaborRegime">
+            <attribute name="Value" column="VALUE" validate="false"/>
+            <attribute name="Description" column="DESCRIPTION" validate="false"/>
+            <attribute name="MappingKey" column="KEY" validate="false"/>
+        </type>
+    </definition>
+    <definition name="Import_AttrDef_Nationality"  file="AttrDef_Nationality.csv">
+        <type name="HumanResource_AttributeDefinitionNationality">
+            <attribute name="Value" column="VALUE" validate="false"/>
+            <attribute name="Description" column="DESCRIPTION" validate="false"/>
+            <attribute name="MappingKey" column="KEY" validate="false"/>
+        </type>
+    </definition>
+    <definition name="Import_AttrDef_Occupation"  file="AttrDef_Occupation.csv">
+        <type name="HumanResource_AttributeDefinitionOccupation">
+            <attribute name="Value" column="VALUE" validate="false"/>
+            <attribute name="Description" column="DESCRIPTION" validate="false"/>
+            <attribute name="MappingKey" column="KEY" validate="false"/>
+        </type>
+    </definition>
+    <definition name="Import_AttrDef_OccupationCategory"  file="AttrDef_OccupationCategory.csv">
+        <type name="HumanResource_AttributeDefinitionOccupationCategory">
+            <attribute name="Value" column="VALUE" validate="false"/>
+            <attribute name="Description" column="DESCRIPTION" validate="false"/>
+            <attribute name="MappingKey" column="KEY" validate="false"/>
+        </type>
+    </definition>
+    <definition name="Import_AttrDef_Payment"  file="AttrDef_Payment.csv">
+        <type name="HumanResource_AttributeDefinitionPayment">
+            <attribute name="Value" column="VALUE" validate="false"/>
+            <attribute name="Description" column="DESCRIPTION" validate="false"/>
+            <attribute name="MappingKey" column="KEY" validate="false"/>
+        </type>
+    </definition>
+    <definition name="Import_AttrDef_PensionRegime"  file="AttrDef_PensionRegime.csv">
+        <type name="HumanResource_AttributeDefinitionPensionRegime">
+            <attribute name="Value" column="VALUE" validate="false"/>
+            <attribute name="Description" column="DESCRIPTION" validate="false"/>
+            <attribute name="MappingKey" column="KEY" validate="false"/>
+        </type>
+    </definition>
+    <definition name="Import_AttrDef_Periodicity"  file="AttrDef_Periodicity.csv">
+        <type name="HumanResource_AttributeDefinitionPeriodicity">
+            <attribute name="Value" column="VALUE" validate="false"/>
+            <attribute name="Description" column="DESCRIPTION" validate="false"/>
+            <attribute name="MappingKey" column="KEY" validate="false"/>
+        </type>
+    </definition>
+    <definition name="Import_AttrDef_Sex"  file="AttrDef_Sex.csv">
+        <type name="HumanResource_AttributeDefinitionSex">
+            <attribute name="Value" column="VALUE" validate="false"/>
+            <attribute name="Description" column="DESCRIPTION" validate="false"/>
+            <attribute name="MappingKey" column="KEY" validate="false"/>
+        </type>
+    </definition>
+    <definition name="Import_AttrDef_Situation"  file="AttrDef_Situation.csv">
+        <type name="HumanResource_AttributeDefinitionSituation">
+            <attribute name="Value" column="VALUE" validate="false"/>
+            <attribute name="Description" column="DESCRIPTION" validate="false"/>
+            <attribute name="MappingKey" column="KEY" validate="false"/>
         </type>
     </definition>
 </data-import>

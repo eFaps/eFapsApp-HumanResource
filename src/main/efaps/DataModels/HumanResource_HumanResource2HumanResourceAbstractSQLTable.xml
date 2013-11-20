@@ -34,7 +34,7 @@
         <name>HumanResource_HumanResource2HumanResourceAbstractSQLTable</name>
         <typeid-column>TYPEID</typeid-column>
         <database>
-            <table-name>T_HR_HR2HRABST</table-name>
+            <table-name>T_HRHR2HR</table-name>
             <!-- columns -->
             <column name="TYPEID"   type="INTEGER"  not-null="true" />
             <column name="FROMID"   type="INTEGER"  not-null="true" />
@@ -44,8 +44,8 @@
             <column name="MODIFIER" type="INTEGER"  not-null="true" />
             <column name="MODIFIED" type="DATETIME" not-null="true" />
             <!-- foreign keys -->
-            <foreign name="T_HR_HR2HRABST_FK_CRTR"       key="CREATOR"  reference="T_USERPERSON(ID)" />
-            <foreign name="T_HR_HR2HRABST_FK_MDFR"       key="MODIFIER" reference="T_USERPERSON(ID)" />
+            <foreign name="T_HRHR2HR_FK_CRTR"       key="CREATOR"  reference="T_USERPERSON(ID)" />
+            <foreign name="T_HRHR2HR_FK_MDFR"       key="MODIFIER" reference="T_USERPERSON(ID)" />
         </database>
     </definition>
 </datamodel-sqltable>
