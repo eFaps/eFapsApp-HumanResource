@@ -27,7 +27,7 @@
         <!-- target definitions -->
 
         <target>
-            <form>ERP_AttributeDefinitionForm</form>
+            <form>ERP_AttributeDefinitionMappingForm</form>
             <execute program="org.efaps.esjp.common.uiform.Create"/>
         </target>
         <!-- properties -->

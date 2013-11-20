@@ -22,12 +22,12 @@
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateNationality</name>
         <access>
-            <role>Contacts_Admin</role>
+            <role>HumanResource_Admin</role>
         </access>
         <!-- target definitions -->
 
         <target>
-            <form>ERP_AttributeDefinitionForm</form>
+            <form>ERP_AttributeDefinitionMappingForm</form>
             <execute program="org.efaps.esjp.common.uiform.Create"/>
         </target>
         <!-- properties -->
