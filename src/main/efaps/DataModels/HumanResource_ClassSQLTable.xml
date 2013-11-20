@@ -37,7 +37,6 @@
             <!-- columns -->
             <column name="HUMANRESOURCEID" type="INTEGER"      not-null="true" />
             <column name="ENTRYDATE"       type="DATETIME"/>
-            <column name="BIRTHDATE"       type="DATETIME"/>
             <foreign name="T_HRCLASS_FK_HUMANRESOURCEID" key="HUMANRESOURCEID" reference="T_HREMPLOYEE(ID)" />
         </database>
     </definition>

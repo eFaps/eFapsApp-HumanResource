@@ -133,12 +133,6 @@
             </attribute>
         </attributeset>
         <attribute>
-            <name>BirthDate</name>
-            <type>Date</type>
-            <sqltable>HumanResource_ClassSQLTable</sqltable>
-            <sqlcolumn>BIRTHDATE</sqlcolumn>
-        </attribute>
-        <attribute>
             <name>EntryDate</name>
             <type>Date</type>
             <sqltable>HumanResource_ClassSQLTable</sqltable>

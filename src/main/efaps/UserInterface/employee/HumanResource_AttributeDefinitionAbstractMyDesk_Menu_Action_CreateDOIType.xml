@@ -14,15 +14,15 @@
 
 --><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
 
-    <uuid>83d9c8ba-0941-4045-8c58-676cf70c2828</uuid>
+    <uuid>ced51d16-5655-4f77-bd92-a74356a63a9a</uuid>
     <file-application>eFapsApp-Contacts</file-application>
     <file-revision>$Rev$</file-revision>
 
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateSexoType</name>
+        <name>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateDOIType</name>
         <access>
-            <role>Contacts_Admin</role>
+            <role>HumanResource_Admin</role>
         </access>
         <!-- target definitions -->
 
@@ -32,7 +32,7 @@
         </target>
         <!-- properties -->
         <property name="Target">modal</property>
-        <property name="TargetCreateType">HumanResource_AttributeDefinitionSexoType</property>
+        <property name="TargetCreateType">HumanResource_AttributeDefinitionDOIType</property>
         <property name="TargetMode">create</property>
     </definition>
 </ui-command>
