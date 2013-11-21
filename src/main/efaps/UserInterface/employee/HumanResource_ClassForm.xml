@@ -59,21 +59,5 @@
             <property name="Label">HumanResource_Class/EmailSet.Label</property>
             <property name="Order">Description4Email|Email</property>
         </field>
-        <field name="birthDate">
-            <property name="Columns">10</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-            <property name="ModeSearch">EDITABLE</property>
-            <property name="Attribute">BirthDate</property>
-            <property name="Required">true</property>
-        </field>
-        <field name="entryDate">
-            <property name="Columns">10</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-            <property name="ModeSearch">EDITABLE</property>
-            <property name="Attribute">EntryDate</property>
-            <property name="Required">true</property>
-        </field>
     </definition>
 </ui-form>
