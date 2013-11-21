@@ -31,6 +31,9 @@
     <file-revision>$Rev: 5314 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
+        <application-dependencies>
+            <application name="eFapsApp-Projects"/>
+        </application-dependencies>
         <name>Projects_WorkOrderTree</name>
         <!-- targets -->
         <target>

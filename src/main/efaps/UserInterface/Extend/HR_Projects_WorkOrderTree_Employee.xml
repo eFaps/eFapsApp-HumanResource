@@ -30,8 +30,11 @@
     <uuid>aca3bb47-9bdc-4106-9233-cc84e4984e1c</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev: 5319 $</file-revision>
-    <definition>
-        <version-expression>(version==latest)</version-expression>
+    <definition >
+        <version-expression >(version==latest)</version-expression>
+        <application-dependencies>
+            <application name="eFapsApp-Projects"/>
+        </application-dependencies>
         <name>HR_Projects_WorkOrderTree_Employee</name>
         <target>
             <menu>HR_Projects_WorkOrderTree_Employee_Menu</menu>

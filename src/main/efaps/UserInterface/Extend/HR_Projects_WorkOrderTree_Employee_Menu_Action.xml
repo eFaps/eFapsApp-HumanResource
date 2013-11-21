@@ -31,6 +31,9 @@
     <file-revision>$Rev: 5319 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
+        <application-dependencies>
+            <application name="eFapsApp-Projects"/>
+        </application-dependencies>
         <name>HR_Projects_WorkOrderTree_Employee_Menu_Action</name>
         <!-- childs -->
         <childs>
