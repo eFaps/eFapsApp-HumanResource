@@ -27,6 +27,12 @@
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_ClassTR_HealthForm</name>
         <type>HumanResource_ClassTR_Health</type>
+        <field name="healthHeading" character="Heading">
+            <property name="Level">2</property>
+            <property name="Label">HumanResource_ClassTR_HealthForm.HealthHeading.Heading</property>
+            <property name="ModeCreate">READONLY</property>
+            <property name="ModeEdit">READONLY</property>
+        </field>
         <field name="healthRegimeLink">
             <property name="Attribute">HealthRegimeLink</property>
             <property name="ModeCreate">EDITABLE</property>

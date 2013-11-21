@@ -23,9 +23,7 @@
 
 -->
 
-<ui-form xmlns="http://www.efaps.org/xsd"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+<ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>893318fe-ea7e-48d1-93a7-37b8dbad73a2</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev$</file-revision>
@@ -54,12 +52,6 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
             <property name="Required">true</property>
-        </field>        
-        <field name="additionalData" character="Heading">
-            <property name="Level">2</property>
-            <property name="Label">HumanResource_ClassLocationForm.additionalData.Heading</property>
-            <property name="ModeCreate">READONLY</property>
-            <property name="ModeEdit">READONLY</property>
         </field>
     </definition>
 </ui-form>

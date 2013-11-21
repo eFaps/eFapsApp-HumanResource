@@ -26,8 +26,14 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_ClassTR_LaborForm</name>
-        <type>HumanResource_ClassTR_Labor</type>        
-         <field name="regimeLink">
+        <type>HumanResource_ClassTR_Labor</type>
+        <field name="laborHeading" character="Heading">
+            <property name="Level">2</property>
+            <property name="Label">HumanResource_ClassTR_LaborForm.LaborHeading.Heading</property>
+            <property name="ModeCreate">READONLY</property>
+            <property name="ModeEdit">READONLY</property>
+        </field>
+        <field name="regimeLink">
             <property name="Attribute">RegimeLink</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
