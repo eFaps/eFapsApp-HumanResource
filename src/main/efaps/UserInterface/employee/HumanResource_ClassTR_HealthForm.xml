@@ -29,7 +29,7 @@
         <type>HumanResource_ClassTR_Health</type>
         <field name="healthHeading" character="Heading">
             <property name="Level">2</property>
-            <property name="Label">HumanResource_ClassTR_HealthForm.HealthHeading.Heading</property>
+            <property name="Label">HumanResource_ClassTR_HealthForm.healthHeading.Heading</property>
             <property name="ModeCreate">READONLY</property>
             <property name="ModeEdit">READONLY</property>
         </field>
@@ -39,46 +39,50 @@
             <property name="ModeEdit">EDITABLE</property>
         </field>
         <field name="healthStartDate">
-            <property name="Columns">40</property>
-            <property name="Attribute">HealthStartDate</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-            <property name="ModeSearch">EDITABLE</property>            
-        </field>       
-        <field name="pensionStartDate">
-            <property name="Columns">40</property>
+            <property name="Columns">20</property>
             <property name="Attribute">HealthStartDate</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>            
         </field>
+         <field name="pensionHeading" character="Heading">
+            <property name="Level">2</property>
+            <property name="Label">HumanResource_ClassTR_HealthForm.pensionHeading.Heading</property>
+            <property name="ModeCreate">READONLY</property>
+            <property name="ModeEdit">READONLY</property>
+        </field>
+        <field name="pensionRegimeLink">
+            <property name="Attribute">PensionRegimeLink</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+        </field>       
+        <field name="pensionStartDate">
+            <property name="Columns">20</property>
+            <property name="Attribute">PensionStartDate</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>            
+        </field>
         <field name="cuspp">
-            <property name="Columns">40</property>
+            <property name="Columns">30</property>
             <property name="Attribute">CUSPP</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
         </field>
         <field name="doubleTax">
-            <property name="Columns">40</property>
+            <property name="Columns">30</property>
             <property name="Attribute">DoubleTax</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
         </field>
         <field name="fifth">
-            <property name="Columns">40</property>
+            <property name="Columns">30</property>
             <property name="Attribute">Fifth</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
-        </field>
-        <field name="cuspp">
-            <property name="Columns">40</property>
-            <property name="Attribute">CUSPP</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-            <property name="ModeSearch">EDITABLE</property>
-        </field>      
+        </field>             
     </definition>
 </ui-form>

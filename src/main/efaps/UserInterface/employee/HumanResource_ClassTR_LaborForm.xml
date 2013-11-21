@@ -58,27 +58,6 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
         </field>
-        <field name="contractLink">
-            <property name="Columns">40</property>
-            <property name="Attribute">ContractLink</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-            <property name="ModeSearch">EDITABLE</property>
-        </field>
-        <field name="paymentLink">
-            <property name="Columns">40</property>
-            <property name="Attribute">PaymentLink</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-            <property name="ModeSearch">EDITABLE</property>
-        </field>
-        <field name="periodicityLink">
-            <property name="Columns">40</property>
-            <property name="Attribute">PeriodicityLink</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-            <property name="ModeSearch">EDITABLE</property>
-        </field>
         <field name="disability">
             <property name="Columns">40</property>
             <property name="Attribute">Disability</property>
@@ -114,6 +93,34 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
         </field>
+         <field name="situationHeading" character="Heading">
+            <property name="Level">2</property>
+            <property name="Label">HumanResource_ClassTR_LaborForm.situationHeading.Heading</property>
+            <property name="ModeCreate">READONLY</property>
+            <property name="ModeEdit">READONLY</property>
+        </field>
+        <field name="contractLink">
+            <property name="Columns">40</property>
+            <property name="Attribute">ContractLink</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>
+        <field name="paymentLink">
+            <property name="Columns">40</property>
+            <property name="Attribute">PaymentLink</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>
+        <field name="periodicityLink">
+            <property name="Columns">40</property>
+            <property name="Attribute">PeriodicityLink</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>
+        
         <field name="specialSituacion">
             <property name="Columns">40</property>
             <property name="Attribute">SpecialSituacion</property>
@@ -127,6 +134,8 @@
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
-        </field>     
+        </field>
+       
+        
     </definition>
 </ui-form>
