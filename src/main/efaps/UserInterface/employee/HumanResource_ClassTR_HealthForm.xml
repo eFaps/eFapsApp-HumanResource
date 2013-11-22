@@ -27,6 +27,12 @@
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_ClassTR_HealthForm</name>
         <type>HumanResource_ClassTR_Health</type>
+        <field name="titleHealthHeading" character="Heading">
+            <property name="Level">1</property>
+            <property name="Label">HumanResource_ClassTR_HealthForm.TitleHealthHeading.Heading</property>
+            <property name="ModeCreate">READONLY</property>
+            <property name="ModeEdit">READONLY</property>
+        </field>        
         <field name="healthHeading" character="Heading">
             <property name="Level">2</property>
             <property name="Label">HumanResource_ClassTR_HealthForm.healthHeading.Heading</property>
@@ -69,7 +75,13 @@
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
-        </field>            
+        </field>
+        <field name="otherHeading" character="Heading">
+            <property name="Level">2</property>
+            <property name="Label">HumanResource_ClassTR_HealthForm.OtherHeading.Heading</property>
+            <property name="ModeCreate">READONLY</property>
+            <property name="ModeEdit">READONLY</property>
+        </field>         
         <field name="fifth">
             <property name="Columns">30</property>
             <property name="Attribute">Fifth</property>

@@ -27,11 +27,24 @@
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_ClassTR_LaborForm</name>
         <type>HumanResource_ClassTR_Labor</type>
+        <field name="titleLaborHeading" character="Heading">
+            <property name="Level">1</property>
+            <property name="Label">HumanResource_ClassTR_HealthForm.TitleLaborHeading.Heading</property>
+            <property name="ModeCreate">READONLY</property>
+            <property name="ModeEdit">READONLY</property>
+        </field>        
         <field name="laborHeading" character="Heading">
             <property name="Level">2</property>
             <property name="Label">HumanResource_ClassTR_LaborForm.LaborHeading.Heading</property>
             <property name="ModeCreate">READONLY</property>
             <property name="ModeEdit">READONLY</property>
+        </field>
+        <field name="contractLink">
+            <property name="Columns">30</property>
+            <property name="Attribute">ContractLink</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
         </field>
         <field name="regimeLink">
             <property name="Attribute">RegimeLink</property>
@@ -92,27 +105,7 @@
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
-        </field>
-        <field name="situationHeading" character="Heading">
-            <property name="Level">2</property>
-            <property name="Label">HumanResource_ClassTR_LaborForm.situationHeading.Heading</property>
-            <property name="ModeCreate">READONLY</property>
-            <property name="ModeEdit">READONLY</property>
-        </field>
-        <field name="specialSituacion">
-            <property name="Columns">30</property>
-            <property name="Attribute">SpecialSituacion</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-            <property name="ModeSearch">EDITABLE</property>
-        </field>
-        <field name="contractLink">
-            <property name="Columns">30</property>
-            <property name="Attribute">ContractLink</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-            <property name="ModeSearch">EDITABLE</property>
-        </field>
+        </field>               
         <field name="remunerationHeading" character="Heading">
             <property name="Level">2</property>
             <property name="Label">HumanResource_ClassTR_LaborForm.remunerationHeading.Heading</property>
@@ -136,6 +129,19 @@
         <field name="remuneration">
             <property name="Columns">30</property>
             <property name="Attribute">Remuneration</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field> 
+        <field name="situationHeading" character="Heading">
+            <property name="Level">2</property>
+            <property name="Label">HumanResource_ClassTR_LaborForm.situationHeading.Heading</property>
+            <property name="ModeCreate">READONLY</property>
+            <property name="ModeEdit">READONLY</property>
+        </field>
+        <field name="specialSituacion">
+            <property name="Columns">30</property>
+            <property name="Attribute">SpecialSituacion</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
