@@ -61,7 +61,7 @@
             <trigger event="RANGE_VALUE"
                 name="HumanResource_ClassTR_Labor.RegimeLink.RANGE_VALUE"
                 program="org.efaps.esjp.admin.datamodel.RangesValue">
-                <property name="Value">$&lt;attribute[Value]&gt; - $&lt;attribute[Description]&gt;</property>
+                <property name="Value">Value</property>
                 <property name="Type">HumanResource_AttributeDefinitionLaborRegime</property>
             </trigger>
         </attribute>
@@ -74,7 +74,7 @@
             <trigger event="RANGE_VALUE"
                 name="HumanResource_ClassTR_Labor.OccupationCatLink.RANGE_VALUE"
                 program="org.efaps.esjp.admin.datamodel.RangesValue">
-                <property name="Value">$&lt;attribute[Value]&gt; - $&lt;attribute[Description]&gt;</property>
+                <property name="Value">Value</property>
                 <property name="Type">HumanResource_AttributeDefinitionOccupationCategory</property>
             </trigger>
         </attribute>
@@ -87,7 +87,7 @@
             <trigger event="RANGE_VALUE"
                 name="HumanResource_ClassTR_Labor.OccupationLink.RANGE_VALUE"
                 program="org.efaps.esjp.admin.datamodel.RangesValue">
-                <property name="Value">$&lt;attribute[Value]&gt; - $&lt;attribute[Description]&gt;</property>
+                <property name="Value">Value</property>
                 <property name="Type">HumanResource_AttributeDefinitionOccupation</property>
             </trigger>
         </attribute>
@@ -100,7 +100,7 @@
             <trigger event="RANGE_VALUE"
                 name="HumanResource_ClassTR_Labor.EducationLink.RANGE_VALUE"
                 program="org.efaps.esjp.admin.datamodel.RangesValue">
-                <property name="Value">$&lt;attribute[Value]&gt; - $&lt;attribute[Description]&gt;</property>
+                <property name="Value">Description</property>
                 <property name="Type">HumanResource_AttributeDefinitionEducation</property>
             </trigger>
         </attribute>
@@ -113,7 +113,7 @@
             <trigger event="RANGE_VALUE"
                 name="HumanResource_ClassTR_Labor.ContractLink.RANGE_VALUE"
                 program="org.efaps.esjp.admin.datamodel.RangesValue">
-                <property name="Value">$&lt;attribute[Value]&gt; - $&lt;attribute[Description]&gt;</property>
+                <property name="Value">Description</property>
                 <property name="Type">HumanResource_AttributeDefinitionContract</property>
             </trigger>
         </attribute>
@@ -126,7 +126,7 @@
             <trigger event="RANGE_VALUE"
                 name="HumanResource_ClassTR_Labor.PaymentLink.RANGE_VALUE"
                 program="org.efaps.esjp.admin.datamodel.RangesValue">
-                <property name="Value">$&lt;attribute[Value]&gt; - $&lt;attribute[Description]&gt;</property>
+                <property name="Value">Value</property>
                 <property name="Type">HumanResource_AttributeDefinitionPayment</property>
             </trigger>
         </attribute>
@@ -139,7 +139,7 @@
             <trigger event="RANGE_VALUE"
                 name="HumanResource_ClassTR_Labor.PeriodicityLink.RANGE_VALUE"
                 program="org.efaps.esjp.admin.datamodel.RangesValue">
-                <property name="Value">$&lt;attribute[Value]&gt; - $&lt;attribute[Description]&gt;</property>
+                <property name="Value">Value</property>
                 <property name="Type">HumanResource_AttributeDefinitionPeriodicity</property>
             </trigger>
         </attribute>

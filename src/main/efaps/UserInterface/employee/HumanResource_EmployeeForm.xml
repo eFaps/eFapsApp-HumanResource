@@ -42,7 +42,35 @@
         </field>
         <field name="numberTypeLink">
             <property name="Attribute">NumberTypeLink</property>
-            <property name="Columns">15</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+        </field>
+        <field name="emitterGroup" character="Group">
+            <property name="GroupCount">2</property>
+            <property name="ModeCreate">READONLY</property>
+        </field>
+        <field name="nationalityLink">
+            <property name="Attribute">NationalityLink</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+        </field>
+         <field name="emitterCountryLink">
+            <property name="Attribute">EmitterCountryLink</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+        </field>
+        <field name="birthGroup" character="Group">
+            <property name="GroupCount">2</property>
+            <property name="ModeCreate">READONLY</property>
+        </field>
+        <field name="birthDate">
+            <property name="Attribute">BirthDate</property>
+            <property name="Columns">12</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+        </field>
+        <field name="SexLink">
+            <property name="Attribute">SexLink</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeCreate">EDITABLE</property>
         </field>

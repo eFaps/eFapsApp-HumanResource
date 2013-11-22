@@ -61,7 +61,7 @@
             <trigger event="RANGE_VALUE"
                 name="HumanResource_ClassTR_Health.HealthRegimeLink.RANGE_VALUE"
                 program="org.efaps.esjp.admin.datamodel.RangesValue">
-                <property name="Value">$&lt;attribute[Value]&gt; - $&lt;attribute[Description]&gt;</property>
+                <property name="Value">Value</property>
                 <property name="Type">HumanResource_AttributeDefinitionHealthRegime</property>
             </trigger>
         </attribute>
@@ -80,7 +80,7 @@
             <trigger event="RANGE_VALUE"
                 name="HumanResource_ClassTR_Health.PensionRegimeLink.RANGE_VALUE"
                 program="org.efaps.esjp.admin.datamodel.RangesValue">
-                <property name="Value">$&lt;attribute[Value]&gt; - $&lt;attribute[Description]&gt;</property>
+                <property name="Value">Value</property>
                 <property name="Type">HumanResource_AttributeDefinitionPensionRegime</property>
             </trigger>
         </attribute>

@@ -73,7 +73,7 @@
             <trigger name="HumanResource_EmployeeAbstract.NumberTypeLink.RANGE_VALUE"
                      event="RANGE_VALUE"
                      program="org.efaps.esjp.admin.datamodel.RangesValue">
-                <property name="Value">$&lt;attribute[Value]&gt; - $&lt;attribute[Description]&gt;</property>
+                <property name="Value">Value</property>
                 <property name="Type">HumanResource_AttributeDefinitionDOIType</property>
             </trigger>
         </attribute>
@@ -85,7 +85,7 @@
             <sqlcolumn>COUNTRYID</sqlcolumn>
             <trigger program="org.efaps.esjp.admin.datamodel.RangesValue" 
                 name="HumanResource_EmployeeAbstract.CountryLink.RANGE_VALUE" event="RANGE_VALUE">
-                    <property name="Value">$&lt;attribute[Value]&gt; - $&lt;attribute[Description]&gt;</property>
+                    <property name="Value">Value</property>
                     <property name="Type">HumanResource_AttributeDefinitionEmitterCountry</property>
                 </trigger>
         </attribute>
@@ -115,7 +115,7 @@
             <sqlcolumn>NATIONALITYID</sqlcolumn>
             <trigger program="org.efaps.esjp.admin.datamodel.RangesValue" 
                 name="HumanResource_EmployeeAbstract.NationalityLink.RANGE_VALUE" event="RANGE_VALUE">
-                    <property name="Value">$&lt;attribute[Value]&gt; - $&lt;attribute[Description]&gt;</property>
+                    <property name="Value">Value</property>
                     <property name="Type">HumanResource_AttributeDefinitionNationality</property>
                 </trigger>
         </attribute>
@@ -133,7 +133,7 @@
             <sqlcolumn>SEXID</sqlcolumn>
             <trigger program="org.efaps.esjp.admin.datamodel.RangesValue" 
                 name="HumanResource_EmployeeAbstract.SexLink.RANGE_VALUE" event="RANGE_VALUE">
-                    <property name="Value">$&lt;attribute[Value]&gt; - $&lt;attribute[Description]&gt;</property>
+                    <property name="Value">Value</property>
                     <property name="Type">HumanResource_AttributeDefinitionSex</property>
                 </trigger>
         </attribute>
