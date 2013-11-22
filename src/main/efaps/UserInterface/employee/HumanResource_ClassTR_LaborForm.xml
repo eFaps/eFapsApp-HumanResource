@@ -39,55 +39,55 @@
             <property name="ModeEdit">EDITABLE</property>
         </field>
         <field name="occupationCatLink">
-            <property name="Columns">40</property>
+            <property name="Columns">30</property>
             <property name="Attribute">OccupationCatLink</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>                        
         </field>       
         <field name="occupationLink">
-            <property name="Columns">40</property>
+            <property name="Columns">30</property>
             <property name="Attribute">OccupationLink</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>            
         </field>
         <field name="educationLink">
-            <property name="Columns">40</property>
+            <property name="Columns">30</property>
             <property name="Attribute">EducationLink</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
         </field>
         <field name="disability">
-            <property name="Columns">40</property>
+            <property name="Columns">30</property>
             <property name="Attribute">Disability</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
         </field>
         <field name="unionized">
-            <property name="Columns">40</property>
+            <property name="Columns">30</property>
             <property name="Attribute">Unionized</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
         </field> 
         <field name="cumulative">
-            <property name="Columns">40</property>
+            <property name="Columns">30</property>
             <property name="Attribute">Cumulative</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
         </field>
         <field name="maximum">
-            <property name="Columns">40</property>
+            <property name="Columns">30</property>
             <property name="Attribute">Maximum</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
         </field>
         <field name="nightly">
-            <property name="Columns">40</property>
+            <property name="Columns">30</property>
             <property name="Attribute">Nightly</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
@@ -99,38 +99,43 @@
             <property name="ModeCreate">READONLY</property>
             <property name="ModeEdit">READONLY</property>
         </field>
+        <field name="remunerationHeading" character="Heading">
+            <property name="Level">2</property>
+            <property name="Label">HumanResource_ClassTR_LaborForm.remunerationHeading.Heading</property>
+            <property name="ModeCreate">READONLY</property>
+            <property name="ModeEdit">READONLY</property>
+        </field>
         <field name="contractLink">
-            <property name="Columns">40</property>
+            <property name="Columns">30</property>
             <property name="Attribute">ContractLink</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
         </field>
         <field name="paymentLink">
-            <property name="Columns">40</property>
+            <property name="Columns">30</property>
             <property name="Attribute">PaymentLink</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
         </field>
         <field name="periodicityLink">
-            <property name="Columns">40</property>
+            <property name="Columns">30</property>
             <property name="Attribute">PeriodicityLink</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
         </field>
-        
-        <field name="specialSituacion">
-            <property name="Columns">40</property>
-            <property name="Attribute">SpecialSituacion</property>
+        <field name="remuneration">
+            <property name="Columns">30</property>
+            <property name="Attribute">Remuneration</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
-        </field>  
-        <field name="remuneration">
-            <property name="Columns">40</property>
-            <property name="Attribute">Remuneration</property>
+        </field>
+        <field name="specialSituacion">
+            <property name="Columns">30</property>
+            <property name="Attribute">SpecialSituacion</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
