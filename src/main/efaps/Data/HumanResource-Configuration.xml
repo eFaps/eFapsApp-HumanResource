@@ -125,6 +125,12 @@
                     <property name="Pattern">dd/MM/yyyy</property>
                 </attribute>
                 <attribute name="CUSPP" column="CUSPP" validate="false" overwrite="true"/>
+                 <attribute name="DoubleTax" class="org.efaps.esjp.data.columns.BooleanColumn" validateClass="org.efaps.esjp.data.columns.BooleanColumn" overwrite="true">
+                    <property name="Column">DOBBLETAX</property>
+                </attribute>
+                 <attribute name="Fifth" class="org.efaps.esjp.data.columns.BooleanColumn" validateClass="org.efaps.esjp.data.columns.BooleanColumn" overwrite="true">
+                    <property name="Column">LIR</property>
+                </attribute>
             </classification>
         </type>
     </definition>
@@ -195,7 +201,7 @@
     </attribute>
             ]]></value>
         </attribute>
-         <attribute>
+        <attribute>
             <key>org.efaps.humanresource.DataImport4TRA02</key>
             <value><![CDATA[
                 <attribute name="PaymentLink" class="org.efaps.esjp.data.columns.QueryBldrColumn" validateClass="org.efaps.esjp.data.columns.QueryBldrColumn" overwrite="true">
@@ -210,7 +216,27 @@
                     <property name="QueryAttribute">Value</property>
                     <property name="QueryColumn">PERIODICITY</property>
                 </attribute>
-                <attribute name="Remuneration" column="REMUNERATION" validate="false" overwrite="true" />
+                ]]></value>
+        </attribute>
+        <attribute>
+            <key>org.efaps.humanresource.DataImport4TRA03</key>
+            <value><![CDATA[
+               <attribute name="Remuneration" column="REMUNERATION" validate="false" overwrite="true" />
+                <attribute name="Disability" class="org.efaps.esjp.data.columns.BooleanColumn" validateClass="org.efaps.esjp.data.columns.BooleanColumn" overwrite="true">
+                    <property name="Column">DISABILITY</property>
+                </attribute>
+                 <attribute name="Unionized" class="org.efaps.esjp.data.columns.BooleanColumn" validateClass="org.efaps.esjp.data.columns.BooleanColumn" overwrite="true">
+                    <property name="Column">UNIONIZED</property>
+                </attribute>
+                 <attribute name="Cumulative" class="org.efaps.esjp.data.columns.BooleanColumn" validateClass="org.efaps.esjp.data.columns.BooleanColumn" overwrite="true">
+                    <property name="Column">CUMULATIVE</property>
+                </attribute>
+                 <attribute name="Maximum" class="org.efaps.esjp.data.columns.BooleanColumn" validateClass="org.efaps.esjp.data.columns.BooleanColumn" overwrite="true">
+                    <property name="Column">MAXIMUM</property>
+                </attribute>
+                 <attribute name="Nightly" class="org.efaps.esjp.data.columns.BooleanColumn" validateClass="org.efaps.esjp.data.columns.BooleanColumn" overwrite="true">
+                    <property name="Column">NIGHTLY</property>
+                </attribute>
             </classification>
         </type>
     </definition>

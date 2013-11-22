@@ -55,6 +55,12 @@
                     <property name="Pattern">dd/MM/yyyy</property>
                 </attribute>
                 <attribute name="CUSPP" column="CUSPP" validate="false" overwrite="true"/>
+                 <attribute name="DoubleTax" class="org.efaps.esjp.data.columns.BooleanColumn" validateClass="org.efaps.esjp.data.columns.BooleanColumn" overwrite="true">
+                    <property name="Column">DOBBLETAX</property>
+                </attribute>
+                 <attribute name="Fifth" class="org.efaps.esjp.data.columns.BooleanColumn" validateClass="org.efaps.esjp.data.columns.BooleanColumn" overwrite="true">
+                    <property name="Column">LIR</property>
+                </attribute>
             </classification>
         </type>
     </definition>

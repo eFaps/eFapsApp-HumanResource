@@ -90,6 +90,21 @@
                     <property name="QueryColumn">PERIODICITY</property>
                 </attribute>
                 <attribute name="Remuneration" column="REMUNERATION" validate="false" overwrite="true" />
+                <attribute name="Disability" class="org.efaps.esjp.data.columns.BooleanColumn" validateClass="org.efaps.esjp.data.columns.BooleanColumn" overwrite="true">
+                    <property name="Column">DISABILITY</property>
+                </attribute>
+                 <attribute name="Unionized" class="org.efaps.esjp.data.columns.BooleanColumn" validateClass="org.efaps.esjp.data.columns.BooleanColumn" overwrite="true">
+                    <property name="Column">UNIONIZED</property>
+                </attribute>
+                 <attribute name="Cumulative" class="org.efaps.esjp.data.columns.BooleanColumn" validateClass="org.efaps.esjp.data.columns.BooleanColumn" overwrite="true">
+                    <property name="Column">CUMULATIVE</property>
+                </attribute>
+                 <attribute name="Maximum" class="org.efaps.esjp.data.columns.BooleanColumn" validateClass="org.efaps.esjp.data.columns.BooleanColumn" overwrite="true">
+                    <property name="Column">MAXIMUM</property>
+                </attribute>
+                <attribute name="Nightly" class="org.efaps.esjp.data.columns.BooleanColumn" validateClass="org.efaps.esjp.data.columns.BooleanColumn" overwrite="true">
+                    <property name="Column">NIGHTLY</property>
+                </attribute>
             </classification>
         </type>
     </definition>
