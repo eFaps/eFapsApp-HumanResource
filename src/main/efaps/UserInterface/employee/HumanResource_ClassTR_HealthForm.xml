@@ -69,7 +69,14 @@
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
-        </field>
+        </field>            
+        <field name="fifth">
+            <property name="Columns">30</property>
+            <property name="Attribute">Fifth</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>  
         <field name="doubleTax">
             <property name="Columns">30</property>
             <property name="Attribute">DoubleTax</property>
@@ -77,12 +84,6 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
         </field>
-        <field name="fifth">
-            <property name="Columns">30</property>
-            <property name="Attribute">Fifth</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-            <property name="ModeSearch">EDITABLE</property>
-        </field>             
+                  
     </definition>
 </ui-form>
