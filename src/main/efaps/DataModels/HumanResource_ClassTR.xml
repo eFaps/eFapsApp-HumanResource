@@ -51,6 +51,12 @@
             <sqlcolumn>EMPLOYEEID</sqlcolumn>
         </attribute>
         <attribute>
+            <name>StartDate</name>
+            <type>Date</type>
+            <sqltable>HumanResource_ClassTRSQLTable</sqltable>
+            <sqlcolumn>SDATE</sqlcolumn>
+        </attribute>
+        <attribute>
             <name>EmployeeTypeLink</name>
             <type>LinkWithRanges</type>
             <typelink>HumanResource_AttributeDefinitionEmployeeType</typelink>

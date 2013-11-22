@@ -31,6 +31,7 @@
             <column name="EMPLOYEEID"       type="INTEGER"  not-null="true" />
             <column name="EMPLOYEETYPEID"   type="INTEGER"/>
             <column name="SITUATIONID"      type="INTEGER"/>
+            <column name="SDATE"            type="DATETIME"/>
             <foreign name="T_HRCLASSTR_EMPLOYEEID" key="EMPLOYEEID" reference="T_HREMPLOYEE(ID)"/>
         </database>
     </definition>
