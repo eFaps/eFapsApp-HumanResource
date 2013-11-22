@@ -38,7 +38,7 @@
 <data-import xmlns="http://www.efaps.org/xsd"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <definition name="ImportIDE"  file="" skipLine="12" execute="true" update="true">
+    <definition name="ImportIDE"  file="" skipLine="12" execute="false" update="true">
         <identifier class="org.efaps.esjp.data.identifier.QueryIdentifier">
              <property name="QueryAttribute">Number</property>
              <property name="QueryColumn">DOCNUMBER</property>
@@ -46,17 +46,16 @@
         <type name="HumanResource_Employee">
             <attribute name="Number" column="DOCNUMBER" validate="false"/>
             <attribute name="NumberTypeLink" class="org.efaps.esjp.data.columns.QueryBldrColumn" validateClass="org.efaps.esjp.data.columns.QueryBldrColumn">
-                <property name="Type">Contacts_AttributeDefinitionDOIType</property>
+                <property name="Type">HumanResource_AttributeDefinitionDOIType</property>
                 <property name="Select">id</property>
-                <property name="QueryAttribute">Description</property>
+                <property name="QueryAttribute">Value</property>
                 <property name="QueryColumn">DOCTYPE</property>
             </attribute>
-            <attribute name="LastName" column="LASTNAME1" validate="false" overwrite="true"/>
-            <attribute name="SecondLastName" column="LASTNAME2" validate="false" overwrite="true"/>
-            <attribute name="FirstName" column="FIRSTNAME" validate="false" overwrite="true"/>
-            <attribute name="Status" class="org.efaps.esjp.data.columns.StatusColumn" validateClass="org.efaps.esjp.data.columns.StatusColumn">
-                <property name="StatusGrp">HumanResource_EmployeeStatus</property>
-                <property name="Status">Worker</property>
+            <attribute name="NationalityLink" class="org.efaps.esjp.data.columns.QueryBldrColumn" validateClass="org.efaps.esjp.data.columns.QueryBldrColumn">
+                <property name="Type">HumanResource_AttributeDefinitionNationality</property>
+                <property name="Select">id</property>
+                <property name="QueryAttribute">Description</property>
+                <property name="QueryColumn">COUNTRY</property>
             </attribute>]]>
             </value>
         </attribute>
@@ -64,12 +63,23 @@
             <key>org.efaps.humanresource.DataImport4IDE01</key>
             <value>
             <![CDATA[
-            <classification name="HumanResource_Class" >
-                <attribute name="BirthDate" class="org.efaps.esjp.data.columns.DateColumn" validateClass="org.efaps.esjp.data.columns.DateColumn" overwrite="true">
-                    <property name="Column">BIRTHDATE</property>
-                    <property name="Pattern">dd/MM/yyyy</property>
-                </attribute>
-            </classification>
+            <attribute name="SexLink" class="org.efaps.esjp.data.columns.QueryBldrColumn" validateClass="org.efaps.esjp.data.columns.QueryBldrColumn">
+                <property name="Type">HumanResource_AttributeDefinitionSex</property>
+                <property name="Select">id</property>
+                <property name="QueryAttribute">Value</property>
+                <property name="QueryColumn">SEX</property>
+            </attribute>
+            <attribute name="LastName" column="LASTNAME1" validate="false" overwrite="true"/>
+            <attribute name="SecondLastName" column="LASTNAME2" validate="false" overwrite="true"/>
+            <attribute name="FirstName" column="FIRSTNAME" validate="false" overwrite="true"/>
+            <attribute name="Status" class="org.efaps.esjp.data.columns.StatusColumn" validateClass="org.efaps.esjp.data.columns.StatusColumn">
+                <property name="StatusGrp">HumanResource_EmployeeStatus</property>
+                <property name="Status">Worker</property>
+            </attribute>
+            <attribute name="BirthDate" class="org.efaps.esjp.data.columns.DateColumn" validateClass="org.efaps.esjp.data.columns.DateColumn" overwrite="true">
+                <property name="Column">BIRTHDATE</property>
+                <property name="Pattern">dd/MM/yyyy</property>
+            </attribute>
         </type>
     </definition>
 </data-import>]]>
