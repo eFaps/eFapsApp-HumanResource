@@ -42,6 +42,17 @@
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateCivilStatus</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateDOIType</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateEmitterCountry</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateContract</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateEducation</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateEmployeeType</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateHealthRegime</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateLaborRegime</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateOccupation</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateOccupationCategory</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreatePayment</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreatePensionRegime</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreatePeriodicity</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateSituation</child>            
         </childs>
     </definition>
 </ui-menu>
