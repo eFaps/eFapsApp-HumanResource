@@ -85,5 +85,51 @@
 </data-import>]]>
             </value>
         </attribute>
+        <attribute>
+            <key>org.efaps.humanresource.DataImport4SSA</key>
+            <value><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<data-import xmlns="http://www.efaps.org/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <definition name="ImportIDE"  file="" skipLine="11" execute="true" update="true">
+        <identifier class="org.efaps.esjp.data.identifier.QueryIdentifier">
+             <property name="QueryAttribute">Number</property>
+             <property name="QueryColumn">DOCNUMBER</property>
+        </identifier>
+        <type name="HumanResource_Employee">
+            <classification name="HumanResource_ClassTR_Health">
+                <attribute name="HealthRegimeLink" class="org.efaps.esjp.data.columns.QueryBldrColumn" validateClass="org.efaps.esjp.data.columns.QueryBldrColumn" overwrite="true">
+                    <property name="Type">HumanResource_AttributeDefinitionHealthRegime</property>
+                    <property name="Select">id</property>
+                    <property name="QueryAttribute">Value</property>
+                    <property name="QueryColumn">HEALTHREGIME</property>
+                </attribute>
+                <attribute name="HealthStartDate" class="org.efaps.esjp.data.columns.DateColumn" validateClass="org.efaps.esjp.data.columns.DateColumn" overwrite="true">
+                    <property name="Column">HDATE</property>
+                    <property name="Pattern">dd/MM/yyyy</property>
+                </attribute>            
+            ]]></value>
+        </attribute>
+        <attribute>
+            <key>org.efaps.humanresource.DataImport4SSA01</key>
+            <value><![CDATA[
+             <attribute name="PensionRegimeLink" class="org.efaps.esjp.data.columns.QueryBldrColumn" validateClass="org.efaps.esjp.data.columns.QueryBldrColumn" overwrite="true">
+                    <property name="Type">HumanResource_AttributeDefinitionPensionRegime</property>
+                    <property name="Select">id</property>
+                    <property name="QueryAttribute">Value</property>
+                    <property name="QueryColumn">PENSIONREGIME</property>
+                </attribute>
+                <attribute name="PensionStartDate" class="org.efaps.esjp.data.columns.DateColumn" validateClass="org.efaps.esjp.data.columns.DateColumn" overwrite="true">
+                    <property name="Column">PDATE</property>
+                    <property name="Pattern">dd/MM/yyyy</property>
+                </attribute>
+                <attribute name="CUSPP" column="CUSPP" validate="false" overwrite="true"/>
+            </classification>
+        </type>
+    </definition>
+</data-import>
+            ]]></value>
+        </attribute>
     </definition>
 </common-systemconfiguration>
