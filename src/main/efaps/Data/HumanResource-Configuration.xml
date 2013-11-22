@@ -131,5 +131,91 @@
 </data-import>
             ]]></value>
         </attribute>
+        <attribute>
+            <key>org.efaps.humanresource.DataImport4TRA</key>
+            <value><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<data-import xmlns="http://www.efaps.org/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <definition name="ImportIDE" file="" skipLine="11"
+        execute="true" update="true">
+        <identifier class="org.efaps.esjp.data.identifier.QueryIdentifier">
+            <property name="QueryAttribute">Number</property>
+            <property name="QueryColumn">DOCNUMBER</property>
+        </identifier>
+        <type name="HumanResource_Employee">
+            <classification name="HumanResource_ClassTR">
+                <attribute name="StartDate" class="org.efaps.esjp.data.columns.DateColumn" validateClass="org.efaps.esjp.data.columns.DateColumn" overwrite="true">
+                    <property name="Column">DATE</property>
+                    <property name="Pattern">dd/MM/yyyy</property>
+                </attribute>
+                <attribute name="EmployeeTypeLink" class="org.efaps.esjp.data.columns.QueryBldrColumn" validateClass="org.efaps.esjp.data.columns.QueryBldrColumn" overwrite="true">
+                    <property name="Type">HumanResource_AttributeDefinitionEmployeeType</property>
+                    <property name="Select">id</property>
+                    <property name="QueryAttribute">Value</property>
+                    <property name="QueryColumn">EMPLOYEETYPE</property>
+                </attribute>
+                <attribute name="SituationLink" class="org.efaps.esjp.data.columns.QueryBldrColumn" validateClass="org.efaps.esjp.data.columns.QueryBldrColumn" overwrite="true">
+                    <property name="Type">HumanResource_AttributeDefinitionSituation</property>
+                    <property name="Select">id</property>
+                    <property name="QueryAttribute">Value</property>
+                    <property name="QueryColumn">SITUATION</property>
+                </attribute>
+            </classification>
+            ]]></value>
+        </attribute>
+         <attribute>
+            <key>org.efaps.humanresource.DataImport4TRA01</key>
+            <value><![CDATA[
+<classification name="HumanResource_ClassTR_Labor">
+    <attribute name="RegimeLink" class="org.efaps.esjp.data.columns.QueryBldrColumn" validateClass="org.efaps.esjp.data.columns.QueryBldrColumn" overwrite="true">
+        <property name="Type">HumanResource_AttributeDefinitionLaborRegime</property>
+        <property name="Select">id</property>
+        <property name="QueryAttribute">Value</property>
+        <property name="QueryColumn">LABORREGIME</property>
+    </attribute>
+    <attribute name="OccupationCatLink" class="org.efaps.esjp.data.columns.QueryBldrColumn" validateClass="org.efaps.esjp.data.columns.QueryBldrColumn" overwrite="true">
+        <property name="Type">HumanResource_AttributeDefinitionOccupationCategory</property>
+        <property name="Select">id</property>
+        <property name="QueryAttribute">Value</property>
+        <property name="QueryColumn">OCUPCAT</property>
+    </attribute>
+    <attribute name="EducationLink" class="org.efaps.esjp.data.columns.QueryBldrColumn" validateClass="org.efaps.esjp.data.columns.QueryBldrColumn" overwrite="true">
+        <property name="Type">HumanResource_AttributeDefinitionEducation</property>
+        <property name="Select">id</property>
+        <property name="QueryAttribute">Description</property>
+        <property name="QueryColumn">EDUCATION</property>
+    </attribute>
+    <attribute name="ContractLink" class="org.efaps.esjp.data.columns.QueryBldrColumn" validateClass="org.efaps.esjp.data.columns.QueryBldrColumn" overwrite="true">
+        <property name="Type">HumanResource_AttributeDefinitionContract</property>
+        <property name="Select">id</property>
+        <property name="QueryAttribute">Value</property>
+        <property name="QueryColumn">CONTRACT</property>
+    </attribute>
+            ]]></value>
+        </attribute>
+         <attribute>
+            <key>org.efaps.humanresource.DataImport4TRA02</key>
+            <value><![CDATA[
+                <attribute name="PaymentLink" class="org.efaps.esjp.data.columns.QueryBldrColumn" validateClass="org.efaps.esjp.data.columns.QueryBldrColumn" overwrite="true">
+                    <property name="Type">HumanResource_AttributeDefinitionPayment</property>
+                    <property name="Select">id</property>
+                    <property name="QueryAttribute">Value</property>
+                    <property name="QueryColumn">PAYMENT</property>
+                </attribute>
+                <attribute name="PeriodicityLink" class="org.efaps.esjp.data.columns.QueryBldrColumn" validateClass="org.efaps.esjp.data.columns.QueryBldrColumn" overwrite="true">
+                    <property name="Type">HumanResource_AttributeDefinitionPeriodicity</property>
+                    <property name="Select">id</property>
+                    <property name="QueryAttribute">Value</property>
+                    <property name="QueryColumn">PERIODICITY</property>
+                </attribute>
+                <attribute name="Remuneration" column="REMUNERATION" validate="false" overwrite="true" />
+            </classification>
+        </type>
+    </definition>
+</data-import>            
+            ]]></value>
+        </attribute>
     </definition>
 </common-systemconfiguration>
