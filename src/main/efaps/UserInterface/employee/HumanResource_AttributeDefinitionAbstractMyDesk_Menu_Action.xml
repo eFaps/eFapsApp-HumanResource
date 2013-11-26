@@ -46,6 +46,7 @@
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateEducation</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateEmployeeType</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateHealthRegime</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateInsurance</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateLaborRegime</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateOccupation</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateOccupationCategory</child>

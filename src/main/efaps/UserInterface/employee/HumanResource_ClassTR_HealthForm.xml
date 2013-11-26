@@ -51,6 +51,11 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>            
         </field>
+        <field name="insuranceLink">
+            <property name="Attribute">InsuranceLink</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+        </field>
          <field name="pensionHeading" character="Heading">
             <property name="Level">2</property>
             <property name="Label">HumanResource_ClassTR_HealthForm.pensionHeading.Heading</property>

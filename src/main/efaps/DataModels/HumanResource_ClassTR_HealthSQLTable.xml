@@ -36,6 +36,7 @@
             <column name="CUSPP"        type="STRING_SHORT" length="64"/>
             <column name="DBTAX"        type="BOOLEAN"/>
             <column name="FIFTH"        type="BOOLEAN"/>
+            <column name="INSURANCEID"  type="INTEGER"/>            
             <foreign key="EMPLOYEEID" name="T_HRCLASSTRHEALTH_EMPLOYEEID" reference="T_HREMPLOYEE(ID)"/>
         </database>
     </definition>

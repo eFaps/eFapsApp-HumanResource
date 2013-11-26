@@ -66,6 +66,19 @@
             </trigger>
         </attribute>
         <attribute>
+            <name>InsuranceLink</name>
+            <type>LinkWithRanges</type>
+            <typelink>HumanResource_AttributeDefinitionInsurance</typelink>
+            <sqltable>HumanResource_ClassTR_HealthSQLTable</sqltable>
+            <sqlcolumn>INSURANCEID</sqlcolumn>
+            <trigger event="RANGE_VALUE"
+                name="HumanResource_ClassTR_Health.InsuranceLink.RANGE_VALUE"
+                program="org.efaps.esjp.admin.datamodel.RangesValue">
+                <property name="Value">Value</property>
+                <property name="Type">HumanResource_AttributeDefinitionInsurance</property>
+            </trigger>
+        </attribute>
+        <attribute>
             <name>HealthStartDate</name>
             <type>Date</type>
             <sqltable>HumanResource_ClassTR_HealthSQLTable</sqltable>
