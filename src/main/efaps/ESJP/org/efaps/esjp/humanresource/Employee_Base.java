@@ -217,10 +217,10 @@ public abstract class Employee_Base
         {
             super.connect(_parameter, _instance);
             final Instance depInst = Instance.get(_parameter.getParameterValue("department"));
-            if (depInst != null && depInst.isValid()) {
+            if (depInst.isValid()) {
                 final Insert insert = new Insert(CIHumanResource.Department2EmployeeAdminister);
-                insert.add(CIHumanResource.Department2EmployeeAbstract.DepartmentAbstractLink, depInst.getId());
-                insert.add(CIHumanResource.Department2EmployeeAbstract.EmployeeAbstractLink, _instance.getId());
+                insert.add(CIHumanResource.Department2EmployeeAbstract.DepartmentAbstractLink, depInst);
+                insert.add(CIHumanResource.Department2EmployeeAbstract.EmployeeAbstractLink, _instance);
                 insert.execute();
             }
         }

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--
 
  Copyright 2003 - 2010 The eFaps Team
@@ -17,25 +16,19 @@
  limitations under the License.
 
  Author:          The eFaps Team
- Revision:        $Rev$
- Last Changed:    $Date$
- Last Changed By: $Author$
+ Revision:        $Rev: 8497 $
+ Last Changed:    $Date: 2013-01-09 12:58:28 -0500 (mié, 09 ene 2013) $
+ Last Changed By: $Author: sara.landa@efaps.org $
 
 -->
-
-<ui-menu xmlns="http://www.efaps.org/xsd"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>95a2cfe0-92f0-432b-bbfb-6dee6e91a181</uuid>
+<ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>c08ca2ba-ed19-4e34-b518-e73dba838839</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev$</file-revision>
+    <file-revision>$Rev: 11088 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_MyDesk</name>
-        <childs>
-            <child>HumanResource_EmployeeMyDesk</child>
-            <child>HumanResource_DepartmentMyDesk</child>
-            <child>HumanResource_ReportMyDesk</child>
-        </childs>
+        <name>HumanResource_ReportForm</name>
+        <!-- fields -->
+
     </definition>
-</ui-menu>
+</ui-form>

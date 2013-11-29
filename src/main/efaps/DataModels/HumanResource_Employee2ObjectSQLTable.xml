@@ -37,6 +37,7 @@
             <column name="CREATED" not-null="true" type="DATETIME"/>
             <column name="MODIFIER" not-null="true" type="INTEGER"/>
             <column name="MODIFIED" not-null="true" type="DATETIME"/>
+            <column name="BOOLEAN1" type="BOOLEAN"/>
             <!-- foreign keys -->
             <foreign key="FROMID" name="T_HREMPLOYEE2OBJ_FK_FROMID" reference="T_HREMPLOYEE(ID)"/>
             <foreign key="CREATOR" name="T_HREMPLOYEE2OBJ_FK_CRTR" reference="T_USERPERSON(ID)"/>
