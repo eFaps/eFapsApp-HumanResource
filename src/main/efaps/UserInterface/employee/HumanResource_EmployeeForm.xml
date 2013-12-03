@@ -103,6 +103,7 @@
         </field>
         <field name="department">
             <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
             <property name="ModeView">NONE</property>
             <property name="Required">true</property>
             <property name="Label">HumanResource_EmployeeForm.department.Label</property>
@@ -114,6 +115,12 @@
                 <property name="Select">attribute[Name]</property>
                 <property name="ValueSelect">oid</property>
             </trigger>
+        </field>
+        <field name="department4View">
+            <property name="Select">linkfrom[HumanResource_Department2EmployeeAdminister#EmployeeLink].linkto[DepartmentLink].attribute[Name]</property>
+            <property name="Label">HumanResource_EmployeeForm.department.Label</property>
+            <property name="ModeView">READONLY</property>
+            <property name="ModeEdit">NONE</property>
         </field>
         <field name="userPerson">
             <property name="ModeEdit">NONE</property>
