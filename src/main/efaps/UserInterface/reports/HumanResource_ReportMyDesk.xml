@@ -27,7 +27,8 @@
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_ReportMyDesk</name>
         <childs>
-            <child>HumanResource_ReportMyDesk_TRegisterReport</child>
+            <child>HumanResource_ReportMyDesk_TRegisterReportIDE</child>
+            <child>HumanResource_ReportMyDesk_TRegisterReportTRA</child>
         </childs>
     </definition>
 </ui-menu>
