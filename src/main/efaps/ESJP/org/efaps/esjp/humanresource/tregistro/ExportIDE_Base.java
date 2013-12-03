@@ -22,7 +22,6 @@
 package org.efaps.esjp.humanresource.tregistro;
 
 import org.efaps.admin.event.Parameter;
-import org.efaps.admin.event.Return;
 import org.efaps.db.MultiPrintQuery;
 import org.efaps.db.QueryBuilder;
 import org.efaps.db.SelectBuilder;
@@ -32,14 +31,6 @@ import org.efaps.esjp.data.columns.export.FrmtDateTimeColumn;
 import org.efaps.util.EFapsException;
 import org.joda.time.DateTime;
 
-import com.brsanthu.dataexporter.DataExporter;
-import com.brsanthu.dataexporter.LineSeparatorType;
-import com.brsanthu.dataexporter.model.AlignType;
-import com.brsanthu.dataexporter.model.RowDetails;
-import com.brsanthu.dataexporter.model.StringColumn;
-import com.brsanthu.dataexporter.output.csv.CsvExportOptions;
-import com.brsanthu.dataexporter.output.csv.CsvWriter;
-
 
 /**
  * TODO comment!
@@ -48,74 +39,77 @@ import com.brsanthu.dataexporter.output.csv.CsvWriter;
  * @version $Id$
  */
 public abstract class ExportIDE_Base
+    extends AbstractExport
 {
-    public Return execute(final Parameter _parameter)
+
+    public static final String PREFIX = "RP_";
+
+    public static final String SUFFIX = "ide";
+
+
+    @Override
+    protected String getPrefix(final Parameter _parameter)
         throws EFapsException
     {
-        final CsvExportOptions exportOption = new CsvExportOptions();
-        configureReport(_parameter, exportOption);
-        final Exporter exporter = new Exporter(exportOption);
-        addColumnDefinition(_parameter, exporter);
-        buildDataSource(_parameter, exporter);
-
-        return new Return();
+        return ExportIDE_Base.PREFIX;
     }
 
-    protected void configureReport(final Parameter _parameter,
-                                   final CsvExportOptions _exportOption) {
-        _exportOption.setLineSeparator(LineSeparatorType.WINDOWS);
-        _exportOption.setQuote("");
-        _exportOption.setDelimiter("|");
-        _exportOption.setPrintHeaders(false);
-    }
-
-    protected void addColumnDefinition(final Parameter _parameter,
-                                       final Exporter _exporter)
+    @Override
+    protected String getSuffix(final Parameter _parameter)
+        throws EFapsException
     {
-        _exporter.addColumns(new StringColumn("DOIType", 2, AlignType.TOP_RIGHT));
-        _exporter.addColumns(new FrmtColumn("Number").setMaxWidth(15));
-        _exporter.addColumns(new StringColumn("EmitterCountry", 3));
-        _exporter.addColumns(new FrmtDateTimeColumn("BirthDate", 10, "dd/MM/yyyy"));
+        return ExportIDE_Base.SUFFIX;
+    }
 
+
+    @Override
+    public void addColumnDefinition(final Parameter _parameter,
+                                    final Exporter _exporter)
+    {
+        _exporter.addColumns(new FrmtColumn("DOIType", 2));
+        _exporter.addColumns(new FrmtColumn("Number").setMaxWidth(15));
+        _exporter.addColumns(new FrmtColumn("EmitterCountry", 3));
+        _exporter.addColumns(new FrmtDateTimeColumn("BirthDate", 10, "dd/MM/yyyy"));
         _exporter.addColumns(new FrmtColumn("LastName", 40));
         _exporter.addColumns(new FrmtColumn("SecondLastName", 40));
         _exporter.addColumns(new FrmtColumn("FirstName", 40));
-        _exporter.addColumns(new StringColumn("Sex", 1));
-        _exporter.addColumns(new StringColumn("Nationality", 1));
-        _exporter.addColumns(new StringColumn("10", 3));
-        _exporter.addColumns(new StringColumn("11", 9));
-        _exporter.addColumns(new StringColumn("12", 50));
-        _exporter.addColumns(new StringColumn("13", 2));
-        _exporter.addColumns(new StringColumn("14", 20));
-        _exporter.addColumns(new StringColumn("15", 4));
-        _exporter.addColumns(new StringColumn("16", 4));
-        _exporter.addColumns(new StringColumn("17", 4));
-        _exporter.addColumns(new StringColumn("18", 4));
-        _exporter.addColumns(new StringColumn("19", 4));
-        _exporter.addColumns(new StringColumn("20", 4));
-        _exporter.addColumns(new StringColumn("21", 4));
-        _exporter.addColumns(new StringColumn("22", 4));
-        _exporter.addColumns(new StringColumn("23", 2));
-        _exporter.addColumns(new StringColumn("24", 20));
-        _exporter.addColumns(new StringColumn("25", 40));
-        _exporter.addColumns(new StringColumn("26", 6));
-        _exporter.addColumns(new StringColumn("27", 2));
-        _exporter.addColumns(new StringColumn("28", 20));
-        _exporter.addColumns(new StringColumn("29", 4));
-        _exporter.addColumns(new StringColumn("30", 4));
-        _exporter.addColumns(new StringColumn("31", 4));
-        _exporter.addColumns(new StringColumn("32", 4));
-        _exporter.addColumns(new StringColumn("33", 4));
-        _exporter.addColumns(new StringColumn("34", 4));
-        _exporter.addColumns(new StringColumn("35", 4));
-        _exporter.addColumns(new StringColumn("36", 4));
-        _exporter.addColumns(new StringColumn("37", 2));
-        _exporter.addColumns(new StringColumn("38", 20));
-        _exporter.addColumns(new StringColumn("39", 40));
-        _exporter.addColumns(new StringColumn("40", 6));
-        _exporter.addColumns(new StringColumn("1", 6));
+        _exporter.addColumns(new FrmtColumn("Sex", 1));
+        _exporter.addColumns(new FrmtColumn("Nationality", 1));
+        _exporter.addColumns(new FrmtColumn("10", 3));
+        _exporter.addColumns(new FrmtColumn("11", 9));
+        _exporter.addColumns(new FrmtColumn("12", 50));
+        _exporter.addColumns(new FrmtColumn("13", 2));
+        _exporter.addColumns(new FrmtColumn("14", 20));
+        _exporter.addColumns(new FrmtColumn("15", 4));
+        _exporter.addColumns(new FrmtColumn("16", 4));
+        _exporter.addColumns(new FrmtColumn("17", 4));
+        _exporter.addColumns(new FrmtColumn("18", 4));
+        _exporter.addColumns(new FrmtColumn("19", 4));
+        _exporter.addColumns(new FrmtColumn("20", 4));
+        _exporter.addColumns(new FrmtColumn("21", 4));
+        _exporter.addColumns(new FrmtColumn("22", 4));
+        _exporter.addColumns(new FrmtColumn("23", 2));
+        _exporter.addColumns(new FrmtColumn("24", 20));
+        _exporter.addColumns(new FrmtColumn("25", 40));
+        _exporter.addColumns(new FrmtColumn("26", 6));
+        _exporter.addColumns(new FrmtColumn("27", 2));
+        _exporter.addColumns(new FrmtColumn("28", 20));
+        _exporter.addColumns(new FrmtColumn("29", 4));
+        _exporter.addColumns(new FrmtColumn("30", 4));
+        _exporter.addColumns(new FrmtColumn("31", 4));
+        _exporter.addColumns(new FrmtColumn("32", 4));
+        _exporter.addColumns(new FrmtColumn("33", 4));
+        _exporter.addColumns(new FrmtColumn("34", 4));
+        _exporter.addColumns(new FrmtColumn("35", 4));
+        _exporter.addColumns(new FrmtColumn("36", 4));
+        _exporter.addColumns(new FrmtColumn("37", 2));
+        _exporter.addColumns(new FrmtColumn("38", 20));
+        _exporter.addColumns(new FrmtColumn("39", 40));
+        _exporter.addColumns(new FrmtColumn("40", 6));
+        _exporter.addColumns(new FrmtColumn("1", 6));
     }
 
+    @Override
     public void buildDataSource(final Parameter _parameter,
                                 final Exporter _exporter)
         throws EFapsException
@@ -149,28 +143,6 @@ public abstract class ExportIDE_Base
             final String nation = multi.<String>getSelect(selNationality);
 
             _exporter.addRow(numberType, number, emitterCount, birthDate, lastName, secLastName, firstName, sex, nation);
-        }
-    }
-
-    public static class Exporter
-        extends DataExporter
-    {
-
-        /**
-         * @param _dataWriter
-         */
-        protected Exporter(final CsvExportOptions _options)
-        {
-            super(new CsvWriter(_options, System.out)
-            {
-                @Override
-                public void beforeRow(final RowDetails rowDetails)
-                {
-                    if (rowDetails.getRowIndex() > 0) {
-                        println();
-                    }
-                }
-            });
         }
     }
 }

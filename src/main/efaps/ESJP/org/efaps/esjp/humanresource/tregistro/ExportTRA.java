@@ -22,14 +22,14 @@
 package org.efaps.esjp.humanresource.tregistro;
 
 
-
 /**
  * TODO comment!
  *
  * @author The eFaps Team
  * @version $Id$
  */
-public class ExportIDE
-    extends ExportIDE_Base
+public class ExportTRA
+    extends ExportTRA_Base
 {
+
 }
