@@ -50,6 +50,18 @@
         <type>HumanResource_AttributeDefinitionFax</type>
         <type>HumanResource_AttributeDefinitionPhone</type>
 
+        <type>HumanResource_AttributeDefinitionAcademicDegree</type>
+        <type>HumanResource_AttributeDefinitionCareer</type>
+        <type>HumanResource_AttributeDefinitionLevelAttained</type>
+        <type>HumanResource_AttributeDefinitionPosition</type>
+        <type>HumanResource_AttributeDefinitionReasonForExit</type>
+        <type>HumanResource_AttributeDefinitionStatus</type>
+
+        <type>HumanResource_Education</type>
+        <type>HumanResource_PreviousWorks</type>
+        <type>HumanResource_Training</type>
+        <type>HumanResource_WorkReferences</type>
+
         <status group="HumanResource_EmployeeStatus">
             <key>Worker</key>
             <key>Notworked</key>

@@ -35,9 +35,15 @@
         <type>HumanResource_AttributeDefinitionEmail</type>
         <type>HumanResource_AttributeDefinitionFax</type>
         <type>HumanResource_AttributeDefinitionPhone</type>
+        <type>HumanResource_AttributeDefinitionAcademicDegree</type>
+        <type>HumanResource_AttributeDefinitionCareer</type>
+        <type>HumanResource_AttributeDefinitionLevelAttained</type>
+        <type>HumanResource_AttributeDefinitionPosition</type>
+        <type>HumanResource_AttributeDefinitionReasonForExit</type>
+        <type>HumanResource_AttributeDefinitionStatus</type>
 
-        <role>Contacts_Modifier</role>
-        <role>Contacts_Reader</role>
+        <role>HumanResource_Modifier</role>
+        <role>HumanResource_Reader</role>
 
     </definition>
 

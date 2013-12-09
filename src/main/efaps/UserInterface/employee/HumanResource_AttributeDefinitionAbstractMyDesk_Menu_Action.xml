@@ -53,7 +53,13 @@
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreatePayment</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreatePensionRegime</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreatePeriodicity</child>
-            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateSituation</child>            
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateSituation</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateAcademicDegree</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateCareer</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateLevelAttained</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreatePosition</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateReasonForExit</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateStatus</child>
         </childs>
     </definition>
 </ui-menu>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Copyright 2003 - 2010 The eFaps Team Licensed under the Apache License,
+    Version 2.0 (the "License"); you may not use this file except in compliance
+    with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+    Unless required by applicable law or agreed to in writing, software distributed
+    under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
+    OR CONDITIONS OF ANY KIND, either express or implied. See the License for
+    the specific language governing permissions and limitations under the License.
+    Author: The eFaps Team Revision: $Rev: 11283 $ Last Changed: $Date: 2011-04-27
+    19:17:45 -0500 (mié, 27 abr 2011) $ Last Changed By: $Author: jan@moxter.net
+    $ --><ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>fa15e120-4aa3-4d63-bd4a-3b254df04bb0</uuid>
+    <file-application>eFapsApp-HumanResource</file-application>
+    <file-revision>$Rev: 11283 $</file-revision>
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <name>HumanResource_PreviousWorksForm</name>
+        <!-- fields -->
+        <field name="institution">
+            <property name="Attribute">Institution</property>
+            <property name="Columns">15</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+            <property name="Required">true</property>
+        </field>
+        <field name="position">
+            <property name="Attribute">PositionLink</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+        </field>
+        <field name="date">
+            <property name="Columns">12</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+            <property name="Attribute">Date</property>
+            <property name="Required">true</property>
+        </field>
+        <field name="dueDate">
+            <property name="Columns">12</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+            <property name="Attribute">DueDate</property>
+            <property name="Required">true</property>
+        </field>
+        <field name="reasonForExit">
+            <property name="Attribute">ReasonForExitLink</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+        </field>
+        <field name="createGroup" character="Group">
+            <property name="GroupCount">2</property>
+        </field>
+        <field name="creator">
+            <property name="ModeCreate">NONE</property>
+            <property name="SelectAlternateOID">linkto[Creator].oid</property>
+            <property name="Attribute">Creator</property>
+            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
+            <property name="ShowTypeIcon">true</property>
+        </field>
+        <field name="created">
+            <property name="ModeCreate">NONE</property>
+            <property name="Attribute">Created</property>
+        </field>
+        <field name="modifyGroup" character="Group">
+            <property name="GroupCount">2</property>
+        </field>
+        <field name="modifier">
+            <property name="ModeCreate">NONE</property>
+            <property name="SelectAlternateOID">linkto[Modifier].oid</property>
+            <property name="Attribute">Modifier</property>
+            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
+            <property name="ShowTypeIcon">true</property>
+        </field>
+        <field name="modified">
+            <property name="ModeCreate">NONE</property>
+            <property name="Attribute">Modified</property>
+        </field>
+    </definition>
+</ui-form>

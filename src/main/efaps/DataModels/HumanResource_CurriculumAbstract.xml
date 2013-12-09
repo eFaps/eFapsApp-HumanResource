@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+
+ Copyright 2003 - 2010 The eFaps Team
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+
+ Author:          The eFaps Team
+ Revision:        $Rev: 11088 $
+ Last Changed:    $Date: 2013-11-21 21:07:50 -0500 (jue, 21 nov 2013) $
+ Last Changed By: $Author: jan@moxter.net $
+
+--><datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>9f192bc6-8af1-47d6-a55f-4953377b683f</uuid>
+    <file-application>eFapsApp-HumanResource</file-application>
+    <file-revision>$Rev: 11088 $</file-revision>
+
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <name>HumanResource_CurriculumAbstract</name>
+        <purpose abstract="true"/>
+        <attribute>
+            <name>Type</name>
+            <type>Type</type>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>TYPEID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>OID</name>
+            <type>OID</type>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>TYPEID, ID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>ID</name>
+            <type>Long</type>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>ID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>Company</name>
+            <type>CompanyLink</type>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>COMPANYID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>EmployeeLink</name>
+            <type>Link</type>
+            <typelink>HumanResource_Employee</typelink>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>EMPLOYEEID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>Institution</name>
+            <type>String</type>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>INSTITUTION</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>Date</name>
+            <type>Date</type>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>DATE</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>DueDate</name>
+            <type>Date</type>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>DUEDATE</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>PositionLink</name>
+            <type>LinkWithRanges</type>
+            <typelink>HumanResource_AttributeDefinitionPosition</typelink>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>POSITIONID</sqlcolumn>
+            <trigger event="RANGE_VALUE" name="HumanResource_Curriculum.PositionLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
+                    <property name="Value">Value</property>
+                    <property name="Type">HumanResource_AttributeDefinitionPosition</property>
+            </trigger>
+        </attribute>
+        <attribute>
+            <name>CareerLink</name>
+            <type>LinkWithRanges</type>
+            <typelink>HumanResource_AttributeDefinitionCareer</typelink>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>CAREERID</sqlcolumn>
+            <trigger event="RANGE_VALUE" name="HumanResource_Curriculum.CareerLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
+                    <property name="Value">Value</property>
+                    <property name="Type">HumanResource_AttributeDefinitionCareer</property>
+            </trigger>
+        </attribute>
+        <attribute>
+            <name>ReasonForExitLink</name>
+            <type>LinkWithRanges</type>
+            <typelink>HumanResource_AttributeDefinitionReasonForExit</typelink>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>REASONFOREXITID</sqlcolumn>
+            <trigger event="RANGE_VALUE" name="HumanResource_Curriculum.ReasonForexitLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
+                    <property name="Value">Value</property>
+                    <property name="Type">HumanResource_AttributeDefinitionReasonForExit</property>
+            </trigger>
+        </attribute>
+        <attribute>
+            <name>FirstName</name>
+            <type>String</type>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>FIRSTNAME</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>LastName</name>
+            <type>String</type>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>LASTNAME</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>Phone</name>
+            <type>String</type>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>PHONE</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>CellPhone</name>
+            <type>String</type>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>CELLPHONE</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>Reference</name>
+            <type>String</type>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>REF</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>AcademicDegreeLink</name>
+            <type>LinkWithRanges</type>
+            <typelink>HumanResource_AttributeDefinitionAcademicDegree</typelink>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>DEGREEID</sqlcolumn>
+            <trigger event="RANGE_VALUE" name="HumanResource_Curriculum.AcademicDegreeLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
+                    <property name="Value">Value</property>
+                    <property name="Type">HumanResource_AttributeDefinitionAcademicDegree</property>
+            </trigger>
+        </attribute>
+        <attribute>
+            <name>StatusLink</name>
+            <type>LinkWithRanges</type>
+            <typelink>HumanResource_AttributeDefinitionStatus</typelink>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>STATUSID</sqlcolumn>
+            <trigger event="RANGE_VALUE" name="HumanResource_Curriculum.StatusLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
+                    <property name="Value">Value</property>
+                    <property name="Type">HumanResource_AttributeDefinitionStatus</property>
+            </trigger>
+        </attribute>
+        <attribute>
+            <name>LevelAttainedLink</name>
+            <type>LinkWithRanges</type>
+            <typelink>HumanResource_AttributeDefinitionLevelAttained</typelink>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>LEVELATTID</sqlcolumn>
+            <trigger event="RANGE_VALUE" name="HumanResource_Curriculum.StatusLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
+                    <property name="Value">Value</property>
+                    <property name="Type">HumanResource_AttributeDefinitionLevelAttained</property>
+            </trigger>
+        </attribute>
+        <attribute>
+            <name>Course</name>
+            <type>String</type>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>COURSE</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>Hours</name>
+            <type>Integer</type>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>HOURS</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>Note</name>
+            <type>String</type>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>NOTE</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>Creator</name>
+            <type>CreatorLink</type>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>CREATOR</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>Created</name>
+            <type>Created</type>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>CREATED</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>Modifier</name>
+            <type>ModifierLink</type>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>MODIFIER</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>Modified</name>
+            <type>Modified</type>
+            <sqltable>HumanResource_CurriculumSQLTable</sqltable>
+            <sqlcolumn>MODIFIED</sqlcolumn>
+        </attribute>
+    </definition>
+</datamodel-type>
