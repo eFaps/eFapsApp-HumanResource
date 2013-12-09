@@ -31,6 +31,9 @@
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
+        <profiles>
+            <profile name="eFaps" />
+        </profiles>
         <name>HumanResource_ClassLocation</name>
         <purpose classification="true">
             <LinkColumn>EmployeeLink</LinkColumn>
@@ -72,6 +75,75 @@
             <type>String</type>
             <sqltable>HumanResource_ClassLocationSQLTable</sqltable>
             <sqlcolumn>ZIP</sqlcolumn>
+        </attribute>
+    </definition>
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <profiles>
+            <profile name="ubicaciones" />
+        </profiles>
+        <name>HumanResource_ClassLocation</name>
+        <purpose classification="true">
+            <LinkColumn>EmployeeLink</LinkColumn>
+            <parent>HumanResource_Class</parent>
+        </purpose>
+        <attribute>
+            <name>OID</name>
+            <type>OID</type>
+            <sqltable>HumanResource_ClassLocationSQLTable</sqltable>
+            <sqlcolumn>ID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>ID</name>
+            <type>Long</type>
+            <sqltable>HumanResource_ClassLocationSQLTable</sqltable>
+            <sqlcolumn>ID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>EmployeeLink</name>
+            <type>Link</type>
+            <typelink>HumanResource_Employee</typelink>
+            <sqltable>HumanResource_ClassLocationSQLTable</sqltable>
+            <sqlcolumn>EMPLOYEEID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>LocationAdressStreet</name>
+            <type>String</type>
+            <sqltable>HumanResource_ClassLocationSQLTable</sqltable>
+            <sqlcolumn>STREET</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>LocationAdressCity</name>
+            <type>String</type>
+            <sqltable>HumanResource_ClassLocationSQLTable</sqltable>
+            <sqlcolumn>CITY</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>LocationAdressZIP</name>
+            <type>String</type>
+            <sqltable>HumanResource_ClassLocationSQLTable</sqltable>
+            <sqlcolumn>ZIP</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>DepartmentLocationLink</name>
+            <type>Link</type>
+            <typelink>Ubicaciones_UbicacionStandardRoot</typelink>
+            <sqltable>HumanResource_ClassLocationSQLTable</sqltable>
+            <sqlcolumn>DEPARTMENTID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>ProvinceLocationLink</name>
+            <type>Link</type>
+            <typelink>Ubicaciones_UbicacionStandardRoot</typelink>
+            <sqltable>HumanResource_ClassLocationSQLTable</sqltable>
+            <sqlcolumn>PROVINCEID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>DistrictLocationLink</name>
+            <type>Link</type>
+            <typelink>Ubicaciones_UbicacionStandardRoot</typelink>
+            <sqltable>HumanResource_ClassLocationSQLTable</sqltable>
+            <sqlcolumn>DISTRICTID</sqlcolumn>
         </attribute>
     </definition>
 </datamodel-type>
