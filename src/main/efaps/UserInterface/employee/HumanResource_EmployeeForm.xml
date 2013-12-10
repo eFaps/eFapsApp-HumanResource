@@ -74,6 +74,17 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeCreate">EDITABLE</property>
         </field>
+        <field name="age">
+            <property name="Label">HumanResource_Employee/Age.Label</property>
+            <property name="ModeEdit">NONE</property>
+            <property name="ModeCreate">NONE</property>
+            <property name="ModeView">READONLY</property>
+            <trigger program="org.efaps.esjp.humanresource.Employee"
+                method="getAgeFieldValueUI2View"
+                name="HumanResource_EmployeeForm.age.UI_Field_Value"
+                event="UI_FIELD_VALUE">
+            </trigger>
+        </field>
         <field name="firstName">
             <property name="Attribute">FirstName</property>
             <property name="Columns">60</property>

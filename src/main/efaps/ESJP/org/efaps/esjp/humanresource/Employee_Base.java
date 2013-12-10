@@ -40,11 +40,15 @@ import org.efaps.db.AttributeQuery;
 import org.efaps.db.Insert;
 import org.efaps.db.Instance;
 import org.efaps.db.MultiPrintQuery;
+import org.efaps.db.PrintQuery;
 import org.efaps.db.QueryBuilder;
 import org.efaps.esjp.ci.CIHumanResource;
 import org.efaps.esjp.common.uiform.Create;
 import org.efaps.ui.wicket.util.EFapsKey;
 import org.efaps.util.EFapsException;
+import org.joda.time.DateTime;
+import org.joda.time.Period;
+import org.joda.time.PeriodType;
 
 
 /**
@@ -224,5 +228,24 @@ public abstract class Employee_Base
                 insert.execute();
             }
         }
+    }
+
+    public Return getAgeFieldValueUI2View(final Parameter _parameter)
+        throws EFapsException
+    {
+        final Return retVal = new Return();
+        final Instance employeeInst = _parameter.getCallInstance();
+        if (employeeInst != null && employeeInst.isValid()){
+            final PrintQuery print = new PrintQuery(employeeInst);
+            print.addAttribute(CIHumanResource.Employee.BirthDate);
+            print.execute();
+            final DateTime birthDate = print.<DateTime>getAttribute(CIHumanResource.Employee.BirthDate);
+            final DateTime todayDate = new DateTime();
+            final Period p = new Period(birthDate, todayDate, PeriodType.years());
+            final int resultado = p.getYears();
+            retVal.put(ReturnValues.VALUES, resultado + "");
+        }
+
+        return retVal;
     }
 }
