@@ -41,6 +41,7 @@
         <type>HumanResource_Employee</type>
         <!-- child -->
         <childs>
+            <child>HumanResource_EmployeeTree_Related</child>
             <child>HumanResource_EmployeeTree_Superior2Inferior</child>
             <child>HumanResource_EmployeeTree_Documents</child>
             <child>HumanResource_EmployeeTree_Contacts</child>

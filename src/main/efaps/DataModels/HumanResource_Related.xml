@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+
+ Copyright 2003 - 2010 The eFaps Team
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+
+ Author:          The eFaps Team
+ Revision:        $Rev: 10334 $
+ Last Changed:    $Date: 2013-10-01 13:50:27 -0500 (mar, 01 oct 2013) $
+ Last Changed By: $Author: jan@moxter.net $
+
+--><datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>907c4a03-db6e-4a53-9e6d-cfe22d01469d</uuid>
+    <file-application>eFapsApp-HumanResource</file-application>
+    <file-revision>$Rev: 10334 $</file-revision>
+
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <name>HumanResource_Related</name>
+        <parent>HumanResource_EmployeeAbstract</parent>
+
+        <attribute>
+            <name>Status</name>
+            <type>Status</type>
+            <typelink>HumanResource_EmployeeStatus</typelink>
+            <sqltable>HumanResource_EmployeeSQLTable</sqltable>
+            <sqlcolumn>STATUS</sqlcolumn>
+            <trigger program="org.efaps.esjp.admin.datamodel.StatusValue"
+                name="HumanResource_Employee.Status.RANGE_VALUE" event="RANGE_VALUE">
+            </trigger>
+        </attribute>
+        <attribute>
+            <name>EmployeeLink</name>
+            <type>Link</type>
+            <typelink>HumanResource_Employee</typelink>
+            <sqltable>HumanResource_RelatedSQLTable</sqltable>
+            <sqlcolumn>EMPLOYEEID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>FamilyTieLink</name>
+            <type>LinkWithRanges</type>
+            <typelink>HumanResource_AttributeDefinitionFamilyTie</typelink>
+            <sqltable>HumanResource_RelatedSQLTable</sqltable>
+            <sqlcolumn>FAMILYTIEID</sqlcolumn>
+            <trigger event="RANGE_VALUE" name="HumanResource_Curriculum.CareerLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
+                    <property name="Value">Value</property>
+                    <property name="Type">HumanResource_AttributeDefinitionFamilyTie</property>
+            </trigger>
+        </attribute>
+        <attribute>
+            <name>DocumentTypeFamilyTieLink</name>
+            <type>LinkWithRanges</type>
+            <typelink>HumanResource_AttributeDefinitionDocumentTypeFamilyTie</typelink>
+            <sqltable>HumanResource_RelatedSQLTable</sqltable>
+            <sqlcolumn>DOCTYPEFTID</sqlcolumn>
+            <trigger event="RANGE_VALUE" name="HumanResource_Curriculum.CareerLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
+                    <property name="Value">Value</property>
+                    <property name="Type">HumanResource_AttributeDefinitionDocumentTypeFamilyTie</property>
+            </trigger>
+        </attribute>
+        <attribute>
+            <name>NumberDocumentFamilyTie</name>
+            <type>String</type>
+            <sqltable>HumanResource_RelatedSQLTable</sqltable>
+            <sqlcolumn>NUMBDOCFT</sqlcolumn>
+        </attribute>
+        <trigger event="ACCESSCHECK" name="HumanResource_Related.ACCESSCHECK"
+                program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType" />
+    </definition>
+</datamodel-type>

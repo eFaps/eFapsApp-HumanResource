@@ -36,10 +36,11 @@
         <access-type>show</access-type>
         <access-type>read</access-type>
         <access-type>checkout</access-type>
-        
+
         <type>HumanResource_Department</type>
         <type>HumanResource_Employee</type>
-        
+        <type>HumanResource_Related</type>
+
         <status group="HumanResource_EmployeeStatus">
             <key>Worker</key>
             <key>Subsidiary</key>

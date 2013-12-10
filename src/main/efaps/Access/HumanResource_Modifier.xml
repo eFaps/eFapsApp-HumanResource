@@ -42,6 +42,7 @@
         
         <type>HumanResource_Department</type>
         <type>HumanResource_Employee</type>
+        <type>HumanResource_Related</type>
         
         <status group="HumanResource_EmployeeStatus">
             <key>Worker</key>
