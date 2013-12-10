@@ -56,6 +56,9 @@
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateSituation</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateFamilyTie</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateDocumentTypeFamilyTie</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateResidenceVerification</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateTypeDrivingLicence</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateRelation</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateAcademicDegree</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateCareer</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateLevelAttained</child>

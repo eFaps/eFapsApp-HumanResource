@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+
+  Copyright 2009 - 2013 moxter.net S.A.C.
+
+  All Rights Reserved.
+  This program contains proprietary and trade secret information of
+  moxter.net S.A.C. Copyright notice is precautionary only and does not
+  evidence any actual or intended publication of such program.
+
+  Author:          moxter.net S.A.C.
+  Revision:        $Rev: 11100 $
+  Last Changed:    $Date: 2013-11-22 12:43:20 -0500 (vie, 22 nov 2013) $
+  Last Changed By: $Author: jose.mallqui@efaps.org $
+
+--><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+
+    <uuid>73c85cc6-b5cd-4b02-8f2a-a0c0b075db69</uuid>
+    <file-application>eFapsApp-HumanResource</file-application>
+    <file-revision>$Rev: 11100 $</file-revision>
+
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <name>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateResidenceVerification</name>
+        <access>
+            <role>HumanResource_Admin</role>
+        </access>
+        <!-- target definitions -->
+
+        <target>
+            <form>ERP_AttributeDefinitionMappingForm</form>
+            <execute program="org.efaps.esjp.common.uiform.Create"/>
+        </target>
+        <!-- properties -->
+        <property name="Target">modal</property>
+        <property name="TargetCreateType">HumanResource_AttributeDefinitionResidenceVerification</property>
+        <property name="TargetMode">create</property>
+    </definition>
+</ui-command>

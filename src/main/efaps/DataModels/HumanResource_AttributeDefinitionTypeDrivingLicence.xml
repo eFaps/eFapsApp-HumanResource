@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+
+  Copyright 2009 - 2013 moxter.net S.A.C.
+
+  All Rights Reserved.
+  This program contains proprietary and trade secret information of
+  moxter.net S.A.C. Copyright notice is precautionary only and does not
+  evidence any actual or intended publication of such program.
+
+  Author:          moxter.net S.A.C.
+  Revision:        $Rev: 11015 $
+  Last Changed:    $Date: 2013-11-20 10:34:01 -0500 (mié, 20 nov 2013) $
+  Last Changed By: $Author: jan@moxter.net $
+
+--><datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>9e470131-d7ed-4ca1-94ad-db35ad785c99</uuid>
+    <file-application>eFapsApp-HumanResource</file-application>
+    <file-revision>$Rev: 11015 $</file-revision>
+
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <name>HumanResource_AttributeDefinitionTypeDrivingLicence</name>
+        <parent>ERP_AttributeDefinitionMappingAbstract</parent>
+    </definition>
+</datamodel-type>
