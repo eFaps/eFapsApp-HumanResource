@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+
+ Copyright 2003 - 2010 The eFaps Team
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+
+ Author:          The eFaps Team
+ Revision:        $Rev: 11342 $
+ Last Changed:    $Date: 2013-12-09 18:42:29 -0500 (lun, 09 dic 2013) $
+ Last Changed By: $Author: rosa.ordonez@efaps.org $
+
+--><datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>965fd2bb-9c38-4bd0-9791-2b0f6d53ee47</uuid>
+    <file-application>eFapsApp-HumanResource</file-application>
+    <file-revision>$Rev: 11342 $</file-revision>
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <name>HumanResource_ClassFinancialInformation</name>
+        <purpose classification="true">
+            <LinkColumn>EmployeeLink</LinkColumn>
+            <parent>HumanResource_Class</parent>
+        </purpose>
+        <attribute>
+            <name>OID</name>
+            <type>OID</type>
+            <sqltable>HumanResource_ClassFinancialInformationSQLTable</sqltable>
+            <sqlcolumn>ID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>ID</name>
+            <type>Long</type>
+            <sqltable>HumanResource_ClassFinancialInformationSQLTable</sqltable>
+            <sqlcolumn>ID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>EmployeeLink</name>
+            <type>Link</type>
+            <typelink>HumanResource_Employee</typelink>
+            <sqltable>HumanResource_ClassFinancialInformationSQLTable</sqltable>
+            <sqlcolumn>EMPLOYEEID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>BankLink</name>
+            <type>LinkWithRanges</type>
+            <typelink>Contacts_AttributeDefinitionFinancialInstitution</typelink>
+            <sqltable>HumanResource_ClassFinancialInformationSQLTable</sqltable>
+            <sqlcolumn>BANKID</sqlcolumn>
+            <trigger event="RANGE_VALUE" name="HumanResource_ClassTR_Health.HealthRegimeLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
+                <property name="Value">Value</property>
+                <property name="Type">Contacts_AttributeDefinitionFinancialInstitution</property>
+            </trigger>
+        </attribute>
+        <attribute>
+            <name>CurrencyId</name>
+            <type>LinkWithRanges</type>
+            <typelink>ERP_Currency</typelink>
+            <sqltable>HumanResource_ClassFinancialInformationSQLTable</sqltable>
+            <sqlcolumn>CURRENCYID</sqlcolumn>
+            <trigger program="org.efaps.esjp.admin.datamodel.RangesValue"
+                     name="Products_ProductPricelistPosition.CurrencyId.RANGE_VALUE"
+                     event="RANGE_VALUE">
+                <property name="Value">Name</property>
+                <property name="Type">ERP_Currency</property>
+            </trigger>
+        </attribute>
+        <attribute>
+            <name>Account</name>
+            <type>String</type>
+            <sqltable>HumanResource_ClassFinancialInformationSQLTable</sqltable>
+            <sqlcolumn>ACCOUNT</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>CCI</name>
+            <type>String</type>
+            <sqltable>HumanResource_ClassFinancialInformationSQLTable</sqltable>
+            <sqlcolumn>CCI</sqlcolumn>
+        </attribute>
+    </definition>
+</datamodel-type>
