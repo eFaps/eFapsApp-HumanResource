@@ -227,6 +227,14 @@ public abstract class Employee_Base
                 insert.add(CIHumanResource.Department2EmployeeAbstract.EmployeeAbstractLink, _instance);
                 insert.execute();
             }
+
+            final Instance locInst = Instance.get(_parameter.getParameterValue("location"));
+            if (locInst.isValid()) {
+                final Insert insert = new Insert(CIHumanResource.Employee2LocationOffice);
+                insert.add(CIHumanResource.Employee2LocationOffice.EmployeeLink, _instance);
+                insert.add(CIHumanResource.Employee2LocationOffice.LocationOfficeLink, locInst);
+                insert.execute();
+            }
         }
     }
 

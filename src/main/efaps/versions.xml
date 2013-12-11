@@ -49,7 +49,7 @@
             import org.efaps.db.QueryBuilder;
             import org.efaps.db.InstanceQuery;
             import org.efaps.esjp.admin.ui.UIUpdate;
-           
+
             EFAPS_LOGGER.info("Importing Data for eFapsApp-HumanResource");
 
             RunLevel.init("shell");
@@ -61,6 +61,9 @@
 
             <!-- HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action, ERP_AttributeDefinitionMyDesk_Menu-->
             update.add2Menu("e02c020f-6418-4f22-a5b7-49459212cc27", "69e0b34a-2483-4662-9a45-1ce5d4e420e6", 1);
+
+            <!-- connect HR_Locations_LocationTree_Employee Menu to Locations_LocationTree -->
+            update.add2Menu("8721159f-fd61-4a4c-996c-abb350bf773a", "385eb1af-ca21-47ca-a9ce-b37b6969e8ea", 2);
         </script>
     </version>
 </install>

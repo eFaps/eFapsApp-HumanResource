@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Copyright 2003 - 2010 The eFaps Team Licensed under the Apache License,
-    Version 2.0 (the "License"); you may not use this file except in compliance
-    with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
-    Unless required by applicable law or agreed to in writing, software distributed
-    under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
-    OR CONDITIONS OF ANY KIND, either express or implied. See the License for
-    the specific language governing permissions and limitations under the License.
-    Author: The eFaps Team Revision: $Rev$ Last Changed: $Date: 2011-04-27
-    19:17:45 -0500 (mié, 27 abr 2011) $ Last Changed By: $Author: jan@moxter.net
-    $ -->
+<!--
+ Copyright 2003 - 2013 The eFaps Team
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+
+ Author:          The eFaps Team
+ Revision:        $Rev$
+ Last Changed:    $Date$
+ Last Changed By: $Author$
+-->
 
 <ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
@@ -18,6 +28,9 @@
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
+        <profiles>
+            <profile name="eFaps"/>
+        </profiles>
         <name>HumanResource_EmployeeForm</name>
         <!-- fields -->
         <field name="classification" character="Classification">
@@ -156,6 +169,203 @@
             <property name="ModeEdit">READONLY</property>
             <property name="ModeView">READONLY</property>
             <property name="ModeCreate">NONE</property>
+        </field>
+        <field name="createGroup" character="Group">
+            <property name="GroupCount">2</property>
+        </field>
+        <field name="creator">
+            <property name="ModeCreate">NONE</property>
+            <property name="SelectAlternateOID">linkto[Creator].oid</property>
+            <property name="Attribute">Creator</property>
+            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
+            <property name="ShowTypeIcon">true</property>
+        </field>
+        <field name="created">
+            <property name="ModeCreate">NONE</property>
+            <property name="Attribute">Created</property>
+        </field>
+        <field name="modifyGroup" character="Group">
+            <property name="GroupCount">2</property>
+        </field>
+        <field name="modifier">
+            <property name="ModeCreate">NONE</property>
+            <property name="SelectAlternateOID">linkto[Modifier].oid</property>
+            <property name="Attribute">Modifier</property>
+            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
+            <property name="ShowTypeIcon">true</property>
+        </field>
+        <field name="modified">
+            <property name="ModeCreate">NONE</property>
+            <property name="Attribute">Modified</property>
+        </field>
+    </definition>
+
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <profiles>
+            <profile name="locations"/>
+        </profiles>
+        <name>HumanResource_EmployeeForm</name>
+        <!-- fields -->
+        <field name="classification" character="Classification">
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="Classification">HumanResource_Class</property>
+        </field>
+        <field name="type">
+            <property name="Attribute">Type</property>
+        </field>
+        <field name="numberGroup" character="Group">
+            <property name="GroupCount">2</property>
+            <property name="ModeCreate">READONLY</property>
+        </field>
+        <field name="number">
+            <property name="Attribute">Number</property>
+            <property name="Columns">15</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+            <property name="Required">true</property>
+        </field>
+        <field name="numberTypeLink">
+            <property name="Attribute">NumberTypeLink</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+        </field>
+        <field name="emitterGroup" character="Group">
+            <property name="GroupCount">2</property>
+            <property name="ModeCreate">READONLY</property>
+        </field>
+        <field name="nationalityLink">
+            <property name="Attribute">NationalityLink</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+        </field>
+         <field name="emitterCountryLink">
+            <property name="Attribute">EmitterCountryLink</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+        </field>
+        <field name="birthGroup" character="Group">
+            <property name="GroupCount">2</property>
+            <property name="ModeCreate">READONLY</property>
+        </field>
+        <field name="birthDate">
+            <property name="Attribute">BirthDate</property>
+            <property name="Columns">12</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+        </field>
+        <field name="SexLink">
+            <property name="Attribute">SexLink</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+        </field>
+        <field name="age">
+            <property name="Label">HumanResource_Employee/Age.Label</property>
+            <property name="ModeEdit">NONE</property>
+            <property name="ModeCreate">NONE</property>
+            <property name="ModeView">READONLY</property>
+            <trigger program="org.efaps.esjp.humanresource.Employee"
+                method="getAgeFieldValueUI2View"
+                name="HumanResource_EmployeeForm.age.UI_Field_Value"
+                event="UI_FIELD_VALUE">
+            </trigger>
+        </field>
+        <field name="firstName">
+            <property name="Attribute">FirstName</property>
+            <property name="Columns">60</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+            <property name="Required">true</property>
+        </field>
+        <field name="lastName">
+            <property name="Attribute">LastName</property>
+            <property name="Columns">60</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+            <property name="Required">true</property>
+        </field>
+        <field name="secondLastName">
+            <property name="Attribute">SecondLastName</property>
+            <property name="Columns">60</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>
+        <field name="status">
+            <property name="Attribute">Status</property>
+            <property name="ModeEdit">EDITABLE</property>
+        </field>
+        <field name="department">
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeView">NONE</property>
+            <property name="Required">true</property>
+            <property name="Label">HumanResource_EmployeeForm.department.Label</property>
+            <trigger program="org.efaps.esjp.common.uiform.Field"
+                method="dropDownFieldValue"
+                name="HumanResource_EmployeeForm.department.UI_FIELD_VALUE"
+                event="UI_FIELD_VALUE">
+                <property name="Type">HumanResource_DepartmentAbstract</property>
+                <property name="Select">attribute[Name]</property>
+                <property name="ValueSelect">oid</property>
+            </trigger>
+        </field>
+        <field name="department4View">
+            <property name="Select">linkfrom[HumanResource_Department2EmployeeAdminister#EmployeeLink].linkto[DepartmentLink].attribute[Name]</property>
+            <property name="Label">HumanResource_EmployeeForm.department.Label</property>
+            <property name="ModeView">READONLY</property>
+            <property name="ModeEdit">NONE</property>
+        </field>
+        <field name="userPerson">
+            <property name="ModeEdit">NONE</property>
+            <property name="ModeView">NONE</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="Attribute">UserPerson</property>
+            <trigger program="org.efaps.esjp.humanresource.Employee"
+                name="HumanResource_EmployeeForm.userPerson.UI_FIELD_AUTOCOMPLETE"
+                method="autoComplete4Person" event="UI_FIELD_AUTOCOMPLETE" />
+            <trigger program="org.efaps.esjp.admin.access.AccessOnField"
+                method="roleCheck"
+                name="HumanResource_EmployeeForm.userPerson.UI_ACCESSCHECK"
+                event="UI_ACCESSCHECK">
+                <property name="Roles">HumanResource_Admin</property>
+            </trigger>
+        </field>
+        <field name="userPerson4View">
+            <property name="SelectAlternateOID">linkto[UserPerson].oid</property>
+            <property name="Select">linkto[UserPerson].attribute[Name]</property>
+            <property name="Label">HumanResource_Employee/UserPerson.Label</property>
+            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
+            <property name="ModeEdit">READONLY</property>
+            <property name="ModeView">READONLY</property>
+            <property name="ModeCreate">NONE</property>
+        </field>
+        <field name="location">
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeView">NONE</property>
+            <property name="Required">true</property>
+            <property name="Label">HumanResource_EmployeeForm.location.Label</property>
+            <trigger program="org.efaps.esjp.common.uiform.Field"
+                method="dropDownFieldValue"
+                name="HumanResource_EmployeeForm.department.UI_FIELD_VALUE"
+                event="UI_FIELD_VALUE">
+                <property name="Type">Locations_LocationOffice</property>
+                <property name="Select">attribute[Name]</property>
+                <property name="ValueSelect">oid</property>
+            </trigger>
+        </field>
+        <field name="location4View">
+            <property name="SelectAlternateOID">linkfrom[HumanResource_Employee2LocationOffice#EmployeeLink].oid</property>
+            <property name="Select">linkfrom[HumanResource_Employee2LocationOffice#EmployeeLink].linkto[LocationOfficeLink].attribute[Name]</property>
+            <property name="Label">HumanResource_EmployeeForm.location.Label</property>
+            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
+            <property name="ModeView">READONLY</property>
+            <property name="ModeEdit">NONE</property>
         </field>
         <field name="createGroup" character="Group">
             <property name="GroupCount">2</property>

@@ -30,6 +30,20 @@
         </application-dependencies>
         <name>HR_Locations_Employee2LocationForm</name>
         <!-- fields -->
+        <field name="employee">
+            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
+            <property name="SelectAlternateOID">linkto[EmployeeLink].oid</property>
+            <property name="Select">linkto[EmployeeLink].attribute[Number]</property>
+            <property name="Label">HumanResource_Employee2LocationOffice/EmployeeLink.Label</property>
+            <property name="ModeSearch">READONLY</property>
+        </field>
+        <field name="location">
+            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
+            <property name="SelectAlternateOID">linkto[LocationOfficeLink].oid</property>
+            <property name="Select">linkto[LocationOfficeLink].attribute[Name]</property>
+            <property name="Label">HumanResource_Employee2LocationOffice/LocationOfficeLink.Label</property>
+            <property name="ModeSearch">READONLY</property>
+        </field>
         <field name="risk">
             <property name="Attribute">Risk</property>
             <property name="ModeCreate">EDITABLE</property>
