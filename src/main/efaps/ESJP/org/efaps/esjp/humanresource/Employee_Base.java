@@ -116,6 +116,8 @@ public abstract class Employee_Base
                 queryBldr.addWhereClassification(classTypes);
             }
 
+            add2QueryBldr(_parameter, queryBldr);
+
             final boolean nameSearch = Character.isDigit(input.charAt(0));
             final Map<String, Map<String, String>> tmpMap = new TreeMap<String, Map<String, String>>();
 
@@ -161,6 +163,12 @@ public abstract class Employee_Base
         final Return retVal = new Return();
         retVal.put(ReturnValues.VALUES, list);
         return retVal;
+    }
+
+    protected void add2QueryBldr(final Parameter _parameter,
+                                 final QueryBuilder _queryBldr)
+        throws EFapsException
+    {
     }
 
     /**
