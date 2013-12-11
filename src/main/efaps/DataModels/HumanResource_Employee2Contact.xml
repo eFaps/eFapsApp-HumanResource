@@ -26,7 +26,7 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_Employee2Contact</name>
-        <parent>HumanResource_Employee2ObjectAbstract</parent>
+        <parent>HumanResource_Employee2ContactAbstract</parent>
         <attribute>
             <name>FromLink</name>
             <type>Link</type>
