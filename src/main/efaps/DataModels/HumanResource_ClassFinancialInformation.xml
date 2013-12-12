@@ -62,7 +62,7 @@
                 <typelink>Contacts_AttributeDefinitionFinancialInstitution</typelink>
                 <sqltable>HumanResource_AttributeAbstractFinancialInformationSQLTable</sqltable>
                 <sqlcolumn>BANKID</sqlcolumn>
-                <trigger event="RANGE_VALUE" name="HumanResource_ClassTR_Health.HealthRegimeLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
+                <trigger event="RANGE_VALUE" name="HumanResource_ClassFinancialInformation.HealthRegimeLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
                     <property name="Value">Value</property>
                     <property name="Type">Contacts_AttributeDefinitionFinancialInstitution</property>
                 </trigger>
@@ -74,7 +74,7 @@
                 <sqltable>HumanResource_AttributeAbstractFinancialInformationSQLTable</sqltable>
                 <sqlcolumn>CURRENCYID</sqlcolumn>
                 <trigger program="org.efaps.esjp.admin.datamodel.RangesValue"
-                     name="Products_ProductPricelistPosition.CurrencyId.RANGE_VALUE"
+                     name="HumanResource_ClassFinancialInformation.CurrencyId.RANGE_VALUE"
                      event="RANGE_VALUE">
                     <property name="Value">Name</property>
                     <property name="Type">ERP_Currency</property>
