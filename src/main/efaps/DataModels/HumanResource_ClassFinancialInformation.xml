@@ -49,41 +49,49 @@
             <sqltable>HumanResource_ClassFinancialInformationSQLTable</sqltable>
             <sqlcolumn>EMPLOYEEID</sqlcolumn>
         </attribute>
-        <attribute>
-            <name>BankLink</name>
-            <type>LinkWithRanges</type>
-            <typelink>Contacts_AttributeDefinitionFinancialInstitution</typelink>
-            <sqltable>HumanResource_ClassFinancialInformationSQLTable</sqltable>
-            <sqlcolumn>BANKID</sqlcolumn>
-            <trigger event="RANGE_VALUE" name="HumanResource_ClassTR_Health.HealthRegimeLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
-                <property name="Value">Value</property>
-                <property name="Type">Contacts_AttributeDefinitionFinancialInstitution</property>
-            </trigger>
-        </attribute>
-        <attribute>
-            <name>CurrencyId</name>
-            <type>LinkWithRanges</type>
-            <typelink>ERP_Currency</typelink>
-            <sqltable>HumanResource_ClassFinancialInformationSQLTable</sqltable>
-            <sqlcolumn>CURRENCYID</sqlcolumn>
-            <trigger program="org.efaps.esjp.admin.datamodel.RangesValue"
+        <attributeset>
+        <name>FinancialInformationSet</name>
+        <type>MultiLineArray</type>
+        <parent>HumanResource_AttributeAbstractFinancialInformation</parent>
+        <sqltable>HumanResource_AttributeAbstractFinancialInformationSQLTable</sqltable>
+        <sqlcolumn>RELID</sqlcolumn>
+        <uuid>2e5c950b-b8f6-44ae-a9c2-c6efbadc22a2</uuid>
+            <attribute>
+                <name>BankLink</name>
+                <type>LinkWithRanges</type>
+                <typelink>Contacts_AttributeDefinitionFinancialInstitution</typelink>
+                <sqltable>HumanResource_AttributeAbstractFinancialInformationSQLTable</sqltable>
+                <sqlcolumn>BANKID</sqlcolumn>
+                <trigger event="RANGE_VALUE" name="HumanResource_ClassTR_Health.HealthRegimeLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
+                    <property name="Value">Value</property>
+                    <property name="Type">Contacts_AttributeDefinitionFinancialInstitution</property>
+                </trigger>
+            </attribute>
+            <attribute>
+                <name>CurrencyId</name>
+                <type>LinkWithRanges</type>
+                <typelink>ERP_Currency</typelink>
+                <sqltable>HumanResource_AttributeAbstractFinancialInformationSQLTable</sqltable>
+                <sqlcolumn>CURRENCYID</sqlcolumn>
+                <trigger program="org.efaps.esjp.admin.datamodel.RangesValue"
                      name="Products_ProductPricelistPosition.CurrencyId.RANGE_VALUE"
                      event="RANGE_VALUE">
-                <property name="Value">Name</property>
-                <property name="Type">ERP_Currency</property>
-            </trigger>
-        </attribute>
-        <attribute>
-            <name>Account</name>
-            <type>String</type>
-            <sqltable>HumanResource_ClassFinancialInformationSQLTable</sqltable>
-            <sqlcolumn>ACCOUNT</sqlcolumn>
-        </attribute>
-        <attribute>
-            <name>CCI</name>
-            <type>String</type>
-            <sqltable>HumanResource_ClassFinancialInformationSQLTable</sqltable>
-            <sqlcolumn>CCI</sqlcolumn>
-        </attribute>
+                    <property name="Value">Name</property>
+                    <property name="Type">ERP_Currency</property>
+                </trigger>
+            </attribute>
+            <attribute>
+                <name>Account</name>
+                <type>String</type>
+                <sqltable>HumanResource_AttributeAbstractFinancialInformationSQLTable</sqltable>
+                <sqlcolumn>ACCOUNT</sqlcolumn>
+            </attribute>
+            <attribute>
+                <name>CCI</name>
+                <type>String</type>
+                <sqltable>HumanResource_AttributeAbstractFinancialInformationSQLTable</sqltable>
+                <sqlcolumn>CCI</sqlcolumn>
+            </attribute>
+        </attributeset>
     </definition>
 </datamodel-type>

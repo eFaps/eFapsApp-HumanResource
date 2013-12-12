@@ -33,28 +33,12 @@
             <property name="ModeCreate">READONLY</property>
             <property name="ModeEdit">READONLY</property>
         </field>
-        <field name="bankLink">
-            <property name="Attribute">BankLink</property>
+        <field character="Set" name="financialInformationSet">
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
-            <property name="Required">true</property>
-        </field>
-        <field name="currencyId">
-            <property name="Attribute">CurrencyId</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-            <property name="Required">true</property>
-        </field>
-        <field name="account">
-            <property name="Attribute">Account</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-            <property name="Required">true</property>
-        </field>
-        <field name="CCI">
-            <property name="Attribute">CCI</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
+            <property name="Attribute">FinancialInformationSet</property>
+            <property name="Label">HumanResource_ClassFinancialInformationForm/FinancialInformationSet.Label</property>
+            <property name="Order">BankLink|CurrencyId|Account|CCI</property>
         </field>
     </definition>
 </ui-form>
