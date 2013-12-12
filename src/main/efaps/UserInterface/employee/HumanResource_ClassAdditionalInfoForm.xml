@@ -25,17 +25,17 @@
     <file-revision>$Rev: 11110 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_ClassTR_AdditionalInfoForm</name>
-        <type>HumanResource_ClassTR_AdditionalInfo</type>
+        <name>HumanResource_ClassAdditionalInfoForm</name>
+        <type>HumanResource_ClassAdditionalInfo</type>
         <field character="Heading" name="titleAdditionalInfoHeading">
             <property name="Level">1</property>
-            <property name="Label">HumanResource_ClassTR_AdditionalInfoForm.TitleAdditionalInfoHeading.Heading</property>
+            <property name="Label">HumanResource_ClassAdditionalInfoForm.TitleAdditionalInfoHeading.Heading</property>
             <property name="ModeCreate">READONLY</property>
             <property name="ModeEdit">READONLY</property>
         </field>        
         <field character="Heading" name="personalInformationHeading">
             <property name="Level">2</property>
-            <property name="Label">HumanResource_ClassTR_AdditionalInfoForm.PersonalInformationHeading.Heading</property>
+            <property name="Label">HumanResource_ClassAdditionalInfoForm.PersonalInformationHeading.Heading</property>
             <property name="ModeCreate">READONLY</property>
             <property name="ModeEdit">READONLY</property>
         </field>
@@ -102,7 +102,7 @@
         </field>
         <field character="Heading" name="emergencyContactHeading">
             <property name="Level">2</property>
-            <property name="Label">HumanResource_ClassTR_AdditionalInfoForm.EmergencyContactHeading.Heading</property>
+            <property name="Label">HumanResource_ClassAdditionalInfoForm.EmergencyContactHeading.Heading</property>
             <property name="ModeCreate">READONLY</property>
             <property name="ModeEdit">READONLY</property>
         </field>

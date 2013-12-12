@@ -25,9 +25,9 @@
     <file-revision>$Rev: 11157 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_ClassTR_AdditionalInfoSQLTable</name>
+        <name>HumanResource_ClassAdditionalInfoSQLTable</name>
         <database>
-            <table-name>T_HRCLASSTRADDINFO</table-name>
+            <table-name>T_HRCLASSADDINFO</table-name>
             <column name="EMPLOYEEID"           type="INTEGER"          not-null="true" />
             <column name="TAXID"                type="STRING_SHORT"     length="64" />
             <column name="TYPEDRIVINGLICID"     type="INTEGER"/>
@@ -46,7 +46,7 @@
             <column name="RELATIONID"           type="INTEGER"/>
             <column name="PHONE"                type="STRING_SHORT"     length="64" />
             <column name="CELLPHONE"            type="STRING_SHORT"     length="64" />
-            <foreign key="EMPLOYEEID" name="T_HRCLASSTRADDINFO_EMPLOYEEID" reference="T_HREMPLOYEE(ID)"/>
+            <foreign key="EMPLOYEEID" name="T_HRCLASSADDINFO_EMPLOYEEID" reference="T_HREMPLOYEE(ID)"/>
         </database>
     </definition>
 </datamodel-sqltable>

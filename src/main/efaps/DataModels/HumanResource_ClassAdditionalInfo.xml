@@ -25,41 +25,41 @@
     <file-revision>$Rev: 11157 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_ClassTR_AdditionalInfo</name>
+        <name>HumanResource_ClassAdditionalInfo</name>
         <purpose classification="true">
             <LinkColumn>EmployeeLink</LinkColumn>
-            <parent>HumanResource_ClassTR</parent>
+            <parent>HumanResource_Class</parent>
         </purpose>
         <attribute>
             <name>OID</name>
             <type>OID</type>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>ID</sqlcolumn>
         </attribute>
         <attribute>
             <name>ID</name>
             <type>Long</type>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>ID</sqlcolumn>
         </attribute>
         <attribute>
             <name>EmployeeLink</name>
             <type>Link</type>
             <typelink>HumanResource_Employee</typelink>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>EMPLOYEEID</sqlcolumn>
         </attribute>
         <attribute>
             <name>TaxNumber</name>
             <type>String</type>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>TAXID</sqlcolumn>
         </attribute>
         <attribute>
             <name>TypeDrivingLicenceLink</name>
             <type>LinkWithRanges</type>
             <typelink>HumanResource_AttributeDefinitionTypeDrivingLicence</typelink>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>TYPEDRIVINGLICID</sqlcolumn>
             <trigger event="RANGE_VALUE" name="HumanResource_ClassTR_Health.HealthRegimeLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
                 <property name="Value">Value</property>
@@ -69,56 +69,56 @@
         <attribute>
             <name>NumberDrivingLicence</name>
             <type>String</type>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>NUMBDRIVINGLIC</sqlcolumn>
         </attribute>
         <attribute>
             <name>Height</name>
             <type>String</type>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>HEIGHT</sqlcolumn>
         </attribute>
         <attribute>
             <name>Weight</name>
             <type>String</type>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>WEIGHT</sqlcolumn>
         </attribute>
         <attribute>
             <name>NumberFootwear</name>
             <type>String</type>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>NUMFOOTWEAR</sqlcolumn>
         </attribute>
         <attribute>
             <name>SizePants</name>
             <type>String</type>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>SIZEPANTS</sqlcolumn>
         </attribute>
         <attribute>
             <name>SizeShirt</name>
             <type>String</type>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>SIZESHIRT</sqlcolumn>
         </attribute>
         <attribute>
             <name>Allergy</name>
             <type>String</type>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>ALLERGY</sqlcolumn>
         </attribute>
         <attribute>
             <name>BloodType</name>
             <type>String</type>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>BLOODTYPE</sqlcolumn>
         </attribute>
         <attribute>
             <name>ResidenceVerificationLink</name>
             <type>LinkWithRanges</type>
             <typelink>HumanResource_AttributeDefinitionResidenceVerification</typelink>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>RESIDENCEVERIFYID</sqlcolumn>
             <trigger event="RANGE_VALUE" name="HumanResource_ClassTR_Health.InsuranceLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
                 <property name="Value">Value</property>
@@ -128,26 +128,26 @@
         <attribute>
             <name>FirstNameEmergencyContact</name>
             <type>String</type>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>FIRSTNAMEEC</sqlcolumn>
         </attribute>
         <attribute>
             <name>LastNameEmergencyContact</name>
             <type>String</type>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>LASTNAMEEC</sqlcolumn>
         </attribute>
         <attribute>
             <name>SecondLastNameEmergencyContact</name>
             <type>String</type>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>SECLASTNAMEEC</sqlcolumn>
         </attribute>
         <attribute>
             <name>RelationLink</name>
             <type>LinkWithRanges</type>
             <typelink>HumanResource_AttributeDefinitionRelation</typelink>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>RELATIONID</sqlcolumn>
             <trigger event="RANGE_VALUE" name="HumanResource_ClassTR_Health.InsuranceLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
                 <property name="Value">Value</property>
@@ -157,13 +157,13 @@
         <attribute>
             <name>Phone</name>
             <type>String</type>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>PHONE</sqlcolumn>
         </attribute>
         <attribute>
             <name>CellPhone</name>
             <type>String</type>
-            <sqltable>HumanResource_ClassTR_AdditionalInfoSQLTable</sqltable>
+            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
             <sqlcolumn>CELLPHONE</sqlcolumn>
         </attribute>
     </definition>
