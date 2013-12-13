@@ -44,6 +44,7 @@
             <child>HumanResource_EmployeeTree_Related</child>
             <child>HumanResource_EmployeeTree_Superior2Inferior</child>
             <child>HumanResource_EmployeeTree_Documents</child>
+            <child>HumanResource_EmployeeTree_Image</child>
             <child>HumanResource_EmployeeTree_Contacts</child>
             <child>HumanResource_EmployeeTree_PreviousWorks</child>
             <child>HumanResource_EmployeeTree_WorkReferences</child>

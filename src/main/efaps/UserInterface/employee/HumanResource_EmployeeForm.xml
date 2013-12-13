@@ -41,6 +41,23 @@
         <field name="type">
             <property name="Attribute">Type</property>
         </field>
+        <field name="image">
+            <property name="Label">HumanResource_EmployeeForm.image.Label</property>
+            <property name="ModeEdit">NONE</property>
+            <property name="RowSpan">5</property>
+            <trigger program="org.efaps.esjp.humanresource.Image"
+                method="getImageFieldValueUI"
+                name="HumanResource_EmployeeForm.image.UI_FIELD_VALUE"
+                event="UI_FIELD_VALUE">
+                <property name="max-width">200px</property>
+                <property name="max-height">200px</property>
+                <property name="RelationType">HumanResource_Employee2ImageThumbnail</property>
+            </trigger>
+            <trigger program="org.efaps.esjp.humanresource.Image"
+                method="access4Image"
+                name="Products_ProductForm.image.UI_ACCESSCHECK"
+                event="UI_ACCESSCHECK"/>
+        </field>
         <field name="numberGroup" character="Group">
             <property name="GroupCount">2</property>
             <property name="ModeCreate">READONLY</property>
@@ -214,6 +231,23 @@
         </field>
         <field name="type">
             <property name="Attribute">Type</property>
+        </field>
+        <field name="image">
+            <property name="Label">HumanResource_EmployeeForm.image.Label</property>
+            <property name="ModeEdit">NONE</property>
+            <property name="RowSpan">5</property>
+            <trigger program="org.efaps.esjp.humanresource.Image"
+                method="getImageFieldValueUI"
+                name="HumanResource_EmployeeForm.image.UI_FIELD_VALUE"
+                event="UI_FIELD_VALUE">
+                <property name="max-width">200px</property>
+                <property name="max-height">200px</property>
+                <property name="RelationType">HumanResource_Employee2ImageThumbnail</property>
+            </trigger>
+            <trigger program="org.efaps.esjp.humanresource.Image"
+                method="access4Image"
+                name="Products_ProductForm.image.UI_ACCESSCHECK"
+                event="UI_ACCESSCHECK"/>
         </field>
         <field name="numberGroup" character="Group">
             <property name="GroupCount">2</property>

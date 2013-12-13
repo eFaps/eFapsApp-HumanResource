@@ -108,7 +108,7 @@
                 <attribute name="HealthStartDate" class="org.efaps.esjp.data.columns.DateColumn" validateClass="org.efaps.esjp.data.columns.DateColumn" overwrite="true">
                     <property name="Column">HDATE</property>
                     <property name="Pattern">dd/MM/yyyy</property>
-                </attribute>            
+                </attribute>
             ]]></value>
         </attribute>
         <attribute>
@@ -240,8 +240,26 @@
             </classification>
         </type>
     </definition>
-</data-import>            
+</data-import>
             ]]></value>
+        </attribute>
+        <attribute>
+            <key>org.efaps.humanresource.ActivateImages</key>
+            <value>false</value>
+            <description>Boolean(true/false). Activate the image menu.</description>
+        </attribute>
+        <attribute>
+            <key>org.efaps.humanresource.ImagesProperties</key>
+            <value>Image4Doc_Create=true
+Image4Doc_Width=250
+Image4Doc_Height=250
+Image4Doc_Enlarge=false
+Thumbnail_Create=true
+Thumbnail_Width=150
+Thumbnail_Height=150
+Thumbnail_Enlarge=false
+            </value>
+            <description>Properties for image</description>
         </attribute>
     </definition>
 </common-systemconfiguration>

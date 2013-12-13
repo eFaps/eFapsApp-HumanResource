@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+
+  Copyright 2003 - 2009 The eFaps Team
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Author:          The eFaps Team
+  Revision:        $Rev: 8052 $
+  Last Changed:    $Date: 2012-10-15 21:50:56 -0500 (lun, 15 oct 2012) $
+  Last Changed By: $Author: jan@moxter.net $
+
+--><ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+
+  <uuid>b0463b0c-a8b7-4408-9995-0f05c26f7ab9</uuid>
+  <file-application>eFapsApp-HumanResource</file-application>
+  <file-revision>$Rev: 8052 $</file-revision>
+
+  <definition>
+    <version-expression>(version==latest)</version-expression>
+    <name>HumanResource_ImageForm</name>
+
+    <field name="upload">
+      <property name="ModeCreate">EDITABLE</property>
+      <property name="ModeEdit">NONE</property>
+      <property name="ModeView">NONE</property>
+      <property name="ModePrint">NONE</property>
+      <property name="Label">HumanResource_ImageForm.upload.Label</property>
+      <trigger event="UI_FIELD_VALUE" method="getFieldValueUI" name="HumanResource_ImageForm.upload.UI_FIELD_VALUE" program="org.efaps.esjp.common.file.FileField">
+        <property name="FileNameField">description4Create</property>
+      </trigger>
+    </field>
+
+    <field name="image">
+      <property name="Label">HumanResource_ImageForm.image.Label</property>
+      <trigger event="UI_FIELD_VALUE" method="getViewFieldValueUI" name="HumanResource_ImageForm.upload.UI_FIELD_VALUE" program="org.efaps.esjp.common.file.ImageField">
+        <property name="max-width">200px</property>
+        <property name="max-height">200px</property>
+      </trigger>
+    </field>
+
+    <field name="description4Create">
+      <property name="ModeCreate">EDITABLE</property>
+      <property name="ModeView">NONE</property>
+      <property name="ModeEdit">NONE</property>
+      <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
+      <property name="Label">HumanResource_ImageAbstract/Description.Label</property>
+      <property name="Required">true</property>
+    </field>
+    <field name="description">
+      <property name="ModeEdit">EDITABLE</property>
+      <property name="Attribute">Description</property>
+    </field>
+
+    <field name="original">
+      <property name="ModeEdit">NONE</property>
+      <property name="SelectAlternateOID">linkto[Original].oid</property>
+      <property name="Select">linkto[Original].type.label</property>
+      <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
+      <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
+      <property name="Label">HumanResource_ImageForm.original.Label</property>
+      <trigger event="UI_ACCESSCHECK" method="access4OriginalFieldUI" name="HumanResource_ImageForm.original.UI_ACCESSCHECK" program="org.efaps.esjp.products.Image"/>
+    </field>
+
+   <field name="caption">
+      <property name="ModeCreate">EDITABLE</property>
+      <property name="ModeEdit">NONE</property>
+      <property name="ModeView">NONE</property>
+      <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
+      <property name="Label">HumanResource_ImageForm.caption.Label</property>
+      <property name="Required">true</property>
+   </field>
+
+    <field character="Group" name="group1">
+      <property name="GroupCount">2</property>
+    </field>
+    <field name="WidthPx">
+      <property name="Attribute">WidthPx</property>
+      <property name="ModeSearch">EDITABLE</property>
+    </field>
+    <field name="HeightPx">
+      <property name="Attribute">HeightPx</property>
+      <property name="ModeSearch">EDITABLE</property>
+    </field>
+
+    <field character="Group" name="group2">
+      <property name="GroupCount">2</property>
+    </field>
+    <field name="WidthDPI">
+      <property name="Attribute">WidthDPI</property>
+      <property name="ModeSearch">EDITABLE</property>
+    </field>
+    <field name="HeightDPI">
+      <property name="Attribute">HeightDPI</property>
+      <property name="ModeSearch">EDITABLE</property>
+    </field>
+
+    <field character="Group" name="group3">
+      <property name="GroupCount">2</property>
+    </field>
+    <field name="WidthInch">
+      <property name="Attribute">WidthInch</property>
+      <property name="ModeSearch">EDITABLE</property>
+    </field>
+    <field name="HeightInch">
+      <property name="Attribute">HeightInch</property>
+      <property name="ModeSearch">EDITABLE</property>
+    </field>
+
+    <field name="NumberOfImages">
+      <property name="Attribute">NumberOfImages</property>
+      <property name="ModeSearch">EDITABLE</property>
+    </field>
+
+    <field character="Group" name="group4">
+      <property name="GroupCount">2</property>
+    </field>
+    <field name="Format">
+      <property name="Attribute">Format</property>
+      <property name="ModeSearch">EDITABLE</property>
+    </field>
+    <field name="ColorType">
+      <property name="Attribute">ColorType</property>
+      <property name="ModeSearch">EDITABLE</property>
+    </field>
+
+    <field character="Group" name="fileGroup">
+      <property name="GroupCount">2</property>
+   </field>
+    <field name="fileName">
+      <property name="Select">file.label</property>
+      <property name="ModeSearch">EDITABLE</property>
+      <property name="Label">HumanResource_ImageForm.fileName.Label</property>
+    </field>
+    <field name="fileLength">
+      <property name="Select">file.length</property>
+      <property name="ModeSearch">EDITABLE</property>
+      <property name="Label">HumanResource_ImageForm.fileLength.Label</property>
+    </field>
+
+    <field character="Group" name="createGroup">
+      <property name="GroupCount">2</property>
+    </field>
+    <field name="creator">
+      <property name="SelectAlternateOID">linkto[Creator].oid</property>
+      <property name="Attribute">Creator</property>
+      <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
+      <property name="ModeSearch">EDITABLE</property>
+      <property name="ShowTypeIcon">true</property>
+    </field>
+    <field name="created">
+      <property name="Attribute">Created</property>
+    </field>
+    <field character="Group" name="modifyGroup">
+      <property name="GroupCount">2</property>
+    </field>
+    <field name="modifier">
+      <property name="SelectAlternateOID">linkto[Modifier].oid</property>
+      <property name="Attribute">Modifier</property>
+      <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
+      <property name="ModeSearch">EDITABLE</property>
+      <property name="ShowTypeIcon">true</property>
+    </field>
+    <field name="modified">
+      <property name="Attribute">Modified</property>
+    </field>
+
+
+  </definition>
+
+</ui-form>

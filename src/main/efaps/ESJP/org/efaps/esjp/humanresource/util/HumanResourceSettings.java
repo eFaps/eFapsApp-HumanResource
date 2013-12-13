@@ -49,4 +49,15 @@ public interface HumanResourceSettings
      */
     String DI_TRA = "org.efaps.humanresource.DataImport4TRA";
 
+    /**
+     * Boolean(true/false).<br/>
+     * Activate the image menu.
+     */
+    String ACTIVATEIMAGE = "org.efaps.humanresource.ActivateImages";
+
+    /**
+     * Boolean(true/false).<br/>
+     * Properties for employee image.
+     */
+    String IMAGEPROPERTIES = "org.efaps.humanresource.ImagesProperties";
 }
