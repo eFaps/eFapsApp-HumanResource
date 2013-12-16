@@ -382,7 +382,6 @@
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeView">NONE</property>
-            <property name="Required">true</property>
             <property name="Label">HumanResource_EmployeeForm.location.Label</property>
             <trigger program="org.efaps.esjp.common.uiform.Field"
                 method="dropDownFieldValue"
