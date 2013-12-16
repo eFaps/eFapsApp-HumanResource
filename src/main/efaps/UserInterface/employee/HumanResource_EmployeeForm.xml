@@ -38,6 +38,11 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="Classification">HumanResource_Class</property>
         </field>
+        <field name="headingBasicInformation" character="Heading">
+            <property name="Level">2</property>
+            <property name="Label">HumanResource_Employee/BasicInformation.Heading</property>
+            <property name="ModeCreate">EDITABLE</property>
+        </field>
         <field name="type">
             <property name="Attribute">Type</property>
         </field>
@@ -228,6 +233,11 @@
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="Classification">HumanResource_Class</property>
+        </field>
+        <field name="headingBasicInformation" character="Heading">
+            <property name="Level">2</property>
+            <property name="Label">HumanResource_Employee/BasicInformation.Heading</property>
+            <property name="ModeCreate">EDITABLE</property>
         </field>
         <field name="type">
             <property name="Attribute">Type</property>
