@@ -168,6 +168,11 @@
             <property name="ModeView">READONLY</property>
             <property name="ModeEdit">NONE</property>
         </field>
+        <field name="employLink">
+            <property name="Attribute">EmployLink</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+        </field>
         <field name="userPerson">
             <property name="ModeEdit">NONE</property>
             <property name="ModeView">NONE</property>
@@ -363,6 +368,11 @@
             <property name="Label">HumanResource_EmployeeForm.department.Label</property>
             <property name="ModeView">READONLY</property>
             <property name="ModeEdit">NONE</property>
+        </field>
+        <field name="employLink">
+            <property name="Attribute">EmployLink</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
         </field>
         <field name="userPerson">
             <property name="ModeEdit">NONE</property>
