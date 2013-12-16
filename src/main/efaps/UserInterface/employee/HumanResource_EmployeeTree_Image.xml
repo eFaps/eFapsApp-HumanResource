@@ -39,7 +39,7 @@
                 <property name="Type">HumanResource_Employee2ImageAbstract</property>
                 <property name="LinkFrom">EmployeeAbstractLink</property>
             </evaluate>
-            <trigger event="UI_ACCESSCHECK" method="access4Image" name="HumanResource_EmployeeTree_Image.UI_ACCESSCHECK" program="org.efaps.esjp.products.Image"/>
+            <trigger event="UI_ACCESSCHECK" method="access4Image" name="HumanResource_EmployeeTree_Image.UI_ACCESSCHECK" program="org.efaps.esjp.humanresource.Image"/>
             <help>org.efaps.wiki.products.Showproducts.wiki</help>
         </target>
         <!-- properties -->
