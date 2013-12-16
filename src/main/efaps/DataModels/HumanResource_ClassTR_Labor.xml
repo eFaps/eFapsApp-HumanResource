@@ -175,7 +175,8 @@
         </attribute>
         <attribute>
             <name>SpecialSituacion</name>
-            <type>Integer</type>
+            <type>Enum</type>
+            <className>org.efaps.esjp.humanresource.tregistro.SpecialSituacion</className>
             <sqltable>HumanResource_ClassTR_LaborSQLTable</sqltable>
             <sqlcolumn>SPECSIT</sqlcolumn>
         </attribute>
