@@ -31,11 +31,13 @@
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_ClassSQLTable</name>
+        <name>HumanResource_ClassBaseSQLTable</name>
+        <typeid-column>TYPEID</typeid-column>
         <database>
             <table-name>T_HRCLASS</table-name>
             <!-- columns -->
             <column name="HUMANRESOURCEID" type="INTEGER"      not-null="true" />
+            <column name="TYPEID"          type="INTEGER"      not-null="true"/>
             <column name="ENTRYDATE"       type="DATETIME"/>
             <foreign name="T_HRCLASS_FK_HUMANRESOURCEID" key="HUMANRESOURCEID" reference="T_HREMPLOYEE(ID)" />
         </database>

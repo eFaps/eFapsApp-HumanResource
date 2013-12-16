@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+
+ Copyright 2003 - 2010 The eFaps Team
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+
+ Author:          The eFaps Team
+ Revision:        $Rev: 11342 $
+ Last Changed:    $Date: 2013-12-09 18:42:29 -0500 (lun, 09 dic 2013) $
+ Last Changed By: $Author: rosa.ordonez@efaps.org $
+
+--><datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>c4db5460-5502-4ee1-a8b2-06c414ecc6b8</uuid>
+    <file-application>eFapsApp-HumanResource</file-application>
+    <file-revision>$Rev: 11342 $</file-revision>
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <profiles>
+            <profile name="eFaps"/>
+        </profiles>
+        <name>HumanResource_RelatedClassLocation</name>
+        <purpose classification="true">
+            <LinkColumn>EmployeeLink</LinkColumn>
+            <parent>HumanResource_RelatedClass</parent>
+        </purpose>
+        <attribute>
+            <name>OID</name>
+            <type>OID</type>
+            <sqltable>HumanResource_RelatedClassLocationSQLTable</sqltable>
+            <sqlcolumn>ID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>ID</name>
+            <type>Long</type>
+            <sqltable>HumanResource_RelatedClassLocationSQLTable</sqltable>
+            <sqlcolumn>ID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>EmployeeLink</name>
+            <type>Link</type>
+            <typelink>HumanResource_Employee</typelink>
+            <sqltable>HumanResource_RelatedClassLocationSQLTable</sqltable>
+            <sqlcolumn>EMPLOYEEID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>LocationAdressStreet</name>
+            <type>String</type>
+            <sqltable>HumanResource_RelatedClassLocationSQLTable</sqltable>
+            <sqlcolumn>STREET</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>LocationAdressCity</name>
+            <type>String</type>
+            <sqltable>HumanResource_RelatedClassLocationSQLTable</sqltable>
+            <sqlcolumn>CITY</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>LocationAdressZIP</name>
+            <type>String</type>
+            <sqltable>HumanResource_RelatedClassLocationSQLTable</sqltable>
+            <sqlcolumn>ZIP</sqlcolumn>
+        </attribute>
+    </definition>
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <profiles>
+            <profile name="ubicaciones"/>
+        </profiles>
+        <name>HumanResource_RelatedClassLocation</name>
+        <purpose classification="true">
+            <LinkColumn>EmployeeLink</LinkColumn>
+            <parent>HumanResource_RelatedClass</parent>
+        </purpose>
+        <attribute>
+            <name>OID</name>
+            <type>OID</type>
+            <sqltable>HumanResource_RelatedClassLocationSQLTable</sqltable>
+            <sqlcolumn>ID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>ID</name>
+            <type>Long</type>
+            <sqltable>HumanResource_RelatedClassLocationSQLTable</sqltable>
+            <sqlcolumn>ID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>EmployeeLink</name>
+            <type>Link</type>
+            <typelink>HumanResource_Employee</typelink>
+            <sqltable>HumanResource_RelatedClassLocationSQLTable</sqltable>
+            <sqlcolumn>EMPLOYEEID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>LocationAdressStreet</name>
+            <type>String</type>
+            <sqltable>HumanResource_RelatedClassLocationSQLTable</sqltable>
+            <sqlcolumn>STREET</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>LocationAdressCity</name>
+            <type>String</type>
+            <sqltable>HumanResource_RelatedClassLocationSQLTable</sqltable>
+            <sqlcolumn>CITY</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>LocationAdressZIP</name>
+            <type>String</type>
+            <sqltable>HumanResource_RelatedClassLocationSQLTable</sqltable>
+            <sqlcolumn>ZIP</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>DepartmentLocationLink</name>
+            <type>Link</type>
+            <typelink>Ubicaciones_UbicacionStandardRoot</typelink>
+            <sqltable>HumanResource_RelatedClassLocationSQLTable</sqltable>
+            <sqlcolumn>DEPARTMENTID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>ProvinceLocationLink</name>
+            <type>Link</type>
+            <typelink>Ubicaciones_UbicacionStandardRoot</typelink>
+            <sqltable>HumanResource_RelatedClassLocationSQLTable</sqltable>
+            <sqlcolumn>PROVINCEID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>DistrictLocationLink</name>
+            <type>Link</type>
+            <typelink>Ubicaciones_UbicacionStandardRoot</typelink>
+            <sqltable>HumanResource_RelatedClassLocationSQLTable</sqltable>
+            <sqlcolumn>DISTRICTID</sqlcolumn>
+        </attribute>
+    </definition>
+</datamodel-type>

@@ -26,32 +26,38 @@
 <datamodel-type  xmlns="http://www.efaps.org/xsd"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>0439a9bf-a293-4986-854e-2de1c4748373</uuid>
+    <uuid>e44001e4-c42e-4da0-8185-42f6e815d22d</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_Class</name>
-        <purpose classification="true" abstract="true">
+        <name>HumanResource_ClassBase</name>
+        <purpose abstract="true">
             <LinkColumn>HumanResourceLink</LinkColumn>
         </purpose>
         <attribute>
+            <name>Type</name>
+            <type>Type</type>
+            <sqltable>HumanResource_ClassBaseSQLTable</sqltable>
+            <sqlcolumn>TYPEID</sqlcolumn>
+        </attribute>
+        <attribute>
             <name>OID</name>
             <type>OID</type>
-            <sqltable>HumanResource_ClassSQLTable</sqltable>
-            <sqlcolumn>ID</sqlcolumn>
+            <sqltable>HumanResource_ClassBaseSQLTable</sqltable>
+            <sqlcolumn>TYPEID,ID</sqlcolumn>
         </attribute>
         <attribute>
             <name>ID</name>
             <type>Long</type>
-            <sqltable>HumanResource_ClassSQLTable</sqltable>
+            <sqltable>HumanResource_ClassBaseSQLTable</sqltable>
             <sqlcolumn>ID</sqlcolumn>
         </attribute>
         <attribute>
             <name>HumanResourceLink</name>
             <type>Link</type>
             <typelink>HumanResource_Employee</typelink>
-            <sqltable>HumanResource_ClassSQLTable</sqltable>
+            <sqltable>HumanResource_ClassBaseSQLTable</sqltable>
             <sqlcolumn>HUMANRESOURCEID</sqlcolumn>
         </attribute>
         <attributeset>
@@ -106,7 +112,5 @@
                 <sqlcolumn>VALUE</sqlcolumn>
             </attribute>
         </attributeset>
-        <classifies type="HumanResource_Employee" relType="HumanResource_Employee2Class"
-                    relLinkAttribute="Employee" relTypeAttribute="ClassTypeId" multipleSelect="true"/>
     </definition>
 </datamodel-type>
