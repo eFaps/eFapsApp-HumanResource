@@ -20,6 +20,7 @@
 
 package org.efaps.esjp.ci;
 
+import org.efaps.admin.program.esjp.EFapsNoUpdate;
 import org.efaps.ci.CIAttribute;
 import org.efaps.ci.CIType;
 
