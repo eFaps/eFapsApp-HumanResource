@@ -40,12 +40,6 @@
             <column name="ALLERGY"              type="STRING_SHORT"     length="64" />
             <column name="BLOODTYPE"            type="STRING_SHORT"     length="64" />
             <column name="RESIDENCEVERIFYID"    type="INTEGER"/>
-            <column name="FIRSTNAMEEC"          type="STRING_SHORT"     length="100" />
-            <column name="LASTNAMEEC"           type="STRING_SHORT"     length="100" />
-            <column name="SECLASTNAMEEC"        type="STRING_SHORT"     length="100" />
-            <column name="RELATIONID"           type="INTEGER"/>
-            <column name="PHONE"                type="STRING_SHORT"     length="64" />
-            <column name="CELLPHONE"            type="STRING_SHORT"     length="64" />
             <foreign key="EMPLOYEEID" name="T_HRCLASSADDINFO_EMPLOYEEID" reference="T_HREMPLOYEE(ID)"/>
         </database>
     </definition>

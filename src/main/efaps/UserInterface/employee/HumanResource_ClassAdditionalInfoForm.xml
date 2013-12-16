@@ -100,41 +100,5 @@
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
         </field>
-        <field character="Heading" name="emergencyContactHeading">
-            <property name="Level">2</property>
-            <property name="Label">HumanResource_ClassAdditionalInfoForm.EmergencyContactHeading.Heading</property>
-            <property name="ModeCreate">READONLY</property>
-            <property name="ModeEdit">READONLY</property>
-        </field>
-        <field name="firstNameEmergencyContact">
-            <property name="Attribute">FirstNameEmergencyContact</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-        </field>
-        <field name="lastNameEmergencyContact">
-            <property name="Attribute">LastNameEmergencyContact</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-        </field>
-        <field name="secondLastNameEmergencyContact">
-            <property name="Attribute">SecondLastNameEmergencyContact</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-        </field>
-        <field name="relationLink">
-            <property name="Attribute">RelationLink</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-        </field>
-        <field name="phone">
-            <property name="Attribute">Phone</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-        </field>
-        <field name="cellPhone">
-            <property name="Attribute">CellPhone</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-        </field> 
     </definition>
 </ui-form>

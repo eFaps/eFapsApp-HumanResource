@@ -125,46 +125,5 @@
                 <property name="Type">HumanResource_AttributeDefinitionResidenceVerification</property>
             </trigger>
         </attribute>
-        <attribute>
-            <name>FirstNameEmergencyContact</name>
-            <type>String</type>
-            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
-            <sqlcolumn>FIRSTNAMEEC</sqlcolumn>
-        </attribute>
-        <attribute>
-            <name>LastNameEmergencyContact</name>
-            <type>String</type>
-            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
-            <sqlcolumn>LASTNAMEEC</sqlcolumn>
-        </attribute>
-        <attribute>
-            <name>SecondLastNameEmergencyContact</name>
-            <type>String</type>
-            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
-            <sqlcolumn>SECLASTNAMEEC</sqlcolumn>
-        </attribute>
-        <attribute>
-            <name>RelationLink</name>
-            <type>LinkWithRanges</type>
-            <typelink>HumanResource_AttributeDefinitionRelation</typelink>
-            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
-            <sqlcolumn>RELATIONID</sqlcolumn>
-            <trigger event="RANGE_VALUE" name="HumanResource_ClassTR_Health.InsuranceLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
-                <property name="Value">Value</property>
-                <property name="Type">HumanResource_AttributeDefinitionRelation</property>
-            </trigger>
-        </attribute>
-        <attribute>
-            <name>Phone</name>
-            <type>String</type>
-            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
-            <sqlcolumn>PHONE</sqlcolumn>
-        </attribute>
-        <attribute>
-            <name>CellPhone</name>
-            <type>String</type>
-            <sqltable>HumanResource_ClassAdditionalInfoSQLTable</sqltable>
-            <sqlcolumn>CELLPHONE</sqlcolumn>
-        </attribute>
     </definition>
 </datamodel-type>
