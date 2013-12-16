@@ -45,13 +45,6 @@
             <property name="Label">HumanResource_Class/PhoneSet.Label</property>
             <property name="Order">Description4Phone|Phone</property>
         </field>
-        <field name="faxSet" character="Set">
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-            <property name="Attribute">FaxSet</property>
-            <property name="Label">HumanResource_Class/FaxSet.Label</property>
-            <property name="Order">Description4Fax|Fax</property>
-        </field>
         <field name="emailSet" character="Set">
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>

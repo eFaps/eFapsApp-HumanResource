@@ -20,26 +20,23 @@
  Last Changed By: $Author: jan@moxter.net $
 
 --><datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>907c4a03-db6e-4a53-9e6d-cfe22d01469d</uuid>
+    <uuid>32e70714-1f8c-4902-9a9d-ca79b2bbbe4d</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev: 10334 $</file-revision>
 
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_Related</name>
+        <name>HumanResource_RelatedEmergency</name>
         <parent>HumanResource_RelatedAbstract</parent>
-
         <attribute>
             <name>Status</name>
             <type>Status</type>
             <typelink>HumanResource_EmployeeStatus</typelink>
             <sqltable>HumanResource_EmployeeSQLTable</sqltable>
             <sqlcolumn>STATUS</sqlcolumn>
-            <trigger program="org.efaps.esjp.admin.datamodel.StatusValue"
-                name="HumanResource_Employee.Status.RANGE_VALUE" event="RANGE_VALUE">
+            <trigger event="RANGE_VALUE" name="HumanResource_Employee.Status.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.StatusValue">
             </trigger>
         </attribute>
-        <trigger event="ACCESSCHECK" name="HumanResource_Related.ACCESSCHECK"
-                program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType" />
+        <trigger event="ACCESSCHECK" name="HumanResource_RelatedEmergency.ACCESSCHECK" program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType"/>
     </definition>
 </datamodel-type>

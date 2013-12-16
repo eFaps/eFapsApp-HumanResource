@@ -15,17 +15,17 @@
  limitations under the License.
 
  Author:          The eFaps Team
- Revision:        $Rev: 8497 $
- Last Changed:    $Date: 2013-01-09 12:58:28 -0500 (Wed, 09 Jan 2013) $
- Last Changed By: $Author: sara.landa@efaps.org $
+ Revision:        $Rev: 5320 $
+ Last Changed:    $Date: 2010-08-16 12:02:56 -0500 (Mon, 16 Aug 2010) $
+ Last Changed By: $Author: miguel.a.aranya $
 
 --><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>fa3d07ea-b66a-4c39-9f7f-1189b416c161</uuid>
+    <uuid>3a2a050e-7122-4d49-bc55-2e258cc549fa</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev: 8497 $</file-revision>
+    <file-revision>$Rev: 5320 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_EmployeeTree_Related_Menu_Action_Create</name>
+        <name>HumanResource_RelatedEmergencyTree_Menu_Action_Edit</name>
         <access>
             <role>HumanResource_Admin</role>
             <role>HumanResource_Modifier</role>
@@ -33,18 +33,10 @@
         <!-- target definitions -->
         <target>
             <form>HumanResource_RelatedForm</form>
-            <execute program="org.efaps.esjp.common.uiform.Create">
-                <property name="StatusGroup">HumanResource_EmployeeStatus</property>
-                <property name="Status">Worker</property>
-            </execute>
+            <execute program="org.efaps.esjp.common.uiform.Edit"/>
         </target>
-
         <!-- properties -->
         <property name="Target">modal</property>
-        <property name="TargetCreateType">HumanResource_Related</property>
-        <property name="TargetConnectAttribute">HumanResource_RelatedAbstract/EmployeeLink</property>
-        <property name="TargetMode">create</property>
-        <property name="WindowHeight">450</property>
-        <property name="WindowWidth">815</property>
+        <property name="TargetMode">edit</property>
     </definition>
 </ui-command>

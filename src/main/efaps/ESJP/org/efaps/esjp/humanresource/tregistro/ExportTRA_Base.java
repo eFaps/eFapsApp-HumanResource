@@ -127,7 +127,7 @@ public abstract class ExportTRA_Base
         final SelectBuilder selRemuneration = new SelectBuilder().clazz(CIHumanResource.ClassTR_Labor)
                         .attribute(CIHumanResource.ClassTR_Labor.Remuneration);
         final SelectBuilder selSpecialSituacion = new SelectBuilder().clazz(CIHumanResource.ClassTR_Labor)
-                        .attribute(CIHumanResource.ClassTR_Labor.SpecialSituacion);
+                        .attribute(CIHumanResource.ClassTR_Labor.SpecialSituation);
         final SelectBuilder selPayment = new SelectBuilder().clazz(CIHumanResource.ClassTR_Labor)
                         .linkto(CIHumanResource.ClassTR_Labor.PaymentLink)
                         .attribute(CIHumanResource.AttributeDefinitionPayment.MappingKey);

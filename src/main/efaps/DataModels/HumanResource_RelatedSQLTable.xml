@@ -31,7 +31,7 @@
         <database>
             <table-name>T_HRRELATED</table-name>
             <parent-table>T_HREMPLOYEE</parent-table>
-            <column name="EMPLOYEEID"  type="INTEGER"       not-null="true" />
+            <column name="EMPLOYEEID"  type="INTEGER" />
             <column name="FAMILYTIEID" type="INTEGER"/>
             <column name="DOCTYPEFTID" type="INTEGER"/>
             <column name="NUMBDOCFT"   type="STRING_SHORT"  length="512"  />

@@ -81,32 +81,6 @@
             </attribute>
         </attributeset>
         <attributeset>
-            <name>FaxSet</name>
-            <type>MultiLineArray</type>
-            <parent>HumanResource_AttributeAbstract</parent>
-            <sqltable>HumanResource_AttributeAbstractSQLTable</sqltable>
-            <sqlcolumn>RELID</sqlcolumn>
-            <uuid>f43168ad-2588-465f-887e-c790a5b46bf2</uuid>
-            <attribute>
-                <name>Description4Fax</name>
-                <type>LinkWithRanges</type>
-                <typelink>HumanResource_AttributeDefinitionFax</typelink>
-                <sqltable>HumanResource_AttributeAbstractSQLTable</sqltable>
-                <sqlcolumn>DEFID</sqlcolumn>
-                <trigger name="HumanResource_Class.EmailSet.Description4Fax"
-                         event="RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
-                    <property name="Value">Value</property>
-                    <property name="Type">HumanResource_AttributeDefinitionFax</property>
-                </trigger>
-            </attribute>
-            <attribute>
-                <name>Fax</name>
-                <type>String</type>
-                <sqltable>HumanResource_AttributeAbstractSQLTable</sqltable>
-                <sqlcolumn>VALUE</sqlcolumn>
-            </attribute>
-        </attributeset>
-        <attributeset>
             <name>EmailSet</name>
             <type>MultiLineArray</type>
             <parent>HumanResource_AttributeAbstract</parent>

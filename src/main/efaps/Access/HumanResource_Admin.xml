@@ -46,6 +46,7 @@
         <type>HumanResource_Department</type>
         <type>HumanResource_Employee</type>
         <type>HumanResource_Related</type>
+        <type>HumanResource_RelatedEmergency</type>
         <type>HumanResource_AttributeDefinitionDistrict</type>
         <type>HumanResource_AttributeDefinitionEmail</type>
         <type>HumanResource_AttributeDefinitionFax</type>

@@ -15,6 +15,11 @@
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_RelatedForm</name>
         <!-- fields -->
+        <field name="classification" character="Classification">
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="Classification">HumanResource_Class</property>
+        </field>
         <field name="type">
             <property name="Attribute">Type</property>
         </field>
