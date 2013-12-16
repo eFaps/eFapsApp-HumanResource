@@ -32,7 +32,7 @@
             <property name="Label">HumanResource_ClassTR_HealthForm.TitleLaborHeading.Heading</property>
             <property name="ModeCreate">READONLY</property>
             <property name="ModeEdit">READONLY</property>
-        </field>        
+        </field>
         <field name="laborHeading" character="Heading">
             <property name="Level">2</property>
             <property name="Label">HumanResource_ClassTR_LaborForm.LaborHeading.Heading</property>
@@ -55,14 +55,14 @@
             <property name="Columns">30</property>
             <property name="Attribute">OccupationCatLink</property>
             <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>                        
-        </field>       
+            <property name="ModeEdit">EDITABLE</property>
+        </field>
         <field name="occupationLink">
             <property name="Columns">30</property>
             <property name="Attribute">OccupationLink</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
-            <property name="ModeSearch">EDITABLE</property>            
+            <property name="ModeSearch">EDITABLE</property>
         </field>
         <field name="educationLink">
             <property name="Columns">30</property>
@@ -84,7 +84,7 @@
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
-        </field> 
+        </field>
         <field name="cumulative">
             <property name="Columns">30</property>
             <property name="Attribute">Cumulative</property>
@@ -105,13 +105,13 @@
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
-        </field>               
+        </field>
         <field name="remunerationHeading" character="Heading">
             <property name="Level">2</property>
             <property name="Label">HumanResource_ClassTR_LaborForm.remunerationHeading.Heading</property>
             <property name="ModeCreate">READONLY</property>
             <property name="ModeEdit">READONLY</property>
-        </field>        
+        </field>
         <field name="paymentLink">
             <property name="Columns">30</property>
             <property name="Attribute">PaymentLink</property>
@@ -132,19 +132,17 @@
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
-        </field> 
+        </field>
         <field name="situationHeading" character="Heading">
             <property name="Level">2</property>
             <property name="Label">HumanResource_ClassTR_LaborForm.situationHeading.Heading</property>
             <property name="ModeCreate">READONLY</property>
             <property name="ModeEdit">READONLY</property>
         </field>
-        <field name="specialSituacion">
-            <property name="Columns">30</property>
-            <property name="Attribute">SpecialSituacion</property>
+        <field name="specialSituation">
+            <property name="Attribute">SpecialSituation</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
-            <property name="ModeSearch">EDITABLE</property>
-        </field> 
+        </field>
     </definition>
 </ui-form>

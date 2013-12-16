@@ -30,7 +30,7 @@ import org.efaps.admin.datamodel.IEnum;
  * @author The eFaps Team
  * @version $Id$
  */
-public enum SpecialSituacion
+public enum SpecialSituation
     implements IEnum
 {
     NONE, MANAGEMENT, TRUST;

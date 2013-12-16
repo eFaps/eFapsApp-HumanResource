@@ -174,9 +174,9 @@
             <sqlcolumn>NIGHT</sqlcolumn>
         </attribute>
         <attribute>
-            <name>SpecialSituacion</name>
+            <name>SpecialSituation</name>
             <type>Enum</type>
-            <className>org.efaps.esjp.humanresource.tregistro.SpecialSituacion</className>
+            <className>org.efaps.esjp.humanresource.tregistro.SpecialSituation</className>
             <sqltable>HumanResource_ClassTR_LaborSQLTable</sqltable>
             <sqlcolumn>SPECSIT</sqlcolumn>
         </attribute>
