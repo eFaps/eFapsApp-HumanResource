@@ -15,41 +15,35 @@
   limitations under the License.
 
   Author:          The eFaps Team
-  Revision:        $Rev$
-  Last Changed:    $Date$
-  Last Changed By: $Author$
+  Revision:        $Rev: 11157 $
+  Last Changed:    $Date: 2013-11-26 11:08:48 -0500 (mar, 26 nov 2013) $
+  Last Changed By: $Author: jose.mallqui@efaps.org $
 
--->
-<ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>5e972d9e-274d-4c46-ae2b-e126cf372e10</uuid>
+--><ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>c9f977b3-151d-481a-a8ac-bb35cfd733cd</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev$</file-revision>
+    <file-revision>$Rev: 11157 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_ClassTRForm</name>
-        <type>HumanResource_ClassTR</type>
-        <field name="laborHeading" character="Heading">
+        <name>HumanResource_ClassTR_TrainingMethodForm</name>
+        <type>HumanResource_ClassTR_TrainingMethod</type>
+        <field character="Heading" name="titleTrainingHeading">
             <property name="Level">1</property>
-            <property name="Label">HumanResource_ClassTRForm.ClassTRHeading.Heading</property>
+            <property name="Label">HumanResource_ClassTR_PensionerForm.titleTrainingHeading.Heading</property>
             <property name="ModeCreate">READONLY</property>
             <property name="ModeEdit">READONLY</property>
         </field>
-        <field name="employeeTypeLink">
-            <property name="Attribute">EmployeeTypeLink</property>
+        <field name="trainingMethodLink">
+            <property name="Attribute">TrainingMethodLink</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
         </field>
-        <field name="startDate">
-            <property name="Attribute">StartDate</property>
+        <field name="trainingCenter">
+            <property name="Columns">30</property>
+            <property name="Attribute">TrainingCenter</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
-        </field>
-        <field name="situationLink">
-            <property name="Columns">40</property>
-            <property name="Attribute">SituationLink</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
         </field>
     </definition>
 </ui-form>

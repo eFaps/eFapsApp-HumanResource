@@ -48,6 +48,8 @@
         <!-- properties -->
         <property name="Target">modal</property>
         <property name="TargetCreateType">HumanResource_Employee</property>
+        <property name="WindowWidth">1024</property>
+        <property name="WindowHeight">600</property>
         <property name="TargetMode">create</property>
     </definition>
 </ui-command>
