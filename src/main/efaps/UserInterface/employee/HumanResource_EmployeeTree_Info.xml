@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+
+  Copyright 2010 - 2013 moxter.net S.A.C.
+
+  All Rights Reserved.
+  This program contains proprietary and trade secret information of
+  moxter.net S.A.C. Copyright notice is precautionary only and does not
+  evidence any actual or intended publication of such program.
+
+  Author:          moxter.net S.A.C.
+  Revision:        $Rev: 314 $
+  Last Changed:    $Date: 2013-11-28 11:49:07 -0500 (jue, 28 nov 2013) $
+  Last Changed By: $Author: Luis Moreyra $
+
+--><ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>4cc7bc52-a16f-4fe9-8a62-2bb8abaed29d</uuid>
+    <file-application>eFapsApp-Projects</file-application>
+    <file-revision>$Rev: 314 $</file-revision>
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <name>HumanResource_EmployeeTree_Info</name>
+        <!-- targets -->
+        <target>
+            <form>HumanResource_EmployeeForm</form>
+        </target>
+        <childs>
+            <child>HumanResource_EmployeeTree_Related</child>
+            <child>HumanResource_EmployeeTree_RelatedEmergency</child>
+            <child>HumanResource_EmployeeTree_PreviousWorks</child>
+            <child>HumanResource_EmployeeTree_WorkReferences</child>
+            <child>HumanResource_EmployeeTree_Education</child>
+            <child>HumanResource_EmployeeTree_Training</child>
+        </childs>
+        <!-- properties -->
+        <property name="Target">content</property>
+        <property name="TargetMode">view</property>
+    </definition>
+</ui-menu>

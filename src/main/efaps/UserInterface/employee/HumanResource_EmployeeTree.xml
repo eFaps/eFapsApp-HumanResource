@@ -41,16 +41,11 @@
         <type>HumanResource_Employee</type>
         <!-- child -->
         <childs>
-            <child>HumanResource_EmployeeTree_Related</child>
-            <child>HumanResource_EmployeeTree_RelatedEmergency</child>
+            <child>HumanResource_EmployeeTree_Info</child>
             <child>HumanResource_EmployeeTree_Superior2Inferior</child>
             <child>HumanResource_EmployeeTree_Documents</child>
             <child>HumanResource_EmployeeTree_Image</child>
             <child>HumanResource_EmployeeTree_Contacts</child>
-            <child>HumanResource_EmployeeTree_PreviousWorks</child>
-            <child>HumanResource_EmployeeTree_WorkReferences</child>
-            <child>HumanResource_EmployeeTree_Education</child>
-            <child>HumanResource_EmployeeTree_Training</child>
         </childs>
         <!-- properties -->
         <property name="Target">content</property>
