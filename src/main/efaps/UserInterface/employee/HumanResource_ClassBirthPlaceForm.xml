@@ -23,11 +23,10 @@
     <uuid>52d5dfad-28ef-431b-88cf-3bd7cd5627f0</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev$</file-revision>
+
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <profiles>
-            <profile name="eFaps"/>
-        </profiles>
+
         <name>HumanResource_ClassBirthPlaceForm</name>
         <type>HumanResource_ClassBirthPlace</type>
         <field character="Heading" name="locationAdressHeading">
@@ -36,7 +35,7 @@
             <property name="ModeCreate">READONLY</property>
             <property name="ModeEdit">READONLY</property>
         </field>
-        <field name="locationAdressStreet">
+        <field name="locationAdressStreet2">
             <property name="Columns">40</property>
             <property name="Attribute">LocationAdressStreet</property>
             <property name="ModeCreate">EDITABLE</property>
@@ -44,7 +43,7 @@
             <property name="ModeSearch">EDITABLE</property>
             <property name="Required">true</property>
         </field>
-        <field name="locationAdressCity">
+        <field name="locationAdressCity2">
             <property name="Columns">15</property>
             <property name="Attribute">LocationAdressCity</property>
             <property name="ModeCreate">EDITABLE</property>
@@ -52,37 +51,7 @@
             <property name="ModeSearch">EDITABLE</property>
             <property name="Required">true</property>
         </field>
-    </definition>
-    <definition>
-        <version-expression>(version==latest)</version-expression>
-        <profiles>
-            <profile name="ubicaciones"/>
-        </profiles>
-        <name>HumanResource_ClassBirthPlaceForm</name>
-        <type>HumanResource_ClassBirthPlace</type>
-        <field character="Heading" name="locationAdressHeading">
-            <property name="Level">2</property>
-            <property name="Label">HumanResource_ClassBirthPlaceForm.locationAdressHeading.Heading</property>
-            <property name="ModeCreate">READONLY</property>
-            <property name="ModeEdit">READONLY</property>
-        </field>
-        <field name="locationAdressStreet">
-            <property name="Columns">40</property>
-            <property name="Attribute">LocationAdressStreet</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-            <property name="ModeSearch">EDITABLE</property>
-            <property name="Required">true</property>
-        </field>
-        <field name="locationAdressCity">
-            <property name="Columns">15</property>
-            <property name="Attribute">LocationAdressCity</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-            <property name="ModeSearch">EDITABLE</property>
-            <property name="Required">true</property>
-        </field>
-        <field name="departmentLocation">
+        <field name="departmentLocation2">
             <property name="Attribute">DepartmentLocationLink</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">NONE</property>
@@ -94,11 +63,11 @@
                 <property name="OrderSelect">attribute[Name]</property>
             </trigger>
             <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication" name="HumanResource_ClassBirthPlaceForm.departmentLocation.UI_FIELD_UPDATE" program="org.efaps.esjp.ubicaciones.Ubicaciones">
-                <property name="targetField">provinceLocation</property>
-                <property name="cleanFields">districtLocation</property>
+                <property name="targetField">provinceLocation2</property>
+                <property name="cleanFields">districtLocation2</property>
             </trigger>
         </field>
-        <field name="provinceLocation">
+        <field name="provinceLocation2">
             <property name="Attribute">ProvinceLocationLink</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">NONE</property>
@@ -111,10 +80,10 @@
                 <property name="WhereAttrEqValue">Name|-</property>
             </trigger>
             <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication" name="HumanResource_ClassBirthPlaceForm.province.UI_FIELD_UPDATE" program="org.efaps.esjp.ubicaciones.Ubicaciones">
-                <property name="targetField">districtLocation</property>
+                <property name="targetField">districtLocation2</property>
             </trigger>
         </field>
-        <field name="districtLocation">
+        <field name="districtLocation2">
             <property name="Attribute">DistrictLocationLink</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">NONE</property>
@@ -127,7 +96,7 @@
                 <property name="WhereAttrEqValue">Name|-</property>
             </trigger>
         </field>
-        <field name="departmentLocationEdit">
+        <field name="departmentLocationEdit2">
             <property name="ModeCreate">NONE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeView">NONE</property>
@@ -139,11 +108,11 @@
                 <property name="OrderSelect">attribute[Name]</property>
             </trigger>
             <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication" name="HumanResource_ClassBirthPlaceForm.departmentLocationEdit.UI_FIELD_UPDATE" program="org.efaps.esjp.ubicaciones.Ubicaciones">
-                <property name="targetField">provinceLocationEdit</property>
-                <property name="cleanFields">districtLocationEdit</property>
+                <property name="targetField">provinceLocationEdit2</property>
+                <property name="cleanFields">districtLocationEdit2</property>
             </trigger>
         </field>
-        <field name="provinceLocationEdit">
+        <field name="provinceLocationEdit2">
             <property name="ModeCreate">NONE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeView">NONE</property>
@@ -156,10 +125,10 @@
                 <property name="ParentAttribute">DepartmentLocationLink</property>
             </trigger>
             <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication" name="HumanResource_ClassBirthPlaceForm.province.UI_FIELD_UPDATE" program="org.efaps.esjp.ubicaciones.Ubicaciones">
-                <property name="targetField">districtLocationEdit</property>
+                <property name="targetField">districtLocationEdit2</property>
             </trigger>
         </field>
-        <field name="districtLocationEdit">
+        <field name="districtLocationEdit2">
             <property name="ModeCreate">NONE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeView">NONE</property>
