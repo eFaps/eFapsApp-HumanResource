@@ -30,6 +30,7 @@
             <child>HumanResource_EmployeeTree_WorkReferences</child>
             <child>HumanResource_EmployeeTree_Education</child>
             <child>HumanResource_EmployeeTree_Training</child>
+            <child>HumanResource_EmployeeTree_File</child>
         </childs>
         <!-- properties -->
         <property name="Target">content</property>

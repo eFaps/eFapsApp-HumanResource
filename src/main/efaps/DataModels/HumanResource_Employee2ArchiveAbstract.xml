@@ -18,6 +18,16 @@
     <file-revision>$Rev: 58 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
+        <profiles>
+            <profile name="eFaps" />
+        </profiles>
+        <name>HumanResource_Employee2ArchiveAbstract</name>
+    </definition>
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <profiles>
+            <profile name="archives" />
+        </profiles>
         <name>HumanResource_Employee2ArchiveAbstract</name>
         <parent>Archives_Object2ArchiveAbstract</parent>
         <attribute>

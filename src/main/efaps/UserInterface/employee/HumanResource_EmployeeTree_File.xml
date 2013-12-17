@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+
+  Copyright 2010 moxter.net S.A.C.
+
+  All Rights Reserved.
+  This program contains proprietary and trade secret information of
+  moxter.net S.A.C. Copyright notice is precautionary only and does not
+  evidence any actual or intended publication of such program.
+
+  Author:          moxter.net S.A.C.
+  Revision:        $Rev: 221 $
+  Last Changed:    $Date: 2013-11-15 17:31:27 -0500 (vie, 15 nov 2013) $
+  Last Changed By: $Author: Rosa Ordonez $
+
+--><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>416c9fe1-d3cf-4b9f-95f1-6d29d139d780</uuid>
+    <file-application>SantoDomingo</file-application>
+    <file-revision>$Rev: 221 $</file-revision>
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <name>HumanResource_EmployeeTree_File</name>
+        <!-- target definitions -->
+        <target>
+            <menu>HumanResource_EmployeeTree_File_Menu</menu>
+            <table>Archives_ArchiveTable</table>
+            <evaluate program="org.efaps.esjp.archives.ArchiveStructurBrowser">
+                <property name="Type">Archives_ArchiveRoot</property>
+                <property name="Type2Structure">HumanResource_Employee2ArchiveAbstract</property>
+                <property name="checkStructure">true</property>
+                <property name="Child_Type">Archives_ArchiveNode</property>
+                <property name="Child_LinkFrom">ParentLink</property>
+            </evaluate>
+        </target>
+        <!-- properties -->
+        <property name="Target">content</property>
+        <property name="TargetShowCheckBoxes">true</property>
+        <property name="TargetStructurBrowserField">name</property>
+    </definition>
+</ui-command>
