@@ -39,7 +39,7 @@
             <!-- columns -->
             <column name="TYPEID"       type="INTEGER"      not-null="true" />
             <column name="COMPANYID"    type="INTEGER"      not-null="true" />
-            <column name="NUMB"         type="STRING_SHORT" not-null="true" length="20" />
+            <column name="NUMB"         type="STRING_SHORT" length="20" />
             <column name="NUMTYPEID"    type="INTEGER"/>
             <column name="COUNTRYID"    type="INTEGER"/>
             <column name="NATIONALITYID"    type="INTEGER"/>
