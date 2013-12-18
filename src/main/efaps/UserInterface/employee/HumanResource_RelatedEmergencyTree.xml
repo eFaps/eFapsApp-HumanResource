@@ -29,7 +29,7 @@
         <!-- targets -->
         <target>
             <menu>HumanResource_RelatedEmergencyTree_Menu</menu>
-            <form>HumanResource_RelatedForm</form>
+            <form>HumanResource_RelatedEmergencyForm</form>
         </target>
         <!-- type tree for -->
         <type>HumanResource_RelatedEmergency</type>

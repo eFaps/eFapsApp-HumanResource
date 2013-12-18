@@ -29,7 +29,7 @@
         <name>HumanResource_EmployeeTree_RelatedEmergency</name>
         <target>
             <menu>HumanResource_EmployeeTree_RelatedEmergency_Menu</menu>
-            <table>HumanResource_Employee2RelatedTable</table>
+            <table>HumanResource_Employee2RelatedEmergencyTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
                 <property name="Type">HumanResource_RelatedEmergency</property>
                 <property name="LinkFrom">EmployeeLink</property>
