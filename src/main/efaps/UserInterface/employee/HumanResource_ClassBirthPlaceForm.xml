@@ -26,7 +26,39 @@
 
     <definition>
         <version-expression>(version==latest)</version-expression>
-
+        <profiles>
+            <profile name="eFaps"/>
+        </profiles>
+        <name>HumanResource_ClassBirthPlaceForm</name>
+        <type>HumanResource_ClassBirthPlace</type>
+        <field character="Heading" name="locationAdressHeading">
+            <property name="Level">2</property>
+            <property name="Label">HumanResource_ClassBirthPlaceForm.locationAdressHeading.Heading</property>
+            <property name="ModeCreate">READONLY</property>
+            <property name="ModeEdit">READONLY</property>
+        </field>
+        <field name="locationAdressStreet2">
+            <property name="Columns">40</property>
+            <property name="Attribute">LocationAdressStreet</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+            <property name="Required">true</property>
+        </field>
+        <field name="locationAdressCity2">
+            <property name="Columns">15</property>
+            <property name="Attribute">LocationAdressCity</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+            <property name="Required">true</property>
+        </field>
+    </definition>
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <profiles>
+            <profile name="ubicaciones"/>
+        </profiles>
         <name>HumanResource_ClassBirthPlaceForm</name>
         <type>HumanResource_ClassBirthPlace</type>
         <field character="Heading" name="locationAdressHeading">
