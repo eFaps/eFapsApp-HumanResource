@@ -41,6 +41,7 @@
         <type>HumanResource_AttributeDefinitionPosition</type>
         <type>HumanResource_AttributeDefinitionReasonForExit</type>
         <type>HumanResource_AttributeDefinitionStatus</type>
+        <type>HumanResource_AttributeDefinitionFinancialInformationType</type>
 
         <role>HumanResource_Modifier</role>
         <role>HumanResource_Reader</role>

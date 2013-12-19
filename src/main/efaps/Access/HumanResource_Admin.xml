@@ -58,6 +58,7 @@
         <type>HumanResource_AttributeDefinitionPosition</type>
         <type>HumanResource_AttributeDefinitionReasonForExit</type>
         <type>HumanResource_AttributeDefinitionStatus</type>
+        <type>HumanResource_AttributeDefinitionFinancialInformationType</type>
 
         <type>HumanResource_Education</type>
         <type>HumanResource_PreviousWorks</type>

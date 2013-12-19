@@ -250,7 +250,7 @@ public abstract class Employee_Base
         throws EFapsException
     {
         final Return retVal = new Return();
-        final Instance employeeInst = _parameter.getCallInstance();
+        final Instance employeeInst = _parameter.getInstance();
         if (employeeInst != null && employeeInst.isValid()){
             final PrintQuery print = new PrintQuery(employeeInst);
             print.addAttribute(CIHumanResource.Employee.BirthDate);
