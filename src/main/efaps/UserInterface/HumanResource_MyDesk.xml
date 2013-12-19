@@ -36,6 +36,7 @@
             <child>HumanResource_EmployeeMyDesk</child>
             <child>HumanResource_DepartmentMyDesk</child>
             <child>HumanResource_ReportMyDesk</child>
+            <child>HumanResource_EmployeeSearchMyDesk</child>
         </childs>
     </definition>
 </ui-menu>

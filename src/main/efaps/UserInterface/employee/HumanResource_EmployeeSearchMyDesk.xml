@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+
+  Copyright 2010 moxter.net S.A.C.
+
+  All Rights Reserved.
+  This program contains proprietary and trade secret information of
+  moxter.net S.A.C. Copyright notice is precautionary only and does not
+  evidence any actual or intended publication of such program.
+
+  Author:          moxter.net S.A.C.
+  Revision:        $Rev$
+  Last Changed:    $Date$
+  Last Changed By: $Author$
+
+--><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+
+    <uuid>0a9787d5-3c2a-4853-878f-c358b8cfb94b</uuid>
+    <file-application>ParaRayos</file-application>
+    <file-revision>$Rev$</file-revision>
+
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <name>HumanResource_EmployeeSearchMyDesk</name>
+        <access>
+            <role>HumanResource_Admin</role>
+            <role>HumanResource_Modifier</role>
+            <role>HumanResource_Reader</role>
+        </access>
+
+        <!-- target definitions -->
+        <target>
+            <search>HumanResource_EmployeeSearchSearch</search>
+            <evaluate program="org.efaps.esjp.common.uitable.MultiPrint"/>
+        </target>
+        <!-- properties -->
+        <property name="Target">popup</property>
+    </definition>
+
+</ui-command>
