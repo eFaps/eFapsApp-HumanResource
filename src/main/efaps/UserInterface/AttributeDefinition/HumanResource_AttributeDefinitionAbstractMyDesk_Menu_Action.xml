@@ -68,6 +68,7 @@
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateReasonForExit</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateStatus</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateEmploy</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateFinancialInformationType</child>
         </childs>
     </definition>
 </ui-menu>

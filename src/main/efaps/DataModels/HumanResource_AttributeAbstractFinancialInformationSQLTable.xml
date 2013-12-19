@@ -34,6 +34,7 @@
             <column name="RELID"    not-null="true" type="INTEGER"/>
             <column name="BANKID"                   type="INTEGER" />
             <column name="CURRENCYID"               type="INTEGER" />
+            <column name="FININFID"                 type="INTEGER" />
             <column name="ACCOUNT"  length="255"    type="STRING_SHORT"/>
             <column name="CCI"      length="255"    type="STRING_SHORT"/>
             <column name="CREATOR"  not-null="true" type="INTEGER"/>

@@ -38,7 +38,7 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="Attribute">FinancialInformationSet</property>
             <property name="Label">HumanResource_ClassFinancialInformationForm/FinancialInformationSet.Label</property>
-            <property name="Order">BankLink|CurrencyId|Account|CCI</property>
+            <property name="Order">BankLink|CurrencyId|Account|CCI|FinancialInformationType</property>
         </field>
     </definition>
 </ui-form>

@@ -50,5 +50,13 @@
             <property name="Attribute">SecondLastName</property>
             <property name="Label">HumanResource_Employee2RelatedTable.secondLastName.Label</property>
         </field>
+        <field name="age">
+            <property name="Label">HumanResource_Related/Age.Label</property>
+            <property name="ModeEdit">NONE</property>
+            <property name="ModeCreate">NONE</property>
+            <property name="ModeView">READONLY</property>
+            <trigger event="UI_FIELD_VALUE" method="getAgeFieldValueUI2View" name="HumanResource_RelatedForm.age.UI_Field_Value" program="org.efaps.esjp.humanresource.Employee">
+            </trigger>
+        </field>
     </definition>
 </ui-table>

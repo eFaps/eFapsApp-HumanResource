@@ -32,6 +32,7 @@
         <field name="firstName">
             <property name="Attribute">FirstName</property>
             <property name="Label">HumanResource_Employee2RelatedTable.firstName.Label</property>
+            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
         </field>
         <field name="lastName">
             <property name="Attribute">LastName</property>

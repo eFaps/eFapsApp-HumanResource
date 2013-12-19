@@ -92,6 +92,17 @@
                 <sqltable>HumanResource_AttributeAbstractFinancialInformationSQLTable</sqltable>
                 <sqlcolumn>CCI</sqlcolumn>
             </attribute>
+            <attribute>
+                <name>FinancialInformationType</name>
+                <type>LinkWithRanges</type>
+                <typelink>HumanResource_AttributeDefinitionFinancialInformationType</typelink>
+                <sqltable>HumanResource_AttributeAbstractFinancialInformationSQLTable</sqltable>
+                <sqlcolumn>FININFID</sqlcolumn>
+                <trigger event="RANGE_VALUE" name="HumanResource_ClassFinancialInformation.HealthRegimeLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
+                    <property name="Value">Value</property>
+                    <property name="Type">HumanResource_AttributeDefinitionFinancialInformationType</property>
+                </trigger>
+            </attribute>
         </attributeset>
     </definition>
 </datamodel-type>
