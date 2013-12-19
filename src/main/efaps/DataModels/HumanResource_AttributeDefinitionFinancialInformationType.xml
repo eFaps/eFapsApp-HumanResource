@@ -26,7 +26,7 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_AttributeDefinitionFinancialInformationType</name>
-        <parent>HumanResource_AttributeDefinitionAbstract</parent>
+        <parent>ERP_AttributeDefinitionMappingAbstract</parent>
 
         <trigger event="ACCESSCHECK" name="HumanResource_AttributeDefinitionFinancialInformationType.ACCESSCHECK" program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType"/>
     </definition>
