@@ -32,7 +32,7 @@
         <type>HumanResource_RelatedClassLocation</type>
         <field character="Heading" name="locationAdressHeading">
             <property name="Level">2</property>
-            <property name="Label">HumanResource_ClassLocationForm.locationAdressHeading.Heading</property>
+            <property name="Label">HumanResource_RelatedClassLocationForm.locationAdressHeading.Heading</property>
             <property name="ModeCreate">READONLY</property>
             <property name="ModeEdit">READONLY</property>
         </field>
@@ -62,7 +62,7 @@
         <type>HumanResource_RelatedClassLocation</type>
         <field character="Heading" name="locationAdressHeading">
             <property name="Level">2</property>
-            <property name="Label">HumanResource_ClassLocationForm.locationAdressHeading.Heading</property>
+            <property name="Label">HumanResource_RelatedClassLocationForm.locationAdressHeading.Heading</property>
             <property name="ModeCreate">READONLY</property>
             <property name="ModeEdit">READONLY</property>
         </field>
