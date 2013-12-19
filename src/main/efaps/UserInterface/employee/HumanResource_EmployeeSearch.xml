@@ -41,6 +41,7 @@
             <evaluate program="org.efaps.esjp.common.uisearch.Search">
                 <property name="Types">HumanResource_EmployeeAbstract</property>
                 <property name="ExpandChildTypes">true</property>
+                <property name="IgnoreCase4Fields">firstName;lastName;secondLastName</property>
             </evaluate>
         </target>
         <!-- properties -->
