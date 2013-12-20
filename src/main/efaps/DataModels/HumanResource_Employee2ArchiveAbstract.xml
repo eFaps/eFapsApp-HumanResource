@@ -19,10 +19,6 @@
     <file-revision>$Rev: 58 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_Employee2ArchiveAbstract</name>
-    </definition>
-    <definition>
-        <version-expression>(version==latest)</version-expression>
         <application-dependencies>
             <application name="eFapsApp-Archives" />
         </application-dependencies>
@@ -43,5 +39,11 @@
             <sqlcolumn>TOID</sqlcolumn>
         </attribute>
     </definition>
-
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+         <application-dependencies>
+            <application name="eFapsApp-Archives" exclude="true"/>
+        </application-dependencies>
+        <name>HumanResource_Employee2ArchiveAbstract</name>
+    </definition>
 </datamodel-type>
