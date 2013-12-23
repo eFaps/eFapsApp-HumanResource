@@ -38,7 +38,7 @@
             <property name="ModeEdit">READONLY</property>
         </field>
         <field name="locationAdressStreet2">
-            <property name="Columns">40</property>
+            <property name="Columns">60</property>
             <property name="Attribute">LocationAdressStreet</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
@@ -46,7 +46,7 @@
             <property name="Required">true</property>
         </field>
         <field name="locationAdressCity2">
-            <property name="Columns">15</property>
+            <property name="Columns">60</property>
             <property name="Attribute">LocationAdressCity</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
@@ -68,7 +68,7 @@
             <property name="ModeEdit">READONLY</property>
         </field>
         <field name="locationAdressStreet2">
-            <property name="Columns">40</property>
+            <property name="Columns">60</property>
             <property name="Attribute">LocationAdressStreet</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
@@ -76,7 +76,7 @@
             <property name="Required">true</property>
         </field>
         <field name="locationAdressCity2">
-            <property name="Columns">15</property>
+            <property name="Columns">60</property>
             <property name="Attribute">LocationAdressCity</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
