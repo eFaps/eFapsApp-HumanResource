@@ -41,5 +41,6 @@
         <property name="TargetCreateType">HumanResource_Education</property>
         <property name="TargetConnectAttribute">HumanResource_CurriculumAbstract/EmployeeLink</property>
         <property name="TargetMode">create</property>
+        <property name="WindowWidth">640</property>
     </definition>
 </ui-command>
