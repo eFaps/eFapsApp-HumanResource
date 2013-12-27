@@ -17,7 +17,7 @@
         <!-- fields -->
         <field name="institution">
             <property name="Attribute">Institution</property>
-            <property name="Columns">15</property>
+            <property name="Columns">60</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>

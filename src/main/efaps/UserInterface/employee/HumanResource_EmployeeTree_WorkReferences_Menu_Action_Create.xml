@@ -40,6 +40,7 @@
         <property name="Target">modal</property>
         <property name="TargetCreateType">HumanResource_WorkReferences</property>
         <property name="TargetConnectAttribute">HumanResource_CurriculumAbstract/EmployeeLink</property>
-        <property name="TargetMode">create</property>
+        <property name="TargetMode">create</property>>
+        <property name="WindowWidth">640</property>
     </definition>
 </ui-command>
