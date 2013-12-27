@@ -19,12 +19,48 @@
   Last Changed:    $Date: 2013-12-09 18:42:29 -0500 (lun, 09 dic 2013) $
   Last Changed By: $Author: rosa.ordonez@efaps.org $
 
---><ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+-->
+<ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>d6aca7ac-8600-4726-83d1-cf44e991441e</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev: 11342 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
+        <profiles>
+            <profile name="eFaps" />
+        </profiles>
+        <name>HumanResource_RelatedClassLocationForm</name>
+        <type>HumanResource_RelatedClassLocation</type>
+        <field character="Heading" name="locationAdressHeading">
+            <property name="Level">2</property>
+            <property name="Label">HumanResource_RelatedClassLocationForm.locationAdressHeading.Heading</property>
+            <property name="ModeCreate">READONLY</property>
+            <property name="ModeEdit">READONLY</property>
+        </field>
+        <field name="locationAdressStreet">
+            <property name="Columns">60</property>
+            <property name="Attribute">LocationAdressStreet</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+            <property name="Required">true</property>
+        </field>
+        <field name="locationAdressCity">
+            <property name="Columns">60</property>
+            <property name="Attribute">LocationAdressCity</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
+            <property name="Label">HumanResource_RelatedClassLocationForm.locationAdressCity.Label</property>
+        </field>
+    </definition>
+
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <profiles>
+            <profile name="ubicaciones" />
+        </profiles>
         <name>HumanResource_RelatedClassLocationForm</name>
         <type>HumanResource_RelatedClassLocation</type>
         <field character="Heading" name="locationAdressHeading">
@@ -55,12 +91,16 @@
             <property name="ModeEdit">NONE</property>
             <property name="ModeView">NONE</property>
             <property name="Label">HumanResource_ClassLocationForm.department.Label</property>
-            <trigger event="UI_FIELD_VALUE" method="dropDownFieldValue" name="Contacts_ClassLocationForm.departmentLocation.UI_FIELD_VALUE" program="org.efaps.esjp.common.uiform.Field">
+            <trigger event="UI_FIELD_VALUE" method="dropDownFieldValue"
+                name="Contacts_ClassLocationForm.departmentLocation.UI_FIELD_VALUE"
+                program="org.efaps.esjp.common.uiform.Field">
                 <property name="Type">Ubicaciones_UbicacionStandardRoot</property>
                 <property name="Select">attribute[Name]</property>
                 <property name="OrderSelect">attribute[Name]</property>
             </trigger>
-            <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication" name="Contacts_ClassLocationForm.departmentLocation.UI_FIELD_UPDATE" program="org.efaps.esjp.ubicaciones.Ubicaciones">
+            <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication"
+                name="Contacts_ClassLocationForm.departmentLocation.UI_FIELD_UPDATE"
+                program="org.efaps.esjp.ubicaciones.Ubicaciones">
                 <property name="targetField">provinceLocation</property>
                 <property name="cleanFields">districtLocation</property>
             </trigger>
@@ -71,13 +111,17 @@
             <property name="ModeEdit">NONE</property>
             <property name="ModeView">NONE</property>
             <property name="Label">HumanResource_ClassLocationForm.province.Label</property>
-            <trigger event="UI_FIELD_VALUE" method="dropDownFieldValue" name="Contacts_ClassLocationForm.province.UI_FIELD_VALUE" program="org.efaps.esjp.common.uiform.Field">
+            <trigger event="UI_FIELD_VALUE" method="dropDownFieldValue"
+                name="Contacts_ClassLocationForm.province.UI_FIELD_VALUE"
+                program="org.efaps.esjp.common.uiform.Field">
                 <property name="Type">Ubicaciones_UbicacionStandardRoot</property>
                 <property name="Select">attribute[Name]</property>
                 <property name="OrderSelect">attribute[Name]</property>
                 <property name="WhereAttrEqValue">Name|-</property>
             </trigger>
-            <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication" name="Contacts_ClassLocationForm.province.UI_FIELD_UPDATE" program="org.efaps.esjp.ubicaciones.Ubicaciones">
+            <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication"
+                name="Contacts_ClassLocationForm.province.UI_FIELD_UPDATE"
+                program="org.efaps.esjp.ubicaciones.Ubicaciones">
                 <property name="targetField">districtLocation</property>
             </trigger>
         </field>
@@ -87,7 +131,9 @@
             <property name="ModeEdit">NONE</property>
             <property name="ModeView">NONE</property>
             <property name="Label">HumanResource_ClassLocationForm.district.Label</property>
-            <trigger event="UI_FIELD_VALUE" method="dropDownFieldValue" name="Contacts_ClassLocationForm.departmentLocation.UI_FIELD_VALUE" program="org.efaps.esjp.common.uiform.Field">
+            <trigger event="UI_FIELD_VALUE" method="dropDownFieldValue"
+                name="Contacts_ClassLocationForm.departmentLocation.UI_FIELD_VALUE"
+                program="org.efaps.esjp.common.uiform.Field">
                 <property name="Type">Ubicaciones_UbicacionStandardRoot</property>
                 <property name="Select">attribute[Name]</property>
                 <property name="OrderSelect">attribute[Name]</property>
@@ -100,12 +146,16 @@
             <property name="ModeView">NONE</property>
             <property name="Attribute">DepartmentLocationLink</property>
             <property name="Label">HumanResource_ClassLocationForm.department.Label</property>
-            <trigger event="UI_FIELD_VALUE" method="getDropdown" name="Ubicaciones_UbicacionExampleForm.locationUbicationEdit.UI_FIELD_VALUE" program="org.efaps.esjp.ubicaciones.Ubicaciones">
+            <trigger event="UI_FIELD_VALUE" method="getDropdown"
+                name="Ubicaciones_UbicacionExampleForm.locationUbicationEdit.UI_FIELD_VALUE"
+                program="org.efaps.esjp.ubicaciones.Ubicaciones">
                 <property name="Type">Ubicaciones_UbicacionStandardRoot</property>
                 <property name="Select">attribute[Name]</property>
                 <property name="OrderSelect">attribute[Name]</property>
             </trigger>
-            <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication" name="Contacts_ClassLocationForm.departmentLocationEdit.UI_FIELD_UPDATE" program="org.efaps.esjp.ubicaciones.Ubicaciones">
+            <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication"
+                name="Contacts_ClassLocationForm.departmentLocationEdit.UI_FIELD_UPDATE"
+                program="org.efaps.esjp.ubicaciones.Ubicaciones">
                 <property name="targetField">provinceLocationEdit</property>
                 <property name="cleanFields">districtLocationEdit</property>
             </trigger>
@@ -116,13 +166,17 @@
             <property name="ModeView">NONE</property>
             <property name="Attribute">ProvinceLocationLink</property>
             <property name="Label">HumanResource_ClassLocationForm.province.Label</property>
-            <trigger event="UI_FIELD_VALUE" method="getDropdown" name="Contacts_ClassLocationForm.provinceEdit.UI_FIELD_VALUE" program="org.efaps.esjp.ubicaciones.Ubicaciones">
+            <trigger event="UI_FIELD_VALUE" method="getDropdown"
+                name="Contacts_ClassLocationForm.provinceEdit.UI_FIELD_VALUE"
+                program="org.efaps.esjp.ubicaciones.Ubicaciones">
                 <property name="Type">Ubicaciones_UbicacionStandard</property>
                 <property name="Select">attribute[Name]</property>
                 <property name="OrderSelect">attribute[Name]</property>
                 <property name="ParentAttribute">DepartmentLocationLink</property>
             </trigger>
-            <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication" name="Contacts_ClassLocationForm.province.UI_FIELD_UPDATE" program="org.efaps.esjp.ubicaciones.Ubicaciones">
+            <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication"
+                name="Contacts_ClassLocationForm.province.UI_FIELD_UPDATE"
+                program="org.efaps.esjp.ubicaciones.Ubicaciones">
                 <property name="targetField">districtLocationEdit</property>
             </trigger>
         </field>
@@ -132,7 +186,9 @@
             <property name="ModeView">NONE</property>
             <property name="Attribute">DistrictLocationLink</property>
             <property name="Label">HumanResource_ClassLocationForm.district.Label</property>
-            <trigger event="UI_FIELD_VALUE" method="getDropdown" name="Contacts_ClassLocationForm.districtEdit.UI_FIELD_VALUE" program="org.efaps.esjp.ubicaciones.Ubicaciones">
+            <trigger event="UI_FIELD_VALUE" method="getDropdown"
+                name="Contacts_ClassLocationForm.districtEdit.UI_FIELD_VALUE"
+                program="org.efaps.esjp.ubicaciones.Ubicaciones">
                 <property name="Type">Ubicaciones_UbicacionStandard</property>
                 <property name="Select">attribute[Name]</property>
                 <property name="OrderSelect">attribute[Name]</property>
