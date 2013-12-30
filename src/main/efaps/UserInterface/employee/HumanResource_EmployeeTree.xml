@@ -32,6 +32,11 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_EmployeeTree</name>
+        <access>
+            <role>HumanResource_Admin</role>
+            <role>HumanResource_Modifier</role>
+            <role>HumanResource_Reader</role>
+        </access>
         <!-- targets -->
         <target>
             <menu>HumanResource_EmployeeTree_Menu</menu>
