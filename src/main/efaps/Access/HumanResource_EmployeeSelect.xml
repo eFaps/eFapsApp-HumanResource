@@ -28,6 +28,7 @@
         <name>HumanResource_EmployeeSelect</name>
 
         <access-type>read</access-type>
+        <access-type>show</access-type>
 
         <type>HumanResource_Employee</type>
 
