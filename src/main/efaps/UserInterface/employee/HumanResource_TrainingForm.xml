@@ -25,6 +25,7 @@
         </field>
         <field name="course">
             <property name="Attribute">Course</property>
+            <property name="Columns">60</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="Required">true</property>
