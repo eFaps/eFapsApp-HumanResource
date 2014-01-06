@@ -18,6 +18,9 @@
     <file-revision>$Rev: 221 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
+        <application-dependencies>
+            <application name="eFapsApp-Archives" />
+        </application-dependencies>
         <name>HumanResource_EmployeeTree_File_Menu_Action_CreateRoot</name>
         <access>
             <role>Archives_Admin</role>
@@ -49,5 +52,12 @@
         <property name="TargetMode">create</property>
         <property name="WindowHeight">460</property>
         <property name="WindowWidth">515</property>
+    </definition>
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+         <application-dependencies>
+            <application name="eFapsApp-Archives" exclude="true"/>
+        </application-dependencies>
+        <name>HumanResource_EmployeeTree_File_Menu_Action_CreateRoot</name>
     </definition>
 </ui-command>

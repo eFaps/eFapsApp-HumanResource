@@ -18,6 +18,9 @@
     <file-revision>$Rev: 221 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
+        <application-dependencies>
+            <application name="eFapsApp-Archives" />
+        </application-dependencies>
         <name>HumanResource_EmployeeTree_File</name>
         <!-- target definitions -->
         <target>
@@ -35,5 +38,12 @@
         <property name="Target">content</property>
         <property name="TargetShowCheckBoxes">true</property>
         <property name="TargetStructurBrowserField">name</property>
+    </definition>
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+         <application-dependencies>
+            <application name="eFapsApp-Archives" exclude="true"/>
+        </application-dependencies>
+        <name>HumanResource_EmployeeTree_File</name>
     </definition>
 </ui-command>
