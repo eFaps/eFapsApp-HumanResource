@@ -44,7 +44,7 @@
         <property name="TargetCreateType">HumanResource_RelatedEmergency</property>
         <property name="TargetConnectAttribute">HumanResource_RelatedAbstract/EmployeeLink</property>
         <property name="TargetMode">create</property>
-        <property name="WindowHeight">450</property>
-        <property name="WindowWidth">815</property>
+        <property name="WindowHeight">430</property>
+        <property name="WindowWidth">620</property>
     </definition>
 </ui-command>

@@ -38,7 +38,7 @@
         <!-- properties -->
         <property name="Target">modal</property>
         <property name="TargetMode">edit</property>
-        <property name="WindowHeight">450</property>
-        <property name="WindowWidth">815</property>
+        <property name="WindowHeight">430</property>
+        <property name="WindowWidth">620</property>
     </definition>
 </ui-command>

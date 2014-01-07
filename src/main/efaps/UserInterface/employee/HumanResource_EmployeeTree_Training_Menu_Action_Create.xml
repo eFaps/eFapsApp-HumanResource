@@ -41,7 +41,7 @@
         <property name="TargetCreateType">HumanResource_Training</property>
         <property name="TargetConnectAttribute">HumanResource_CurriculumAbstract/EmployeeLink</property>
         <property name="TargetMode">create</property>
-        <property name="WindowHeight">450</property>
-        <property name="WindowWidth">750</property>
+        <property name="WindowHeight">400</property>
+        <property name="WindowWidth">600</property>
     </definition>
 </ui-command>
