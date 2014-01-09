@@ -108,6 +108,11 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeCreate">EDITABLE</property>
         </field>
+        <field name="civilStatus">
+            <property name="Attribute">CivilStatus</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+        </field>
         <field name="age">
             <property name="Label">HumanResource_Employee/Age.Label</property>
             <property name="ModeEdit">NONE</property>
@@ -305,6 +310,11 @@
         </field>
         <field name="SexLink">
             <property name="Attribute">SexLink</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+        </field>
+        <field name="civilStatus">
+            <property name="Attribute">CivilStatus</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeCreate">EDITABLE</property>
         </field>

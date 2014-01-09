@@ -83,7 +83,7 @@
             <typelink>HumanResource_AttributeDefinitionEmitterCountry</typelink>
             <sqltable>HumanResource_EmployeeSQLTable</sqltable>
             <sqlcolumn>COUNTRYID</sqlcolumn>
-            <trigger program="org.efaps.esjp.admin.datamodel.RangesValue" 
+            <trigger program="org.efaps.esjp.admin.datamodel.RangesValue"
                 name="HumanResource_EmployeeAbstract.CountryLink.RANGE_VALUE" event="RANGE_VALUE">
                     <property name="Value">Value</property>
                     <property name="Type">HumanResource_AttributeDefinitionEmitterCountry</property>
@@ -113,7 +113,7 @@
             <typelink>HumanResource_AttributeDefinitionNationality</typelink>
             <sqltable>HumanResource_EmployeeSQLTable</sqltable>
             <sqlcolumn>NATIONALITYID</sqlcolumn>
-            <trigger program="org.efaps.esjp.admin.datamodel.RangesValue" 
+            <trigger program="org.efaps.esjp.admin.datamodel.RangesValue"
                 name="HumanResource_EmployeeAbstract.NationalityLink.RANGE_VALUE" event="RANGE_VALUE">
                     <property name="Value">Value</property>
                     <property name="Type">HumanResource_AttributeDefinitionNationality</property>
@@ -125,7 +125,7 @@
             <typelink>HumanResource_AttributeDefinitionEmploy</typelink>
             <sqltable>HumanResource_EmployeeSQLTable</sqltable>
             <sqlcolumn>EMPLOYID</sqlcolumn>
-            <trigger program="org.efaps.esjp.admin.datamodel.RangesValue" 
+            <trigger program="org.efaps.esjp.admin.datamodel.RangesValue"
                 name="HumanResource_EmployeeAbstract.EmployLink.RANGE_VALUE" event="RANGE_VALUE">
                     <property name="Value">Value</property>
                     <property name="Type">HumanResource_AttributeDefinitionEmploy</property>
@@ -143,11 +143,24 @@
             <typelink>HumanResource_AttributeDefinitionSex</typelink>
             <sqltable>HumanResource_EmployeeSQLTable</sqltable>
             <sqlcolumn>SEXID</sqlcolumn>
-            <trigger program="org.efaps.esjp.admin.datamodel.RangesValue" 
+            <trigger program="org.efaps.esjp.admin.datamodel.RangesValue"
                 name="HumanResource_EmployeeAbstract.SexLink.RANGE_VALUE" event="RANGE_VALUE">
                     <property name="Value">Value</property>
                     <property name="Type">HumanResource_AttributeDefinitionSex</property>
                 </trigger>
+        </attribute>
+        <attribute>
+            <name>CivilStatus</name>
+            <type>LinkWithRanges</type>
+            <typelink>HumanResource_AttributeDefinitionCivilStatus</typelink>
+            <sqltable>HumanResource_EmployeeSQLTable</sqltable>
+            <sqlcolumn>CIVILSTID</sqlcolumn>
+            <trigger name="HumanResource_EmployeeAbstract.NumberTypeLink.RANGE_VALUE"
+                     event="RANGE_VALUE"
+                     program="org.efaps.esjp.admin.datamodel.RangesValue">
+                <property name="Value">Value</property>
+                <property name="Type">HumanResource_AttributeDefinitionCivilStatus</property>
+            </trigger>
         </attribute>
         <attribute>
             <name>UserPerson</name>
