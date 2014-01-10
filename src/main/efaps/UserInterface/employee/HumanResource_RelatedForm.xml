@@ -43,6 +43,11 @@
             <property name="GroupCount">2</property>
             <property name="ModeCreate">READONLY</property>
         </field>
+        <field name="numberTypeLink">
+            <property name="Attribute">NumberTypeLink</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+        </field>
         <field name="number">
             <property name="Attribute">Number</property>
             <property name="Columns">15</property>
@@ -50,11 +55,6 @@
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
             <property name="Required">true</property>
-        </field>
-        <field name="numberTypeLink">
-            <property name="Attribute">NumberTypeLink</property>
-            <property name="ModeEdit">EDITABLE</property>
-            <property name="ModeCreate">EDITABLE</property>
         </field>
         <field character="Group" name="emitterGroup">
             <property name="GroupCount">2</property>
