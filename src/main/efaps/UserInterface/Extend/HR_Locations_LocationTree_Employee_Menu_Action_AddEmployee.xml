@@ -36,6 +36,7 @@
                 <property name="ConnectChildAttribute">EmployeeLink</property>
                 <property name="ConnectParentAttribute">LocationOfficeLink</property>
                 <property name="ConnectType">HumanResource_Employee2LocationOffice</property>
+                <property name="AllowMultiple">false</property>
             </execute>
         </target>
 
