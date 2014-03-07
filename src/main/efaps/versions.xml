@@ -59,11 +59,18 @@
             <!-- connect the HumanResource_MyDesk Menu to the main menu from efaps -->
             update.add2Menu("95a2cfe0-92f0-432b-bbfb-6dee6e91a181", "87001cc3-c45c-44de-b8f1-776df507f268", 2);
 
-            <!-- HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action, ERP_AttributeDefinitionMyDesk_Menu-->
-            update.add2Menu("e02c020f-6418-4f22-a5b7-49459212cc27", "69e0b34a-2483-4662-9a45-1ce5d4e420e6", 1);
-
             <!-- connect HR_Locations_LocationTree_Employee Menu to Locations_LocationTree -->
             update.add2Menu("8721159f-fd61-4a4c-996c-abb350bf773a", "385eb1af-ca21-47ca-a9ce-b37b6969e8ea", 2);
+            
+            
+            <!-- Define attribute definition -->
+            <!-- HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action, ERP_AttributeDefinitionMyDesk_Menu-->
+            update.add2Menu("e02c020f-6418-4f22-a5b7-49459212cc27", "69e0b34a-2483-4662-9a45-1ce5d4e420e6", 1);
+            
+            <!-- add to HumanResource_Admin role -->
+            RoleUpdate rolUp = new RoleUpdate("c3ff7ad7-da2b-4219-8b18-aa671fdb2113");
+            <!-- ERP_AttributeDefinitionMyDesk -->
+            rolUp.addUI("1c506850-7e64-439f-ad65-9c82dc762db8");
         </script>
     </version>
 </install>
