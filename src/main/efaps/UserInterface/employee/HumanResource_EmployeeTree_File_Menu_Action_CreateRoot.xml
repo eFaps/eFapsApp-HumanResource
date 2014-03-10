@@ -36,8 +36,6 @@
                 <property name="ConnectParentAttribute">FromLink</property>
                 <property name="StatusGroup">Archives_ArchiveNodeStatus</property>
                 <property name="Status">Editable</property>
-                <property name="DefaultRole">SD_Archives_Staff</property>
-                <property name="DefaultAccessSet">Archives_Modifier</property>
             </execute>
             <trigger event="UI_ACCESSCHECK" method="checkAccess2ArchiveRoot" name="HumanResource_EmployeeTree_File_Menu_Action_CreateRoot.UI_ACCESSCHECK" program="org.efaps.esjp.archives.Archive">
                 <property name="Type">HumanResource_Employee2ArchiveAbstract</property>
