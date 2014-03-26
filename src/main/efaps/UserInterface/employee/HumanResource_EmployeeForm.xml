@@ -32,7 +32,6 @@
             <profile name="eFaps"/>
         </profiles>
         <name>HumanResource_EmployeeForm</name>
-        <!-- fields -->
         <field name="classification" character="Classification">
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
@@ -146,10 +145,6 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
-        </field>
-        <field name="status">
-            <property name="Attribute">Status</property>
-            <property name="ModeEdit">EDITABLE</property>
         </field>
         <field name="department">
             <property name="ModeCreate">EDITABLE</property>
@@ -229,6 +224,27 @@
             <property name="ModeCreate">NONE</property>
             <property name="Attribute">Modified</property>
         </field>
+        <field name="statusGroup" character="Group">
+            <property name="GroupCount">2</property>
+            <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI"
+                method="configCheck"
+                name="HumanResource_EmployeeForm.statusGroup.UI_ACCESSCHECK"
+                event="UI_ACCESSCHECK">
+                <property name="SystemConfig">HumanResource-Configuration</property>
+                <property name="Attribute">org.efaps.humanresource.ActivateActivationGroup</property>
+            </trigger>
+        </field>
+        <field name="status">
+            <property name="Attribute">Status</property>
+            <property name="ModeEdit">EDITABLE</property>
+        </field>
+        <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI"
+                method="configCheck"
+                name="HumanResource_EmployeeForm.activation.UI_ACCESSCHECK"
+                event="UI_ACCESSCHECK">
+                <property name="SystemConfig">HumanResource-Configuration</property>
+                <property name="Attribute">org.efaps.humanresource.ActivateActivationGroup</property>
+            </trigger>
     </definition>
 
     <definition>
@@ -237,7 +253,6 @@
             <profile name="locations"/>
         </profiles>
         <name>HumanResource_EmployeeForm</name>
-        <!-- fields -->
         <field name="classification" character="Classification">
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
@@ -351,10 +366,6 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
-        </field>
-        <field name="status">
-            <property name="Attribute">Status</property>
-            <property name="ModeEdit">EDITABLE</property>
         </field>
         <field name="department">
             <property name="ModeCreate">EDITABLE</property>
@@ -455,6 +466,32 @@
         <field name="modified">
             <property name="ModeCreate">NONE</property>
             <property name="Attribute">Modified</property>
+        </field>
+        <field name="statusGroup" character="Group">
+            <property name="GroupCount">2</property>
+            <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI"
+                method="configCheck"
+                name="HumanResource_EmployeeForm.statusGroup.UI_ACCESSCHECK"
+                event="UI_ACCESSCHECK">
+                <property name="SystemConfig">HumanResource-Configuration</property>
+                <property name="Attribute">org.efaps.humanresource.ActivateActivationGroup</property>
+            </trigger>
+        </field>
+        <field name="status">
+            <property name="Attribute">Status</property>
+            <property name="ModeEdit">EDITABLE</property>
+        </field>
+        <field name="activation">
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="Attribute">Activation</property>
+            <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI"
+                method="configCheck"
+                name="HumanResource_EmployeeForm.activation.UI_ACCESSCHECK"
+                event="UI_ACCESSCHECK">
+                <property name="SystemConfig">HumanResource-Configuration</property>
+                <property name="Attribute">org.efaps.humanresource.ActivateActivationGroup</property>
+            </trigger>
         </field>
     </definition>
 </ui-form>

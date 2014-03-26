@@ -43,7 +43,10 @@ import org.efaps.db.MultiPrintQuery;
 import org.efaps.db.PrintQuery;
 import org.efaps.db.QueryBuilder;
 import org.efaps.esjp.ci.CIHumanResource;
+import org.efaps.esjp.common.AbstractCommon;
 import org.efaps.esjp.common.uiform.Create;
+import org.efaps.esjp.common.uitable.MultiPrint;
+import org.efaps.esjp.humanresource.util.ActivationGroup;
 import org.efaps.ui.wicket.util.EFapsKey;
 import org.efaps.util.EFapsException;
 import org.joda.time.DateTime;
@@ -60,6 +63,7 @@ import org.joda.time.PeriodType;
 @EFapsUUID("6c060a95-0515-4809-ab2f-6834a951e93c")
 @EFapsRevision("$Rev$")
 public abstract class Employee_Base
+    extends AbstractCommon
 {
     /**
      * Method is executed on create event.
@@ -264,4 +268,37 @@ public abstract class Employee_Base
 
         return retVal;
     }
+
+    public Return multiPrint4Employee(final Parameter _parameter)
+        throws EFapsException
+    {
+        final MultiPrint multi = new MultiPrint()
+        {
+            @Override
+            protected void add2QueryBldr(final Parameter _parameter,
+                                         final QueryBuilder _queryBldr)
+                throws EFapsException
+            {
+                super.add2QueryBldr(_parameter, _queryBldr);
+                add2QueryBldr4EmployeeWithActivation(_parameter, _queryBldr);
+            }
+        };
+        return multi.execute(_parameter);
+    }
+
+    public void add2QueryBldr4EmployeeWithActivation(final Parameter _parameter,
+                                                     final QueryBuilder _queryBldr)
+        throws EFapsException
+    {
+        final Map<Integer, String> activations = analyseProperty(_parameter, "Activation");
+        if (!activations.isEmpty()) {
+            final List<ActivationGroup> activationList = new ArrayList<ActivationGroup>();
+            for (final String activationStr : activations.values()) {
+                final ActivationGroup activation = ActivationGroup.valueOf(activationStr);
+                activationList.add(activation);
+            }
+            _queryBldr.addWhereAttrEqValue(CIHumanResource.Employee.Activation, activationList.toArray());
+        }
+    };
+
 }

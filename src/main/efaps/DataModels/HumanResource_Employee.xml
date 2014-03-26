@@ -44,6 +44,13 @@
                 name="HumanResource_Employee.Status.RANGE_VALUE" event="RANGE_VALUE">
             </trigger>
         </attribute>
+        <attribute>
+            <name>Activation</name>
+            <type>BitEnum</type>
+            <className>org.efaps.esjp.humanresource.util.ActivationGroup</className>
+            <sqltable>HumanResource_EmployeeSQLTable</sqltable>
+            <sqlcolumn>ACTIVATION</sqlcolumn>
+        </attribute>
         <trigger program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType"
             name="HumanResource_Employee.ACCESSCHECK" event="ACCESSCHECK" />
     </definition>

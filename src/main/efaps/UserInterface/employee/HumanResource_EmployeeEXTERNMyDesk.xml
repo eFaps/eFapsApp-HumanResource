@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
  Copyright 2003 - 2010 The eFaps Team
 
@@ -22,16 +20,14 @@
  Last Changed By: $Author$
 
 -->
-
-<ui-menu xmlns="http://www.efaps.org/xsd"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>bbc4d93c-038c-4a1b-ae34-fa30b458ac28</uuid>
+<ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>e0f992d8-898f-4666-9336-cdaf5b9f1b6f</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_EmployeeMyDesk</name>
+        <name>HumanResource_EmployeeEXTERNMyDesk</name>
         <access>
             <role>HumanResource_Admin</role>
             <role>HumanResource_Modifier</role>
@@ -43,10 +39,16 @@
             <evaluate program="org.efaps.esjp.humanresource.Employee" method="multiPrint4Employee">
                 <property name="Type">HumanResource_Employee</property>
                 <property name="ExpandChildTypes">true</property>
+                <property name="Activation">EXTERN</property>
             </evaluate>
+            <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI"
+                method="configCheck"
+                name="HumanResource_EmployeeEXTERNMyDesk.UI_ACCESSCHECK"
+                event="UI_ACCESSCHECK">
+                <property name="SystemConfig">HumanResource-Configuration</property>
+                <property name="Attribute">org.efaps.humanresource.ActivateActivationGroup</property>
+            </trigger>
         </target>
-
-        <!-- properties -->
         <property name="Target">content</property>
         <property name="TargetShowCheckBoxes">true</property>
     </definition>

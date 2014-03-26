@@ -60,4 +60,11 @@ public interface HumanResourceSettings
      * Properties for employee image.
      */
     String IMAGEPROPERTIES = "org.efaps.humanresource.ImagesProperties";
+
+    /**
+     * Boolean(true/false).<br/>
+     * Activate the image menu.
+     */
+    String ACTIVATEACTIVATIONGRP = "org.efaps.humanresource.ActivateActivationGroup";
+
 }
