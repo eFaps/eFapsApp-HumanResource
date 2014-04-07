@@ -38,7 +38,7 @@
             <column name="CREATED"  not-null="true" type="DATETIME"/>
             <column name="MODIFIER" not-null="true" type="INTEGER"/>
             <column name="MODIFIED" not-null="true" type="DATETIME"/>
-            <foreign key="FROMID"   name="T_HRDEPT2OBJ_FK_FROMID"   reference="T_HREMPLOYEE(ID)"/>
+            <foreign key="FROMID"   name="T_HRDEPT2OBJ_FK_FROMID"   reference="T_HRDEPT(ID)"/>
             <foreign key="TOID"     name="T_HRDEPT2OBJ_FK_TOID"     reference="T_ERPDOC(ID)"/>
             <foreign key="CREATOR"  name="T_HRDEPT2OBJ_FK_CRTR"     reference="T_USERPERSON(ID)"/>
             <foreign key="MODIFIER" name="T_HRDEPT2OBJ_FK_MDFR"     reference="T_USERPERSON(ID)"/>

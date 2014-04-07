@@ -33,14 +33,14 @@
             <name>FromLink</name>
             <type>Link</type>
             <typelink>HumanResource_Department</typelink>
-            <sqltable>HumanResource_Employee2DocumentSQLTable</sqltable>
+            <sqltable>HumanResource_Department2DocumentSQLTable</sqltable>
             <sqlcolumn>FROMID</sqlcolumn>
         </attribute>
         <attribute>
             <name>ToLink</name>
             <type>Link</type>
             <typelink>Sales_UsageReport</typelink>
-            <sqltable>HumanResource_Employee2DocumentSQLTable</sqltable>
+            <sqltable>HumanResource_Department2DocumentSQLTable</sqltable>
             <sqlcolumn>TOID</sqlcolumn>
         </attribute>
     </definition>
