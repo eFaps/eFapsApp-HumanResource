@@ -32,16 +32,14 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_DepartmentTree</name>
-        <!-- targets -->
         <target>
             <menu>HumanResource_DepartmentTree_Menu</menu>
             <form>HumanResource_DepartmentForm</form>
         </target>
-        <!-- type tree for -->
         <type>HumanResource_DepartmentAbstract</type>
-        <!-- child -->
         <childs>
             <child>HumanResource_DepartmentTree_Employee</child>
+            <child>HumanResource_DepartmentTree_Documents</child>
         </childs>
         <!-- properties -->
         <property name="Target">content</property>
