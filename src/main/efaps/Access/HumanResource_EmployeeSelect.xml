@@ -19,24 +19,23 @@
  Last Changed:    $Date: 2013-12-16 13:22:46 -0500 (lun, 16 dic 2013) $
  Last Changed By: $Author: jorge.cueva@moxter.net $
 
---><access-set xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+-->
+<access-set xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>e2d85337-f427-4eaa-a0e9-c1f9cf3b19f9</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev: 11414 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_EmployeeSelect</name>
-
         <access-type>read</access-type>
         <access-type>show</access-type>
-
         <type>HumanResource_Employee</type>
-
+        <type>HumanResource_Department</type>
         <status group="HumanResource_EmployeeStatus">
             <key>Worker</key>
             <key>Subsidiary</key>
         </status>
-
         <role>HumanResource_EmployeeSelect</role>
     </definition>
 </access-set>
