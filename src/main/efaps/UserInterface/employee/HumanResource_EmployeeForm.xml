@@ -250,7 +250,7 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <profiles>
-            <profile name="locations"/>
+            <profile name="ubicaciones"/>
         </profiles>
         <name>HumanResource_EmployeeForm</name>
         <field name="classification" character="Classification">
