@@ -19,11 +19,12 @@
  Last Changed:    $Date: 2013-06-13 11:01:35 -0500 (jue, 13 jun 2013) $
  Last Changed By: $Author: jan@moxter.net $
 
---><access-set xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+-->
+<access-set xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>7c567ace-98ae-4ce9-8bc3-9ed7e414dae7</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev: 9610 $</file-revision>
-
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_AttributesDefinition</name>
@@ -33,7 +34,6 @@
 
         <type>HumanResource_AttributeDefinitionDistrict</type>
         <type>HumanResource_AttributeDefinitionEmail</type>
-        <type>HumanResource_AttributeDefinitionFax</type>
         <type>HumanResource_AttributeDefinitionPhone</type>
         <type>HumanResource_AttributeDefinitionAcademicDegree</type>
         <type>HumanResource_AttributeDefinitionCareer</type>
@@ -45,7 +45,5 @@
 
         <role>HumanResource_Modifier</role>
         <role>HumanResource_Reader</role>
-
     </definition>
-
 </access-set>

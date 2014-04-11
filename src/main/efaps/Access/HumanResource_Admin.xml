@@ -49,7 +49,6 @@
         <type>HumanResource_RelatedEmergency</type>
         <type>HumanResource_AttributeDefinitionDistrict</type>
         <type>HumanResource_AttributeDefinitionEmail</type>
-        <type>HumanResource_AttributeDefinitionFax</type>
         <type>HumanResource_AttributeDefinitionPhone</type>
 
         <type>HumanResource_AttributeDefinitionAcademicDegree</type>
