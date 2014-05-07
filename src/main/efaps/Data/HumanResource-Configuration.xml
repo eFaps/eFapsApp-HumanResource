@@ -73,7 +73,7 @@
             <attribute name="SecondLastName" column="LASTNAME2" validate="false" overwrite="true"/>
             <attribute name="FirstName" column="FIRSTNAME" validate="false" overwrite="true"/>
             <attribute name="Status" class="org.efaps.esjp.data.columns.StatusColumn" validateClass="org.efaps.esjp.data.columns.StatusColumn">
-                <property name="StatusGrp">HumanResource_EmployeeStatus</property>
+                <property name="StatusGroup">HumanResource_EmployeeStatus</property>
                 <property name="Status">Worker</property>
             </attribute>
             <attribute name="BirthDate" class="org.efaps.esjp.data.columns.DateColumn" validateClass="org.efaps.esjp.data.columns.DateColumn" overwrite="true">
