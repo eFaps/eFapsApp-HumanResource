@@ -19,28 +19,26 @@
  Last Changed:    $Date$
  Last Changed By: $Author$
 
--->
-<datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>75c9e5c7-b799-43b5-810f-eef2f9136ca2</uuid>
+--><datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>0e90dbc7-efa1-497d-80b0-cddf1c4b4f7b</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_Department2UsageReport</name>
-        <parent>HumanResource_Department2DocumentAbstract</parent>
+        <name>HumanResource_Employee2ReturnUsageReport</name>
+        <parent>HumanResource_Employee2DocumentAbstract</parent>
         <attribute>
             <name>FromLink</name>
             <type>Link</type>
-            <typelink>HumanResource_Department</typelink>
-            <sqltable>HumanResource_Department2DocumentSQLTable</sqltable>
+            <typelink>HumanResource_Employee</typelink>
+            <sqltable>HumanResource_Employee2DocumentSQLTable</sqltable>
             <sqlcolumn>FROMID</sqlcolumn>
         </attribute>
         <attribute>
             <name>ToLink</name>
             <type>Link</type>
             <typelink>ERP_DocumentAbstract</typelink>
-            <sqltable>HumanResource_Department2DocumentSQLTable</sqltable>
+            <sqltable>HumanResource_Employee2DocumentSQLTable</sqltable>
             <sqlcolumn>TOID</sqlcolumn>
         </attribute>
     </definition>

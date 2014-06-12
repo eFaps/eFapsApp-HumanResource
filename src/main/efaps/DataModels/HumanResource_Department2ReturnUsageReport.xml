@@ -19,15 +19,13 @@
  Last Changed:    $Date$
  Last Changed By: $Author$
 
--->
-<datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>75c9e5c7-b799-43b5-810f-eef2f9136ca2</uuid>
+--><datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>a0daf6e6-f093-4f9e-b212-72922d96fbb6</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_Department2UsageReport</name>
+        <name>HumanResource_Department2ReturnUsageReport</name>
         <parent>HumanResource_Department2DocumentAbstract</parent>
         <attribute>
             <name>FromLink</name>
