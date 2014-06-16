@@ -46,6 +46,7 @@ import org.efaps.esjp.ci.CIHumanResource;
 import org.efaps.esjp.common.AbstractCommon;
 import org.efaps.esjp.common.uiform.Create;
 import org.efaps.esjp.common.uitable.MultiPrint;
+import org.efaps.esjp.common.util.InterfaceUtils;
 import org.efaps.esjp.humanresource.util.ActivationGroup;
 import org.efaps.ui.wicket.util.EFapsKey;
 import org.efaps.util.EFapsException;
@@ -102,15 +103,16 @@ public abstract class Employee_Base
     {
         final String input = (String) _parameter.get(ParameterValues.OTHERS);
         final List<Map<String, String>> list = new ArrayList<Map<String, String>>();
-        final Map<?, ?> properties = (Map<?, ?>) _parameter.get(ParameterValues.PROPERTIES);
-        final String key = (String) properties.get("keyValue");
-        final String classesStr = (String) properties.get("Classifications");
-        String[] classes = new String[0];
-        if (classesStr != null) {
-            classes = classesStr.split(";");
-        }
+
 
         if (input.length() > 0) {
+            final String key = containsProperty(_parameter, "Key") ? getProperty(_parameter, "Key") : "OID";
+
+            final String classesStr = getProperty(_parameter, "Classifications");
+            String[] classes = new String[0];
+            if (classesStr != null) {
+                classes = classesStr.split(";");
+            }
             final QueryBuilder queryBldr = new QueryBuilder(CIHumanResource.EmployeeAbstract);
             if (classes.length > 0) {
                 final Classification[] classTypes = new Classification[classes.length];
@@ -120,46 +122,47 @@ public abstract class Employee_Base
                 queryBldr.addWhereClassification(classTypes);
             }
 
-            add2QueryBldr(_parameter, queryBldr);
-
             final boolean nameSearch = Character.isDigit(input.charAt(0));
             final Map<String, Map<String, String>> tmpMap = new TreeMap<String, Map<String, String>>();
 
+            final QueryBuilder attQueryBldr = new QueryBuilder(CIHumanResource.EmployeeAbstract);
             if (nameSearch) {
-                queryBldr.addWhereAttrMatchValue(CIHumanResource.EmployeeAbstract.Number, input + "*");
+                attQueryBldr.addWhereAttrMatchValue(CIHumanResource.EmployeeAbstract.Number, input + "*");
             } else {
-                queryBldr.addWhereAttrMatchValue(CIHumanResource.EmployeeAbstract.LastName, input + "*")
+                attQueryBldr.setOr(true);
+                attQueryBldr.addWhereAttrMatchValue(CIHumanResource.EmployeeAbstract.LastName, input + "*")
+                                .setIgnoreCase(true);
+                attQueryBldr.addWhereAttrMatchValue(CIHumanResource.EmployeeAbstract.FirstName, input + "*")
+                                .setIgnoreCase(true);
+                attQueryBldr.addWhereAttrMatchValue(CIHumanResource.EmployeeAbstract.SecondLastName, input + "*")
                                 .setIgnoreCase(true);
             }
+            queryBldr.addWhereAttrInQuery(CIHumanResource.EmployeeAbstract.ID,
+                            attQueryBldr.getAttributeQuery(CIHumanResource.EmployeeAbstract.ID));
 
-            final MultiPrintQuery print = queryBldr.getPrint();
-            print.addAttribute(CIHumanResource.EmployeeAbstract.OID,
-                               CIHumanResource.EmployeeAbstract.Number,
+            InterfaceUtils.addMaxResult2QueryBuilder4AutoComplete(_parameter, queryBldr);
+
+            add2QueryBldr(_parameter, queryBldr);
+
+            final MultiPrintQuery multi = queryBldr.getPrint();
+            multi.addAttribute(CIHumanResource.EmployeeAbstract.Number,
                                CIHumanResource.EmployeeAbstract.FirstName,
                                CIHumanResource.EmployeeAbstract.LastName,
                                CIHumanResource.EmployeeAbstract.SecondLastName);
-            print.execute();
-            while (print.next()) {
-                final String number = print.<String>getAttribute(CIHumanResource.EmployeeAbstract.Number);
-                final String firstname = print.<String>getAttribute(CIHumanResource.EmployeeAbstract.FirstName);
-                final String lastname = print.<String>getAttribute(CIHumanResource.EmployeeAbstract.LastName);
-                final String secondLastname = print
+            multi.addAttribute(key);
+            multi.execute();
+            while (multi.next()) {
+                final String number = multi.<String>getAttribute(CIHumanResource.EmployeeAbstract.Number);
+                final String firstname = multi.<String>getAttribute(CIHumanResource.EmployeeAbstract.FirstName);
+                final String lastname = multi.<String>getAttribute(CIHumanResource.EmployeeAbstract.LastName);
+                final String secondLastname = multi
                                 .<String>getAttribute(CIHumanResource.EmployeeAbstract.SecondLastName);
                 final String dataemployee = lastname + (secondLastname.isEmpty() ? ", " : " " + secondLastname + ", ")
                                 + firstname;
-                final String oid = print.<String>getAttribute(CIHumanResource.EmployeeAbstract.OID);
                 final String choice = nameSearch ? number + "- " + dataemployee : dataemployee + " - " + number;
                 final Map<String, String> map = new HashMap<String, String>();
-                map.put(EFapsKey.AUTOCOMPLETE_KEY.getKey(), oid);
+                map.put(EFapsKey.AUTOCOMPLETE_KEY.getKey(), multi.getAttribute(key).toString());
                 map.put(EFapsKey.AUTOCOMPLETE_CHOICE.getKey(), choice);
-                if (key == null || key.isEmpty()) {
-                    map.put("FirstName", firstname);
-                    map.put("LastName", lastname);
-                    map.put("SecondLastName", secondLastname);
-                    map.put(EFapsKey.AUTOCOMPLETE_VALUE.getKey(), dataemployee);
-                } else {
-                    map.put(EFapsKey.AUTOCOMPLETE_VALUE.getKey(), dataemployee);
-                }
                 tmpMap.put(choice, map);
             }
             list.addAll(tmpMap.values());
@@ -210,9 +213,9 @@ public abstract class Employee_Base
                 final String fullName = lastname + ", " + firstname;
                 final String choice = name + " - " + fullName;
                 final Map<String, String> map = new HashMap<String, String>();
-                map.put("eFapsAutoCompleteKEY", String.valueOf(id));
-                map.put("eFapsAutoCompleteCHOICE", choice);
-                map.put("eFapsAutoCompleteVALUE", name);
+                map.put(EFapsKey.AUTOCOMPLETE_KEY.getKey(), String.valueOf(id));
+                map.put(EFapsKey.AUTOCOMPLETE_CHOICE.getKey(), choice);
+                map.put(EFapsKey.AUTOCOMPLETE_VALUE.getKey(), name);
                 tmpMap.put(choice, map);
             }
             list.addAll(tmpMap.values());
