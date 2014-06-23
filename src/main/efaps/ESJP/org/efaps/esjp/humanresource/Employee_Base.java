@@ -39,6 +39,7 @@ import org.efaps.ci.CIAdminUser;
 import org.efaps.db.AttributeQuery;
 import org.efaps.db.Insert;
 import org.efaps.db.Instance;
+import org.efaps.db.InstanceQuery;
 import org.efaps.db.MultiPrintQuery;
 import org.efaps.db.PrintQuery;
 import org.efaps.db.QueryBuilder;
@@ -177,6 +178,44 @@ public abstract class Employee_Base
         throws EFapsException
     {
     }
+
+    /**
+     * @param _parameter Parameter as passed by the eFasp API
+     * @return maplist for fielupdate
+     * @throws EFapsException on error
+     */
+    public Return updateField4Employee(final Parameter _parameter)
+        throws EFapsException
+    {
+        final Return ret = new Return();
+        final List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+        final Map<String, Object> map = new HashMap<String, Object>();
+        final String depField = getProperty(_parameter, "HR_DepartmentFieldName", "department");
+        final String employeeField = getProperty(_parameter, "HR_EmployeeFieldName", "employee");
+
+        final String employee = _parameter.getParameterValue(employeeField);
+        if (employee != null && employee.isEmpty()) {
+            final Instance employeeInst = Instance.get(employee);
+            if (employeeInst.isValid()) {
+                final QueryBuilder attrQueryBldr = new QueryBuilder(CIHumanResource.Department2EmployeeAbstract);
+                attrQueryBldr.addWhereAttrEqValue(CIHumanResource.Department2EmployeeAbstract.EmployeeAbstractLink,
+                                employeeInst);
+
+                final QueryBuilder queryBldr = new QueryBuilder(CIHumanResource.Department);
+                queryBldr.addWhereAttrInQuery(CIHumanResource.Department.ID, attrQueryBldr.getAttributeQuery(
+                                                CIHumanResource.Department2EmployeeAbstract.DepartmentAbstractLink));
+                final InstanceQuery query = queryBldr.getQuery();
+                query.execute();
+                if (query.next()) {
+                    map.put(depField, query.getCurrentValue().getOid());
+                }
+            }
+        }
+        list.add(map);
+        ret.put(ReturnValues.VALUES, list);
+        return ret;
+    }
+
 
     /**
      * method for auto-complete user person (if any a case non-existing in DB.)
