@@ -194,7 +194,7 @@ public abstract class Employee_Base
         final String employeeField = getProperty(_parameter, "HR_EmployeeFieldName", "employee");
 
         final String employee = _parameter.getParameterValue(employeeField);
-        if (employee != null && employee.isEmpty()) {
+        if (employee != null && !employee.isEmpty()) {
             final Instance employeeInst = Instance.get(employee);
             if (employeeInst.isValid()) {
                 final QueryBuilder attrQueryBldr = new QueryBuilder(CIHumanResource.Department2EmployeeAbstract);
