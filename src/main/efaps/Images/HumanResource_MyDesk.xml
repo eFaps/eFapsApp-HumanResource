@@ -33,7 +33,7 @@
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_MyDesk</name>
-        <file>HumanResource_MyDesk.png</file>
+        <name>HumanResource_MyDeskImg</name>
+        <file>HumanResource_MyDeskImg.png</file>
     </definition>
 </ui-image>

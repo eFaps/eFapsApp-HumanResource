@@ -32,7 +32,7 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_MyDesk</name>
-        <icon>HumanResource_MyDesk</icon>
+        <icon>HumanResource_MyDeskImg</icon>
         <childs>
             <child>HumanResource_EmployeeMyDesk</child>
             <child>HumanResource_EmployeeINTERNMyDesk</child>
