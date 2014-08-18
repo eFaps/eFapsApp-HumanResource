@@ -48,6 +48,7 @@
         <field name="image">
             <property name="Label">HumanResource_EmployeeForm.image.Label</property>
             <property name="ModeEdit">NONE</property>
+            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
             <trigger program="org.efaps.esjp.humanresource.Image"
                 method="getImageFieldValueUI"
                 name="HumanResource_EmployeeForm.image.UI_FIELD_VALUE"
@@ -117,6 +118,7 @@
             <property name="ModeEdit">NONE</property>
             <property name="ModeCreate">NONE</property>
             <property name="ModeView">READONLY</property>
+            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
             <trigger program="org.efaps.esjp.humanresource.Employee"
                 method="getAgeFieldValueUI2View"
                 name="HumanResource_EmployeeForm.age.UI_Field_Value"
@@ -151,6 +153,7 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeView">NONE</property>
             <property name="Required">true</property>
+            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
             <property name="Label">HumanResource_EmployeeForm.department.Label</property>
             <trigger program="org.efaps.esjp.common.uiform.Field"
                 method="dropDownFieldValue"
@@ -166,6 +169,7 @@
             <property name="Label">HumanResource_EmployeeForm.department.Label</property>
             <property name="ModeView">READONLY</property>
             <property name="ModeEdit">NONE</property>
+            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
         </field>
         <field name="employLink">
             <property name="Attribute">EmployLink</property>
@@ -269,6 +273,7 @@
         <field name="image">
             <property name="Label">HumanResource_EmployeeForm.image.Label</property>
             <property name="ModeEdit">NONE</property>
+            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
             <trigger program="org.efaps.esjp.humanresource.Image"
                 method="getImageFieldValueUI"
                 name="HumanResource_EmployeeForm.image.UI_FIELD_VALUE"
@@ -338,6 +343,7 @@
             <property name="ModeEdit">NONE</property>
             <property name="ModeCreate">NONE</property>
             <property name="ModeView">READONLY</property>
+            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
             <trigger program="org.efaps.esjp.humanresource.Employee"
                 method="getAgeFieldValueUI2View"
                 name="HumanResource_EmployeeForm.age.UI_Field_Value"
@@ -372,6 +378,7 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeView">NONE</property>
             <property name="Required">true</property>
+            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
             <property name="Label">HumanResource_EmployeeForm.department.Label</property>
             <trigger program="org.efaps.esjp.common.uiform.Field"
                 method="dropDownFieldValue"
@@ -383,6 +390,7 @@
             </trigger>
         </field>
         <field name="department4View">
+            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
             <property name="Select">linkfrom[HumanResource_Department2EmployeeAdminister#EmployeeLink].linkto[DepartmentLink].attribute[Name]</property>
             <property name="Label">HumanResource_EmployeeForm.department.Label</property>
             <property name="ModeView">READONLY</property>
@@ -422,6 +430,7 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeView">NONE</property>
             <property name="Label">HumanResource_EmployeeForm.location.Label</property>
+            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
             <trigger program="org.efaps.esjp.common.uiform.Field"
                 method="dropDownFieldValue"
                 name="HumanResource_EmployeeForm.department.UI_FIELD_VALUE"
