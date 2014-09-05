@@ -12,14 +12,26 @@
   Last Changed:    $Date$
   Last Changed By: $Author$
 
---><datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+-->
+<datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>9b4bf13e-4ca4-45cf-831e-6f13b55bca27</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev$</file-revision>
-
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_AttributeDefinitionSex</name>
         <parent>ERP_AttributeDefinitionMappingAbstract</parent>
+        <attribute>
+            <name>Status</name>
+            <type>Status</type>
+            <typelink>ERP_AttributeDefinitionStatus</typelink>
+            <sqltable>ERP_AttributeDefinitionSQLTable</sqltable>
+            <sqlcolumn>STATUS</sqlcolumn>
+            <trigger program="org.efaps.esjp.admin.datamodel.StatusValue"
+                name="HumanResource_AttributeDefinitionSex.Status.RANGE_VALUE"
+                event="RANGE_VALUE">
+            </trigger>
+        </attribute>
     </definition>
 </datamodel-type>
