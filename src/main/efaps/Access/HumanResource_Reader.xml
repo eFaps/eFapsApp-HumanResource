@@ -47,6 +47,11 @@
             <key>Subsidiary</key>
         </status>
 
+        <status group="HumanResource_DepartmentStatus">
+            <key>Active</key>
+            <key>Inactive</key>
+        </status>
+
         <role>HumanResource_Reader</role>
     </definition>
 </access-set>
