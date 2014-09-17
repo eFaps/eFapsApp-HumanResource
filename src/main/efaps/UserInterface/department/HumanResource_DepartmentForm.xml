@@ -32,7 +32,6 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_DepartmentForm</name>
-        <!-- fields -->
         <field name="type">
             <property name="Attribute">Type</property>
         </field>
@@ -41,7 +40,13 @@
             <property name="Columns">15</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeSearch">EDITABLE</property>
             <property name="Required">true</property>
+        </field>
+         <field name="status">
+            <property name="Attribute">Status</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
         </field>
         <field name="createGroup" character="Group">
             <property name="GroupCount">2</property>
@@ -50,12 +55,10 @@
             <property name="SelectAlternateOID">linkto[Creator].oid</property>
             <property name="Attribute">Creator</property>
             <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
-            <property name="ModeSearch">EDITABLE</property>
             <property name="ShowTypeIcon">true</property>
         </field>
         <field name="created">
             <property name="Attribute">Created</property>
-            <property name="ModeSearch">EDITABLE</property>
         </field>
         <field name="modifyGroup" character="Group">
             <property name="GroupCount">2</property>
@@ -64,12 +67,10 @@
             <property name="SelectAlternateOID">linkto[Modifier].oid</property>
             <property name="Attribute">Modifier</property>
             <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
-            <property name="ModeSearch">EDITABLE</property>
             <property name="ShowTypeIcon">true</property>
         </field>
         <field name="modified">
             <property name="Attribute">Modified</property>
-            <property name="ModeSearch">EDITABLE</property>
         </field>
     </definition>
 </ui-form>
