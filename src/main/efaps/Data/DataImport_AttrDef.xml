@@ -27,12 +27,16 @@
 <data-import xmlns="http://www.efaps.org/xsd"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    
+
     <definition name="Import_AttrDef_Contract"  file="AttrDef_Contract.csv">
         <type name="HumanResource_AttributeDefinitionContract">
             <attribute name="Value" column="VALUE" validate="false"/>
             <attribute name="Description" column="DESCRIPTION" validate="false"/>
             <attribute name="MappingKey" column="KEY" validate="false"/>
+            <attribute name="Status" class="org.efaps.esjp.data.columns.StatusColumn" validateClass="org.efaps.esjp.data.columns.StatusColumn">
+                <property name="StatusGroup">ERP_AttributeDefinitionStatus</property>
+                <property name="Status">Active</property>
+            </attribute>
         </type>
     </definition>
     <definition name="Import_AttrDef_DOIType"  file="AttrDef_DOIType.csv">
@@ -40,6 +44,10 @@
             <attribute name="Value" column="VALUE" validate="false"/>
             <attribute name="Description" column="DESCRIPTION" validate="false"/>
             <attribute name="MappingKey" column="KEY" validate="false"/>
+            <attribute name="Status" class="org.efaps.esjp.data.columns.StatusColumn" validateClass="org.efaps.esjp.data.columns.StatusColumn">
+                <property name="StatusGroup">ERP_AttributeDefinitionStatus</property>
+                <property name="Status">Active</property>
+            </attribute>
         </type>
     </definition>
     <definition name="Import_AttrDef_Education"  file="AttrDef_Education.csv">
@@ -47,6 +55,10 @@
             <attribute name="Value" column="VALUE" validate="false"/>
             <attribute name="Description" column="DESCRIPTION" validate="false"/>
             <attribute name="MappingKey" column="KEY" validate="false"/>
+            <attribute name="Status" class="org.efaps.esjp.data.columns.StatusColumn" validateClass="org.efaps.esjp.data.columns.StatusColumn">
+                <property name="StatusGroup">ERP_AttributeDefinitionStatus</property>
+                <property name="Status">Active</property>
+            </attribute>
         </type>
     </definition>
     <definition name="Import_AttrDef_EmitterCountry"  file="AttrDef_EmitterCountry.csv">
@@ -54,6 +66,10 @@
             <attribute name="Value" column="VALUE" validate="false"/>
             <attribute name="Description" column="DESCRIPTION" validate="false"/>
             <attribute name="MappingKey" column="KEY" validate="false"/>
+            <attribute name="Status" class="org.efaps.esjp.data.columns.StatusColumn" validateClass="org.efaps.esjp.data.columns.StatusColumn">
+                <property name="StatusGroup">ERP_AttributeDefinitionStatus</property>
+                <property name="Status">Active</property>
+            </attribute>
         </type>
     </definition>
     <definition name="Import_AttrDef_EmployeeType"  file="AttrDef_EmployeeType.csv">
@@ -61,6 +77,10 @@
             <attribute name="Value" column="VALUE" validate="false"/>
             <attribute name="Description" column="DESCRIPTION" validate="false"/>
             <attribute name="MappingKey" column="KEY" validate="false"/>
+            <attribute name="Status" class="org.efaps.esjp.data.columns.StatusColumn" validateClass="org.efaps.esjp.data.columns.StatusColumn">
+                <property name="StatusGroup">ERP_AttributeDefinitionStatus</property>
+                <property name="Status">Active</property>
+            </attribute>
         </type>
     </definition>
     <definition name="Import_AttrDef_HealthRegime"  file="AttrDef_HealthRegime.csv">
@@ -68,6 +88,10 @@
             <attribute name="Value" column="VALUE" validate="false"/>
             <attribute name="Description" column="DESCRIPTION" validate="false"/>
             <attribute name="MappingKey" column="KEY" validate="false"/>
+            <attribute name="Status" class="org.efaps.esjp.data.columns.StatusColumn" validateClass="org.efaps.esjp.data.columns.StatusColumn">
+                <property name="StatusGroup">ERP_AttributeDefinitionStatus</property>
+                <property name="Status">Active</property>
+            </attribute>
         </type>
     </definition>
     <definition name="Import_AttrDef_LaborRegime"  file="AttrDef_LaborRegime.csv">
@@ -75,6 +99,10 @@
             <attribute name="Value" column="VALUE" validate="false"/>
             <attribute name="Description" column="DESCRIPTION" validate="false"/>
             <attribute name="MappingKey" column="KEY" validate="false"/>
+            <attribute name="Status" class="org.efaps.esjp.data.columns.StatusColumn" validateClass="org.efaps.esjp.data.columns.StatusColumn">
+                <property name="StatusGroup">ERP_AttributeDefinitionStatus</property>
+                <property name="Status">Active</property>
+            </attribute>
         </type>
     </definition>
     <definition name="Import_AttrDef_Nationality"  file="AttrDef_Nationality.csv">
@@ -82,6 +110,10 @@
             <attribute name="Value" column="VALUE" validate="false"/>
             <attribute name="Description" column="DESCRIPTION" validate="false"/>
             <attribute name="MappingKey" column="KEY" validate="false"/>
+            <attribute name="Status" class="org.efaps.esjp.data.columns.StatusColumn" validateClass="org.efaps.esjp.data.columns.StatusColumn">
+                <property name="StatusGroup">ERP_AttributeDefinitionStatus</property>
+                <property name="Status">Active</property>
+            </attribute>
         </type>
     </definition>
     <definition name="Import_AttrDef_Occupation"  file="AttrDef_Occupation.csv">
@@ -89,6 +121,10 @@
             <attribute name="Value" column="VALUE" validate="false"/>
             <attribute name="Description" column="DESCRIPTION" validate="false"/>
             <attribute name="MappingKey" column="KEY" validate="false"/>
+            <attribute name="Status" class="org.efaps.esjp.data.columns.StatusColumn" validateClass="org.efaps.esjp.data.columns.StatusColumn">
+                <property name="StatusGroup">ERP_AttributeDefinitionStatus</property>
+                <property name="Status">Active</property>
+            </attribute>
         </type>
     </definition>
     <definition name="Import_AttrDef_OccupationCategory"  file="AttrDef_OccupationCategory.csv">
@@ -96,6 +132,10 @@
             <attribute name="Value" column="VALUE" validate="false"/>
             <attribute name="Description" column="DESCRIPTION" validate="false"/>
             <attribute name="MappingKey" column="KEY" validate="false"/>
+            <attribute name="Status" class="org.efaps.esjp.data.columns.StatusColumn" validateClass="org.efaps.esjp.data.columns.StatusColumn">
+                <property name="StatusGroup">ERP_AttributeDefinitionStatus</property>
+                <property name="Status">Active</property>
+            </attribute>
         </type>
     </definition>
     <definition name="Import_AttrDef_Payment"  file="AttrDef_Payment.csv">
@@ -103,6 +143,10 @@
             <attribute name="Value" column="VALUE" validate="false"/>
             <attribute name="Description" column="DESCRIPTION" validate="false"/>
             <attribute name="MappingKey" column="KEY" validate="false"/>
+            <attribute name="Status" class="org.efaps.esjp.data.columns.StatusColumn" validateClass="org.efaps.esjp.data.columns.StatusColumn">
+                <property name="StatusGroup">ERP_AttributeDefinitionStatus</property>
+                <property name="Status">Active</property>
+            </attribute>
         </type>
     </definition>
     <definition name="Import_AttrDef_PensionRegime"  file="AttrDef_PensionRegime.csv">
@@ -110,6 +154,10 @@
             <attribute name="Value" column="VALUE" validate="false"/>
             <attribute name="Description" column="DESCRIPTION" validate="false"/>
             <attribute name="MappingKey" column="KEY" validate="false"/>
+            <attribute name="Status" class="org.efaps.esjp.data.columns.StatusColumn" validateClass="org.efaps.esjp.data.columns.StatusColumn">
+                <property name="StatusGroup">ERP_AttributeDefinitionStatus</property>
+                <property name="Status">Active</property>
+            </attribute>
         </type>
     </definition>
     <definition name="Import_AttrDef_Periodicity"  file="AttrDef_Periodicity.csv">
@@ -117,6 +165,10 @@
             <attribute name="Value" column="VALUE" validate="false"/>
             <attribute name="Description" column="DESCRIPTION" validate="false"/>
             <attribute name="MappingKey" column="KEY" validate="false"/>
+            <attribute name="Status" class="org.efaps.esjp.data.columns.StatusColumn" validateClass="org.efaps.esjp.data.columns.StatusColumn">
+                <property name="StatusGroup">ERP_AttributeDefinitionStatus</property>
+                <property name="Status">Active</property>
+            </attribute>
         </type>
     </definition>
     <definition name="Import_AttrDef_Sex"  file="AttrDef_Sex.csv">
@@ -124,6 +176,10 @@
             <attribute name="Value" column="VALUE" validate="false"/>
             <attribute name="Description" column="DESCRIPTION" validate="false"/>
             <attribute name="MappingKey" column="KEY" validate="false"/>
+            <attribute name="Status" class="org.efaps.esjp.data.columns.StatusColumn" validateClass="org.efaps.esjp.data.columns.StatusColumn">
+                <property name="StatusGroup">ERP_AttributeDefinitionStatus</property>
+                <property name="Status">Active</property>
+            </attribute>
         </type>
     </definition>
     <definition name="Import_AttrDef_Situation"  file="AttrDef_Situation.csv">
@@ -131,6 +187,10 @@
             <attribute name="Value" column="VALUE" validate="false"/>
             <attribute name="Description" column="DESCRIPTION" validate="false"/>
             <attribute name="MappingKey" column="KEY" validate="false"/>
+            <attribute name="Status" class="org.efaps.esjp.data.columns.StatusColumn" validateClass="org.efaps.esjp.data.columns.StatusColumn">
+                <property name="StatusGroup">ERP_AttributeDefinitionStatus</property>
+                <property name="Status">Active</property>
+            </attribute>
         </type>
     </definition>
 </data-import>
