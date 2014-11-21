@@ -51,5 +51,10 @@
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
         </field>
+         <field name="householdAllowance">
+            <property name="Attribute">HouseholdAllowance</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+        </field>
     </definition>
 </ui-form>

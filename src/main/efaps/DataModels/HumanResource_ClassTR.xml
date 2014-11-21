@@ -80,5 +80,11 @@
                     <property name="Type">HumanResource_AttributeDefinitionSituation</property>
                 </trigger>
         </attribute>
+        <attribute>
+            <name>HouseholdAllowance</name>
+            <type>Boolean</type>
+            <sqltable>HumanResource_ClassTRSQLTable</sqltable>
+            <sqlcolumn>ALLOWANCE</sqlcolumn>
+        </attribute>
     </definition>
 </datamodel-type>
