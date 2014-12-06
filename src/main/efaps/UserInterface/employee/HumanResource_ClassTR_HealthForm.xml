@@ -32,7 +32,7 @@
             <property name="Label">HumanResource_ClassTR_HealthForm.TitleHealthHeading.Heading</property>
             <property name="ModeCreate">READONLY</property>
             <property name="ModeEdit">READONLY</property>
-        </field>        
+        </field>
         <field name="healthHeading" character="Heading">
             <property name="Level">2</property>
             <property name="Label">HumanResource_ClassTR_HealthForm.healthHeading.Heading</property>
@@ -49,7 +49,7 @@
             <property name="Attribute">HealthStartDate</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
-            <property name="ModeSearch">EDITABLE</property>            
+            <property name="ModeSearch">EDITABLE</property>
         </field>
         <field name="insuranceLink">
             <property name="Attribute">InsuranceLink</property>
@@ -66,13 +66,18 @@
             <property name="Attribute">PensionRegimeLink</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
-        </field>       
+        </field>
+         <field name="pensionRegimeTypeLink">
+            <property name="Attribute">PensionRegimeTypeLink</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+        </field>
         <field name="pensionStartDate">
             <property name="Columns">20</property>
             <property name="Attribute">PensionStartDate</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
-            <property name="ModeSearch">EDITABLE</property>            
+            <property name="ModeSearch">EDITABLE</property>
         </field>
         <field name="cuspp">
             <property name="Columns">30</property>
@@ -86,14 +91,14 @@
             <property name="Label">HumanResource_ClassTR_HealthForm.OtherHeading.Heading</property>
             <property name="ModeCreate">READONLY</property>
             <property name="ModeEdit">READONLY</property>
-        </field>         
+        </field>
         <field name="fifth">
             <property name="Columns">30</property>
             <property name="Attribute">Fifth</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
-        </field>  
+        </field>
         <field name="doubleTax">
             <property name="Columns">30</property>
             <property name="Attribute">DoubleTax</property>
@@ -101,6 +106,6 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
         </field>
-                  
+
     </definition>
 </ui-form>

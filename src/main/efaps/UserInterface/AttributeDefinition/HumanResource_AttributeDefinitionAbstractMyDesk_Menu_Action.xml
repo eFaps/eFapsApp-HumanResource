@@ -54,6 +54,7 @@
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateOccupationCategory</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreatePayment</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreatePensionRegime</child>
+            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreatePensionRegimeType</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreatePeriodicity</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateSituation</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateFamilyTie</child>

@@ -98,6 +98,19 @@
             </trigger>
         </attribute>
          <attribute>
+            <name>PensionRegimeTypeLink</name>
+            <type>LinkWithRanges</type>
+            <typelink>HumanResource_AttributeDefinitionPensionRegimeType</typelink>
+            <sqltable>HumanResource_ClassTR_HealthSQLTable</sqltable>
+            <sqlcolumn>PREGIMETYPEID</sqlcolumn>
+            <trigger event="RANGE_VALUE"
+                name="HumanResource_ClassTR_Health.PensionRegimeTypeLink.RANGE_VALUE"
+                program="org.efaps.esjp.admin.datamodel.RangesValue">
+                <property name="Value">Value</property>
+                <property name="Type">HumanResource_AttributeDefinitionPensionRegimeType</property>
+            </trigger>
+        </attribute>
+         <attribute>
             <name>PensionStartDate</name>
             <type>Date</type>
             <sqltable>HumanResource_ClassTR_HealthSQLTable</sqltable>
