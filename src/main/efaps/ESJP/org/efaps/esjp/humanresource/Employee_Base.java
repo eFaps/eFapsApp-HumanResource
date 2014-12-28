@@ -27,8 +27,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import org.efaps.admin.datamodel.Classification;
-import org.efaps.admin.datamodel.Type;
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Parameter.ParameterValues;
 import org.efaps.admin.event.Return;
@@ -105,22 +103,14 @@ public abstract class Employee_Base
         final String input = (String) _parameter.get(ParameterValues.OTHERS);
         final List<Map<String, String>> list = new ArrayList<Map<String, String>>();
 
-
         if (input.length() > 0) {
             final String key = containsProperty(_parameter, "Key") ? getProperty(_parameter, "Key") : "OID";
 
-            final String classesStr = getProperty(_parameter, "Classifications");
-            String[] classes = new String[0];
-            if (classesStr != null) {
-                classes = classesStr.split(";");
-            }
-            final QueryBuilder queryBldr = new QueryBuilder(CIHumanResource.EmployeeAbstract);
-            if (classes.length > 0) {
-                final Classification[] classTypes = new Classification[classes.length];
-                for (int i = 0; i < classes.length; i++) {
-                    classTypes[i] = (Classification) Type.get(classes[i]);
-                }
-                queryBldr.addWhereClassification(classTypes);
+            final QueryBuilder queryBldr;
+            if (containsProperty(_parameter, "Type")) {
+                queryBldr = getQueryBldrFromProperties(_parameter);
+            } else {
+                queryBldr = new QueryBuilder(CIHumanResource.EmployeeAbstract);
             }
 
             final boolean nameSearch = Character.isDigit(input.charAt(0));
