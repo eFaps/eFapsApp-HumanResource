@@ -19,7 +19,9 @@
  Last Changed:    $Date$
  Last Changed By: $Author$
 
---><datamodel-sqltable xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+-->
+<datamodel-sqltable xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>852bab63-efa2-4e9c-a14a-da995a9b8e7d</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev$</file-revision>
@@ -28,7 +30,7 @@
         <name>HumanResource_ClassTR_LaborSQLTable</name>
         <database>
             <table-name>T_HRCLASSTRLABOR</table-name>
-            <column name="EMPLOYEEID" not-null="true" type="INTEGER"/>
+            <column name="EMPLOYEEID"   type="INTEGER"                          not-null="true"/>
             <column name="REGIMEID"     type="INTEGER"/>
             <column name="OCCATID"      type="INTEGER"/>
             <column name="OCCID"        type="INTEGER"/>
@@ -42,7 +44,7 @@
             <column name="MAXIM"        type="BOOLEAN"/>
             <column name="NIGHT"        type="BOOLEAN"/>
             <column name="SPECSIT"      type="INTEGER"/>
-            <column name="RENUM"   type="INTEGER"/>
+            <column name="RENUM"        type="DECIMAL"  length="12" scale="2"/>
             <foreign key="EMPLOYEEID" name="T_HRCLASSTRLABOR_EMPLOYEEID" reference="T_HREMPLOYEE(ID)"/>
         </database>
     </definition>

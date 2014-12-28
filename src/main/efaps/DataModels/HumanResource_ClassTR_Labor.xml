@@ -182,7 +182,7 @@
         </attribute>
          <attribute>
             <name>Remuneration</name>
-            <type>Integer</type>
+            <type>Decimal</type>
             <sqltable>HumanResource_ClassTR_LaborSQLTable</sqltable>
             <sqlcolumn>RENUM</sqlcolumn>
         </attribute>
