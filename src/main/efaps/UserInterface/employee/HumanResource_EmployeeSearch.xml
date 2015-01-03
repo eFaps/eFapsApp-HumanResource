@@ -39,9 +39,11 @@
             <form>HumanResource_EmployeeForm</form>
             <table>HumanResource_EmployeeTable</table>
             <evaluate program="org.efaps.esjp.common.uisearch.Search">
-                <property name="Types">HumanResource_EmployeeAbstract</property>
+                <property name="Type">HumanResource_EmployeeAbstract</property>
                 <property name="ExpandChildTypes">true</property>
-                <property name="IgnoreCase4Fields">firstName;lastName;secondLastName</property>
+                <property name="IgnoreCase4Field01">firstName</property>
+                <property name="IgnoreCase4Field02">lastName</property>
+                <property name="IgnoreCase4Field03">secondLastName</property>
             </evaluate>
         </target>
         <!-- properties -->
