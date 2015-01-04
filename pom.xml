@@ -174,7 +174,7 @@
            <!-- eFaps ERP Common Module -->
         <dependency>
             <groupId>org.efaps.apps</groupId>
-            <artifactId>commons</artifactId>
+            <artifactId>contacts</artifactId>
             <version>${efaps.app.dependencies}</version>
         </dependency>
         <!-- Sanselan is used for sizing of images -->
