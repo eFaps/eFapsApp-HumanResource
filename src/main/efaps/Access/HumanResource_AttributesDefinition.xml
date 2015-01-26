@@ -43,6 +43,11 @@
         <type>HumanResource_AttributeDefinitionStatus</type>
         <type>HumanResource_AttributeDefinitionFinancialInformationType</type>
 
+        <status group="ERP_AttributeDefinitionStatus">
+            <key>Active</key>
+            <key>Inactive</key>
+        </status>
+
         <role>HumanResource_Modifier</role>
         <role>HumanResource_Reader</role>
     </definition>

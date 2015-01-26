@@ -75,6 +75,11 @@
             <key>Inactive</key>
         </status>
 
+         <status group="ERP_AttributeDefinitionStatus">
+            <key>Active</key>
+            <key>Inactive</key>
+        </status>
+
         <role>HumanResource_Admin</role>
     </definition>
 </access-set>

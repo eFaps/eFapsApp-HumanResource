@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
-  Copyright 2009 - 2013 moxter.net S.A.C.
+  Copyright 2009 - 2015 moxter.net S.A.C.
 
   All Rights Reserved.
   This program contains proprietary and trade secret information of
@@ -12,25 +12,22 @@
   Last Changed:    $Date: 2013-12-13 18:25:28 -0500 (vie, 13 dic 2013) $
   Last Changed By: $Author: jorge.cueva@moxter.net $
 
---><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-
+-->
+<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>0520736e-ebf5-4f24-900b-83330df92c07</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev: 11405 $</file-revision>
-
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateFinancialInformationType</name>
         <access>
             <role>HumanResource_Admin</role>
         </access>
-        <!-- target definitions -->
-
         <target>
             <form>ERP_AttributeDefinitionMappingForm</form>
-            <execute program="org.efaps.esjp.common.uiform.Create"/>
+            <execute program="org.efaps.esjp.common.uiform.Create" />
         </target>
-        <!-- properties -->
         <property name="Target">modal</property>
         <property name="TargetCreateType">HumanResource_AttributeDefinitionFinancialInformationType</property>
         <property name="TargetMode">create</property>
