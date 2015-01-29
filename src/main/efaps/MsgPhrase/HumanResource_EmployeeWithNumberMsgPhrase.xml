@@ -15,22 +15,23 @@
  limitations under the License.
 
  Author:          The eFaps Team
- Revision:        $Rev$
- Last Changed:    $Date$
- Last Changed By: $Author$
+ Revision:        $Rev: 14563 $
+ Last Changed:    $Date: 2014-12-02 14:04:36 -0500 (Tue, 02 Dec 2014) $
+ Last Changed By: $Author: jan@moxter.net $
 
 -->
 <common-msgphrase xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>f543ca6d-29fb-4f1a-8747-0057b9a08404</uuid>
+    <uuid>c6686d34-f9d7-4bf4-b9f1-80dad440eac4</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev$</file-revision>
+    <file-revision>$Rev: 14563 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_EmployeeMsgPhrase</name>
-        <label>{1} {2},{0}</label>
-        <argument index="0">attribute[FirstName]</argument>
-        <argument index="1">attribute[LastName]</argument>
-        <argument index="2">attribute[SecondLastName]</argument>
+        <name>HumanResource_EmployeeWithNumberMsgPhrase</name>
+        <label>{0} - {2} {3}, {1}</label>
+        <argument index="0">attribute[Number]</argument>
+        <argument index="1">attribute[FirstName]</argument>
+        <argument index="2">attribute[LastName]</argument>
+        <argument index="3">attribute[SecondLastName]</argument>
     </definition>
 </common-msgphrase>

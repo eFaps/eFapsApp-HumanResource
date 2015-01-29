@@ -69,8 +69,8 @@ public abstract class OnContact_Base
                 final Instance emplInst = multi.getSelect(selEmplInst);
                 if (emplInst != null && emplInst.isValid()) {
                     final PrintQuery print = new PrintQuery(emplInst);
-                    // HumanResource_EmployeeMsgPhrase
-                    final MsgPhrase msgPhrase = MsgPhrase.get(UUID.fromString("f543ca6d-29fb-4f1a-8747-0057b9a08404"));
+                    // HumanResource_EmployeeWithNumberMsgPhrase
+                    final MsgPhrase msgPhrase = MsgPhrase.get(UUID.fromString("c6686d34-f9d7-4bf4-b9f1-80dad440eac4"));
                     print.addMsgPhrase(msgPhrase);
                     print.execute();
                     final String label = print.getMsgPhrase(msgPhrase);
