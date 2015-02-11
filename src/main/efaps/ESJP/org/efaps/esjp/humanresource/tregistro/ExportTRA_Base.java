@@ -25,14 +25,19 @@ import org.efaps.db.MultiPrintQuery;
 import org.efaps.db.QueryBuilder;
 import org.efaps.db.SelectBuilder;
 import org.efaps.esjp.ci.CIHumanResource;
+import org.efaps.esjp.data.columns.export.FrmtBooleanColumn;
 import org.efaps.esjp.data.columns.export.FrmtColumn;
+import org.efaps.esjp.data.columns.export.FrmtNumberColumn;
 import org.efaps.util.EFapsException;
+
+import com.brsanthu.dataexporter.model.BooleanColumn.Format;
 
 /**
  * TODO comment!
  *
  * @author The eFaps Team
- * @version $Id$
+ * @version $Id: ExportTRA_Base.java 11414 2013-12-16 18:22:46Z
+ *          jorge.cueva@moxter.net $
  */
 public abstract class ExportTRA_Base
     extends AbstractExport
@@ -60,29 +65,29 @@ public abstract class ExportTRA_Base
     public void addColumnDefinition(final Parameter _parameter,
                                     final Exporter _exporter)
     {
-        _exporter.addColumns(new FrmtColumn("DOIType", 2));//1
-        _exporter.addColumns(new FrmtColumn("Number").setMaxWidth(15));//2
-        _exporter.addColumns(new FrmtColumn("EmitterCountry", 3));//3
-        _exporter.addColumns(new FrmtColumn("RegimeLink", 2));//4
-        _exporter.addColumns(new FrmtColumn("EducationLink", 2));//5
-        _exporter.addColumns(new FrmtColumn("OccupationLink", 6));//6
-        _exporter.addColumns(new FrmtColumn("Disability", 1));//7
-        _exporter.addColumns(new FrmtColumn("CUSPP", 12));//8
-        _exporter.addColumns(new FrmtColumn("SCTR", 1));//9
-        _exporter.addColumns(new FrmtColumn("ContractLink", 2));//10
-        _exporter.addColumns(new FrmtColumn("Cumulative", 1));//11
-        _exporter.addColumns(new FrmtColumn("Maximum", 1));//12
-        _exporter.addColumns(new FrmtColumn("Nightly", 1));//13
-        _exporter.addColumns(new FrmtColumn("Unionized", 1));//14
-        _exporter.addColumns(new FrmtColumn("PeriodicityLink", 1));//15
-        _exporter.addColumns(new FrmtColumn("Remuneration", 7));//16 - 7.2
-        _exporter.addColumns(new FrmtColumn("Situacion", 2));//17
-        _exporter.addColumns(new FrmtColumn("Renta5", 1));//18
-        _exporter.addColumns(new FrmtColumn("SpecialSituacion", 7));//19
-        _exporter.addColumns(new FrmtColumn("PaymentLink", 1));//20
-        _exporter.addColumns(new FrmtColumn("OccupationCatLink", 2));//21
-        _exporter.addColumns(new FrmtColumn("Convenio", 2));//22
-        _exporter.addColumns(new FrmtColumn("RUC", 2));//23
+        _exporter.addColumns(new FrmtColumn("DOIType", 2));// 1
+        _exporter.addColumns(new FrmtColumn("Number").setMaxWidth(15));// 2
+        _exporter.addColumns(new FrmtColumn("EmitterCountry", 3));// 3
+        _exporter.addColumns(new FrmtColumn("RegimeLink", 2));// 4
+        _exporter.addColumns(new FrmtColumn("EducationLink", 2));// 5
+        _exporter.addColumns(new FrmtColumn("OccupationLink", 6));// 6
+        _exporter.addColumns(new FrmtBooleanColumn("Disability", 1, Format.ONE_ZERO));// 7
+        _exporter.addColumns(new FrmtColumn("CUSPP", 12));// 8
+        _exporter.addColumns(new FrmtColumn("SCTR", 1));// 9
+        _exporter.addColumns(new FrmtColumn("ContractLink", 2));// 10
+        _exporter.addColumns(new FrmtBooleanColumn("Cumulative", 1, Format.ONE_ZERO));// 11
+        _exporter.addColumns(new FrmtBooleanColumn("Maximum", 1, Format.ONE_ZERO));// 12
+        _exporter.addColumns(new FrmtBooleanColumn("Nightly", 1, Format.ONE_ZERO));// 13
+        _exporter.addColumns(new FrmtBooleanColumn("Unionized", 1, Format.ONE_ZERO));// 14
+        _exporter.addColumns(new FrmtColumn("PeriodicityLink", 1));// 15
+        _exporter.addColumns(new FrmtNumberColumn("Remuneration", 7, 2));// 16 - 7.2
+        _exporter.addColumns(new FrmtColumn("Situacion", 2));// 17
+        _exporter.addColumns(new FrmtBooleanColumn("Renta5", 1, Format.ONE_ZERO));// 18
+        _exporter.addColumns(new FrmtColumn("SpecialSituacion", 7));// 19
+        _exporter.addColumns(new FrmtColumn("PaymentLink", 1));// 20
+        _exporter.addColumns(new FrmtColumn("OccupationCatLink", 2));// 21
+        _exporter.addColumns(new FrmtColumn("Convenio", 2));// 22
+        _exporter.addColumns(new FrmtColumn("RUC", 2));// 23
     }
 
     @Override
@@ -110,6 +115,9 @@ public abstract class ExportTRA_Base
                         .attribute(CIHumanResource.ClassTR_Labor.Disability);
         final SelectBuilder selCUSPP = new SelectBuilder().clazz(CIHumanResource.ClassTR_Health)
                         .attribute(CIHumanResource.ClassTR_Health.CUSPP);
+        final SelectBuilder selSCTR = new SelectBuilder().clazz(CIHumanResource.ClassTR_Health)
+                        .linkto(CIHumanResource.ClassTR_Health.PensionRegimeLink)
+                        .attribute(CIHumanResource.AttributeDefinitionPensionRegime.MappingKey);
         final SelectBuilder selContract = new SelectBuilder().clazz(CIHumanResource.ClassTR_Labor)
                         .linkto(CIHumanResource.ClassTR_Labor.ContractLink)
                         .attribute(CIHumanResource.AttributeDefinitionContract.MappingKey);
@@ -135,10 +143,9 @@ public abstract class ExportTRA_Base
                         .linkto(CIHumanResource.ClassTR_Labor.OccupationCatLink)
                         .attribute(CIHumanResource.AttributeDefinitionPayment.MappingKey);
 
-
-
         multi.addSelect(selEmitterCount, selNumberType, selRegime, selEducation, selOccupation, selDisability,
-                        selCUSPP, selContract, selCumulative, selMaximum, selNightly, selUnionized, selPeriodicity,
+                        selCUSPP, selSCTR, selContract, selCumulative, selMaximum, selNightly, selUnionized,
+                        selPeriodicity,
                         selRemuneration, selSpecialSituacion, selPayment, selOccupationCat);
         multi.execute();
         while (multi.next()) {
@@ -150,6 +157,18 @@ public abstract class ExportTRA_Base
             final String occupation = multi.<String>getSelect(selOccupation);
             final Object disability = multi.<Object>getSelect(selDisability);
             final String cUSPP = multi.<String>getSelect(selCUSPP);
+            final String sCTRStr = multi.<String>getSelect(selSCTR);
+            int sCTR = 2;
+            switch (sCTRStr) {
+                case "99":
+                    sCTR = 0;
+                    break;
+                case "02":
+                    sCTR = 1;
+                    break;
+                default:
+                    break;
+            }
             final String contract = multi.<String>getSelect(selContract);
             final Object cumulative = multi.<Object>getSelect(selCumulative);
             final Object maximum = multi.<Object>getSelect(selMaximum);
@@ -157,13 +176,14 @@ public abstract class ExportTRA_Base
             final Object unionized = multi.<Object>getSelect(selUnionized);
             final Object periodicity = multi.<Object>getSelect(selPeriodicity);
             final Object remuneration = multi.<Object>getSelect(selRemuneration);
-            final Object specialSituacion = multi.<Object>getSelect(selSpecialSituacion);
+            final SpecialSituation specialSituacion = multi.<SpecialSituation>getSelect(selSpecialSituacion);
             final Object payment = multi.<Object>getSelect(selPayment);
             final Object occupationCat = multi.<Object>getSelect(selOccupationCat);
 
             _exporter.addRow(numberType, number, emitterCount, regime, education, occupation, disability, cUSPP,
-                            null, contract, cumulative, maximum, nightly, unionized, periodicity, remuneration,
-                            null, null, specialSituacion, payment, occupationCat);
+                            sCTR, contract, cumulative, maximum, nightly, unionized, periodicity, remuneration,
+                            null, null, specialSituacion == null ? 0 : specialSituacion.getIdx(), payment,
+                            occupationCat);
         }
     }
 }

@@ -18,26 +18,42 @@
  * Last Changed By: $Author$
  */
 
-
 package org.efaps.esjp.humanresource.tregistro;
 
 import org.efaps.admin.datamodel.IEnum;
-
 
 /**
  * TODO comment!
  *
  * @author The eFaps Team
- * @version $Id$
+ * @version $Id: SpecialSituation.java 11409 2013-12-16 16:43:43Z jan@moxter.net
+ *          $
  */
 public enum SpecialSituation
-    implements IEnum
+                implements IEnum
 {
-    NONE, MANAGEMENT, TRUST;
+    NONE(0), MANAGEMENT(1), TRUST(2);
+
+    private int idx;
+
+    private SpecialSituation(final int _idx)
+    {
+        this.idx = _idx;
+    }
 
     @Override
     public int getInt()
     {
         return ordinal();
+    }
+
+    /**
+     * Getter method for the instance variable {@link #idx}.
+     *
+     * @return value of instance variable {@link #idx}
+     */
+    public int getIdx()
+    {
+        return this.idx;
     }
 }

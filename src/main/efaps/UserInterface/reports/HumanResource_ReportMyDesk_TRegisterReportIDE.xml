@@ -21,7 +21,8 @@
  Last Changed By: $Author: sara.landa@efaps.org $
 
 -->
-<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>7f270b30-30e1-405a-8fd4-ef7ef4e8acdc</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev: 8497 $</file-revision>
@@ -32,13 +33,10 @@
             <role>HumanResource_Admin</role>
             <role>HumanResource_Modifier</role>
         </access>
-        <!-- target definitions -->
         <target>
             <form>HumanResource_ReportForm</form>
-            <execute program="org.efaps.esjp.humanresource.tregistro.ExportIDE"/>
+            <execute program="org.efaps.esjp.humanresource.tregistro.ExportIDE" />
         </target>
-
-        <!-- properties -->
         <property name="Target">modal</property>
         <property name="TargetShowFile">true</property>
         <property name="TargetMode">create</property>

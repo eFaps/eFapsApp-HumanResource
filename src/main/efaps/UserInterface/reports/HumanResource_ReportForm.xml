@@ -21,14 +21,18 @@
  Last Changed By: $Author: sara.landa@efaps.org $
 
 -->
-<ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+<ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>c08ca2ba-ed19-4e34-b518-e73dba838839</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <file-revision>$Rev: 11088 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_ReportForm</name>
-        <!-- fields -->
-
+        <field name="empty">
+            <property name="HideLabel">true</property>
+            <property name="ModeCreate">READONLY</property>
+            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
+        </field>
     </definition>
 </ui-form>
