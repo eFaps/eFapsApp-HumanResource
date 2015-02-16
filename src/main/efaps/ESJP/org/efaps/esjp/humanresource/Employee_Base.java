@@ -20,7 +20,6 @@
 
 package org.efaps.esjp.humanresource;
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -35,15 +34,18 @@ import org.efaps.admin.program.esjp.EFapsRevision;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.ci.CIAdminUser;
 import org.efaps.db.AttributeQuery;
+import org.efaps.db.Delete;
 import org.efaps.db.Insert;
 import org.efaps.db.Instance;
 import org.efaps.db.InstanceQuery;
 import org.efaps.db.MultiPrintQuery;
 import org.efaps.db.PrintQuery;
 import org.efaps.db.QueryBuilder;
+import org.efaps.db.Update;
 import org.efaps.esjp.ci.CIHumanResource;
 import org.efaps.esjp.common.AbstractCommon;
 import org.efaps.esjp.common.uiform.Create;
+import org.efaps.esjp.common.uiform.Edit;
 import org.efaps.esjp.common.uitable.MultiPrint;
 import org.efaps.esjp.common.util.InterfaceUtils;
 import org.efaps.esjp.humanresource.util.ActivationGroup;
@@ -52,7 +54,6 @@ import org.efaps.util.EFapsException;
 import org.joda.time.DateTime;
 import org.joda.time.Period;
 import org.joda.time.PeriodType;
-
 
 /**
  * TODO comment!
@@ -65,6 +66,7 @@ import org.joda.time.PeriodType;
 public abstract class Employee_Base
     extends AbstractCommon
 {
+
     /**
      * Method is executed on create event.
      *
@@ -75,19 +77,96 @@ public abstract class Employee_Base
     public Return create(final Parameter _parameter)
         throws EFapsException
     {
-        final EmployeeCreate create = getCreate(_parameter);
+        final Create create = new Create()
+        {
+            @Override
+            public void connect(final Parameter _parameter,
+                                final Instance _instance)
+                throws EFapsException
+            {
+                super.connect(_parameter, _instance);
+                Employee_Base.this.connect(_parameter, _instance);
+            }
+        };
         return create.execute(_parameter);
     }
 
     /**
-     * @param _parameter Parameter as passed by the eFaps API
-     * @return new EmployeeCreate
+     * @param _parameter Parameter as passed from the eFaps API.
+     * @param _instance Instance of the Employee
+     * @throws EFapsException on error.
      */
-    protected EmployeeCreate getCreate(final Parameter _parameter)
+    protected void connect(final Parameter _parameter,
+                           final Instance _instance)
+        throws EFapsException
     {
-        return new EmployeeCreate();
+        final Instance depInst = Instance.get(_parameter.getParameterValue("department"));
+        final QueryBuilder queryBldr = new QueryBuilder(CIHumanResource.Department2EmployeeAdminister);
+        queryBldr.addWhereAttrEqValue(CIHumanResource.Department2EmployeeAbstract.EmployeeAbstractLink, _instance);
+        final InstanceQuery query = queryBldr.getQuery();
+        final List<Instance> list = query.execute();
+
+        if (depInst.isValid()) {
+            final Update update;
+            if (list.isEmpty()) {
+                update = new Insert(CIHumanResource.Department2EmployeeAdminister);
+            } else {
+                update = new Update(list.get(0));
+            }
+            update.add(CIHumanResource.Department2EmployeeAbstract.DepartmentAbstractLink, depInst);
+            update.add(CIHumanResource.Department2EmployeeAbstract.EmployeeAbstractLink, _instance);
+            update.execute();
+        } else if (!list.isEmpty()) {
+            for (final Instance ins : list) {
+                new Delete(ins).execute();
+            }
+        }
+
+        final Instance locInst = Instance.get(_parameter.getParameterValue("location"));
+        final QueryBuilder queryBldr2 = new QueryBuilder(CIHumanResource.Employee2LocationOffice);
+        queryBldr2.addWhereAttrEqValue(CIHumanResource.Employee2LocationOffice.EmployeeLink, _instance);
+        final InstanceQuery query2 = queryBldr2.getQuery();
+        final List<Instance> list2 = query2.execute();
+
+        if (locInst.isValid()) {
+            final Update update;
+            if (list2.isEmpty()) {
+                update = new Insert(CIHumanResource.Employee2LocationOffice);
+            } else {
+                update = new Update(list2.get(0));
+            }
+            update.add(CIHumanResource.Employee2LocationOffice.EmployeeLink, _instance);
+            update.add(CIHumanResource.Employee2LocationOffice.LocationOfficeLink, locInst);
+            update.execute();
+        } else if (!list2.isEmpty()) {
+            for (final Instance ins : list2) {
+                new Delete(ins).execute();
+            }
+        }
     }
 
+    /**
+     * @param _parameter Parameter as passed from the eFaps API.
+     * @return empty Return
+     * @throws EFapsException on error.
+     */
+    public Return edit(final Parameter _parameter)
+        throws EFapsException
+    {
+        final Edit edit = new Edit()
+        {
+
+            @Override
+            protected void add2MainUpdate(final Parameter _parameter,
+                                          final Update _update)
+                throws EFapsException
+            {
+                super.add2MainUpdate(_parameter, _update);
+                connect(_parameter, _update.getInstance());
+            }
+        };
+        return edit.execute(_parameter);
+    }
 
     /**
      * Method is executed on an auto-complete event to present a drop-down with
@@ -137,9 +216,9 @@ public abstract class Employee_Base
 
             final MultiPrintQuery multi = queryBldr.getPrint();
             multi.addAttribute(CIHumanResource.EmployeeAbstract.Number,
-                               CIHumanResource.EmployeeAbstract.FirstName,
-                               CIHumanResource.EmployeeAbstract.LastName,
-                               CIHumanResource.EmployeeAbstract.SecondLastName);
+                            CIHumanResource.EmployeeAbstract.FirstName,
+                            CIHumanResource.EmployeeAbstract.LastName,
+                            CIHumanResource.EmployeeAbstract.SecondLastName);
             multi.addAttribute(key);
             multi.execute();
             while (multi.next()) {
@@ -193,7 +272,7 @@ public abstract class Employee_Base
 
                 final QueryBuilder queryBldr = new QueryBuilder(CIHumanResource.Department);
                 queryBldr.addWhereAttrInQuery(CIHumanResource.Department.ID, attrQueryBldr.getAttributeQuery(
-                                                CIHumanResource.Department2EmployeeAbstract.DepartmentAbstractLink));
+                                CIHumanResource.Department2EmployeeAbstract.DepartmentAbstractLink));
                 final InstanceQuery query = queryBldr.getQuery();
                 query.execute();
                 if (query.next()) {
@@ -205,7 +284,6 @@ public abstract class Employee_Base
         ret.put(ReturnValues.VALUES, list);
         return ret;
     }
-
 
     /**
      * method for auto-complete user person (if any a case non-existing in DB.)
@@ -232,7 +310,7 @@ public abstract class Employee_Base
             final MultiPrintQuery multi = queryBldr.getPrint();
 
             multi.addAttribute(CIAdminUser.Person.ID, CIAdminUser.Person.Name,
-                               CIAdminUser.Person.FirstName, CIAdminUser.Person.LastName);
+                            CIAdminUser.Person.FirstName, CIAdminUser.Person.LastName);
             multi.execute();
             while (multi.next()) {
                 final long id = multi.<Long>getAttribute(CIAdminUser.Person.ID);
@@ -254,40 +332,12 @@ public abstract class Employee_Base
         return retVal;
     }
 
-
-    public class EmployeeCreate
-        extends Create
-    {
-        @Override
-        public void connect(final Parameter _parameter,
-                            final Instance _instance)
-            throws EFapsException
-        {
-            super.connect(_parameter, _instance);
-            final Instance depInst = Instance.get(_parameter.getParameterValue("department"));
-            if (depInst.isValid()) {
-                final Insert insert = new Insert(CIHumanResource.Department2EmployeeAdminister);
-                insert.add(CIHumanResource.Department2EmployeeAbstract.DepartmentAbstractLink, depInst);
-                insert.add(CIHumanResource.Department2EmployeeAbstract.EmployeeAbstractLink, _instance);
-                insert.execute();
-            }
-
-            final Instance locInst = Instance.get(_parameter.getParameterValue("location"));
-            if (locInst.isValid()) {
-                final Insert insert = new Insert(CIHumanResource.Employee2LocationOffice);
-                insert.add(CIHumanResource.Employee2LocationOffice.EmployeeLink, _instance);
-                insert.add(CIHumanResource.Employee2LocationOffice.LocationOfficeLink, locInst);
-                insert.execute();
-            }
-        }
-    }
-
     public Return getAgeFieldValueUI2View(final Parameter _parameter)
         throws EFapsException
     {
         final Return retVal = new Return();
         final Instance employeeInst = _parameter.getInstance();
-        if (employeeInst != null && employeeInst.isValid()){
+        if (employeeInst != null && employeeInst.isValid()) {
             final PrintQuery print = new PrintQuery(employeeInst);
             print.addAttribute(CIHumanResource.Employee.BirthDate);
             print.execute();
@@ -306,6 +356,7 @@ public abstract class Employee_Base
     {
         final MultiPrint multi = new MultiPrint()
         {
+
             @Override
             protected void add2QueryBldr(final Parameter _parameter,
                                          final QueryBuilder _queryBldr)

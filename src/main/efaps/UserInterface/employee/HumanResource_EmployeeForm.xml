@@ -149,6 +149,7 @@
             <property name="ModeSearch">EDITABLE</property>
         </field>
         <field name="department">
+            <property name="Select">linkfrom[HumanResource_Department2EmployeeAdminister#EmployeeLink].linkto[DepartmentLink].oid</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeView">NONE</property>
@@ -162,6 +163,7 @@
                 <property name="Type">HumanResource_DepartmentAbstract</property>
                 <property name="Select">attribute[Name]</property>
                 <property name="ValueSelect">oid</property>
+                <property name="SetSelected">true</property>
             </trigger>
         </field>
         <field name="department4View">
@@ -373,7 +375,8 @@
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeSearch">EDITABLE</property>
         </field>
-        <field name="department">
+         <field name="department">
+            <property name="Select">linkfrom[HumanResource_Department2EmployeeAdminister#EmployeeLink].linkto[DepartmentLink].oid</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeView">NONE</property>
@@ -387,6 +390,7 @@
                 <property name="Type">HumanResource_DepartmentAbstract</property>
                 <property name="Select">attribute[Name]</property>
                 <property name="ValueSelect">oid</property>
+                <property name="SetSelected">true</property>
             </trigger>
         </field>
         <field name="department4View">
@@ -426,6 +430,7 @@
             <property name="ModeCreate">NONE</property>
         </field>
         <field name="location">
+            <property name="Select">linkfrom[HumanResource_Employee2LocationOffice#EmployeeLink].linkto[LocationOfficeLink].oid</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeView">NONE</property>
@@ -438,6 +443,7 @@
                 <property name="Type">Locations_LocationOffice</property>
                 <property name="Select">attribute[Name]</property>
                 <property name="ValueSelect">oid</property>
+                <property name="SetSelected">true</property>
             </trigger>
         </field>
         <field name="location4View">
