@@ -153,7 +153,6 @@
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeView">NONE</property>
-            <property name="Required">true</property>
             <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
             <property name="Label">HumanResource_EmployeeForm.department.Label</property>
             <trigger program="org.efaps.esjp.common.uiform.Field"
@@ -164,6 +163,7 @@
                 <property name="Select">attribute[Name]</property>
                 <property name="ValueSelect">oid</property>
                 <property name="SetSelected">true</property>
+                <property name="emptyValue">org.efaps.esjp.common.uiform.Field.EmptyValue</property>
             </trigger>
         </field>
         <field name="department4View">
@@ -380,7 +380,6 @@
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeView">NONE</property>
-            <property name="Required">true</property>
             <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
             <property name="Label">HumanResource_EmployeeForm.department.Label</property>
             <trigger program="org.efaps.esjp.common.uiform.Field"
@@ -391,6 +390,7 @@
                 <property name="Select">attribute[Name]</property>
                 <property name="ValueSelect">oid</property>
                 <property name="SetSelected">true</property>
+                 <property name="emptyValue">org.efaps.esjp.common.uiform.Field.EmptyValue</property>
             </trigger>
         </field>
         <field name="department4View">
@@ -444,6 +444,7 @@
                 <property name="Select">attribute[Name]</property>
                 <property name="ValueSelect">oid</property>
                 <property name="SetSelected">true</property>
+                <property name="emptyValue">org.efaps.esjp.common.uiform.Field.EmptyValue</property>
             </trigger>
         </field>
         <field name="location4View">
