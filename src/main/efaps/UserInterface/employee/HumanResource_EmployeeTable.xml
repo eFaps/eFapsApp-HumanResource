@@ -66,6 +66,12 @@
             <property name="Label">HumanResource_EmployeeAbstract/Status.Label</property>
             <property name="ModeSearch">READONLY</property>
         </field>
+        <field name="periodicityLink">
+            <property name="FilterType">PICKLIST</property>
+            <property name="Select">class[HumanResource_ClassTR_Labor].linkto[PeriodicityLink].attribute[Value]</property>
+            <property name="Label">HumanResource_ClassTR_Labor/PeriodicityLink.Label</property>
+            <property name="ModeSearch">READONLY</property>
+        </field>
         <field name="buttonOpenInNewWindow">
             <icon>eFapsActionNewWindow</icon>
             <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
