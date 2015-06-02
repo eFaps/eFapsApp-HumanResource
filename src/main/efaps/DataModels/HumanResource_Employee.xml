@@ -2,7 +2,7 @@
 
 <!--
 
- Copyright 2003 - 2010 The eFaps Team
+ Copyright 2003 - 2015 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -16,24 +16,17 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev$
- Last Changed:    $Date$
- Last Changed By: $Author$
-
 -->
 
-<datamodel-type  xmlns="http://www.efaps.org/xsd"
-                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<datamodel-type  xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>682bea7b-03f0-4a31-bd96-cb3a3b94882f</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev$</file-revision>
-
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_Employee</name>
         <parent>HumanResource_EmployeeAbstract</parent>
+        <purpose history="true"/>
         <attribute>
             <name>Status</name>
             <type>Status</type>
@@ -53,5 +46,40 @@
         </attribute>
         <trigger program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType"
             name="HumanResource_Employee.ACCESSCHECK" event="ACCESSCHECK" />
+        <trigger program="org.efaps.esjp.common.history.InsertHistoryTrigger"
+            name="HumanResource_Employee.INSERT_POST"
+            event="INSERT_POST">
+            <property name="SelectAttribute01">CivilStatus</property>
+            <property name="Select01">linkto[CivilStatus].attribute[Value]</property>
+            <property name="SelectAttribute02">SexLink</property>
+            <property name="Select02">linkto[SexLink].attribute[Value]</property>
+            <property name="SelectAttribute03">EmployLink</property>
+            <property name="Select03">linkto[EmployLink].attribute[Value]</property>
+            <property name="SelectAttribute04">NationalityLink</property>
+            <property name="Select04">linkto[NationalityLink].attribute[Value]</property>
+            <property name="SelectAttribute05">EmitterCountryLink</property>
+            <property name="Select05">linkto[EmitterCountryLink].attribute[Value]</property>
+            <property name="SelectAttribute06">NumberTypeLink</property>
+            <property name="Select06">linkto[NumberTypeLink].attribute[Value]</property>
+        </trigger>
+        <trigger program="org.efaps.esjp.common.history.UpdateHistoryTrigger"
+            name="HumanResource_Employee.UPDATE_POST"
+            event="UPDATE_POST">
+            <property name="SelectAttribute01">CivilStatus</property>
+            <property name="Select01">linkto[CivilStatus].attribute[Value]</property>
+            <property name="SelectAttribute02">SexLink</property>
+            <property name="Select02">linkto[SexLink].attribute[Value]</property>
+            <property name="SelectAttribute03">EmployLink</property>
+            <property name="Select03">linkto[EmployLink].attribute[Value]</property>
+            <property name="SelectAttribute04">NationalityLink</property>
+            <property name="Select04">linkto[NationalityLink].attribute[Value]</property>
+            <property name="SelectAttribute05">EmitterCountryLink</property>
+            <property name="Select05">linkto[EmitterCountryLink].attribute[Value]</property>
+            <property name="SelectAttribute06">NumberTypeLink</property>
+            <property name="Select06">linkto[NumberTypeLink].attribute[Value]</property>
+        </trigger>
+        <trigger program="org.efaps.esjp.common.history.DeleteHistoryTrigger"
+            name="HumanResource_Employee.DELETE_PRE"
+            event="DELETE_PRE"/>
     </definition>
 </datamodel-type>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
- Copyright 2003 - 2010 The eFaps Team
+ Copyright 2003 - 2015 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -14,15 +14,11 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev: 11342 $
- Last Changed:    $Date: 2013-12-09 18:42:29 -0500 (lun, 09 dic 2013) $
- Last Changed By: $Author: rosa.ordonez@efaps.org $
-
---><datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+-->
+<datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>965fd2bb-9c38-4bd0-9791-2b0f6d53ee47</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev: 11342 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_ClassFinancialInformation</name>
@@ -50,19 +46,21 @@
             <sqlcolumn>EMPLOYEEID</sqlcolumn>
         </attribute>
         <attributeset>
-        <name>FinancialInformationSet</name>
-        <type>MultiLineArray</type>
-        <parent>HumanResource_AttributeAbstractFinancialInformation</parent>
-        <sqltable>HumanResource_AttributeAbstractFinancialInformationSQLTable</sqltable>
-        <sqlcolumn>RELID</sqlcolumn>
-        <uuid>2e5c950b-b8f6-44ae-a9c2-c6efbadc22a2</uuid>
+            <name>FinancialInformationSet</name>
+            <type>MultiLineArray</type>
+            <parent>HumanResource_AttributeAbstractFinancialInformation</parent>
+            <sqltable>HumanResource_AttributeAbstractFinancialInformationSQLTable</sqltable>
+            <sqlcolumn>RELID</sqlcolumn>
+            <uuid>2e5c950b-b8f6-44ae-a9c2-c6efbadc22a2</uuid>
             <attribute>
                 <name>BankLink</name>
                 <type>LinkWithRanges</type>
                 <typelink>Contacts_AttributeDefinitionFinancialInstitution</typelink>
                 <sqltable>HumanResource_AttributeAbstractFinancialInformationSQLTable</sqltable>
                 <sqlcolumn>BANKID</sqlcolumn>
-                <trigger event="RANGE_VALUE" name="HumanResource_ClassFinancialInformation.HealthRegimeLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
+                <trigger event="RANGE_VALUE"
+                    name="HumanResource_ClassFinancialInformation.HealthRegimeLink.RANGE_VALUE"
+                    program="org.efaps.esjp.admin.datamodel.RangesValue">
                     <property name="Value">Value</property>
                     <property name="Type">Contacts_AttributeDefinitionFinancialInstitution</property>
                 </trigger>
@@ -98,11 +96,52 @@
                 <typelink>HumanResource_AttributeDefinitionFinancialInformationType</typelink>
                 <sqltable>HumanResource_AttributeAbstractFinancialInformationSQLTable</sqltable>
                 <sqlcolumn>FININFID</sqlcolumn>
-                <trigger event="RANGE_VALUE" name="HumanResource_ClassFinancialInformation.HealthRegimeLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
+                <trigger event="RANGE_VALUE"
+                    name="HumanResource_ClassFinancialInformation.HealthRegimeLink.RANGE_VALUE"
+                    program="org.efaps.esjp.admin.datamodel.RangesValue">
                     <property name="Value">Value</property>
                     <property name="Type">HumanResource_AttributeDefinitionFinancialInformationType</property>
                 </trigger>
             </attribute>
+            <trigger program="org.efaps.esjp.common.history.InsertRelatedHistoryTrigger"
+                name="HumanResource_ClassFinancialInformation.FinancialInformationSet.INSERT_POST"
+                event="INSERT_POST">
+                <property name="Select4HistoryInstance">linkto[FinancialInformationSet].linkto[EmployeeLink].instance</property>
+                <property name="SelectAttribute01">BankLink</property>
+                <property name="Select01">linkto[BankLink].attribute[Value]</property>
+                <property name="SelectAttribute02">CurrencyId</property>
+                <property name="Select02">linkto[CurrencyId].attribute[Name]</property>
+                <property name="SelectAttribute03">FinancialInformationType</property>
+                <property name="Select03">linkto[FinancialInformationType].attribute[Value]</property>
+            </trigger>
+            <trigger program="org.efaps.esjp.common.history.UpdateRelatedHistoryTrigger"
+                name="HumanResource_ClassFinancialInformation.FinancialInformationSet.UPDATE_POST"
+                event="UPDATE_POST">
+                <property name="Select4HistoryInstance">linkto[FinancialInformationSet].linkto[EmployeeLink].instance</property>
+                <property name="SelectAttribute01">BankLink</property>
+                <property name="Select01">linkto[BankLink].attribute[Value]</property>
+                <property name="SelectAttribute02">CurrencyId</property>
+                <property name="Select02">linkto[CurrencyId].attribute[Name]</property>
+                <property name="SelectAttribute03">FinancialInformationType</property>
+                <property name="Select03">linkto[FinancialInformationType].attribute[Value]</property>
+            </trigger>
+            <trigger program="org.efaps.esjp.common.history.DeleteRelatedHistoryTrigger"
+                name="HumanResource_ClassFinancialInformation.FinancialInformationSet.DELETE_PRE"
+                event="DELETE_PRE">
+                 <property name="Select4HistoryInstance">linkto[FinancialInformationSet].linkto[EmployeeLink].instance</property>
+            </trigger>
         </attributeset>
+        <trigger program="org.efaps.esjp.common.history.InsertClassificationHistoryTrigger"
+            name="HumanResource_ClassFinancialInformation.INSERT_POST"
+            event="INSERT_POST">
+            <property name="IgnoreAttribute">EmployeeLin</property>
+        </trigger>
+        <trigger program="org.efaps.esjp.common.history.UpdateClassificationHistoryTrigger"
+            name="HumanResource_ClassFinancialInformation.UPDATE_POST"
+            event="UPDATE_POST">
+        </trigger>
+        <trigger program="org.efaps.esjp.common.history.DeleteClassificationHistoryTrigger"
+            name="HumanResource_ClassFinancialInformation.DELETE_PRE"
+            event="DELETE_PRE"/>
     </definition>
 </datamodel-type>
