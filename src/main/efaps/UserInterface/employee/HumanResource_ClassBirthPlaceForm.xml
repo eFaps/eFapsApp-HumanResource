@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
 
-  Copyright 2003 - 2009 The eFaps Team
+  Copyright 2003 - 2015 The eFaps Team
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -14,17 +15,12 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 
-  Author:          The eFaps Team
-  Revision:        $Rev$
-  Last Changed:    $Date$
-  Last Changed By: $Author$
-
---><ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+-->
+<ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>52d5dfad-28ef-431b-88cf-3bd7cd5627f0</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev$</file-revision>
-
-    <definition>
+        <definition>
         <version-expression>(version==latest)</version-expression>
         <profiles>
             <profile name="eFaps"/>
@@ -89,12 +85,16 @@
             <property name="ModeEdit">NONE</property>
             <property name="ModeView">NONE</property>
             <property name="Label">HumanResource_ClassBirthPlaceForm.department.Label</property>
-            <trigger event="UI_FIELD_VALUE" method="dropDownFieldValue" name="HumanResource_ClassBirthPlaceForm.departmentLocation.UI_FIELD_VALUE" program="org.efaps.esjp.common.uiform.Field">
+            <trigger event="UI_FIELD_VALUE" method="dropDownFieldValue"
+                name="HumanResource_ClassBirthPlaceForm.departmentLocation.UI_FIELD_VALUE"
+                program="org.efaps.esjp.common.uiform.Field">
                 <property name="Type">Ubicaciones_UbicacionStandardRoot</property>
                 <property name="Select">attribute[Name]</property>
                 <property name="OrderSelect">attribute[Name]</property>
             </trigger>
-            <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication" name="HumanResource_ClassBirthPlaceForm.departmentLocation.UI_FIELD_UPDATE" program="org.efaps.esjp.ubicaciones.Ubicaciones">
+            <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication"
+                name="HumanResource_ClassBirthPlaceForm.departmentLocation.UI_FIELD_UPDATE"
+                program="org.efaps.esjp.ubicaciones.Ubicaciones">
                 <property name="targetField">provinceLocation2</property>
                 <property name="cleanFields">districtLocation2</property>
             </trigger>
@@ -105,13 +105,17 @@
             <property name="ModeEdit">NONE</property>
             <property name="ModeView">NONE</property>
             <property name="Label">HumanResource_ClassBirthPlaceForm.province.Label</property>
-            <trigger event="UI_FIELD_VALUE" method="dropDownFieldValue" name="HumanResource_ClassBirthPlaceForm.province.UI_FIELD_VALUE" program="org.efaps.esjp.common.uiform.Field">
+            <trigger event="UI_FIELD_VALUE" method="dropDownFieldValue"
+                name="HumanResource_ClassBirthPlaceForm.province.UI_FIELD_VALUE"
+                program="org.efaps.esjp.common.uiform.Field">
                 <property name="Type">Ubicaciones_UbicacionStandardRoot</property>
                 <property name="Select">attribute[Name]</property>
                 <property name="OrderSelect">attribute[Name]</property>
                 <property name="WhereAttrEqValue">Name|-</property>
             </trigger>
-            <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication" name="HumanResource_ClassBirthPlaceForm.province.UI_FIELD_UPDATE" program="org.efaps.esjp.ubicaciones.Ubicaciones">
+            <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication"
+                name="HumanResource_ClassBirthPlaceForm.province.UI_FIELD_UPDATE"
+                program="org.efaps.esjp.ubicaciones.Ubicaciones">
                 <property name="targetField">districtLocation2</property>
             </trigger>
         </field>
@@ -121,7 +125,9 @@
             <property name="ModeEdit">NONE</property>
             <property name="ModeView">NONE</property>
             <property name="Label">HumanResource_ClassBirthPlaceForm.district.Label</property>
-            <trigger event="UI_FIELD_VALUE" method="dropDownFieldValue" name="HumanResource_ClassBirthPlaceForm.departmentLocation.UI_FIELD_VALUE" program="org.efaps.esjp.common.uiform.Field">
+            <trigger event="UI_FIELD_VALUE" method="dropDownFieldValue"
+                name="HumanResource_ClassBirthPlaceForm.departmentLocation.UI_FIELD_VALUE"
+                program="org.efaps.esjp.common.uiform.Field">
                 <property name="Type">Ubicaciones_UbicacionStandardRoot</property>
                 <property name="Select">attribute[Name]</property>
                 <property name="OrderSelect">attribute[Name]</property>
@@ -134,12 +140,16 @@
             <property name="ModeView">NONE</property>
             <property name="Attribute">DepartmentLocationLink</property>
             <property name="Label">HumanResource_ClassBirthPlaceForm.department.Label</property>
-            <trigger event="UI_FIELD_VALUE" method="getDropdown" name="Ubicaciones_UbicacionExampleForm.locationUbicationEdit.UI_FIELD_VALUE" program="org.efaps.esjp.ubicaciones.Ubicaciones">
+            <trigger event="UI_FIELD_VALUE" method="getDropdown"
+                name="Ubicaciones_UbicacionExampleForm.locationUbicationEdit.UI_FIELD_VALUE"
+                program="org.efaps.esjp.ubicaciones.Ubicaciones">
                 <property name="Type">Ubicaciones_UbicacionStandardRoot</property>
                 <property name="Select">attribute[Name]</property>
                 <property name="OrderSelect">attribute[Name]</property>
             </trigger>
-            <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication" name="HumanResource_ClassBirthPlaceForm.departmentLocationEdit.UI_FIELD_UPDATE" program="org.efaps.esjp.ubicaciones.Ubicaciones">
+            <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication"
+                name="HumanResource_ClassBirthPlaceForm.departmentLocationEdit.UI_FIELD_UPDATE"
+                program="org.efaps.esjp.ubicaciones.Ubicaciones">
                 <property name="targetField">provinceLocationEdit2</property>
                 <property name="cleanFields">districtLocationEdit2</property>
             </trigger>
@@ -150,13 +160,17 @@
             <property name="ModeView">NONE</property>
             <property name="Attribute">ProvinceLocationLink</property>
             <property name="Label">HumanResource_ClassBirthPlaceForm.province.Label</property>
-            <trigger event="UI_FIELD_VALUE" method="getDropdown" name="HumanResource_ClassBirthPlaceForm.provinceEdit.UI_FIELD_VALUE" program="org.efaps.esjp.ubicaciones.Ubicaciones">
+            <trigger event="UI_FIELD_VALUE" method="getDropdown"
+                name="HumanResource_ClassBirthPlaceForm.provinceEdit.UI_FIELD_VALUE"
+                program="org.efaps.esjp.ubicaciones.Ubicaciones">
                 <property name="Type">Ubicaciones_UbicacionStandard</property>
                 <property name="Select">attribute[Name]</property>
                 <property name="OrderSelect">attribute[Name]</property>
                 <property name="ParentAttribute">DepartmentLocationLink</property>
             </trigger>
-            <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication" name="HumanResource_ClassBirthPlaceForm.province.UI_FIELD_UPDATE" program="org.efaps.esjp.ubicaciones.Ubicaciones">
+            <trigger event="UI_FIELD_UPDATE" method="updateDropDown4Ubication"
+                name="HumanResource_ClassBirthPlaceForm.province.UI_FIELD_UPDATE"
+                program="org.efaps.esjp.ubicaciones.Ubicaciones">
                 <property name="targetField">districtLocationEdit2</property>
             </trigger>
         </field>
@@ -166,7 +180,9 @@
             <property name="ModeView">NONE</property>
             <property name="Attribute">DistrictLocationLink</property>
             <property name="Label">HumanResource_ClassBirthPlaceForm.district.Label</property>
-            <trigger event="UI_FIELD_VALUE" method="getDropdown" name="HumanResource_ClassBirthPlaceForm.districtEdit.UI_FIELD_VALUE" program="org.efaps.esjp.ubicaciones.Ubicaciones">
+            <trigger event="UI_FIELD_VALUE" method="getDropdown"
+                name="HumanResource_ClassBirthPlaceForm.districtEdit.UI_FIELD_VALUE"
+                program="org.efaps.esjp.ubicaciones.Ubicaciones">
                 <property name="Type">Ubicaciones_UbicacionStandard</property>
                 <property name="Select">attribute[Name]</property>
                 <property name="OrderSelect">attribute[Name]</property>

@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
 
- Copyright 2003 - 2013 The eFaps Team
+ Copyright 2003 - 2015 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -14,15 +15,11 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev: 11157 $
- Last Changed:    $Date: 2013-11-26 11:08:48 -0500 (mar, 26 nov 2013) $
- Last Changed By: $Author: jose.mallqui@efaps.org $
-
---><datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+-->
+<datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>3f3ecb7e-c6e7-4f72-ba91-bdcf51fe95a1</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev: 11157 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_ClassTR_Pensioner</name>
@@ -55,10 +52,27 @@
             <typelink>HumanResource_AttributeDefinitionPensionerType</typelink>
             <sqltable>HumanResource_ClassTR_PensionerSQLTable</sqltable>
             <sqlcolumn>PENSTYPEID</sqlcolumn>
-            <trigger event="RANGE_VALUE" name="HumanResource_ClassTR_Health.HealthRegimeLink.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.RangesValue">
+            <trigger event="RANGE_VALUE" name="HumanResource_ClassTR_Pensioner.HealthRegimeLink.RANGE_VALUE"
+                program="org.efaps.esjp.admin.datamodel.RangesValue">
                 <property name="Value">Value</property>
                 <property name="Type">HumanResource_AttributeDefinitionPensionerType</property>
             </trigger>
         </attribute>
+        <trigger program="org.efaps.esjp.common.history.InsertClassificationHistoryTrigger"
+            name="HumanResource_ClassTR_Pensioner.INSERT_POST"
+            event="INSERT_POST">
+            <property name="IgnoreAttribute">EmployeeLink</property>
+            <property name="SelectAttribute01">PensionerTypeLink</property>
+            <property name="Select01">linkto[PensionerTypeLink].attribute[Value]</property>
+        </trigger>
+        <trigger program="org.efaps.esjp.common.history.UpdateClassificationHistoryTrigger"
+            name="HumanResource_ClassTR_Pensioner.UPDATE_POST"
+            event="UPDATE_POST">
+            <<property name="SelectAttribute01">PensionerTypeLink</property>
+            <property name="Select01">linkto[PensionerTypeLink].attribute[Value]</property>
+        </trigger>
+        <trigger program="org.efaps.esjp.common.history.DeleteClassificationHistoryTrigger"
+            name="HumanResource_ClassTR_Pensioner.DELETE_PRE"
+            event="DELETE_PRE"/>
     </definition>
 </datamodel-type>

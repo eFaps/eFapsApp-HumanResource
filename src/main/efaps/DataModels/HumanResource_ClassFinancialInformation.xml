@@ -22,7 +22,7 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_ClassFinancialInformation</name>
-        <purpose classification="true">
+        <purpose classification="true" history="true">
             <LinkColumn>EmployeeLink</LinkColumn>
             <parent>HumanResource_Class</parent>
         </purpose>
@@ -134,7 +134,7 @@
         <trigger program="org.efaps.esjp.common.history.InsertClassificationHistoryTrigger"
             name="HumanResource_ClassFinancialInformation.INSERT_POST"
             event="INSERT_POST">
-            <property name="IgnoreAttribute">EmployeeLin</property>
+            <property name="IgnoreAttribute">EmployeeLink</property>
         </trigger>
         <trigger program="org.efaps.esjp.common.history.UpdateClassificationHistoryTrigger"
             name="HumanResource_ClassFinancialInformation.UPDATE_POST"

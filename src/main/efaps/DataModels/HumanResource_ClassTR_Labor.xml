@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
 
- Copyright 2003 - 2013 The eFaps Team
+ Copyright 2003 - 2015 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -14,18 +15,11 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev$
- Last Changed:    $Date$
- Last Changed By: $Author$
-
 -->
-<datamodel-type xmlns="http://www.efaps.org/xsd"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>b961823d-a6e8-40c2-9e2d-43c025f77769</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_ClassTR_Labor</name>
@@ -186,5 +180,45 @@
             <sqltable>HumanResource_ClassTR_LaborSQLTable</sqltable>
             <sqlcolumn>RENUM</sqlcolumn>
         </attribute>
+        <trigger program="org.efaps.esjp.common.history.InsertClassificationHistoryTrigger"
+            name="HumanResource_ClassTR_Labor.INSERT_POST"
+            event="INSERT_POST">
+            <property name="IgnoreAttribute">EmployeeLink</property>
+            <property name="SelectAttribute01">RegimeLink</property>
+            <property name="Select01">linkto[RegimeLink].attribute[Value]</property>
+            <property name="SelectAttribute02">OccupationCatLink</property>
+            <property name="Select02">linkto[OccupationCatLink].attribute[Value]</property>
+            <property name="SelectAttribute03">OccupationLink</property>
+            <property name="Select03">linkto[OccupationLink].attribute[Value]</property>
+            <property name="SelectAttribute04">EducationLink</property>
+            <property name="Select04">linkto[EducationLink].attribute[Description]</property>
+            <property name="SelectAttribute05">ContractLink</property>
+            <property name="Select05">linkto[ContractLink].attribute[Description]</property>
+            <property name="SelectAttribute06">PaymentLink</property>
+            <property name="Select06">linkto[PaymentLink].attribute[Value]</property>
+            <property name="SelectAttribute07">PeriodicityLink</property>
+            <property name="Select07">linkto[PeriodicityLink].attribute[Value]</property>
+        </trigger>
+        <trigger program="org.efaps.esjp.common.history.UpdateClassificationHistoryTrigger"
+            name="HumanResource_ClassTR_Labor.UPDATE_POST"
+            event="UPDATE_POST">
+            <property name="SelectAttribute01">RegimeLink</property>
+            <property name="Select01">linkto[RegimeLink].attribute[Value]</property>
+            <property name="SelectAttribute02">OccupationCatLink</property>
+            <property name="Select02">linkto[OccupationCatLink].attribute[Value]</property>
+            <property name="SelectAttribute03">OccupationLink</property>
+            <property name="Select03">linkto[OccupationLink].attribute[Value]</property>
+            <property name="SelectAttribute04">EducationLink</property>
+            <property name="Select04">linkto[EducationLink].attribute[Description]</property>
+            <property name="SelectAttribute05">ContractLink</property>
+            <property name="Select05">linkto[ContractLink].attribute[Description]</property>
+            <property name="SelectAttribute06">PaymentLink</property>
+            <property name="Select06">linkto[PaymentLink].attribute[Value]</property>
+            <property name="SelectAttribute07">PeriodicityLink</property>
+            <property name="Select07">linkto[PeriodicityLink].attribute[Value]</property>
+        </trigger>
+        <trigger program="org.efaps.esjp.common.history.DeleteClassificationHistoryTrigger"
+            name="HumanResource_ClassTR_Labor.DELETE_PRE"
+            event="DELETE_PRE"/>
     </definition>
 </datamodel-type>

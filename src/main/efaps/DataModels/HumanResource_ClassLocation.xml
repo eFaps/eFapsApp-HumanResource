@@ -16,11 +16,6 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev$
- Last Changed:    $Date$
- Last Changed By: $Author$
-
 -->
 
 <datamodel-type  xmlns="http://www.efaps.org/xsd"
@@ -28,14 +23,13 @@
                  xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>6ccb02d0-fc1d-4bf4-a9d7-1baf6b7faa5e</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <profiles>
             <profile name="eFaps" />
         </profiles>
         <name>HumanResource_ClassLocation</name>
-        <purpose classification="true">
+        <purpose classification="true" history="true">
             <LinkColumn>EmployeeLink</LinkColumn>
             <parent>HumanResource_Class</parent>
         </purpose>
@@ -76,6 +70,18 @@
             <sqltable>HumanResource_ClassLocationSQLTable</sqltable>
             <sqlcolumn>ZIP</sqlcolumn>
         </attribute>
+        <trigger program="org.efaps.esjp.common.history.InsertClassificationHistoryTrigger"
+            name="HumanResource_ClassLocation.INSERT_POST"
+            event="INSERT_POST">
+            <property name="IgnoreAttribute">EmployeeLink</property>
+        </trigger>
+        <trigger program="org.efaps.esjp.common.history.UpdateClassificationHistoryTrigger"
+            name="HumanResource_ClassLocation.UPDATE_POST"
+            event="UPDATE_POST">
+        </trigger>
+        <trigger program="org.efaps.esjp.common.history.DeleteClassificationHistoryTrigger"
+            name="HumanResource_ClassLocation.DELETE_PRE"
+            event="DELETE_PRE"/>
     </definition>
     <definition>
         <version-expression>(version==latest)</version-expression>
@@ -83,7 +89,7 @@
             <profile name="ubicaciones" />
         </profiles>
         <name>HumanResource_ClassLocation</name>
-        <purpose classification="true">
+        <purpose classification="true" history="true">
             <LinkColumn>EmployeeLink</LinkColumn>
             <parent>HumanResource_Class</parent>
         </purpose>
@@ -145,5 +151,29 @@
             <sqltable>HumanResource_ClassLocationSQLTable</sqltable>
             <sqlcolumn>DISTRICTID</sqlcolumn>
         </attribute>
+        <trigger program="org.efaps.esjp.common.history.InsertClassificationHistoryTrigger"
+            name="HumanResource_ClassLocation.INSERT_POST"
+            event="INSERT_POST">
+            <property name="IgnoreAttribute">EmployeeLink</property>
+            <property name="SelectAttribute01">DepartmentLocationLink</property>
+            <property name="Select01">linkto[DepartmentLocationLink].attribute[Name]</property>
+            <property name="SelectAttribute02">ProvinceLocationLink</property>
+            <property name="Select02">linkto[ProvinceLocationLink].attribute[Name]</property>
+            <property name="SelectAttribute03">DistrictLocationLink</property>
+            <property name="Select03">linkto[DistrictLocationLink].attribute[Name]</property>
+        </trigger>
+        <trigger program="org.efaps.esjp.common.history.UpdateClassificationHistoryTrigger"
+            name="HumanResource_ClassLocation.UPDATE_POST"
+            event="UPDATE_POST">
+            <property name="SelectAttribute01">DepartmentLocationLink</property>
+            <property name="Select01">linkto[DepartmentLocationLink].attribute[Name]</property>
+            <property name="SelectAttribute02">ProvinceLocationLink</property>
+            <property name="Select02">linkto[ProvinceLocationLink].attribute[Name]</property>
+            <property name="SelectAttribute03">DistrictLocationLink</property>
+            <property name="Select03">linkto[DistrictLocationLink].attribute[Name]</property>
+        </trigger>
+        <trigger program="org.efaps.esjp.common.history.DeleteClassificationHistoryTrigger"
+            name="HumanResource_ClassLocation.DELETE_PRE"
+            event="DELETE_PRE"/>
     </definition>
 </datamodel-type>
