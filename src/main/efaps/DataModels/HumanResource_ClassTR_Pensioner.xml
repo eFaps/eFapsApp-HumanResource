@@ -68,7 +68,7 @@
         <trigger program="org.efaps.esjp.common.history.UpdateClassificationHistoryTrigger"
             name="HumanResource_ClassTR_Pensioner.UPDATE_POST"
             event="UPDATE_POST">
-            <<property name="SelectAttribute01">PensionerTypeLink</property>
+            <property name="SelectAttribute01">PensionerTypeLink</property>
             <property name="Select01">linkto[PensionerTypeLink].attribute[Value]</property>
         </trigger>
         <trigger program="org.efaps.esjp.common.history.DeleteClassificationHistoryTrigger"

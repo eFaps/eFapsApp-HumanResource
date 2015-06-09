@@ -74,7 +74,7 @@
         <trigger program="org.efaps.esjp.common.history.UpdateClassificationHistoryTrigger"
             name="HumanResource_ClassTR_TrainingMethod.UPDATE_POST"
             event="UPDATE_POST">
-            <<property name="SelectAttribute01">TrainingMethodLink</property>
+            <property name="SelectAttribute01">TrainingMethodLink</property>
             <property name="Select01">linkto[TrainingMethodLink].attribute[Value]</property>
         </trigger>
         <trigger program="org.efaps.esjp.common.history.DeleteClassificationHistoryTrigger"
