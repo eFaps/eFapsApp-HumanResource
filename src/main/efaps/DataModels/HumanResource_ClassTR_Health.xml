@@ -25,7 +25,7 @@
         <name>HumanResource_ClassTR_Health</name>
         <purpose classification="true">
             <LinkColumn>EmployeeLink</LinkColumn>
-            <parent>HumanResource_ClassTR_Health</parent>
+            <parent>HumanResource_ClassTR</parent>
         </purpose>
         <attribute>
             <name>OID</name>
