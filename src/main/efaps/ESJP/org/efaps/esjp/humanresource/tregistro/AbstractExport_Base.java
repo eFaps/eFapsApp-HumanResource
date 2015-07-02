@@ -31,7 +31,6 @@ import org.efaps.admin.event.Return;
 import org.efaps.admin.event.Return.ReturnValues;
 import org.efaps.esjp.common.file.FileUtil;
 import org.efaps.esjp.erp.util.ERP;
-import org.efaps.esjp.erp.util.ERPSettings;
 import org.efaps.util.EFapsException;
 
 import com.brsanthu.dataexporter.DataExporter;
@@ -113,7 +112,7 @@ public abstract class AbstractExport_Base
                                  final String _suffix)
         throws EFapsException
     {
-        final String taxnumber = ERP.getSysConfig().getAttributeValue(ERPSettings.COMPANYTAX);
+        final String taxnumber = ERP.COMPANYTAX.get();
         return _prefix + taxnumber + "." + _suffix;
     }
 
