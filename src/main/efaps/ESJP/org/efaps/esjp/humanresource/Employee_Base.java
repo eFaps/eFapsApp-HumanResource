@@ -123,12 +123,12 @@ public abstract class Employee_Base
         }
 
         final Instance locInst = Instance.get(_parameter.getParameterValue("location"));
-        final QueryBuilder queryBldr2 = new QueryBuilder(CIHumanResource.Employee2LocationOffice);
-        queryBldr2.addWhereAttrEqValue(CIHumanResource.Employee2LocationOffice.EmployeeLink, _instance);
-        final InstanceQuery query2 = queryBldr2.getQuery();
-        final List<Instance> list2 = query2.execute();
-
         if (locInst.isValid()) {
+            final QueryBuilder queryBldr2 = new QueryBuilder(CIHumanResource.Employee2LocationOffice);
+            queryBldr2.addWhereAttrEqValue(CIHumanResource.Employee2LocationOffice.EmployeeLink, _instance);
+            final InstanceQuery query2 = queryBldr2.getQuery();
+            final List<Instance> list2 = query2.execute();
+
             final Update update;
             if (list2.isEmpty()) {
                 update = new Insert(CIHumanResource.Employee2LocationOffice);
@@ -138,9 +138,10 @@ public abstract class Employee_Base
             update.add(CIHumanResource.Employee2LocationOffice.EmployeeLink, _instance);
             update.add(CIHumanResource.Employee2LocationOffice.LocationOfficeLink, locInst);
             update.execute();
-        } else if (!list2.isEmpty()) {
-            for (final Instance ins : list2) {
-                new Delete(ins).execute();
+            if (!list2.isEmpty()) {
+                for (final Instance ins : list2) {
+                    new Delete(ins).execute();
+                }
             }
         }
     }
