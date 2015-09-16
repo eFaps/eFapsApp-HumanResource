@@ -112,6 +112,20 @@ public final class HumanResource
 
     /** See description. */
     @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute ACTIVATEDOCS = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "ActivateDocuments")
+                    .description("Activate the possibilty to assign documents.");
+
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute ACTIVATECONTACTS = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "ActivateContacts")
+                    .description("Activate the possibilty to assign contacts.");
+
+    /** See description. */
+    @EFapsSysConfAttribute
     public static final BooleanSysConfAttribute ACTIVATEACTIVATIONGRP = new BooleanSysConfAttribute()
                     .sysConfUUID(SYSCONFUUID)
                     .key(BASE + "ActivateActivationGroup")
