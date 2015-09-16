@@ -36,6 +36,7 @@
                 <!-- HummanResource-Configuration -->
                 <property name="SystemConfig">4620a7d6-0c39-48ac-9c52-e90dd077f52e</property>
                 <property name="Attribute">org.efaps.humanresource.ActivateRelated</property>
+                <property name="Attribute01">org.efaps.humanresource.ActivateAll</property>
             </trigger>
         </target>
         <property name="Target">content</property>

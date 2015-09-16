@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
- Copyright 2003 - 2013 The eFaps Team
+ Copyright 2003 - 201 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -15,17 +15,12 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev$
- Last Changed:    $Date$
- Last Changed By: $Author$
 -->
 
 <ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>2796bb7f-a5a5-42ac-8e71-b4d1442595d8</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <profiles>
@@ -446,6 +441,12 @@
                 <property name="SetSelected">true</property>
                 <property name="emptyValue">org.efaps.esjp.common.uiform.Field.EmptyValue</property>
             </trigger>
+            <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI"
+                method="check4Application"
+                name="HumanResource_EmployeeForm.location.UI_ACCESSCHECK"
+                event="UI_ACCESSCHECK">
+                <property name="Application">eFapsApp-Locations</property>
+            </trigger>
         </field>
         <field name="location4View">
             <property name="SelectAlternateOID">linkfrom[HumanResource_Employee2LocationOffice#EmployeeLink].oid</property>
@@ -454,6 +455,12 @@
             <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
             <property name="ModeView">READONLY</property>
             <property name="ModeEdit">NONE</property>
+            <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI"
+                method="check4Application"
+                name="HumanResource_EmployeeForm.location4View.UI_ACCESSCHECK"
+                event="UI_ACCESSCHECK">
+                <property name="Application">eFapsApp-Locations</property>
+            </trigger>
         </field>
         <field name="createGroup" character="Group">
             <property name="GroupCount">2</property>

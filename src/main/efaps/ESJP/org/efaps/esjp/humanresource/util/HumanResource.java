@@ -48,6 +48,13 @@ public final class HumanResource
 
     /** See description. */
     @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute ACTIVATEALL = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "ActivateAll")
+                    .description("Activates T-Registro, related persons, hirachic relations, previous works etc.");
+
+    /** See description. */
+    @EFapsSysConfAttribute
     public static final BooleanSysConfAttribute ACTIVATETR = new BooleanSysConfAttribute()
                     .sysConfUUID(SYSCONFUUID)
                     .key(BASE + "ActivateTRegistro")
@@ -59,6 +66,14 @@ public final class HumanResource
                     .sysConfUUID(SYSCONFUUID)
                     .key(BASE + "ActivateRelated")
                     .description("Activate the possibilty to register related persons. (family etc.)");
+
+
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute ACTIVATEREALTEDEM = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "ActivateRelatedEmergency")
+                    .description("Activate the possibilty to register related persons fro emergency.");
 
     /** See description. */
     @EFapsSysConfAttribute
