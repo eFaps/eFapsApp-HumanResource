@@ -1,5 +1,5 @@
 /*
- * Copyright 2003 - 2013 The eFaps Team
+ * Copyright 2003 - 2015 The eFaps Team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,9 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Revision:        $Rev$
- * Last Changed:    $Date$
- * Last Changed By: $Author$
  */
 
 package org.efaps.esjp.humanresource.tregistro;
@@ -28,20 +25,18 @@ import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 
 import org.efaps.admin.event.Parameter;
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.esjp.humanresource.util.HumanResource;
-import org.efaps.esjp.humanresource.util.HumanResourceSettings;
 import org.efaps.util.EFapsException;
 
 /**
  * TODO comment!
  *
  * @author The eFaps Team
- * @version $Id$
  */
 @EFapsUUID("31fec190-8189-4b7c-9fc9-08df7d57b698")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-HumanResource")
 public abstract class ImportIDE_Base
     extends AbstractImportUpdate
 {
@@ -70,10 +65,10 @@ public abstract class ImportIDE_Base
         Source source = null;
         final StringBuilder bldr = new StringBuilder();
 
-        final String xml = HumanResource.getSysConfig().getAttributeValue(HumanResourceSettings.DI_IDE);
+        final String xml = HumanResource.DI4IDE.get();
         bldr.append(xml == null ? "" : xml);
         for (int i = 1; i < 100; i++) {
-            final String keyTmp = HumanResourceSettings.DI_IDE + String.format("%02d", i);
+            final String keyTmp = HumanResource.DI4IDE + String.format("%02d", i);
             final String valueTmp = HumanResource.getSysConfig().getAttributeValue(keyTmp);
             if (valueTmp != null) {
                 bldr.append(valueTmp);

@@ -1,5 +1,5 @@
 /*
- * Copyright 2003 - 2009 The eFaps Team
+ * Copyright 2003 - 2015 The eFaps Team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,14 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Revision:        $Rev: 3449 $
- * Last Changed:    $Date: 2009-11-29 18:06:11 -0500 (dom, 29 nov 2009) $
- * Last Changed By: $Author: tim.moxter $
  */
 
 package org.efaps.esjp.humanresource;
 
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 
 /**
@@ -29,10 +26,9 @@ import org.efaps.admin.program.esjp.EFapsUUID;
  * class.
  *
  * @author The eFaps Team
- * @version $Id: Image.java 3449 2009-11-29 23:06:11Z tim.moxter $
  */
 @EFapsUUID("8da00ce1-3668-4a87-904e-6c839f43caa8")
-@EFapsRevision("$Rev: 3449 $")
+@EFapsApplication("eFapsApp-HumanResource")
 public class Image extends Image_Base
 {
 

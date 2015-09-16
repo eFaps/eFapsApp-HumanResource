@@ -1,5 +1,5 @@
 /*
- * Copyright 2003 - 2011 The eFaps Team
+ * Copyright 2003 - 2015 The eFaps Team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,9 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Revision:        $Rev: 10440 $
- * Last Changed:    $Date: 2013-10-14 15:37:03 -0500 (lun, 14 oct 2013) $
- * Last Changed By: $Author: rosa.ordonez@efaps.org $
  */
 
 package org.efaps.esjp.humanresource;
@@ -36,13 +33,12 @@ import org.apache.sanselan.ImageInfo;
 import org.apache.sanselan.ImageReadException;
 import org.apache.sanselan.ImageWriteException;
 import org.apache.sanselan.Sanselan;
-import org.efaps.admin.common.SystemConfiguration;
 import org.efaps.admin.datamodel.Type;
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Parameter.ParameterValues;
 import org.efaps.admin.event.Return;
 import org.efaps.admin.event.Return.ReturnValues;
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.admin.ui.AbstractCommand;
 import org.efaps.admin.ui.AbstractUserInterfaceObject.TargetMode;
@@ -61,7 +57,6 @@ import org.efaps.esjp.ci.CIHumanResource;
 import org.efaps.esjp.common.file.FileUtil;
 import org.efaps.esjp.common.file.ImageField;
 import org.efaps.esjp.humanresource.util.HumanResource;
-import org.efaps.esjp.humanresource.util.HumanResourceSettings;
 import org.efaps.util.EFapsException;
 
 import com.mortennobel.imagescaling.DimensionConstrain;
@@ -71,10 +66,9 @@ import com.mortennobel.imagescaling.ResampleOp;
  * TODO comment! First fast draft for testing purpose only!!!
  *
  * @author The eFaps Team
- * @version $Id: Image_Base.java 10440 2013-10-14 20:37:03Z rosa.ordonez@efaps.org $
  */
 @EFapsUUID("33c5bee0-f958-4326-90d7-173bcf77476c")
-@EFapsRevision("$Rev: 10440 $")
+@EFapsApplication("eFapsApp-HumanResource")
 public abstract class Image_Base
 {
 
@@ -89,11 +83,8 @@ public abstract class Image_Base
         throws EFapsException
     {
         final Return ret = new Return();
-        final SystemConfiguration config = HumanResource.getSysConfig();
-        if (config != null) {
-            if (config.getAttributeValueAsBoolean(HumanResourceSettings.ACTIVATEIMAGE)) {
-                ret.put(ReturnValues.TRUE, true);
-            }
+        if (HumanResource.ACTIVATEIMAGE.get()) {
+            ret.put(ReturnValues.TRUE, true);
         }
         return ret;
     }
@@ -201,8 +192,7 @@ public abstract class Image_Base
         connectImage(_parameter, CIHumanResource.Employee2ImageOriginal.getType(), parentInst, imageInst);
         final FileParameter fileItem = getFileParameter(_parameter);
         uploadImage(_parameter, imageInst, fileItem);
-        final Properties props = HumanResource.getSysConfig()
-                        .getAttributeValueAsProperties(HumanResourceSettings.IMAGEPROPERTIES);
+        final Properties props = HumanResource.IMAGEPROPERTIES.get();
         if (props.containsKey("Image4Doc_Create") && "true".equalsIgnoreCase(props.getProperty("Image4Doc_Create"))) {
             final int width = Integer.parseInt(props.getProperty("Image4Doc_Width", "250"));
             final int height = Integer.parseInt(props.getProperty("Image4Doc_Height", "250"));
