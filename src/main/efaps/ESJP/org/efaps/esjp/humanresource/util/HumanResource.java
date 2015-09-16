@@ -15,7 +15,6 @@
  *
  */
 
-
 package org.efaps.esjp.humanresource.util;
 
 import java.util.UUID;
@@ -35,7 +34,6 @@ import org.efaps.util.cache.CacheReloadException;
  * TODO comment!
  *
  * @author The eFaps Team
- * @version $Id$
  */
 @EFapsUUID("8b0780d7-b6db-4f67-ab7b-ccabe8d77359")
 @EFapsApplication("eFapsApp-HumanResource")
@@ -61,6 +59,41 @@ public final class HumanResource
                     .sysConfUUID(SYSCONFUUID)
                     .key(BASE + "ActivateRelated")
                     .description("Activate the possibilty to register related persons. (family etc.)");
+
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute ACTIVATEHIRACHY = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "ActivateHirachy")
+                    .description("Activate the possibilty to register hirachic relations");
+
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute ACTIVATEPREWORK = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "ActivatePreviousWorks")
+                    .description("Activate the possibilty to register previous works.");
+
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute ACTIVATEEDU = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "ActivateEducation")
+                    .description("Activate the possibilty to register education.");
+
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute ACTIVATEREF = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "ActivateWorkReferences")
+                    .description("Activate the possibilty to register Work References.");
+
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute ACTIVATETRAINING = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "ActivateTraining")
+                    .description("Activate the possibilty to register trainings.");
 
     /** See description. */
     @EFapsSysConfAttribute

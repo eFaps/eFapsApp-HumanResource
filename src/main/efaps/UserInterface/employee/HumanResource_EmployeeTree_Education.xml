@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
- Copyright 2003 - 2013 The eFaps Team
+ Copyright 2003 - 2015 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -14,16 +14,11 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev: 5498 $
- Last Changed:    $Date: 2010-09-06 13:47:04 -0500 (Mon, 06 Sep 2010) $
- Last Changed By: $Author: miguel.a.aranya $
-
---><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-
+-->
+<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>b8161999-9e21-4470-8237-1cdb2a7067c7</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev: 5498 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_EmployeeTree_Education</name>
@@ -34,8 +29,15 @@
                 <property name="Type">HumanResource_Education</property>
                 <property name="LinkFrom">EmployeeLink</property>
             </evaluate>
+            <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI"
+                method="configCheck"
+                name="HumanResource_EmployeeTree_Education.UI_ACCESSCHECK"
+                event="UI_ACCESSCHECK">
+                <!-- HummanResource-Configuration -->
+                <property name="SystemConfig">4620a7d6-0c39-48ac-9c52-e90dd077f52e</property>
+                <property name="Attribute">org.efaps.humanresource.ActivateEducation</property>
+            </trigger>
         </target>
-        <!-- properties -->
         <property name="Target">content</property>
         <property name="TargetShowCheckBoxes">true</property>
     </definition>
