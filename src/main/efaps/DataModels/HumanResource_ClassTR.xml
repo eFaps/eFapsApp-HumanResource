@@ -81,6 +81,12 @@
             <sqltable>HumanResource_ClassTRSQLTable</sqltable>
             <sqlcolumn>ALLOWANCE</sqlcolumn>
         </attribute>
+        <attribute>
+            <name>LifeInsurance</name>
+            <type>Boolean</type>
+            <sqltable>HumanResource_ClassTRSQLTable</sqltable>
+            <sqlcolumn>LIFEINS</sqlcolumn>
+        </attribute>
         <trigger program="org.efaps.esjp.common.history.InsertClassificationHistoryTrigger"
             name="HumanResource_ClassTR.INSERT_POST"
             event="INSERT_POST">
