@@ -516,5 +516,18 @@
                 <property name="Attribute">org.efaps.humanresource.ActivateActivationGroup</property>
             </trigger>
         </field>
+        <field name="employeeGroup">
+            <property name="SelectAlternateOID">linkfrom[Payroll_Employee2EmployeeGroup#FromLink].linkto[ToLink].oid</property>
+            <property name="Label">Payroll_EmployeeGroup.Label</property>
+            <property name="HRef">TREE</property>
+            <property name="Select">linkfrom[Payroll_Employee2EmployeeGroup#FromLink].linkto[ToLink].attribute[Name]</property>
+            <trigger event="UI_ACCESSCHECK" method="configCheck"
+                name="HumanResource_EmployeeForm.employeeGroup.UI_ACCESSCHECK"
+                program="org.efaps.esjp.admin.access.AccessCheck4UI">
+                <!-- eFapsApp-Payroll -->
+                <property name="SystemConfig">6f21b777-3c7d-4792-b3c0-8bfb6af0bf5e</property>
+                <property name="Attribute">org.efaps.payroll.Process.Activate</property>
+            </trigger>
+        </field>
     </definition>
 </ui-form>
