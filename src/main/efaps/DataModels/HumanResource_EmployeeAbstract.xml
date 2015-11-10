@@ -196,7 +196,7 @@
          <attribute>
             <name>StatusAbstract</name>
             <type>Status</type>
-            <typelink>Admin_DataModel_StatusAbstract</typelink>
+            <typelink>HumanResource_EmployeeStatus</typelink>
             <sqltable>HumanResource_EmployeeSQLTable</sqltable>
             <sqlcolumn>STATUS</sqlcolumn>
             <trigger program="org.efaps.esjp.admin.datamodel.StatusValue"
