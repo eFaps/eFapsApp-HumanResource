@@ -28,6 +28,7 @@
             <column name="EMPLOYEETYPEID"   type="INTEGER"/>
             <column name="SITUATIONID"      type="INTEGER"/>
             <column name="SDATE"            type="DATETIME"/>
+            <column name="EDATE"            type="DATETIME"/>
             <column name="ALLOWANCE"        type="BOOLEAN"/>
             <column name="LIFEINS"          type="BOOLEAN"/>
             <foreign name="T_HRCLASSTR_EMPLOYEEID" key="EMPLOYEEID" reference="T_HREMPLOYEE(ID)"/>

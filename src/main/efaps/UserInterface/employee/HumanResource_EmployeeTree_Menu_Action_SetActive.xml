@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+
+ Copyright 2003 - 2015 The eFaps Team
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+
+-->
+<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>b75df411-9106-48dd-aab2-4545e81e205e</uuid>
+    <file-application>eFapsApp-HumanResource</file-application>
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <name>HumanResource_EmployeeTree_Menu_Action_SetActive</name>
+        <access>
+            <role>HumanResource_Admin</role>
+        </access>
+        <target>
+            <execute method="setStatus" program="org.efaps.esjp.admin.datamodel.StatusValue">
+                <property name="Status">Worker</property>
+            </execute>
+            <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI" method="configCheck" index="1"
+                name="HumanResource_EmployeeTree_Menu_Action_SetActive.UI_ACCESSCHECK.1" event="UI_ACCESSCHECK">
+                <!-- HummanResource-Configuration -->
+                <property name="SystemConfig">4620a7d6-0c39-48ac-9c52-e90dd077f52e</property>
+                <property name="Attribute">org.efaps.humanresource.ActivateTRegistro</property>
+                <property name="Attribute01">org.efaps.humanresource.ActivateAll</property>
+                <property name="Inverse">true</property>
+            </trigger>
+            <trigger event="UI_ACCESSCHECK" method="check4Status" index="2"
+                name="HumanResource_EmployeeTree_Menu_Action_SetActive.UI_ACCESSCHECK.2"
+                program="org.efaps.esjp.admin.access.AccessCheck4UI">
+                <property name="Status">Notworked</property>
+            </trigger>
+        </target>
+        <property name="AskUser">true</property>
+        <property name="Submit">true</property>
+        <property name="SubmitSelectedRows">-1</property>
+    </definition>
+</ui-command>

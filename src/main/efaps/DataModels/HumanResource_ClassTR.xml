@@ -52,6 +52,12 @@
             <sqlcolumn>SDATE</sqlcolumn>
         </attribute>
         <attribute>
+            <name>EndDate</name>
+            <type>Date</type>
+            <sqltable>HumanResource_ClassTRSQLTable</sqltable>
+            <sqlcolumn>EDATE</sqlcolumn>
+        </attribute>
+        <attribute>
             <name>EmployeeTypeLink</name>
             <type>LinkWithRanges</type>
             <typelink>HumanResource_AttributeDefinitionEmployeeType</typelink>

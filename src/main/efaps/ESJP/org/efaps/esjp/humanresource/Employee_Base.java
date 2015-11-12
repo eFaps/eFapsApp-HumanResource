@@ -1,5 +1,5 @@
 /*
- * Copyright 2003 - 2013 The eFaps Team
+ * Copyright 2003 - 2015 The eFaps Team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,9 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Revision:        $Rev$
- * Last Changed:    $Date$
- * Last Changed By: $Author$
  */
 
 package org.efaps.esjp.humanresource;
@@ -26,11 +23,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+import org.efaps.admin.datamodel.Classification;
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Parameter.ParameterValues;
 import org.efaps.admin.event.Return;
 import org.efaps.admin.event.Return.ReturnValues;
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.ci.CIAdminUser;
 import org.efaps.db.AttributeQuery;
@@ -41,7 +39,9 @@ import org.efaps.db.InstanceQuery;
 import org.efaps.db.MultiPrintQuery;
 import org.efaps.db.PrintQuery;
 import org.efaps.db.QueryBuilder;
+import org.efaps.db.SelectBuilder;
 import org.efaps.db.Update;
+import org.efaps.esjp.ci.CIFormHumanResource;
 import org.efaps.esjp.ci.CIHumanResource;
 import org.efaps.esjp.common.AbstractCommon;
 import org.efaps.esjp.common.uiform.Create;
@@ -59,10 +59,9 @@ import org.joda.time.PeriodType;
  * TODO comment!
  *
  * @author The eFaps Team
- * @version $Id$
  */
 @EFapsUUID("6c060a95-0515-4809-ab2f-6834a951e93c")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-HumanResource")
 public abstract class Employee_Base
     extends AbstractCommon
 {
@@ -89,6 +88,77 @@ public abstract class Employee_Base
             }
         };
         return create.execute(_parameter);
+    }
+
+    /**
+     * Sets the employee active.
+     *
+     * @param _parameter Parameter as passed from the eFaps API.
+     * @return empty Return
+     * @throws EFapsException on error.
+     */
+    public Return setActive(final Parameter _parameter)
+        throws EFapsException
+    {
+        final PrintQuery print = new PrintQuery(_parameter.getInstance());
+        final SelectBuilder selClassInst = SelectBuilder.get().clazz(CIHumanResource.ClassTR).instance();
+        print.addSelect(selClassInst);
+        print.execute();
+
+        final Instance classInst = print.getSelect(selClassInst);
+        Update update;
+        if (classInst == null || (classInst != null && !classInst.isValid())) {
+            final Classification clazz = (Classification) CIHumanResource.ClassTR.getType();
+            final Insert relInsert = new Insert(clazz.getClassifyRelationType());
+            relInsert.add(clazz.getRelLinkAttributeName(), _parameter.getInstance());
+            relInsert.add(clazz.getRelTypeAttributeName(), clazz.getId());
+            relInsert.execute();
+
+            update = new Insert(CIHumanResource.ClassTR);
+            update.add(clazz.getLinkAttributeName(), _parameter.getInstance());
+        } else {
+            update = new Update(classInst);
+        }
+        update.add(CIHumanResource.ClassTR.StartDate, _parameter.getParameterValue(
+                        CIFormHumanResource.HumanResource_EmployeeSetActiveForm.date.name));
+        update.add(CIHumanResource.ClassTR.EndDate, (Object) null);
+        update.execute();
+        return new Return();
+    }
+
+    /**
+     * Sets the employee inactive.
+     *
+     * @param _parameter Parameter as passed from the eFaps API.
+     * @return empty Return
+     * @throws EFapsException on error.
+     */
+    public Return setInActive(final Parameter _parameter)
+        throws EFapsException
+    {
+        final PrintQuery print = new PrintQuery(_parameter.getInstance());
+        final SelectBuilder selClassInst = SelectBuilder.get().clazz(CIHumanResource.ClassTR).instance();
+        print.addSelect(selClassInst);
+        print.execute();
+
+        final Instance classInst = print.getSelect(selClassInst);
+        Update update;
+        if (classInst == null || (classInst != null && !classInst.isValid())) {
+            final Classification clazz = (Classification) CIHumanResource.ClassTR.getType();
+            final Insert relInsert = new Insert(clazz.getClassifyRelationType());
+            relInsert.add(clazz.getRelLinkAttributeName(), _parameter.getInstance());
+            relInsert.add(clazz.getRelTypeAttributeName(), clazz.getId());
+            relInsert.execute();
+
+            update = new Insert(CIHumanResource.ClassTR);
+            update.add(clazz.getLinkAttributeName(), _parameter.getInstance());
+        } else {
+            update = new Update(classInst);
+        }
+        update.add(CIHumanResource.ClassTR.EndDate, _parameter.getParameterValue(
+                        CIFormHumanResource.HumanResource_EmployeeSetInActiveForm.date.name));
+        update.execute();
+        return new Return();
     }
 
     /**
