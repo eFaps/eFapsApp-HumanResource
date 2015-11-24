@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--
 
  Copyright 2003 - 2015 The eFaps Team
@@ -17,15 +16,13 @@
  limitations under the License.
 
 -->
-
 <ui-table xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>6125f981-baa6-4a22-a4e3-5de320964b91</uuid>
+    <uuid>9ffd089a-5f74-4d4f-99cf-487bfc5e0630</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>HumanResource_EmployeeTable</name>
-        <!-- fields -->
+        <name>HumanResource_EmployeeSearchTable</name>
         <field name="type">
             <property name="Attribute">Type</property>
             <property name="Label">HumanResource_EmployeeAbstract/Type.Label</property>
@@ -54,12 +51,11 @@
             <property name="ModeSearch">READONLY</property>
         </field>
         <field name="status">
-            <property name="FilterType">STATUS</property>
-            <property name="FilterDefault">Worker</property>
-            <property name="FilterBase">DATABASE</property>
+            <property name="FilterType">PICKLIST</property>
             <property name="Attribute">StatusAbstract</property>
             <property name="Label">HumanResource_EmployeeAbstract/Status.Label</property>
-            <property name="ModeSearch">NONE</property>
+            <property name="ModeView">NONE</property>
+            <property name="ModeSearch">READONLY</property>
         </field>
         <field name="periodicityLink">
             <property name="FilterType">PICKLIST</property>

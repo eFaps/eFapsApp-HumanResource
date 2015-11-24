@@ -16,30 +16,23 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev$
- Last Changed:    $Date$
- Last Changed By: $Author$
-
 -->
 
-<ui-menu xmlns="http://www.efaps.org/xsd"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>95a2cfe0-92f0-432b-bbfb-6dee6e91a181</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_MyDesk</name>
         <icon>HumanResource_MyDeskImg</icon>
         <childs>
+            <child>HumanResource_EmployeeSearchMyDesk</child>
             <child>HumanResource_EmployeeMyDesk</child>
             <child>HumanResource_EmployeeINTERNMyDesk</child>
             <child>HumanResource_EmployeeEXTERNMyDesk</child>
             <child>HumanResource_DepartmentMyDesk</child>
             <child>HumanResource_ReportMyDesk</child>
-            <child>HumanResource_EmployeeSearchMyDesk</child>
         </childs>
     </definition>
 </ui-menu>

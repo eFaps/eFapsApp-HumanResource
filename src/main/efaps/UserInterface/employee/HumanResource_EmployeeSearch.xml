@@ -2,7 +2,7 @@
 
 <!--
 
- Copyright 2003 - 2010 The eFaps Team
+ Copyright 2003 - 2015 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -16,28 +16,18 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev$
- Last Changed:    $Date$
- Last Changed By: $Author$
-
 -->
 
-<ui-command xmlns="http://www.efaps.org/xsd"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-
     <uuid>db3a5501-9487-4ac1-ad11-9d473994798b</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev$</file-revision>
-
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_EmployeeSearch</name>
-        <!-- target definitions -->
         <target>
-            <form>HumanResource_EmployeeForm</form>
-            <table>HumanResource_EmployeeTable</table>
+            <form>HumanResource_EmployeeSearchForm</form>
+            <table>HumanResource_EmployeeSearchTable</table>
             <evaluate program="org.efaps.esjp.common.uisearch.Search">
                 <property name="Type">HumanResource_EmployeeAbstract</property>
                 <property name="ExpandChildTypes">true</property>
@@ -46,8 +36,6 @@
                 <property name="IgnoreCase4Field03">secondLastName</property>
             </evaluate>
         </target>
-        <!-- properties -->
         <property name="TargetMode">search</property>
     </definition>
-
 </ui-command>
