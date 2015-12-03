@@ -21,6 +21,7 @@
 package org.efaps.esjp.humanresource.tregistro;
 
 import org.efaps.admin.event.Parameter;
+import org.efaps.dataexporter.model.BooleanColumn.Format;
 import org.efaps.db.MultiPrintQuery;
 import org.efaps.db.QueryBuilder;
 import org.efaps.db.SelectBuilder;
@@ -29,8 +30,6 @@ import org.efaps.esjp.data.columns.export.FrmtBooleanColumn;
 import org.efaps.esjp.data.columns.export.FrmtColumn;
 import org.efaps.esjp.data.columns.export.FrmtNumberColumn;
 import org.efaps.util.EFapsException;
-
-import com.brsanthu.dataexporter.model.BooleanColumn.Format;
 
 /**
  * TODO comment!
