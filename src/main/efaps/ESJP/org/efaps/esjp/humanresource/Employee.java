@@ -1,5 +1,5 @@
 /*
- * Copyright 2003 - 2015 The eFaps Team
+ * Copyright 2003 - 2016 The eFaps Team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,9 +17,11 @@
 
 package org.efaps.esjp.humanresource;
 
+import org.efaps.admin.event.Parameter;
 import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
-
+import org.efaps.db.Instance;
+import org.efaps.util.EFapsException;
 
 /**
  * This class must be replaced for customization, therefore it is left empty.
@@ -33,5 +35,18 @@ import org.efaps.admin.program.esjp.EFapsUUID;
 public class Employee
     extends Employee_Base
 {
-
+    /**
+     * Gets the employee assigned to contact.
+     *
+     * @param _parameter Parameter as passed by the eFaps API
+     * @param _contactInstance the contact instance
+     * @return the employee assigned2 contact
+     * @throws EFapsException on error
+     */
+    public static String getEmployeeAssigned2Contact(final Parameter _parameter,
+                                                     final Instance _contactInstance)
+        throws EFapsException
+    {
+        return Employee_Base.getEmployeeAssigned2Contact(_parameter, _contactInstance);
+    }
 }

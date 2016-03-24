@@ -32,6 +32,7 @@ import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.ci.CIAdminUser;
 import org.efaps.db.AttributeQuery;
+import org.efaps.db.CachedMultiPrintQuery;
 import org.efaps.db.Delete;
 import org.efaps.db.Insert;
 import org.efaps.db.Instance;
@@ -43,6 +44,7 @@ import org.efaps.db.SelectBuilder;
 import org.efaps.db.Update;
 import org.efaps.esjp.ci.CIFormHumanResource;
 import org.efaps.esjp.ci.CIHumanResource;
+import org.efaps.esjp.ci.CIMsgHumanResource;
 import org.efaps.esjp.common.AbstractCommon;
 import org.efaps.esjp.common.uiform.Create;
 import org.efaps.esjp.common.uiform.Edit;
@@ -106,7 +108,7 @@ public abstract class Employee_Base
         print.execute();
 
         final Instance classInst = print.getSelect(selClassInst);
-        Update update;
+        final Update update;
         if (classInst == null || (classInst != null && !classInst.isValid())) {
             final Classification clazz = (Classification) CIHumanResource.ClassTR.getType();
             final Insert relInsert = new Insert(clazz.getClassifyRelationType());
@@ -142,7 +144,7 @@ public abstract class Employee_Base
         print.execute();
 
         final Instance classInst = print.getSelect(selClassInst);
-        Update update;
+        final Update update;
         if (classInst == null || (classInst != null && !classInst.isValid())) {
             final Classification clazz = (Classification) CIHumanResource.ClassTR.getType();
             final Insert relInsert = new Insert(clazz.getClassifyRelationType());
@@ -313,6 +315,13 @@ public abstract class Employee_Base
         return retVal;
     }
 
+    /**
+     * Add2 query bldr.
+     *
+     * @param _parameter Parameter as passed by the eFaps API
+     * @param _queryBldr the query bldr
+     * @throws EFapsException on error
+     */
     protected void add2QueryBldr(final Parameter _parameter,
                                  final QueryBuilder _queryBldr)
         throws EFapsException
@@ -357,7 +366,7 @@ public abstract class Employee_Base
     }
 
     /**
-     * method for auto-complete user person (if any a case non-existing in DB.)
+     * Method for auto-complete user person (if any a case non-existing in DB.
      *
      * @param _parameter Parameter as passed from the eFaps API.
      * @return ret witch values
@@ -403,6 +412,13 @@ public abstract class Employee_Base
         return retVal;
     }
 
+    /**
+     * Gets the age field value u i2 view.
+     *
+     * @param _parameter Parameter as passed by the eFaps API
+     * @return the age field value u i2 view
+     * @throws EFapsException on error
+     */
     public Return getAgeFieldValueUI2View(final Parameter _parameter)
         throws EFapsException
     {
@@ -422,6 +438,13 @@ public abstract class Employee_Base
         return retVal;
     }
 
+    /**
+     * Multi print4 employee.
+     *
+     * @param _parameter Parameter as passed by the eFaps API
+     * @return the return
+     * @throws EFapsException on error
+     */
     public Return multiPrint4Employee(final Parameter _parameter)
         throws EFapsException
     {
@@ -440,6 +463,13 @@ public abstract class Employee_Base
         return multi.execute(_parameter);
     }
 
+    /**
+     * Add2 query bldr4 employee with activation.
+     *
+     * @param _parameter Parameter as passed by the eFaps API
+     * @param _queryBldr the query bldr
+     * @throws EFapsException on error
+     */
     public void add2QueryBldr4EmployeeWithActivation(final Parameter _parameter,
                                                      final QueryBuilder _queryBldr)
         throws EFapsException
@@ -455,4 +485,34 @@ public abstract class Employee_Base
         }
     };
 
+    /**
+     * Gets the employee assigned2 contact.
+     *
+     * @param _parameter Parameter as passed by the eFaps API
+     * @param _contactInstance the contact instance
+     * @return the employee assigned2 contact
+     * @throws EFapsException on error
+     */
+    protected static String getEmployeeAssigned2Contact(final Parameter _parameter,
+                                                        final Instance _contactInstance)
+        throws EFapsException
+    {
+        final StringBuilder ret = new StringBuilder();
+        final QueryBuilder attrQueryBldr = new QueryBuilder(CIHumanResource.Employee2Contact);
+        attrQueryBldr.addWhereAttrEqValue(CIHumanResource.Employee2Contact.ToLink, _contactInstance);
+
+        final QueryBuilder queryBldr = new QueryBuilder(CIHumanResource.Employee);
+        queryBldr.addWhereAttrInQuery(CIHumanResource.Employee.ID, attrQueryBldr.getAttributeQuery(
+                        CIHumanResource.Employee2Contact.FromLink));
+        final CachedMultiPrintQuery multi = queryBldr.getCachedPrint4Request();
+        multi.addMsgPhrase(CIMsgHumanResource.EmployeeMsgPhrase);
+        multi.execute();
+        while (multi.next()) {
+            if (ret.length() > 0) {
+                ret.append("\n");
+            }
+            ret.append(multi.getMsgPhrase(CIMsgHumanResource.EmployeeMsgPhrase));
+        }
+        return ret.toString();
+    }
 }
