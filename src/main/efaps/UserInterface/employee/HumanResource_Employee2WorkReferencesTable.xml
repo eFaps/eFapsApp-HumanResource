@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
 
- Copyright 2003 - 2013 The eFaps Team
+ Copyright 2003 - 2016 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -14,21 +15,14 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev: 9189 $
- Last Changed:    $Date: 2013-04-17 09:58:22 -0500 (Wed, 17 Apr 2013) $
- Last Changed By: $Author: jorge.cueva@moxter.net $
-
---><ui-table xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-
+-->
+<ui-table xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>61d229e1-7c89-4905-b73c-8598858cc488</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev: 9189 $</file-revision>
-
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_Employee2WorkReferencesTable</name>
-        <!-- fields -->
         <field name="institution">
             <property name="Attribute">Institution</property>
             <property name="Label">HumanResource_Employee2WorkReferencesTable.institution.Label</property>
@@ -37,6 +31,7 @@
         <field name="name">
             <property name="Phrase">$&lt;attribute[LastName]&gt;, $&lt;attribute[FirstName]&gt;</property>
             <property name="Label">HumanResource_Employee2WorkReferencesTable.name.Label</property>
+            <property name="UIProvider">org.efaps.admin.datamodel.ui.StringUI</property>
         </field>
         <field name="position">
             <property name="Attribute">PositionLink</property>
