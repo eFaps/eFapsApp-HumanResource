@@ -48,7 +48,7 @@
         </field>
         <field name="size">
             <property name="Phrase">$&lt;linkto[ImageAbstractLink].attribute[WidthPx]&gt;px x $&lt;linkto[ImageAbstractLink].attribute[HeightPx]&gt;px - $&lt;linkto[ImageAbstractLink].file.length&gt;</property>
-            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
+            <property name="UIProvider">org.efaps.admin.datamodel.ui.StringUI</property>
             <property name="Label">HumanResource_Employee2ImageTable.size.Label</property>
         </field>
     </definition>

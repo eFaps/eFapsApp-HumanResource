@@ -33,14 +33,14 @@
             <property name="ModeView">NONE</property>
             <property name="ModePrint">NONE</property>
             <property name="Label">HumanResource_ImageForm.upload.Label</property>
-            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
+            <property name="UIProvider">org.efaps.admin.datamodel.ui.StringUI</property>
             <trigger event="UI_FIELD_VALUE" method="getFieldValueUI" name="HumanResource_ImageForm.upload.UI_FIELD_VALUE" program="org.efaps.esjp.common.file.FileField">
                 <property name="FileNameField">description4Create</property>
             </trigger>
         </field>
         <field name="image">
             <property name="Label">HumanResource_ImageForm.image.Label</property>
-            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
+            <property name="UIProvider">org.efaps.admin.datamodel.ui.StringUI</property>
             <trigger event="UI_FIELD_VALUE" method="getViewFieldValueUI" name="HumanResource_ImageForm.upload.UI_FIELD_VALUE"
                 program="org.efaps.esjp.common.file.ImageField">
                 <property name="max-width">200px</property>
@@ -51,7 +51,7 @@
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeView">NONE</property>
             <property name="ModeEdit">NONE</property>
-            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
+            <property name="UIProvider">org.efaps.admin.datamodel.ui.StringUI</property>
             <property name="Label">HumanResource_ImageAbstract/Description.Label</property>
             <property name="Required">true</property>
         </field>
@@ -64,7 +64,7 @@
             <property name="SelectAlternateOID">linkto[Original].oid</property>
             <property name="Select">linkto[Original].type.label</property>
             <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
-            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
+            <property name="UIProvider">org.efaps.admin.datamodel.ui.StringUI</property>
             <property name="Label">HumanResource_ImageForm.original.Label</property>
             <trigger event="UI_ACCESSCHECK" method="access4OriginalFieldUI" name="HumanResource_ImageForm.original.UI_ACCESSCHECK"
                 program="org.efaps.esjp.products.Image" />
@@ -73,7 +73,7 @@
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">NONE</property>
             <property name="ModeView">NONE</property>
-            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
+            <property name="UIProvider">org.efaps.admin.datamodel.ui.StringUI</property>
             <property name="Label">HumanResource_ImageForm.caption.Label</property>
             <property name="Required">true</property>
         </field>
