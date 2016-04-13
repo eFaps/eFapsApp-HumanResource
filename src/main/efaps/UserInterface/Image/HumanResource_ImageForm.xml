@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
 
-  Copyright 2003 - 2009 The eFaps Team
+  Copyright 2003 - 2016 The eFaps Team
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -14,16 +15,11 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 
-  Author:          The eFaps Team
-  Revision:        $Rev: 8052 $
-  Last Changed:    $Date: 2012-10-15 21:50:56 -0500 (lun, 15 oct 2012) $
-  Last Changed By: $Author: jan@moxter.net $
-
 -->
-<ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+<ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>b0463b0c-a8b7-4408-9995-0f05c26f7ab9</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev: 8052 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_ImageForm</name>
@@ -34,14 +30,17 @@
             <property name="ModePrint">NONE</property>
             <property name="Label">HumanResource_ImageForm.upload.Label</property>
             <property name="UIProvider">org.efaps.admin.datamodel.ui.StringUI</property>
-            <trigger event="UI_FIELD_VALUE" method="getFieldValueUI" name="HumanResource_ImageForm.upload.UI_FIELD_VALUE" program="org.efaps.esjp.common.file.FileField">
+            <trigger event="UI_FIELD_VALUE" method="getFieldValueUI"
+                name="HumanResource_ImageForm.upload.UI_FIELD_VALUE"
+                program="org.efaps.esjp.common.file.FileField">
                 <property name="FileNameField">description4Create</property>
             </trigger>
         </field>
         <field name="image">
             <property name="Label">HumanResource_ImageForm.image.Label</property>
             <property name="UIProvider">org.efaps.admin.datamodel.ui.StringUI</property>
-            <trigger event="UI_FIELD_VALUE" method="getViewFieldValueUI" name="HumanResource_ImageForm.upload.UI_FIELD_VALUE"
+            <trigger event="UI_FIELD_VALUE" method="getViewFieldValueUI"
+                name="HumanResource_ImageForm.upload.UI_FIELD_VALUE"
                 program="org.efaps.esjp.common.file.ImageField">
                 <property name="max-width">200px</property>
                 <property name="max-height">200px</property>
@@ -66,7 +65,8 @@
             <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
             <property name="UIProvider">org.efaps.admin.datamodel.ui.StringUI</property>
             <property name="Label">HumanResource_ImageForm.original.Label</property>
-            <trigger event="UI_ACCESSCHECK" method="access4OriginalFieldUI" name="HumanResource_ImageForm.original.UI_ACCESSCHECK"
+            <trigger event="UI_ACCESSCHECK" method="access4OriginalFieldUI"
+                name="HumanResource_ImageForm.original.UI_ACCESSCHECK"
                 program="org.efaps.esjp.products.Image" />
         </field>
         <field name="caption">
@@ -132,11 +132,13 @@
             <property name="Select">file.label</property>
             <property name="ModeSearch">EDITABLE</property>
             <property name="Label">HumanResource_ImageForm.fileName.Label</property>
+            <property name="UIProvider">org.efaps.admin.datamodel.ui.StringUI</property>
         </field>
         <field name="fileLength">
             <property name="Select">file.length</property>
             <property name="ModeSearch">EDITABLE</property>
             <property name="Label">HumanResource_ImageForm.fileLength.Label</property>
+            <property name="UIProvider">org.efaps.admin.datamodel.ui.StringUI</property>
         </field>
         <field character="Group" name="createGroup">
             <property name="GroupCount">2</property>
