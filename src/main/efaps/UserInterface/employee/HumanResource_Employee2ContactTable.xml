@@ -24,7 +24,7 @@
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_Employee2ContactTable</name>
         <field name="name">
-        <property name="SelectAlternateOID">linkto[ToLink].oid</property>
+            <property name="SelectAlternateOID">linkto[ToLink].oid</property>
             <property name="Select">linkto[ToLink].attribute[Name]</property>
             <property name="Label">HumanResource_Employee2ContactTable.name.Label</property>
             <property name="HRef">TREE</property>
@@ -42,13 +42,6 @@
             <property name="Phrase">$&lt;linkto[ToLink].class[Contacts_ClassOrganisation].attribute[TaxNumber]&gt;</property>
             <property name="Label">HumanResource_Employee2ContactTable/TaxNumber.Label</property>
             <property name="UIProvider">org.efaps.admin.datamodel.ui.StringUI</property>
-        </field>
-        <field name="buttonOpenInNewWindow">
-            <icon>eFapsActionNewWindow</icon>
-            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
-            <property name="Target">popup</property>
-            <property name="SortAble">false</property>
-            <property name="Width">15px</property>
         </field>
     </definition>
 </ui-table>
