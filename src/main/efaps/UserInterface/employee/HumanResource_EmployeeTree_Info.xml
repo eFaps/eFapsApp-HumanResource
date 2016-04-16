@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--
 
- Copyright 2003 - 2013 The eFaps Team
+ Copyright 2003 - 2016 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -15,20 +15,14 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev: 11430 $
- Last Changed:    $Date: 2013-12-16 18:25:38 -0500 (lun, 16 dic 2013) $
- Last Changed By: $Author: jorge.cueva@moxter.net $
-
 -->
-<ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+<ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>4cc7bc52-a16f-4fe9-8a62-2bb8abaed29d</uuid>
-    <file-application>eFapsApp-Projects</file-application>
-    <file-revision>$Rev: 314 $</file-revision>
+    <file-application>eFapsApp-HumanResource</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_EmployeeTree_Info</name>
-        <!-- targets -->
         <target>
             <form>HumanResource_EmployeeForm</form>
         </target>

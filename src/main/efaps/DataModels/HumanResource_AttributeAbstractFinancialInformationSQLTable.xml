@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
- Copyright 2003 - 2011 The eFaps Team
+ Copyright 2003 - 2016 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -14,15 +14,11 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev: 10945 $
- Last Changed:    $Date: 2013-11-15 10:21:11 -0500 (vie, 15 nov 2013) $
- Last Changed By: $Author: sara.landa@efaps.org $
-
---><datamodel-sqltable xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+-->
+<datamodel-sqltable xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>41daca25-163b-4c22-8ae1-aba44c8f3ce0</uuid>
-    <file-application>eFapsApp-Contacts</file-application>
-    <file-revision>$Rev: 10945 $</file-revision>
+    <file-application>eFapsApp-HumanResource</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_AttributeAbstractFinancialInformationSQLTable</name>
