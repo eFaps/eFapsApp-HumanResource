@@ -14,17 +14,11 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 
-  Author:          The eFaps Team
-  Revision:        $Rev: 11342 $
-  Last Changed:    $Date: 2013-12-09 18:42:29 -0500 (lun, 09 dic 2013) $
-  Last Changed By: $Author: rosa.ordonez@efaps.org $
-
 -->
 <ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>d6aca7ac-8600-4726-83d1-cf44e991441e</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev: 11342 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <profiles>
@@ -91,7 +85,8 @@
             <property name="ModeEdit">NONE</property>
             <property name="ModeView">NONE</property>
             <property name="Label">HumanResource_ClassLocationForm.department.Label</property>
-            <trigger event="UI_FIELD_VALUE" method="dropDownFieldValue"
+            <property name="UIType">DROPDOWN</property>
+            <trigger event="UI_FIELD_VALUE" method="getOptionListFieldValue"
                 name="Contacts_ClassLocationForm.departmentLocation.UI_FIELD_VALUE"
                 program="org.efaps.esjp.common.uiform.Field">
                 <property name="Type">Ubicaciones_UbicacionStandardRoot</property>
@@ -111,7 +106,8 @@
             <property name="ModeEdit">NONE</property>
             <property name="ModeView">NONE</property>
             <property name="Label">HumanResource_ClassLocationForm.province.Label</property>
-            <trigger event="UI_FIELD_VALUE" method="dropDownFieldValue"
+            <property name="UIType">DROPDOWN</property>
+            <trigger event="UI_FIELD_VALUE" method="getOptionListFieldValue"
                 name="Contacts_ClassLocationForm.province.UI_FIELD_VALUE"
                 program="org.efaps.esjp.common.uiform.Field">
                 <property name="Type">Ubicaciones_UbicacionStandardRoot</property>
@@ -131,7 +127,8 @@
             <property name="ModeEdit">NONE</property>
             <property name="ModeView">NONE</property>
             <property name="Label">HumanResource_ClassLocationForm.district.Label</property>
-            <trigger event="UI_FIELD_VALUE" method="dropDownFieldValue"
+            <property name="UIType">DROPDOWN</property>
+            <trigger event="UI_FIELD_VALUE" method="getOptionListFieldValue"
                 name="Contacts_ClassLocationForm.departmentLocation.UI_FIELD_VALUE"
                 program="org.efaps.esjp.common.uiform.Field">
                 <property name="Type">Ubicaciones_UbicacionStandardRoot</property>

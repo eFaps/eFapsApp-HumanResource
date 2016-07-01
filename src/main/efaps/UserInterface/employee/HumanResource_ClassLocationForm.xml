@@ -22,7 +22,6 @@
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>893318fe-ea7e-48d1-93a7-37b8dbad73a2</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <profiles>
@@ -88,7 +87,8 @@
             <property name="ModeEdit">NONE</property>
             <property name="ModeView">NONE</property>
             <property name="Label">HumanResource_ClassLocationForm.department.Label</property>
-            <trigger program="org.efaps.esjp.common.uiform.Field" method="dropDownFieldValue"
+            <property name="UIType">DROPDOWN</property>
+            <trigger program="org.efaps.esjp.common.uiform.Field" method="getOptionListFieldValue"
                 name="Contacts_ClassLocationForm.departmentLocation.UI_FIELD_VALUE" event="UI_FIELD_VALUE">
                 <property name="Type">Ubicaciones_UbicacionStandardRoot</property>
                 <property name="Select">attribute[Name]</property>
@@ -106,7 +106,8 @@
             <property name="ModeEdit">NONE</property>
             <property name="ModeView">NONE</property>
             <property name="Label">HumanResource_ClassLocationForm.province.Label</property>
-            <trigger program="org.efaps.esjp.common.uiform.Field" method="dropDownFieldValue"
+            <property name="UIType">DROPDOWN</property>
+            <trigger program="org.efaps.esjp.common.uiform.Field" method="getOptionListFieldValue"
                 name="Contacts_ClassLocationForm.province.UI_FIELD_VALUE" event="UI_FIELD_VALUE">
                 <property name="Type">Ubicaciones_UbicacionStandardRoot</property>
                 <property name="Select">attribute[Name]</property>
@@ -124,7 +125,8 @@
             <property name="ModeEdit">NONE</property>
             <property name="ModeView">NONE</property>
             <property name="Label">HumanResource_ClassLocationForm.district.Label</property>
-            <trigger program="org.efaps.esjp.common.uiform.Field" method="dropDownFieldValue"
+            <property name="UIType">DROPDOWN</property>
+            <trigger program="org.efaps.esjp.common.uiform.Field" method="getOptionListFieldValue"
                 name="Contacts_ClassLocationForm.departmentLocation.UI_FIELD_VALUE" event="UI_FIELD_VALUE">
                 <property name="Type">Ubicaciones_UbicacionStandardRoot</property>
                 <property name="Select">attribute[Name]</property>
