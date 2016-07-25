@@ -21,8 +21,8 @@
 
 package org.efaps.esjp.humanresource.listener;
 
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsListener;
-import org.efaps.admin.program.esjp.EFapsRevision;
 import org.efaps.admin.program.esjp.EFapsUUID;
 
 
@@ -36,7 +36,7 @@ import org.efaps.admin.program.esjp.EFapsUUID;
  * @version $Id: Department.java 6164 2011-02-14 02:40:16Z jan@moxter.net $
  */
 @EFapsUUID("e6a5fa49-e3cd-48ce-94b0-f41700874474")
-@EFapsRevision("$Rev: 6164 $")
+@EFapsApplication("eFapsApp-HumanResource")
 @EFapsListener
 public class OnContact
     extends OnContact_Base

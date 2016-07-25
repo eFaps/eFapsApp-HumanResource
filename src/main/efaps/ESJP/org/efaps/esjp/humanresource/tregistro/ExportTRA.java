@@ -21,13 +21,17 @@
 
 package org.efaps.esjp.humanresource.tregistro;
 
+import org.efaps.admin.program.esjp.EFapsApplication;
+import org.efaps.admin.program.esjp.EFapsUUID;
 
 /**
  * TODO comment!
  *
  * @author The eFaps Team
- * @version $Id$
+ * 
  */
+@EFapsUUID("913062a3-3b60-4ea9-a740-d8f14be89820")
+@EFapsApplication("eFapsApp-HumanResource")
 public class ExportTRA
     extends ExportTRA_Base
 {

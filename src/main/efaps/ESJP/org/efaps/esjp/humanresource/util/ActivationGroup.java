@@ -23,7 +23,7 @@ package org.efaps.esjp.humanresource.util;
 
 import org.efaps.admin.datamodel.IBitEnum;
 import org.efaps.admin.datamodel.attributetype.BitEnumType;
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 
 
@@ -31,10 +31,10 @@ import org.efaps.admin.program.esjp.EFapsUUID;
  * TODO comment!
  *
  * @author The eFaps Team
- * @version $Id$
+ * 
  */
 @EFapsUUID("6b22380b-272d-46d1-8c21-a814bf7e6b9f")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-HumanResource")
 public enum ActivationGroup
     implements IBitEnum
 {

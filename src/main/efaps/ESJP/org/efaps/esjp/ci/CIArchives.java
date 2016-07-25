@@ -20,7 +20,9 @@
 
 package org.efaps.esjp.ci;
 
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsNoUpdate;
+import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.ci.CIAttribute;
 import org.efaps.ci.CIType;
 
@@ -29,6 +31,8 @@ import org.efaps.ci.CIType;
  * to be able to compile the classes.
  * @author The eFaps Team
  */
+@EFapsUUID("296b1900-fa6b-4a6e-ac6d-98118e84a129")
+@EFapsApplication("eFapsApp-HumanResource")
 @EFapsNoUpdate
 public final class CIArchives
 {

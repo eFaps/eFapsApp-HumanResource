@@ -21,7 +21,7 @@
 
 package org.efaps.esjp.humanresource;
 
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 
 
@@ -31,10 +31,10 @@ import org.efaps.admin.program.esjp.EFapsUUID;
  * class.
  *
  * @author The eFaps Team
- * @version $Id$
+ * 
  */
 @EFapsUUID("bc4c1ea8-f670-4dfc-9f56-65a3b5fa6009")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-HumanResource")
 public class Department
 {
 

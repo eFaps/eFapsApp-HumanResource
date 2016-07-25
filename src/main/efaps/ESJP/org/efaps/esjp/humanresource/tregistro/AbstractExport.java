@@ -21,13 +21,17 @@
 
 package org.efaps.esjp.humanresource.tregistro;
 
+import org.efaps.admin.program.esjp.EFapsApplication;
+import org.efaps.admin.program.esjp.EFapsUUID;
 
 /**
  * TODO comment!
  *
  * @author The eFaps Team
- * @version $Id$
+ * 
  */
+@EFapsUUID("2b8d1d6f-009a-48ff-9759-c92b1ad5fbfe")
+@EFapsApplication("eFapsApp-HumanResource")
 public abstract class AbstractExport
     extends AbstractExport_Base
 {

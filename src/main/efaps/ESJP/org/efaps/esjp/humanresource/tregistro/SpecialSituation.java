@@ -21,14 +21,16 @@
 package org.efaps.esjp.humanresource.tregistro;
 
 import org.efaps.admin.datamodel.IEnum;
+import org.efaps.admin.program.esjp.EFapsApplication;
+import org.efaps.admin.program.esjp.EFapsUUID;
 
 /**
  * TODO comment!
  *
  * @author The eFaps Team
- * @version $Id: SpecialSituation.java 11409 2013-12-16 16:43:43Z jan@moxter.net
- *          $
  */
+@EFapsUUID("fa62ee9c-97a4-4213-b6d2-6cd220987dca")
+@EFapsApplication("eFapsApp-HumanResource")
 public enum SpecialSituation
                 implements IEnum
 {

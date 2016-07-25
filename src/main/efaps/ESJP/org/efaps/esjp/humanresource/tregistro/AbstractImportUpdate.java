@@ -21,7 +21,7 @@
 
 package org.efaps.esjp.humanresource.tregistro;
 
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 
 
@@ -31,10 +31,10 @@ import org.efaps.admin.program.esjp.EFapsUUID;
  * class.
  *
  * @author The eFaps Team
- * @version $Id$
+ * 
  */
 @EFapsUUID("66b96d46-3fea-4f9e-adf9-17906d5948bc")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-HumanResource")
 public abstract class AbstractImportUpdate
     extends AbstractImportUpdate_Base
 {

@@ -28,7 +28,7 @@ import java.net.URL;
 import java.util.List;
 
 import org.efaps.admin.event.Parameter;
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.esjp.data.AbstractImport;
 import org.efaps.esjp.data.jaxb.DataImport;
@@ -41,10 +41,10 @@ import au.com.bytecode.opencsv.CSVReader;
  * TODO comment!
  *
  * @author The eFaps Team
- * @version $Id$
+ * 
  */
 @EFapsUUID("71a7ccb3-bb44-49a7-abf4-3e029e8d1e21")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-HumanResource")
 public abstract class AbstractImportUpdate_Base
     extends AbstractImport
 {

@@ -21,6 +21,8 @@
 package org.efaps.esjp.humanresource.tregistro;
 
 import org.efaps.admin.event.Parameter;
+import org.efaps.admin.program.esjp.EFapsApplication;
+import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.dataexporter.model.BooleanColumn.Format;
 import org.efaps.db.MultiPrintQuery;
 import org.efaps.db.QueryBuilder;
@@ -35,9 +37,9 @@ import org.efaps.util.EFapsException;
  * TODO comment!
  *
  * @author The eFaps Team
- * @version $Id: ExportTRA_Base.java 11414 2013-12-16 18:22:46Z
- *          jorge.cueva@moxter.net $
  */
+@EFapsUUID("fd47b6a2-4418-4ed0-9eeb-97a89c9d99e2")
+@EFapsApplication("eFapsApp-HumanResource")
 public abstract class ExportTRA_Base
     extends AbstractExport
 {

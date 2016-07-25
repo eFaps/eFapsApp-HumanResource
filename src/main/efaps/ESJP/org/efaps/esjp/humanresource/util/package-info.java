@@ -21,6 +21,6 @@
  * Utility for the humanresource Package.
  *
  * @author The eFaps Team
- * @version $Id$
+ * 
  */
 package org.efaps.esjp.humanresource.util;

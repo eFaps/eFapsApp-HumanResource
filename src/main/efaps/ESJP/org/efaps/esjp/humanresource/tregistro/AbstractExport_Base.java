@@ -29,6 +29,8 @@ import org.apache.commons.io.output.FileWriterWithEncoding;
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Return;
 import org.efaps.admin.event.Return.ReturnValues;
+import org.efaps.admin.program.esjp.EFapsApplication;
+import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.dataexporter.DataExporter;
 import org.efaps.dataexporter.LineSeparatorType;
 import org.efaps.dataexporter.model.RowDetails;
@@ -42,8 +44,10 @@ import org.efaps.util.EFapsException;
  * TODO comment!
  *
  * @author The eFaps Team
- * @version $Id$
+ * 
  */
+@EFapsUUID("3358e796-b32b-49d4-aeaa-ea03196aca27")
+@EFapsApplication("eFapsApp-HumanResource")
 public abstract class AbstractExport_Base
 {
 

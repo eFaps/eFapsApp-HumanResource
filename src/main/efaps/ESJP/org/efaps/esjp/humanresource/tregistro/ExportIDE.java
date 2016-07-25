@@ -21,14 +21,16 @@
 
 package org.efaps.esjp.humanresource.tregistro;
 
-
+import org.efaps.admin.program.esjp.EFapsApplication;
+import org.efaps.admin.program.esjp.EFapsUUID;
 
 /**
  * TODO comment!
  *
  * @author The eFaps Team
- * @version $Id$
  */
+@EFapsUUID("94652de1-74e5-4fa3-88f6-4ec3e67f0e32")
+@EFapsApplication("eFapsApp-HumanResource")
 public class ExportIDE
     extends ExportIDE_Base
 {

@@ -22,6 +22,8 @@
 package org.efaps.esjp.humanresource.tregistro;
 
 import org.efaps.admin.event.Parameter;
+import org.efaps.admin.program.esjp.EFapsApplication;
+import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.db.MultiPrintQuery;
 import org.efaps.db.QueryBuilder;
 import org.efaps.db.SelectBuilder;
@@ -36,8 +38,10 @@ import org.joda.time.DateTime;
  * TODO comment!
  *
  * @author The eFaps Team
- * @version $Id$
+ * 
  */
+@EFapsUUID("028a1a70-4ad6-476c-be12-0281e0f85995")
+@EFapsApplication("eFapsApp-HumanResource")
 public abstract class ExportIDE_Base
     extends AbstractExport
 {
