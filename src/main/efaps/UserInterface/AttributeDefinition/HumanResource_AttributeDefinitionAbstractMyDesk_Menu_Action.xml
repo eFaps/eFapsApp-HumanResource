@@ -2,7 +2,7 @@
 
 <!--
 
- Copyright 2003 - 2010 The eFaps Team
+ Copyright 2003 - 2016 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -16,19 +16,12 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev$
- Last Changed:    $Date$
- Last Changed By: $Author$
-
 -->
 
-<ui-menu  xmlns="http://www.efaps.org/xsd"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+<ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>e02c020f-6418-4f22-a5b7-49459212cc27</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action</name>
@@ -71,5 +64,8 @@
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateEmploy</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateFinancialInformationType</child>
         </childs>
+        <parents>
+            <parent>ERP_AttributeDefinitionMyDesk_Menu</parent>
+        </parents>
     </definition>
 </ui-menu>
