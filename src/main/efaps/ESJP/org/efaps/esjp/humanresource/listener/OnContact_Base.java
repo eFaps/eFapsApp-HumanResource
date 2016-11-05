@@ -21,7 +21,6 @@
 package org.efaps.esjp.humanresource.listener;
 
 import java.util.Map;
-import java.util.UUID;
 
 import org.efaps.admin.common.MsgPhrase;
 import org.efaps.admin.event.Parameter;
@@ -33,6 +32,7 @@ import org.efaps.db.PrintQuery;
 import org.efaps.db.QueryBuilder;
 import org.efaps.db.SelectBuilder;
 import org.efaps.esjp.ci.CIHumanResource;
+import org.efaps.esjp.ci.CIMsgHumanResource;
 import org.efaps.esjp.common.AbstractCommon;
 import org.efaps.esjp.contacts.listener.IOnContact;
 import org.efaps.util.EFapsException;
@@ -69,8 +69,7 @@ public abstract class OnContact_Base
                 final Instance emplInst = multi.getSelect(selEmplInst);
                 if (emplInst != null && emplInst.isValid()) {
                     final PrintQuery print = new PrintQuery(emplInst);
-                    // HumanResource_EmployeeWithNumberMsgPhrase
-                    final MsgPhrase msgPhrase = MsgPhrase.get(UUID.fromString("c6686d34-f9d7-4bf4-b9f1-80dad440eac4"));
+                    final MsgPhrase msgPhrase = CIMsgHumanResource.EmployeeWithNumberMsgPhrase.getMsgPhrase();
                     print.addMsgPhrase(msgPhrase);
                     print.execute();
                     final String label = print.getMsgPhrase(msgPhrase);
