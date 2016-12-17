@@ -37,8 +37,8 @@
             <menu>HumanResource_DepartmentTree_Employee_Menu</menu>
             <table>HumanResource_Department2EmployeeTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types">HumanResource_Department2EmployeeAbstract</property>
-                <property name="LinkFroms">DepartmentAbstractLink</property>
+                <property name="Type">HumanResource_Department2EmployeeAbstract</property>
+                <property name="LinkFrom">DepartmentAbstractLink</property>
             </evaluate>
         </target>
         <!-- properties -->

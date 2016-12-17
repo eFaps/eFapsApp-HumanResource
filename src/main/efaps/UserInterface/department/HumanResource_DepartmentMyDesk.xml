@@ -39,7 +39,7 @@
             <menu>HumanResource_DepartmentMyDesk_Menu</menu>
             <table>HumanResource_DepartmentTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types">HumanResource_DepartmentAbstract</property>
+                <property name="Type">HumanResource_DepartmentAbstract</property>
                 <property name="ExpandChildTypes">true</property>
             </evaluate>
         </target>

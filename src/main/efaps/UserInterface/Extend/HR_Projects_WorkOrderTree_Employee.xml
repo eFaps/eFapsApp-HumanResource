@@ -40,8 +40,8 @@
             <menu>HR_Projects_WorkOrderTree_Employee_Menu</menu>
             <table>HumanResource_Document2EmployeeTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types">HumanResource_Employee2WorkOrder</property>
-                <property name="LinkFroms">ToLink</property>
+                <property name="Type">HumanResource_Employee2WorkOrder</property>
+                <property name="LinkFrom">ToLink</property>
             </evaluate>
         </target>
         <!-- properties -->
