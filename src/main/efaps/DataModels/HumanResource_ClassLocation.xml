@@ -82,6 +82,15 @@
         <trigger program="org.efaps.esjp.common.history.DeleteClassificationHistoryTrigger"
             name="HumanResource_ClassLocation.DELETE_PRE"
             event="DELETE_PRE"/>
+        <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI"
+            method="configCheck"
+            name="HumanResource_ClassLocation.ACCESSCHECK"
+            event="ACCESSCHECK">
+            <!-- HummanResource-Configuration -->
+            <property name="SystemConfig">4620a7d6-0c39-48ac-9c52-e90dd077f52e</property>
+            <property name="Attribute">org.efaps.humanresource.classification.Location.Activate</property>
+            <property name="Default">true</property>
+        </trigger>
     </definition>
     <definition>
         <version-expression>(version==latest)</version-expression>
@@ -175,5 +184,14 @@
         <trigger program="org.efaps.esjp.common.history.DeleteClassificationHistoryTrigger"
             name="HumanResource_ClassLocation.DELETE_PRE"
             event="DELETE_PRE"/>
+         <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI"
+            method="configCheck"
+            name="HumanResource_ClassLocation.ACCESSCHECK"
+            event="ACCESSCHECK">
+            <!-- HummanResource-Configuration -->
+            <property name="SystemConfig">4620a7d6-0c39-48ac-9c52-e90dd077f52e</property>
+            <property name="Attribute">org.efaps.humanresource.classification.Location.Activate</property>
+            <property name="Default">true</property>
+        </trigger>
     </definition>
 </datamodel-type>
