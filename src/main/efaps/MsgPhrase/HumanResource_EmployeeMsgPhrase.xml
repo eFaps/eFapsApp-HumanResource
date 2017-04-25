@@ -22,7 +22,7 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_EmployeeMsgPhrase</name>
-        <label>{1} {2}, {0}</label>
+        <label>{1} {2, eval,{0},} {0}</label>
         <argument index="0">attribute[FirstName]</argument>
         <argument index="1">attribute[LastName]</argument>
         <argument index="2">attribute[SecondLastName]</argument>

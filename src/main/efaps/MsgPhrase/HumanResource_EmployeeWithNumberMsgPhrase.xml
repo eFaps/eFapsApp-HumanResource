@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
 
- Copyright 2003 - 2014 The eFaps Team
+ Copyright 2003 - 2017 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -14,21 +15,15 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev: 14563 $
- Last Changed:    $Date: 2014-12-02 14:04:36 -0500 (Tue, 02 Dec 2014) $
- Last Changed By: $Author: jan@moxter.net $
-
 -->
 <common-msgphrase xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>c6686d34-f9d7-4bf4-b9f1-80dad440eac4</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev: 14563 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_EmployeeWithNumberMsgPhrase</name>
-        <label>{0} - {2} {3}, {1}</label>
+        <label>{0, eval,{0}\u0020-\u0020}{2} {3, eval,{0},} {1}</label>
         <argument index="0">attribute[Number]</argument>
         <argument index="1">attribute[FirstName]</argument>
         <argument index="2">attribute[LastName]</argument>
