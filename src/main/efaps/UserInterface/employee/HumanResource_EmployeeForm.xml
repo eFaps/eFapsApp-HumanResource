@@ -181,7 +181,7 @@
             <trigger program="org.efaps.esjp.humanresource.Employee"
                 name="HumanResource_EmployeeForm.userPerson.UI_FIELD_AUTOCOMPLETE"
                 method="autoComplete4Person" event="UI_FIELD_AUTOCOMPLETE" />
-            <trigger program="org.efaps.esjp.admin.access.AccessOnField"
+            <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI"
                 method="roleCheck"
                 name="HumanResource_EmployeeForm.userPerson.UI_ACCESSCHECK"
                 event="UI_ACCESSCHECK">
@@ -407,7 +407,7 @@
             <trigger program="org.efaps.esjp.humanresource.Employee"
                 name="HumanResource_EmployeeForm.userPerson.UI_FIELD_AUTOCOMPLETE"
                 method="autoComplete4Person" event="UI_FIELD_AUTOCOMPLETE" />
-            <trigger program="org.efaps.esjp.admin.access.AccessOnField"
+            <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI"
                 method="roleCheck"
                 name="HumanResource_EmployeeForm.userPerson.UI_ACCESSCHECK"
                 event="UI_ACCESSCHECK">
