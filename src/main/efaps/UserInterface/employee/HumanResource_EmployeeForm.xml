@@ -442,9 +442,19 @@
             </trigger>
             <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI"
                 method="check4Application"
-                name="HumanResource_EmployeeForm.location.UI_ACCESSCHECK"
-                event="UI_ACCESSCHECK">
+                name="HumanResource_EmployeeForm.location.UI_ACCESSCHECK.1"
+                event="UI_ACCESSCHECK"
+                index="1">
                 <property name="Application">eFapsApp-Locations</property>
+            </trigger>
+            <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI"
+                method="configCheck"
+                name="HumanResource_EmployeeForm.location.UI_ACCESSCHECK.2"
+                event="UI_ACCESSCHECK"
+                index="2">
+                <!-- eFapsApp-Locations -->
+                <property name="SystemConfig">a3f9278e-0fb3-4def-a3fe-035c202148ad</property>
+                <property name="Attribute">org.efaps.locations.Activate</property>
             </trigger>
         </field>
         <field name="location4View">
@@ -456,9 +466,19 @@
             <property name="ModeEdit">NONE</property>
             <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI"
                 method="check4Application"
-                name="HumanResource_EmployeeForm.location4View.UI_ACCESSCHECK"
-                event="UI_ACCESSCHECK">
+                name="HumanResource_EmployeeForm.location4View.UI_ACCESSCHECK.1"
+                event="UI_ACCESSCHECK"
+                index="1">
                 <property name="Application">eFapsApp-Locations</property>
+            </trigger>
+            <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI"
+                method="configCheck"
+                name="HumanResource_EmployeeForm.location4View.UI_ACCESSCHECK.2"
+                event="UI_ACCESSCHECK"
+                index="2">
+                <!-- eFapsApp-Locations -->
+                <property name="SystemConfig">a3f9278e-0fb3-4def-a3fe-035c202148ad</property>
+                <property name="Attribute">org.efaps.locations.Activate</property>
             </trigger>
         </field>
         <field name="createGroup" character="Group">
