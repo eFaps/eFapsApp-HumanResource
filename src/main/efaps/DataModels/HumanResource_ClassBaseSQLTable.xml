@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
 
- Copyright 2003 - 2010 The eFaps Team
+ Copyright 2003 - 2019 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -16,11 +15,6 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev$
- Last Changed:    $Date$
- Last Changed By: $Author$
-
 -->
 
 <datamodel-sqltable  xmlns="http://www.efaps.org/xsd"
@@ -28,14 +22,12 @@
                      xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>a1985173-7dd7-4f38-b871-31369717019c</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_ClassBaseSQLTable</name>
         <typeid-column>TYPEID</typeid-column>
         <database>
             <table-name>T_HRCLASS</table-name>
-            <!-- columns -->
             <column name="HUMANRESOURCEID" type="INTEGER"      not-null="true" />
             <column name="TYPEID"          type="INTEGER"      not-null="true"/>
             <column name="ENTRYDATE"       type="DATETIME"/>
