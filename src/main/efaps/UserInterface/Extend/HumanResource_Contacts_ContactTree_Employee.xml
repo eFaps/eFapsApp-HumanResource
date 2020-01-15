@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+
+ Copyright 2003 - 2020 The eFaps Team
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+
+-->
+<ui-command xmlns="http://www.efaps.org/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>6b8b86da-0d6e-4bd9-bb87-d69b3932c7c1</uuid>
+    <file-application>eFapsApp-HumanResource</file-application>
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <name>HumanResource_Contacts_ContactTree_Employee</name>
+        <target>
+            <table>HumanResource_Employee4ContactsTable</table>
+            <evaluate
+                program="org.efaps.esjp.common.uitable.MultiPrint">
+                <property name="Type">HumanResource_Employee2Contact</property>
+                <property name="LinkFrom">ToLink</property>
+                <property name="InstanceSelect">linkto[FromLink].instance</property>
+            </evaluate>
+            <trigger event="UI_ACCESSCHECK" method="configCheck"
+                name="HumanResource_EmployeeTree_Contacts.UI_ACCESSCHECK"
+                program="org.efaps.esjp.admin.access.AccessCheck4UI">
+                <property name="SystemConfig">4620a7d6-0c39-48ac-9c52-e90dd077f52e</property>
+                <property name="Attribute">org.efaps.humanresource.ActivateContacts</property>
+                <property name="Attribute01">org.efaps.humanresource.ActivateAll</property>
+            </trigger>
+        </target>
+        <parents>
+            <parent>Contacts_ContactTree</parent>
+        </parents>
+        <property name="Target">content</property>
+        <property name="TargetShowCheckBoxes">true</property>
+    </definition>
+</ui-command>
