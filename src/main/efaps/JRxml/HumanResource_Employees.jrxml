@@ -192,7 +192,7 @@ class[HumanResource_ClassTR_Labor].attribute[Remuneration] as remuneration, stat
         <band height="12" splitType="Stretch">
             <property name="local_mesure_unitheight" value="pixel"/>
             <property name="com.jaspersoft.studio.unit.height" value="px"/>
-            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
                 <reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="61" height="12" isPrintWhenDetailOverflows="true" uuid="4f08b21f-477c-4b6b-bac6-c00302cebb63">
                     <property name="local_mesure_unity" value="pixel"/>
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -204,7 +204,7 @@ class[HumanResource_ClassTR_Labor].attribute[Remuneration] as remuneration, stat
                 </textElement>
                 <textFieldExpression><![CDATA[$F{number}]]></textFieldExpression>
             </textField>
-            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
                 <reportElement stretchType="RelativeToTallestObject" x="61" y="0" width="57" height="12" isPrintWhenDetailOverflows="true" uuid="acf04478-ed5d-4a79-a019-4c827b87894c">
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -214,7 +214,7 @@ class[HumanResource_ClassTR_Labor].attribute[Remuneration] as remuneration, stat
                 </textElement>
                 <textFieldExpression><![CDATA[$F{firstName}]]></textFieldExpression>
             </textField>
-            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
                 <reportElement stretchType="RelativeToTallestObject" x="118" y="0" width="57" height="12" isPrintWhenDetailOverflows="true" uuid="89af19a6-93fd-425a-ae32-87304dc55ad8">
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -224,7 +224,7 @@ class[HumanResource_ClassTR_Labor].attribute[Remuneration] as remuneration, stat
                 </textElement>
                 <textFieldExpression><![CDATA[$F{lastName}]]></textFieldExpression>
             </textField>
-            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
                 <reportElement stretchType="RelativeToTallestObject" x="175" y="0" width="57" height="12" isPrintWhenDetailOverflows="true" uuid="f6f22814-f39f-485c-860c-c11031933e7a">
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -234,7 +234,7 @@ class[HumanResource_ClassTR_Labor].attribute[Remuneration] as remuneration, stat
                 </textElement>
                 <textFieldExpression><![CDATA[$F{secondLastName}]]></textFieldExpression>
             </textField>
-            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
                 <reportElement stretchType="RelativeToTallestObject" x="232" y="0" width="57" height="12" isPrintWhenDetailOverflows="true" uuid="0cb7bc50-51df-42e2-ac1d-5a902afe2ce7">
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -244,7 +244,7 @@ class[HumanResource_ClassTR_Labor].attribute[Remuneration] as remuneration, stat
                 </textElement>
                 <textFieldExpression><![CDATA[$F{SPP}]]></textFieldExpression>
             </textField>
-            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
                 <reportElement stretchType="RelativeToTallestObject" x="289" y="0" width="57" height="12" isPrintWhenDetailOverflows="true" uuid="4d10a1e3-e11c-4067-adc9-1045a351b132">
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -254,7 +254,7 @@ class[HumanResource_ClassTR_Labor].attribute[Remuneration] as remuneration, stat
                 </textElement>
                 <textFieldExpression><![CDATA[$F{SPPType}]]></textFieldExpression>
             </textField>
-            <textField isStretchWithOverflow="true" pattern="dd/MM/yy" isBlankWhenNull="true">
+            <textField textAdjust="StretchHeight" pattern="dd/MM/yy" isBlankWhenNull="true">
                 <reportElement stretchType="RelativeToTallestObject" x="346" y="0" width="57" height="12" isPrintWhenDetailOverflows="true" uuid="225f6a64-da45-4835-97f0-dab0d73375f4">
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -264,7 +264,7 @@ class[HumanResource_ClassTR_Labor].attribute[Remuneration] as remuneration, stat
                 </textElement>
                 <textFieldExpression><![CDATA[$F{startDate}.toDate()]]></textFieldExpression>
             </textField>
-            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
                 <reportElement stretchType="RelativeToTallestObject" x="403" y="0" width="57" height="12" isPrintWhenDetailOverflows="true" uuid="a2ee4258-6468-4de8-b6fd-2e3f8fffea76">
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -274,7 +274,7 @@ class[HumanResource_ClassTR_Labor].attribute[Remuneration] as remuneration, stat
                 </textElement>
                 <textFieldExpression><![CDATA[$F{householdAllowance}]]></textFieldExpression>
             </textField>
-            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
                 <reportElement stretchType="RelativeToTallestObject" x="460" y="0" width="57" height="12" isPrintWhenDetailOverflows="true" uuid="abd0b058-0cd0-48d3-ab25-bb1f02b07fcd">
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -284,7 +284,7 @@ class[HumanResource_ClassTR_Labor].attribute[Remuneration] as remuneration, stat
                 </textElement>
                 <textFieldExpression><![CDATA[$F{activation}]]></textFieldExpression>
             </textField>
-            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
                 <reportElement stretchType="RelativeToTallestObject" x="517" y="0" width="57" height="12" isPrintWhenDetailOverflows="true" uuid="58c9eed7-3232-49b3-8783-de8665b366f2">
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -294,7 +294,7 @@ class[HumanResource_ClassTR_Labor].attribute[Remuneration] as remuneration, stat
                 </textElement>
                 <textFieldExpression><![CDATA[$F{account}]]></textFieldExpression>
             </textField>
-            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
                 <reportElement stretchType="RelativeToTallestObject" x="574" y="0" width="57" height="12" isPrintWhenDetailOverflows="true" uuid="f53f3123-6df5-46ac-8646-8f41a027e08b">
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -304,7 +304,7 @@ class[HumanResource_ClassTR_Labor].attribute[Remuneration] as remuneration, stat
                 </textElement>
                 <textFieldExpression><![CDATA[$F{bank}]]></textFieldExpression>
             </textField>
-            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
                 <reportElement stretchType="RelativeToTallestObject" x="631" y="0" width="57" height="12" isPrintWhenDetailOverflows="true" uuid="d0d10e01-3f6e-461f-9998-cf4b99b8dbc3">
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -314,7 +314,7 @@ class[HumanResource_ClassTR_Labor].attribute[Remuneration] as remuneration, stat
                 </textElement>
                 <textFieldExpression><![CDATA[$F{currency}]]></textFieldExpression>
             </textField>
-            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
                 <reportElement stretchType="RelativeToTallestObject" x="688" y="0" width="57" height="12" isPrintWhenDetailOverflows="true" uuid="c52da2ec-6f51-42f1-a14a-da8c80aee741">
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -324,7 +324,7 @@ class[HumanResource_ClassTR_Labor].attribute[Remuneration] as remuneration, stat
                 </textElement>
                 <textFieldExpression><![CDATA[$F{remuneration}]]></textFieldExpression>
             </textField>
-            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
                 <reportElement stretchType="RelativeToTallestObject" x="745" y="0" width="57" height="12" isPrintWhenDetailOverflows="true" uuid="f01c32a6-d7e1-48f6-b5a7-f48053ec908f">
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
