@@ -212,6 +212,13 @@ public final class HumanResource
                     .key(HumanResource.BASE + "DataImport4TRA")
                     .description(" Import xml.");
 
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute DEPARTMENT_ACTIVATEPRICEGRP = new BooleanSysConfAttribute()
+                    .sysConfUUID(HumanResource.SYSCONFUUID)
+                    .key(HumanResource.BASE + "Department.ActivatePriceGroup")
+                    .description("Activate the possibilty to register Work References.");
+
     /**
      * Singelton.
      */
