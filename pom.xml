@@ -157,6 +157,11 @@
             <artifactId>contacts</artifactId>
             <version>${efaps.app.dependencies}</version>
         </dependency>
+         <dependency>
+            <groupId>org.efaps.apps</groupId>
+            <artifactId>products</artifactId>
+            <version>${efaps.app.dependencies}</version>
+        </dependency>
         <!-- commons-imaging is used for sizing of images -->
         <dependency>
             <groupId>org.apache.commons</groupId>
