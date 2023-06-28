@@ -18,6 +18,7 @@ package org.efaps.esjp.humanresource.listener;
 
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.program.esjp.EFapsApplication;
+import org.efaps.admin.program.esjp.EFapsListener;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.db.Instance;
 import org.efaps.eql.EQL;
@@ -32,6 +33,7 @@ import org.slf4j.LoggerFactory;
 
 @EFapsUUID("ab36ce21-e15b-4f67-8610-086aa8ff5078")
 @EFapsApplication("eFapsApp-HumanResource")
+@EFapsListener
 public class PriceListener
     implements IPriceListListener
 {
