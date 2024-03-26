@@ -1,32 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
 
- Copyright 2003 - 2010 The eFaps Team
+    Copyright © 2003 - 2024 The eFaps Team (-)
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-      http://www.apache.org/licenses/LICENSE-2.0
+        http://www.apache.org/licenses/LICENSE-2.0
 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev: 8533 $
- Last Changed:    $Date: 2013-01-16 11:22:09 -0500 (Wed, 16 Jan 2013) $
- Last Changed By: $Author: jan@moxter.net $
-
---><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+-->
+<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>6b0ee2e6-7fb9-4d3a-aa5f-4a59e7b3d074</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    <file-revision>$Rev: 8533 $</file-revision>
+    
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateAcademicDegree</name>
-        <!-- target definitions -->
+        
+
         <access>
             <role>HumanResource_Admin</role>
         </access>
@@ -34,7 +32,8 @@
             <form>ERP_AttributeDefinitionForm</form>
             <execute program="org.efaps.esjp.common.uiform.Create"/>
         </target>
-        <!-- properties -->
+        
+
         <property name="Target">modal</property>
         <property name="TargetCreateType">HumanResource_AttributeDefinitionAcademicDegree</property>
         <property name="TargetMode">create</property>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.0.1.final using JasperReports Library version 6.0.0  -->
-<!-- 2015-01-26T14:25:51 -->
+
+
+
+
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HumanResource_Employees" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7f52ec49-a4b0-47c7-85e6-4ae2717e01f9">
     <property name="org.efaps.admin.program.jasper.EFapsApplication" value="eFapsApp-HumanResource"/>
     <property name="com.jaspersoft.studio.data.defaultdataadapter" value="eFaps"/>
