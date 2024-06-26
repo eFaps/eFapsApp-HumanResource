@@ -16,6 +16,7 @@
 package org.efaps.esjp.humanresource;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,6 +29,8 @@ import org.efaps.admin.event.Return;
 import org.efaps.admin.event.Return.ReturnValues;
 import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
+import org.efaps.admin.ui.AbstractUserInterfaceObject;
+import org.efaps.admin.ui.field.Field;
 import org.efaps.ci.CIAdminUser;
 import org.efaps.db.AttributeQuery;
 import org.efaps.db.CachedMultiPrintQuery;
@@ -49,6 +52,8 @@ import org.efaps.esjp.common.uiform.Edit;
 import org.efaps.esjp.common.uitable.MultiPrint;
 import org.efaps.esjp.common.util.InterfaceUtils;
 import org.efaps.esjp.humanresource.util.ActivationGroup;
+import org.efaps.esjp.ui.rest.provider.ITableProvider;
+import org.efaps.esjp.ui.rest.provider.StandardTableProvider;
 import org.efaps.ui.wicket.util.EFapsKey;
 import org.efaps.util.EFapsException;
 import org.joda.time.DateTime;
@@ -63,7 +68,7 @@ import org.joda.time.PeriodType;
 @EFapsUUID("6c060a95-0515-4809-ab2f-6834a951e93c")
 @EFapsApplication("eFapsApp-HumanResource")
 public abstract class Employee_Base
-    extends AbstractCommon
+    extends AbstractCommon implements ITableProvider
 {
 
     /**
@@ -107,7 +112,7 @@ public abstract class Employee_Base
 
         final Instance classInst = print.getSelect(selClassInst);
         final Update update;
-        if (classInst == null || (classInst != null && !classInst.isValid())) {
+        if (classInst == null || classInst != null && !classInst.isValid()) {
             final Classification clazz = (Classification) CIHumanResource.ClassTR.getType();
             final Insert relInsert = new Insert(clazz.getClassifyRelationType());
             relInsert.add(clazz.getRelLinkAttributeName(), _parameter.getInstance());
@@ -143,7 +148,7 @@ public abstract class Employee_Base
 
         final Instance classInst = print.getSelect(selClassInst);
         final Update update;
-        if (classInst == null || (classInst != null && !classInst.isValid())) {
+        if (classInst == null || classInst != null && !classInst.isValid()) {
             final Classification clazz = (Classification) CIHumanResource.ClassTR.getType();
             final Insert relInsert = new Insert(clazz.getClassifyRelationType());
             relInsert.add(clazz.getRelLinkAttributeName(), _parameter.getInstance());
@@ -251,7 +256,7 @@ public abstract class Employee_Base
         throws EFapsException
     {
         final String input = (String) _parameter.get(ParameterValues.OTHERS);
-        final List<Map<String, String>> list = new ArrayList<Map<String, String>>();
+        final List<Map<String, String>> list = new ArrayList<>();
 
         if (input.length() > 0) {
             final String key = containsProperty(_parameter, "Key") ? getProperty(_parameter, "Key") : "OID";
@@ -264,7 +269,7 @@ public abstract class Employee_Base
             }
 
             final boolean nameSearch = Character.isDigit(input.charAt(0));
-            final Map<String, Map<String, String>> tmpMap = new TreeMap<String, Map<String, String>>();
+            final Map<String, Map<String, String>> tmpMap = new TreeMap<>();
 
             final QueryBuilder attQueryBldr = new QueryBuilder(CIHumanResource.EmployeeAbstract);
             if (nameSearch) {
@@ -301,7 +306,7 @@ public abstract class Employee_Base
                 final String dataemployee = lastname + (secondLastname.isEmpty() ? ", " : " " + secondLastname + ", ")
                                 + firstname;
                 final String choice = nameSearch ? number + "- " + dataemployee : dataemployee + " - " + number;
-                final Map<String, String> map = new HashMap<String, String>();
+                final Map<String, String> map = new HashMap<>();
                 map.put(EFapsKey.AUTOCOMPLETE_KEY.getKey(), multi.getAttribute(key).toString());
                 map.put(EFapsKey.AUTOCOMPLETE_CHOICE.getKey(), choice);
                 tmpMap.put(choice, map);
@@ -335,8 +340,8 @@ public abstract class Employee_Base
         throws EFapsException
     {
         final Return ret = new Return();
-        final List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
-        final Map<String, Object> map = new HashMap<String, Object>();
+        final List<Map<String, Object>> list = new ArrayList<>();
+        final Map<String, Object> map = new HashMap<>();
         final String depField = getProperty(_parameter, "HR_DepartmentFieldName", "department");
         final String employeeField = getProperty(_parameter, "HR_EmployeeFieldName", "employee");
 
@@ -374,9 +379,9 @@ public abstract class Employee_Base
         throws EFapsException
     {
         final String input = (String) _parameter.get(ParameterValues.OTHERS);
-        final List<Map<String, String>> list = new ArrayList<Map<String, String>>();
+        final List<Map<String, String>> list = new ArrayList<>();
         if (input.length() > 0) {
-            final Map<String, Map<String, String>> tmpMap = new TreeMap<String, Map<String, String>>();
+            final Map<String, Map<String, String>> tmpMap = new TreeMap<>();
             final QueryBuilder queryBldr = new QueryBuilder(CIAdminUser.Person);
             queryBldr.addWhereAttrMatchValue(CIAdminUser.Person.Name, input + "*").setIgnoreCase(true);
 
@@ -397,7 +402,7 @@ public abstract class Employee_Base
                 final String lastname = multi.<String>getAttribute(CIAdminUser.Person.LastName);
                 final String fullName = lastname + ", " + firstname;
                 final String choice = name + " - " + fullName;
-                final Map<String, String> map = new HashMap<String, String>();
+                final Map<String, String> map = new HashMap<>();
                 map.put(EFapsKey.AUTOCOMPLETE_KEY.getKey(), String.valueOf(id));
                 map.put(EFapsKey.AUTOCOMPLETE_CHOICE.getKey(), choice);
                 map.put(EFapsKey.AUTOCOMPLETE_VALUE.getKey(), name);
@@ -474,14 +479,25 @@ public abstract class Employee_Base
     {
         final Map<Integer, String> activations = analyseProperty(_parameter, "Activation");
         if (!activations.isEmpty()) {
-            final List<ActivationGroup> activationList = new ArrayList<ActivationGroup>();
+            final List<ActivationGroup> activationList = new ArrayList<>();
             for (final String activationStr : activations.values()) {
                 final ActivationGroup activation = ActivationGroup.valueOf(activationStr);
                 activationList.add(activation);
             }
             _queryBldr.addWhereAttrEqValue(CIHumanResource.Employee.Activation, activationList.toArray());
         }
-    };
+    }
+
+    @Override
+    public Collection<Map<String, ?>> getValues(final AbstractUserInterfaceObject cmd,
+                                                final List<Field> fields,
+                                                final Map<String, String> properties,
+                                                final String oid)
+        throws EFapsException
+    {
+        // Should this Activation thing be done here also?
+        return new StandardTableProvider().getValues(cmd, fields, properties, oid);
+    }
 
     /**
      * Gets the employee assigned2 contact.
