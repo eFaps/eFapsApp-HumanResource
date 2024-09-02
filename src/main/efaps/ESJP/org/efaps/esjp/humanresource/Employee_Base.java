@@ -68,8 +68,11 @@ import org.joda.time.PeriodType;
 @EFapsUUID("6c060a95-0515-4809-ab2f-6834a951e93c")
 @EFapsApplication("eFapsApp-HumanResource")
 public abstract class Employee_Base
-    extends AbstractCommon implements ITableProvider
+    extends AbstractCommon
+    implements ITableProvider
 {
+
+    private ITableProvider tableProvider;
 
     /**
      * Method is executed on create event.
@@ -83,6 +86,7 @@ public abstract class Employee_Base
     {
         final Create create = new Create()
         {
+
             @Override
             public void connect(final Parameter _parameter,
                                 final Instance _instance)
@@ -489,14 +493,22 @@ public abstract class Employee_Base
     }
 
     @Override
-    public Collection<Map<String, ?>> getValues(final AbstractUserInterfaceObject cmd,
-                                                final List<Field> fields,
-                                                final Map<String, String> properties,
-                                                final String oid)
+    public ITableProvider init(AbstractUserInterfaceObject cmd,
+                               List<Field> fields,
+                               Map<String, String> properties,
+                               String oid)
+        throws EFapsException
+    {
+        tableProvider = new StandardTableProvider();
+        return tableProvider.init(cmd, fields, properties, oid);
+    }
+
+    @Override
+    public Collection<Map<String, ?>> getValues()
         throws EFapsException
     {
         // Should this Activation thing be done here also?
-        return new StandardTableProvider().getValues(cmd, fields, properties, oid);
+        return tableProvider.getValues();
     }
 
     /**
