@@ -20,7 +20,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
@@ -28,8 +27,6 @@ import javax.imageio.ImageIO;
 
 import org.apache.commons.imaging.ImageFormats;
 import org.apache.commons.imaging.ImageInfo;
-import org.apache.commons.imaging.ImageReadException;
-import org.apache.commons.imaging.ImageWriteException;
 import org.apache.commons.imaging.Imaging;
 import org.efaps.admin.datamodel.Type;
 import org.efaps.admin.event.Parameter;
@@ -232,7 +229,7 @@ public abstract class Image_Base
         final File ret;
         try {
             final ImageInfo info = Imaging.getImageInfo(_fileItem.getInputStream(), _fileItem.getName());
-            ret = new FileUtil().getFile(_prefix + _fileItem.getName(), info.getFormat().getExtension());
+            ret = new FileUtil().getFile(_prefix + _fileItem.getName(), info.getFormat().getDefaultExtension());
 
             final FileOutputStream os = new FileOutputStream(ret);
 
@@ -240,19 +237,15 @@ public abstract class Image_Base
                 final BufferedImage img = ImageIO.read(_fileItem.getInputStream());
                 final ResampleOp resampleOp = new ResampleOp(_dim);
                 final BufferedImage rescaledTomato = resampleOp.filter(img, null);
-                ImageIO.write(rescaledTomato, "jpg", os);
+                Imaging.writeImage(rescaledTomato, os, info.getFormat());
             } else {
                 final BufferedImage image = Imaging.getBufferedImage(_fileItem.getInputStream());
                 final ResampleOp resampleOp = new ResampleOp(_dim);
                 // resampleOp.setUnsharpenMask(AdvancedResizeOp.UnsharpenMask.Normal);
                 final BufferedImage rescaledTomato = resampleOp.filter(image, null);
-                Imaging.writeImage(rescaledTomato, os, info.getFormat(), new HashMap<String, Object>());
+                Imaging.writeImage(rescaledTomato, os, info.getFormat());
             }
-        } catch (final ImageReadException e) {
-            throw new EFapsException(this.getClass(), "createNewImage", e, _parameter);
         } catch (final IOException e) {
-            throw new EFapsException(this.getClass(), "createNewImage", e, _parameter);
-        } catch (final ImageWriteException e) {
             throw new EFapsException(this.getClass(), "createNewImage", e, _parameter);
         }
         return ret;
@@ -301,8 +294,6 @@ public abstract class Image_Base
             updateImage(_parameter, _imageInst, info);
         } catch (final IOException e) {
             throw new EFapsException(this.getClass(), "uploadImage", e, _parameter);
-        } catch (final ImageReadException e) {
-            throw new EFapsException(this.getClass(), "uploadImage", e, _parameter);
         }
     }
 
@@ -325,8 +316,6 @@ public abstract class Image_Base
             final ImageInfo info = Imaging.getImageInfo(_file);
             updateImage(_parameter, _imageInst, info);
         } catch (final IOException e) {
-            throw new EFapsException(this.getClass(), "uploadImage", e, _parameter);
-        } catch (final ImageReadException e) {
             throw new EFapsException(this.getClass(), "uploadImage", e, _parameter);
         }
     }
