@@ -54,7 +54,6 @@ import org.efaps.esjp.common.util.InterfaceUtils;
 import org.efaps.esjp.humanresource.util.ActivationGroup;
 import org.efaps.esjp.ui.rest.provider.ITableProvider;
 import org.efaps.esjp.ui.rest.provider.StandardTableProvider;
-import org.efaps.ui.wicket.util.EFapsKey;
 import org.efaps.util.EFapsException;
 import org.joda.time.DateTime;
 import org.joda.time.Period;
@@ -311,8 +310,8 @@ public abstract class Employee_Base
                                 + firstname;
                 final String choice = nameSearch ? number + "- " + dataemployee : dataemployee + " - " + number;
                 final Map<String, String> map = new HashMap<>();
-                map.put(EFapsKey.AUTOCOMPLETE_KEY.getKey(), multi.getAttribute(key).toString());
-                map.put(EFapsKey.AUTOCOMPLETE_CHOICE.getKey(), choice);
+                map.put("eFapsAutoCompleteKEY", multi.getAttribute(key).toString());
+                map.put("eFapsAutoCompleteCHOICE", choice);
                 tmpMap.put(choice, map);
             }
             list.addAll(tmpMap.values());
@@ -407,9 +406,9 @@ public abstract class Employee_Base
                 final String fullName = lastname + ", " + firstname;
                 final String choice = name + " - " + fullName;
                 final Map<String, String> map = new HashMap<>();
-                map.put(EFapsKey.AUTOCOMPLETE_KEY.getKey(), String.valueOf(id));
-                map.put(EFapsKey.AUTOCOMPLETE_CHOICE.getKey(), choice);
-                map.put(EFapsKey.AUTOCOMPLETE_VALUE.getKey(), name);
+                map.put("eFapsAutoCompleteKEY", String.valueOf(id));
+                map.put("eFapsAutoCompleteCHOICE", choice);
+                map.put("eFapsAutoCompleteVALUE", name);
                 tmpMap.put(choice, map);
             }
             list.addAll(tmpMap.values());
