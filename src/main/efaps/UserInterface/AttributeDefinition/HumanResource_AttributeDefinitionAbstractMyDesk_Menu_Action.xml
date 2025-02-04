@@ -31,7 +31,6 @@
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateDistrict</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreatePhone</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateEmail</child>
-            <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateFax</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateNationality</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateSex</child>
             <child>HumanResource_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateCivilStatus</child>
