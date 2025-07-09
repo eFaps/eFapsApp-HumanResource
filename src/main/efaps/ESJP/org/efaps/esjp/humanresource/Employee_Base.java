@@ -30,6 +30,7 @@ import org.efaps.admin.event.Return.ReturnValues;
 import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.admin.ui.AbstractUserInterfaceObject;
+import org.efaps.admin.ui.AbstractUserInterfaceObject.TargetMode;
 import org.efaps.admin.ui.field.Field;
 import org.efaps.ci.CIAdminUser;
 import org.efaps.db.AttributeQuery;
@@ -495,11 +496,12 @@ public abstract class Employee_Base
     public ITableProvider init(AbstractUserInterfaceObject cmd,
                                List<Field> fields,
                                Map<String, String> properties,
+                               TargetMode targetMode,
                                String oid)
         throws EFapsException
     {
         tableProvider = new StandardTableProvider();
-        return tableProvider.init(cmd, fields, properties, oid);
+        return tableProvider.init(cmd, fields, properties, targetMode, oid);
     }
 
     @Override
