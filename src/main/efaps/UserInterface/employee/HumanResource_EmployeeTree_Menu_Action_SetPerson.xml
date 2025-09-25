@@ -17,15 +17,11 @@
 
 -->
 
-
-
-
 <ui-command xmlns="http://www.efaps.org/xsd"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>560a6221-335a-4432-b586-010deb284f1e</uuid>
     <file-application>eFapsApp-HumanResource</file-application>
-    
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>HumanResource_EmployeeTree_Menu_Action_SetPerson</name>
@@ -33,15 +29,11 @@
             <role>HumanResource_Admin</role>
             <role>HumanResource_Modifier</role>
         </access>
-        
-
         <target>
             <form>HumanResource_EmployeeSetPersonForm</form>
             <execute program="org.efaps.esjp.common.uiform.Edit" />
         </target>
-        
-
         <property name="Target">modal</property>
-        <property name="TargetMode">create</property>
+        <property name="TargetMode">edit</property>
     </definition>
 </ui-command>
