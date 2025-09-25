@@ -44,6 +44,7 @@ import org.efaps.db.PrintQuery;
 import org.efaps.db.QueryBuilder;
 import org.efaps.db.SelectBuilder;
 import org.efaps.db.Update;
+import org.efaps.eql.EQL;
 import org.efaps.esjp.ci.CIFormHumanResource;
 import org.efaps.esjp.ci.CIHumanResource;
 import org.efaps.esjp.ci.CIMsgHumanResource;
@@ -541,5 +542,21 @@ public abstract class Employee_Base
             ret.append(multi.getMsgPhrase(CIMsgHumanResource.EmployeeMsgPhrase));
         }
         return ret.toString();
+    }
+
+    protected static Instance getEmployee4Person(final Long personId)
+        throws EFapsException
+    {
+        Instance employeeInst = null;
+        final var eval = EQL.builder().print()
+                        .query(CIHumanResource.Employee)
+                        .where()
+                        .attribute(CIHumanResource.Employee.UserPerson).eq(personId)
+                        .select()
+                        .oid().evaluate();
+        if (eval.next()) {
+            employeeInst = eval.inst();
+        }
+        return employeeInst;
     }
 }

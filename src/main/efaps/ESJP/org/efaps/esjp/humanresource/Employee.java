@@ -33,6 +33,7 @@ import org.efaps.util.EFapsException;
 public class Employee
     extends Employee_Base
 {
+
     /**
      * Gets the employee assigned to contact.
      *
@@ -46,5 +47,11 @@ public class Employee
         throws EFapsException
     {
         return Employee_Base.getEmployeeAssigned2Contact(_parameter, _contactInstance);
+    }
+
+    public static Instance getEmployee4Person(final Long personId)
+        throws EFapsException
+    {
+        return Employee_Base.getEmployee4Person(personId);
     }
 }
