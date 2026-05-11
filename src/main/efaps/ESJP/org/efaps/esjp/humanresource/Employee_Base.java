@@ -494,15 +494,16 @@ public abstract class Employee_Base
     }
 
     @Override
-    public ITableProvider init(AbstractUserInterfaceObject cmd,
-                               List<Field> fields,
-                               Map<String, String> properties,
-                               TargetMode targetMode,
-                               String oid)
+    public ITableProvider init(final AbstractUserInterfaceObject cmd,
+                               final List<Field> fields,
+                               final Map<String, String> properties,
+                               final TargetMode targetMode,
+                               final String oid,
+                               final List<String> selectedOids)
         throws EFapsException
     {
         tableProvider = new StandardTableProvider();
-        return tableProvider.init(cmd, fields, properties, targetMode, oid);
+        return tableProvider.init(cmd, fields, properties, targetMode, oid, selectedOids);
     }
 
     @Override
